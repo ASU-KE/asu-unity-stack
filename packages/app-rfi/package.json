@@ -40,7 +40,7 @@
     "postdocs": "node ../../scripts/process-readme-props.js"
   },
   "bugs": {
-    "url": "https://github.com/ASU/asu-unity-stack/issues"
+    "url": "https://github.com/ASU-KE/asu-unity-stack/issues"
   },
   "devDependencies": {
     "@asu/unity-bootstrap-theme": "*",
