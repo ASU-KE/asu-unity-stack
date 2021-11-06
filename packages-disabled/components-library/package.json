@@ -15,7 +15,7 @@
   },
   "author": "Colton Testamarck",
   "license": "UNLICENSED",
-  "private": false,
+  "private": true,
   "scripts": {
     "build": "webpack --progress && yarn prerender",
     "lint": "eslint --fix 'src/**/*.{js,jsx}' --ignore-path ../../.eslintignore",
