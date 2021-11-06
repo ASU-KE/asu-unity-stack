@@ -9,6 +9,11 @@
     "url": "https://github.com/asu/asu-unity-stack.git",
     "directory": "packages/bootstrap4-theme"
   },
+  "files": [
+    "dist/*",
+    "docs/*",
+    "src/*"
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com"
