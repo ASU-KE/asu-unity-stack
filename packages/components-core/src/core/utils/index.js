@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 
 import { Accordion } from "../../components/Accordion";
 import { AnchorMenu } from "../../components/AnchorMenu";
@@ -32,7 +32,7 @@ import { getCurrentScriptPath } from "./script-utils";
  * @param {ComponentProps} props
  */
 const RenderReact = (component, props, target) => {
-  ReactDOM.render(React.createElement(component, props), target);
+  render(React.createElement(component, props), target);
 };
 
 /**
