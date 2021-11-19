@@ -11,8 +11,7 @@
   "files": [
     "examples/*",
     "dist/*",
-    "docs/*",
-    "src/*"
+    "docs/*"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
