@@ -33,9 +33,15 @@ const isValidActiveProgram = row =>
 function degreeDataPropResolverService(row = {}) {
   return {
     getMajorDesc: () => row["Descr100"],
+    getMajorDescUrlFix: () =>
+      row["Descr100"]
+        .replace(/\s+/g, "-")
+        .replace(/[ ,()]/g, "")
+        .toLowerCase(),
     getInstitution: () => row["Institution"],
     getAcadPlan: () => row["AcadPlan"],
     getDegree: () => row["Degree"],
+    getDegreeFix: () => row["Degree"].toLowerCase(),
     getDegreeMajorMap: () => row["degreeMajorMap"],
     isUndergradProgram: () => isUndergradProgram(row),
     isGradProgram: () => !isUndergradProgram(row),
