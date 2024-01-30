@@ -42,7 +42,9 @@ function parseMajorInfoLink(resolver, majorInfoUrl) {
 
   res = res
     .replaceAll("{INSTITUTION_CODE}", resolver.getInstitution())
-    .replaceAll("{ACAD_PLAN_CODE}", resolver.getAcadPlan());
+    .replaceAll("{ACAD_PLAN_CODE}", resolver.getAcadPlan())
+    .replaceAll("{DEGREE_NAME}", resolver.getMajorDescUrlFix())
+    .replaceAll("{DEGREE_LEVEL}", resolver.getDegreeFix());
 
   return res;
 }
