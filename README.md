@@ -1,3 +1,34 @@
+# ASU Unity Design System (UDS) KE Fork
+
+KE Fork of ASU UDS. Changelog tracks customizations made. See git commit guidelines below to contribute to this repository.
+
+## Changelog
+
+### app-rfi
+
+### app-degree-pages
+#### 1/31/24
+The following changes allow degree pages to use a pre-formatted semantic URL structure. The KE ASU Degree Search WP plugin depends on these values.
+
+- packages/app-degree-pages/src/core/services/degree-data-prop-resolver-service.js
+```
+getMajorDescUrlFix: () =>
+      row["Descr100"]
+        .replace(/\s+/g, "-")
+        .replace(/[ ,()]/g, "")
+        .toLowerCase(),
+
+getDegreeFix: () => row["Degree"].toLowerCase(),
+```
+
+- packages/app-degree-pages/src/core/services/degree-http-service.js
+```
+resolver.getInstitution())
+    .replaceAll("{ACAD_PLAN_CODE}", resolver.getAcadPlan())
+    .replaceAll("{DEGREE_NAME}", resolver.getMajorDescUrlFix())
+    .replaceAll("{DEGREE_LEVEL}", resolver.getDegreeFix());
+```
+
 # ASU Unity Design System (UDS)
 ## Quickstart Guide
 
