@@ -5,7 +5,12 @@ KE Fork of ASU UDS. Changelog tracks customizations made. See git commit guideli
 ## Changelog
 
 ### app-rfi
-
+#### 1/31/24
+Fixes image import issue with wp build scripts.
+- packages/app-rfi/src/components/stepper/RfiMainForm.js
+```
+import RfiImage from "../../assets/img/WS2-DefaultImagev01-Final.png";
+```
 ### app-degree-pages
 #### 1/31/24
 The following changes allow degree pages to use a pre-formatted semantic URL structure. The KE ASU Degree Search WP plugin depends on these values.
