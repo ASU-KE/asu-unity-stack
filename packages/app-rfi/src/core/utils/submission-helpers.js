@@ -58,7 +58,15 @@ export function submissionSetHiddenFields(payload, test) {
 
   // Stub in sourceid. Actual value will be added in the form's host site proxy.
   // sourceid is treated securely like an API key and kept out of the frontend.
-  output.Source = "mock";
+  //output.Source = "mock";
+
+  const rfiContainer = document.querySelector('#asu-degree-rfi-container');
+  const maroon = rfiContainer.dataset.maroon;
+  const gold = rfiContainer.dataset.gold;
+  const asu = rfiContainer.dataset.asu;
+  const combinedAttributes = `${maroon}${gold}${asu}`;
+
+  output.Source = combinedAttributes;
 
   // Whether we're in test mode or not: 1 or nothing. A prop value passed down.
   output.Test = test ? 1 : undefined;
