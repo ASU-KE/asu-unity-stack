@@ -16,6 +16,7 @@ import { optionalForm } from "../steps/Optional";
 import { programInterestForm } from "../steps/ProgramInterest";
 import { successForm } from "../steps/Success";
 import { RfiStepper } from "./RfiStepper";
+import RfiImage from "../../assets/img/WS2-DefaultImagev01-Final.png";
 
 const currentScript = getCurrentScriptPath();
 
@@ -39,9 +40,9 @@ const RfiMainForm = ({
   dataSourceCountriesStates,
   submissionUrl,
 }) => {
-  const RfiImage = `${
-    appPathFolder || currentScript
-  }/assets/img/WS2-DefaultImagev01-Final.png`;
+  // const RfiImage = `${
+  //   appPathFolder || currentScript
+  // }/assets/img/WS2-DefaultImagev01-Final.png`;
 
   return (
     <div className="container rfi-container-inner">
