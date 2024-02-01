@@ -11,6 +11,19 @@ Fixes image import issue with wp build scripts.
 ```
 import RfiImage from "../../assets/img/WS2-DefaultImagev01-Final.png";
 ```
+Prepare and add sourceID needed to route form to correct team. Depends on data- attributes set by The KE ASU Degree Search WP plugin. Phase 2 this functionality will be removed, and moved to a backend PHP service.
+- packages/app-rfi/src/core/utils/submission-helpers.js
+```
+  //output.Source = "mock";
+
+  const rfiContainer = document.querySelector('#asu-degree-rfi-container');
+  const maroon = rfiContainer.dataset.maroon;
+  const gold = rfiContainer.dataset.gold;
+  const asu = rfiContainer.dataset.asu;
+  const combinedAttributes = `${maroon}${gold}${asu}`;
+
+  output.Source = combinedAttributes;
+```
 ### app-degree-pages
 #### 1/31/24
 The following changes allow degree pages to use a pre-formatted semantic URL structure. The KE ASU Degree Search WP plugin depends on these values.
