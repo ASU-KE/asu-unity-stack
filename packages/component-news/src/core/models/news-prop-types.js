@@ -12,9 +12,17 @@ const componentCtaButtonShape = PropTypes.shape({
 const componentDataSourceShape = PropTypes.shape({
   url: PropTypes.string,
 });
+const componentDrupalDataSourceShape = PropTypes.shape({
+  url: PropTypes.string,
+});
+const componentWpRestDataSourceShape = PropTypes.shape({
+  url: PropTypes.string,
+});
 
 export {
   componentHeaderShape,
   componentCtaButtonShape,
   componentDataSourceShape,
+  componentDrupalDataSourceShape,
+  componentWpRestDataSourceShape,
 };
