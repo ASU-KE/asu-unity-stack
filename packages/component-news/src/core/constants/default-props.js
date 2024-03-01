@@ -16,8 +16,11 @@ const defaultProps = {
     text: "Read at ASU News",
     size: "default",
   },
-  dataSource: {
+  drupalDataSource: {
     url: "https://asunow.asu.edu/feeds-json",
+  },
+  wpDataSource: {
+    url: "https://ke.news.prod.rtd.asu.edu/wp-json/wp/v2/posts",
   },
 };
 
