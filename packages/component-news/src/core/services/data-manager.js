@@ -6,7 +6,7 @@ import { filterFields } from "../constants/filter-fields";
  * @param {Object.<string,string>} node
  * @return {boolean}
  */
-const filterData = (node, rawFilters = "") => {
+const filterDrupalData = (node, rawFilters = "") => {
   if (!rawFilters) return true;
 
   const filters = rawFilters.split(",");
@@ -25,4 +25,4 @@ const filterData = (node, rawFilters = "") => {
   return false;
 };
 
-export { filterData };
+export { filterDrupalData };
