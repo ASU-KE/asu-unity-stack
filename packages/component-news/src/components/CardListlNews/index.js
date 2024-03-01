@@ -1,5 +1,5 @@
 // @ts-check
-import { Card, FeedContext } from "@asu/components-core";
+import { Card, FeedContext } from "../../../../components-core/src";
 import React, { useContext, useEffect } from "react";
 
 import trackReactComponent from "../../../../../shared/services/componentDatalayer";
