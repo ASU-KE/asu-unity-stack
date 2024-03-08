@@ -21,25 +21,26 @@ import RfiImage from "../../assets/img/WS2-DefaultImagev01-Final.png";
 const currentScript = getCurrentScriptPath();
 
 const RfiMainForm = () => {
-  const { appPathFolder, test, submissionUrl } = useRfiContext();
-  appPathFolder,
-  campus,
-  actualCampus,
-  college,
-  department,
-  studentType,
-  areaOfInterest,
-  programOfInterest,
-  programOfInterestOptional,
-  isCertMinor,
-  country,
-  stateProvince,
-  successMsg,
-  test,
-  dataSourceDegreeSearch,
-  dataSourceAsuOnline,
-  dataSourceCountriesStates,
-  submissionUrl,
+  const {
+    appPathFolder,
+    campus,
+    actualCampus,
+    college,
+    department,
+    studentType,
+    areaOfInterest,
+    programOfInterest,
+    programOfInterestOptional,
+    isCertMinor,
+    country,
+    stateProvince,
+    successMsg,
+    test,
+    dataSourceDegreeSearch,
+    dataSourceAsuOnline,
+    dataSourceCountriesStates,
+    submissionUrl
+  } = useRfiContext();
   // const RfiImage = `${
   //   appPathFolder || currentScript
   // }/assets/img/WS2-DefaultImagev01-Final.png`;
