@@ -31,7 +31,7 @@ function degreeDataPropResolverService(row = {}) {
   return {
     getMajorDesc: () => row["acadPlanMarketingDescription"],
     getMajorDescUrlFix: () =>
-      row["Descr100"]
+      row["acadPlanMarketingDescription"]
         .replace(/\s+/g, "-")
         .replace(/[ ,()]/g, "")
         .toLowerCase(),
@@ -47,7 +47,15 @@ function degreeDataPropResolverService(row = {}) {
       }
       return degree;
     },
-    getDegreeFix: () => row["Degree"].toLowerCase(),
+    getDegreeFix: () => {
+      // Minors
+      let degree =
+        row["degreeDescriptionShort"].toLowerCase() || row["acadPlanTypeDescription"].toLowerCase();
+      if (degree === "CERT") {
+        degree = "certificate";
+      }
+      return degree;
+    },
     getGeneralDegreeMajorMap: () => {
       // TODO: Will there always be a default major map?
       /**
