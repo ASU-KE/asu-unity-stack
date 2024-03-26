@@ -4,7 +4,7 @@ import { shortenText } from "../utils/shorten-text";
 // Transformer data function provided to the high order component
 const transformData = (post) => ({
   id: post.id,
-  headerImageUrl: post.uds_story_hero?.background_image?.sizes?.medium,
+  headerImageUrl: post.uds_story_hero?.background_image?.sizes?.large,
   heroImageUrl: post.uds_story_hero?.background_image?.url,
   featuredImageUrl:
     post.uds_featured_image?.source_url,
