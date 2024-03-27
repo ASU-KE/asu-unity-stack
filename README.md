@@ -2,6 +2,12 @@
 
 KE Fork of ASU UDS. Changelog tracks customizations made. See git commit guidelines below to contribute to this repository.
 
+```
+git remote - v //view all remote branches
+git fetch upstream
+git merge upstream/dev
+```
+
 ## Changelog
 
 ### component-news
