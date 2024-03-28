@@ -1,6 +1,7 @@
 // @ts-check
-import { Card, FeedContext } from "@asu/components-core";
+import { Card, FeedContext } from "../../../../components-core/src";
 import React, { useContext, useEffect } from "react";
+import classNames from "classnames";
 
 import trackReactComponent from "../../../../../shared/services/componentDatalayer";
 import { feedCardButtonShape } from "../../../../components-core/src/components/FeedAnatomy/feed-prop-types";
@@ -11,53 +12,94 @@ import { NewsWrapper } from "./index.styles";
 
 /**
  *
- * @param {Object} feed
+ * @param {Object} feed //feed aka story
  * @param {import("../../core/types/news-types").CardButton} cardButton
+ * @param {Boolean} enableStoryAuthor
+ * @param {Boolean} enableStoryDate
+ * @param {String} numberColumns
  */
-const gridRow = (feed, cardButton) => (
-  <div
-    className="col col-12 col-md-6 col-lg-4 cards-items-container"
-    key={feed.id}
-  >
-    <Card
-      type="default"
-      eventFormat="inline"
-      eventLocation={feed.location}
-      clickable={!!feed.buttonLink}
-      cardLink={feed.alias}
-      clickHref={feed.buttonLink}
-      title={feed.title}
-      body={`<p class="card-text text-dark">${feed.content}</p>`}
-      image={feed.imageUrl}
-      imageAltText={feed.title}
-      linkLabel={feed.eventButtonText}
-      linkUrl={feed.eventButtonUrl || feed.buttonLink}
-      buttons={[
-        {
-          ariaLabel: cardButton.text,
-          color: cardButton.color,
-          label: cardButton.text,
-          size: cardButton.size,
-          href: feed.buttonLink,
-        },
-      ]}
-      tags={parseInterests(feed?.interests)}
-    />
-  </div>
-);
+const feedBody = (feed, enableStoryAuthor, enableStoryDate) => {
+  if (enableStoryDate) {
+    return enableStoryAuthor && feed.author?.name
+      ? `<p><b>${feed.date} - ${feed.author.name}</b></p><p class="card-text text-dark">${feed.excerpt}</p>`
+      : `<p><b>${feed.date}</b></p><p class="card-text text-dark">${feed.excerpt}</p>`;
+  }
+
+  return `<p class="card-text text-dark">${feed.excerpt}</p>`;
+};
+const gridRow = (
+  feed,
+  enableCardTags,
+  enableStoryAuthor,
+  enableStoryDate,
+  numberColumns
+) => {
+  const cardClasses = classNames(
+    "col",
+    "col-12",
+    "col-md-6",
+    "cards-items-container",
+    {
+      "col-lg-6": numberColumns === "2",
+      "col-lg-4": numberColumns === "3",
+    }
+  );
+  return (
+    <div className={cardClasses} key={feed.id}>
+      <Card
+        type="default" //story?
+        eventFormat="inline"
+        eventLocation={feed.location}
+        clickable={false}
+        cardLink={false}
+        clickHref={false}
+        title={feed.title}
+        // body={`<p class="card-text text-dark">${feed.content}</p>`}
+        body={storyBody(feed, enableStoryAuthor, enableStoryDate)}
+        image={feed.featuredImageUrl ? feed.featuredImageUrl : feed.headerImageUrl}
+        imageAltText={feed.title}
+        linkLabel={"Read"}
+        linkUrl={feed.storyLink}
+        buttons={[
+          {
+            ariaLabel: cardButton.text,
+            color: cardButton.color,
+            label: cardButton.text,
+            size: cardButton.size,
+            href: feed.buttonLink,
+          },
+        ]}
+        tags={enableCardTags ? parseInterests(feed?.interests) : null}
+      />
+    </div>
+  );
+};
 
 /**
  * @param {import("../../core/types/news-types").TemplateProps} props
  */
 // eslint-disable-next-line react/prop-types
-const GridTemplate = ({ cardButton }) => {
+const GridTemplate = ({
+  enableCardTags,
+  enableStoryAuthor,
+  enableStoryDate,
+  numberColumns,
+}) => {
   const { feeds } = useContext(FeedContext); // Reading the "feeds" object from the context
 
   return (
     <NewsWrapper className="row row-spaced" data-testid="grid-view-container">
       {feeds?.map((feed, index) => (
         // eslint-disable-next-line react/no-array-index-key
-        <React.Fragment key={index}>{gridRow(feed, cardButton)}</React.Fragment>
+        <React.Fragment key={index}>
+          {gridRow(
+            feed,
+            enableCardTags,
+            enableStoryAuthor,
+            enableStoryDate,
+            numberColumns
+          )}
+        </React.Fragment>
       ))}
     </NewsWrapper>
   );
@@ -71,7 +113,13 @@ const GridTemplate = ({ cardButton }) => {
 /**
  * @param {FeedType} props
  */
-const CardGridNews = ({ cardButton, ...props }) => {
+const CardGridNews = ({
+  enableCardTags,
+  enableStoryAuthor,
+  enableStoryDate,
+  numberColumns,
+  ...props
+}) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       trackReactComponent({
@@ -91,6 +139,10 @@ const CardGridNews = ({ cardButton, ...props }) => {
     <BaseFeed {...props}>
       <GridTemplate
         cardButton={{ ...defaultProps.cardButton, ...cardButton }}
+        enableCardTags={enableCardTags}
+        enableStoryAuthor={enableStoryAuthor}
+        enableStoryDate={enableStoryDate}
+        numberColumns={numberColumns}
       />
     </BaseFeed>
   );
