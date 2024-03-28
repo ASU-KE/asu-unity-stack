@@ -1,5 +1,5 @@
 # ASU Unity Design System (UDS) KE Fork
-
+## Do not merge branch into ke-dev. Changes have been made to components-core.
 KE Fork of ASU UDS. Changelog tracks customizations made. See git commit guidelines below to contribute to this repository.
 
 ```
@@ -11,9 +11,20 @@ git merge upstream/dev
 ## Changelog
 
 ### component-news
-Do not merge branch into ke-dev. Changes have been made to components-core.
+#### Do not merge branch into ke-dev. Changes have been made to components-core.
 Must install components-core, component-carousel
 #### 2/26/24
+
+### npm run build
+Warning for packages/component-carousel/node_modules. Missing "." warning: package.json needs exports updated for current directory (.):
+```
+"exports": {
+    "./dist/libCore.es.js": {
+      "default": "./src/index.js"
+    },
+    ".": "./dist/libCore.es.js"
+  }
+```
 
 ### app-rfi
 #### 1/31/24
