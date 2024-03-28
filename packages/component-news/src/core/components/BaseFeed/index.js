@@ -1,4 +1,7 @@
 // @ts-check
+import PropTypes from "prop-types";
+import React from "react";
+
 import {
   FeedBody,
   FeedContainerProvider,
@@ -6,9 +9,10 @@ import {
   DrupalFeedContainerProvider,
   KeNewsContainerProvider,
   MergedNewsContainerProvider,
-} from "../../../../../components-core/src";
-import PropTypes from "prop-types";
-import React from "react";
+}
+from "../../../../../components-core/src/components/FeedAnatomy";
+
+
 
 // import {
 //   feedHeaderShape,
