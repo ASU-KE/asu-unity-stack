@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
 // import PropTypes from 'prop-types';
-import React, { useEffect, useState, createContext } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 // import { feedDrupalDataSourceShape } from '../../../../components-core/src';
+import { FeedContext } from "./FeedContext";
 import { useFetchDrupalFeed } from "../../../../../shared/hooks/use-fetch-drupal-feed";
 import { Loader } from "../Loader";
 
 const Container = styled.section``;
-const FeedContext = createContext(null);
+
 /**
  * This component is the HOC(high order component) used in component-news packages
  * @param {{
@@ -93,4 +94,4 @@ const DrupalFeedContainerProvider = ({
 // 	noResultsText: PropTypes.string,
 // };
 
-export { DrupalFeedContainerProvider, FeedContext };
+export { DrupalFeedContainerProvider };

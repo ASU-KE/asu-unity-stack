@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 // import { feedWpRestDataSourceShape } from '../../../../components-core/src';
 import { FeedContext } from "./FeedContext";
-import { useFetchWpRest } from "../../core/hooks/use-fetch-wp-rest";
+import { useFetchWpRest } from "../../../../../shared/hooks/use-fetch-wp-rest";
 import { Loader } from "../Loader";
 
 const Container = styled.section``;

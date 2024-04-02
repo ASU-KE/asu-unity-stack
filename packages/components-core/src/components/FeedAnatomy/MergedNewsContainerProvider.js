@@ -9,11 +9,12 @@ import styled from "styled-components";
 // 	feedWpRestDataSourceShape,
 // } from '../../../../components-core/src';
 import { FeedContext } from "./FeedContext";
-import { useFetchDrupalFeed } from "../../core/hooks/use-fetch-drupal-feed";
-import { useFetchWpRest } from "../../core/hooks/use-fetch-wp-rest";
+import { useFetchDrupalFeed } from "../../../../../shared/hooks/use-fetch-drupal-feed";
+import { useFetchWpRest } from "../../../../../shared/hooks/use-fetch-wp-rest";
 import { Loader } from "../Loader";
 
 const Container = styled.section``;
+const MergeFeedContext = createContext(null);
 
 /**
  * This component is the HOC(high order component) used in component-news packages
