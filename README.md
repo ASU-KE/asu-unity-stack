@@ -1,9 +1,9 @@
 # ASU Unity Design System (UDS) KE Fork
 
-KE Fork of ASU UDS. Changelog tracks customizations made. See git commit guidelines below to contribute to this repository.
+KE Fork of ASU UDS. Changelog tracks customizations made. View the [git commit guidelines](#git-commit-guidelines) section to contribute to this repository.
 
+### How to get latest:
 ```
-git remote - v //view all remote branches
 git fetch upstream
 git merge upstream/dev
 ```
