@@ -1,3 +1,17 @@
+# [@asu/app-degree-pages-v2.5.5](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v2.5.4...@asu/app-degree-pages-v2.5.5) (2024-07-10)
+
+
+### Bug Fixes
+
+* **app-degree-pages:** udpate at a glance online url ([bdbfb69](https://github.com/asu/asu-unity-stack/commit/bdbfb69c1230109cc5960a93d6538a5b11393399))
+
+# [@asu/app-degree-pages-v2.5.4](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v2.5.3...@asu/app-degree-pages-v2.5.4) (2024-06-26)
+
+
+### Bug Fixes
+
+* **app-degree-pages:** fix accordion closing/open issue ([d260fad](https://github.com/asu/asu-unity-stack/commit/d260fad7426cc06dcb2f5e689f8ed82a32c84d7c))
+
 # [@asu/app-degree-pages-v2.5.3](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v2.5.2...@asu/app-degree-pages-v2.5.3) (2024-05-17)
 
 

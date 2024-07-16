@@ -1,3 +1,52 @@
+# [@asu/unity-bootstrap-theme-v1.9.21](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.9.20...@asu/unity-bootstrap-theme-v1.9.21) (2024-06-26)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix blue text issue on iPhone lg ranking card ([b47e5c2](https://github.com/ASU/asu-unity-stack/commit/b47e5c255fc89d9ad8aae0abcfe8c7f8f68f13d0))
+
+# [@asu/unity-bootstrap-theme-v1.9.20](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.9.19...@asu/unity-bootstrap-theme-v1.9.20) (2024-06-18)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix lg ranking card caret issue ([02d0239](https://github.com/ASU/asu-unity-stack/commit/02d023991c43697b95d6e89b5cace716c4e35c09))
+
+# [@asu/unity-bootstrap-theme-v1.9.19](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.9.18...@asu/unity-bootstrap-theme-v1.9.19) (2024-06-18)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** adjusted Ranking card styles ([2dc14b1](https://github.com/ASU/asu-unity-stack/commit/2dc14b13b18bc39946591b4bfb556d8c0fa0106f))
+* **unity-bootstrap-theme:** fixed Ranking card styles for accessibility ([8b9179e](https://github.com/ASU/asu-unity-stack/commit/8b9179e4a6953aa12a1f3fd4715a130217faf433))
+* **unity-bootstrap-theme:** updated direct link styles ([86ad8da](https://github.com/ASU/asu-unity-stack/commit/86ad8dab59d964b49c9196f313e2af03ba0f1ea7))
+* **unity-bootstrap-theme:** updated ranking card btn focus styles ([3b663de](https://github.com/ASU/asu-unity-stack/commit/3b663de0ad7b5a8797bc5d20ae87ee27ec7b0626))
+* **unity-bootstrap-theme:** updated ranking card styles ([f2d6784](https://github.com/ASU/asu-unity-stack/commit/f2d6784aeb461dccc852faf8848a2c5983c78775))
+* **unity-bootstrap-theme:** updated styles for large ranking card changes ([0eafca0](https://github.com/ASU/asu-unity-stack/commit/0eafca0cf51ee4265145f4b3950aa22ca39e304f))
+* **unity-bootstrap-theme:** updated visibility for items on ranking card ([95d52ba](https://github.com/ASU/asu-unity-stack/commit/95d52ba55a419527a87ce566b40519983cdb2c3b))
+
+# [@asu/unity-bootstrap-theme-v1.9.18](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.9.17...@asu/unity-bootstrap-theme-v1.9.18) (2024-06-10)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** added new styles for nav link ([7324e02](https://github.com/ASU/asu-unity-stack/commit/7324e028e637e03d2bc63fcc0f1f04f9abd9bacc))
+
+# [@asu/unity-bootstrap-theme-v1.9.17](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.9.16...@asu/unity-bootstrap-theme-v1.9.17) (2024-06-10)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** large hero text now hidden on mobile ([665e7ce](https://github.com/ASU/asu-unity-stack/commit/665e7ceaa85d3973064ac07623ae09684be0add9))
+
+# [@asu/unity-bootstrap-theme-v1.9.16](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.9.15...@asu/unity-bootstrap-theme-v1.9.16) (2024-06-10)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** updated close button for alert,Banner,modals ([2313eec](https://github.com/ASU/asu-unity-stack/commit/2313eecb2df5d5c5b3e96cd186cf535e047fea26))
+* **unity-bootstrap-theme:** updated modal and allerts/banners to new mockups ([3228558](https://github.com/ASU/asu-unity-stack/commit/32285581c8b9360e67cd2a44e518a813a770fab5))
+
 # [@asu/unity-bootstrap-theme-v1.9.15](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.9.14...@asu/unity-bootstrap-theme-v1.9.15) (2024-05-17)
 
 

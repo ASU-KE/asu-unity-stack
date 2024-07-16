@@ -14,8 +14,16 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: ' ',
+        component: " ",
       },
+    },
+  },
+  argTypes: {
+    title: {
+      control: {
+        type: 'object',
+      },
+      description: 'Options for highlightColor are gold, white, black, or none',
     },
   },
 };
@@ -46,15 +54,15 @@ HeroSmall.args = {
   },
   title: {
     text: "Heading with a long title 1",
-    highlightColor: "gold",
+    highlightColor: "none",
   },
 };
 HeroSmall.parameters = {
   docs: {
     description: {
-      story: ' '
-    }
-  }
+      story: " ",
+    },
+  },
 };
 
 /**
@@ -77,9 +85,9 @@ HeroLongTitle.args = {
 HeroLongTitle.parameters = {
   docs: {
     description: {
-      story: ' '
-    }
-  }
+      story: " ",
+    },
+  },
 };
 
 /**
@@ -108,9 +116,9 @@ HeroMedium.args = {
 HeroMedium.parameters = {
   docs: {
     description: {
-      story: ' '
-    }
-  }
+      story: " ",
+    },
+  },
 };
 
 /**
@@ -139,7 +147,7 @@ HeroLarge.args = {
 HeroLarge.parameters = {
   docs: {
     description: {
-      story: ' '
-    }
-  }
+      story: " ",
+    },
+  },
 };
