@@ -1,3 +1,17 @@
+# [@asu/app-degree-pages-v2.6.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v2.6.0...@asu/app-degree-pages-v2.6.1) (2024-07-22)
+
+
+### Bug Fixes
+
+* **app-degree-pages:** fixed error in anchor menu detail page ([4bf5020](https://github.com/asu/asu-unity-stack/commit/4bf502090d6ece5654e4f87b6a1429a2115163fc))
+
+# [@asu/app-degree-pages-v2.6.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v2.5.6...@asu/app-degree-pages-v2.6.0) (2024-07-22)
+
+
+### Features
+
+* **app-degree-pages:** add breadcrumbs to listing page ([1aec857](https://github.com/asu/asu-unity-stack/commit/1aec857d016a6664e32202e19bde5f72885609b9))
+
 # [@asu/app-degree-pages-v2.5.6](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v2.5.5...@asu/app-degree-pages-v2.5.6) (2024-07-17)
 
 
