@@ -1,3 +1,31 @@
+# [@asu/unity-bootstrap-theme-v1.11.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.11.0...@asu/unity-bootstrap-theme-v1.11.1) (2024-08-05)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix storybook image ([113039f](https://github.com/ASU/asu-unity-stack/commit/113039f558875094f0fbde25213dc3780173a189))
+
+# [@asu/unity-bootstrap-theme-v1.11.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.10.1...@asu/unity-bootstrap-theme-v1.11.0) (2024-08-01)
+
+
+### Features
+
+* **unity-bootstrap-theme:** changed h4 to h2 and added styles for this change ([d1bd183](https://github.com/ASU/asu-unity-stack/commit/d1bd1830d88c3408a29a56c8caf9718c5df2af21))
+
+# [@asu/unity-bootstrap-theme-v1.10.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.10.0...@asu/unity-bootstrap-theme-v1.10.1) (2024-07-31)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix A11y issue with incorrect Hero Heading structure ([0b4c5e8](https://github.com/ASU/asu-unity-stack/commit/0b4c5e8efb92c7f9082f2e23f2659c6d3753f2d9))
+
+# [@asu/unity-bootstrap-theme-v1.10.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.9.21...@asu/unity-bootstrap-theme-v1.10.0) (2024-07-31)
+
+
+### Features
+
+* **unity-bootstrap-theme:** modified _banner.scss, banners.templates.stories.js for accessibility ([044bab1](https://github.com/ASU/asu-unity-stack/commit/044bab18d2eefd925acf7f7479a4eec1819bdea5))
+
 # [@asu/unity-bootstrap-theme-v1.9.21](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.9.20...@asu/unity-bootstrap-theme-v1.9.21) (2024-06-26)
 
 
