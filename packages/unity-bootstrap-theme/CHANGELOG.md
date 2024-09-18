@@ -1,3 +1,55 @@
+# [@asu/unity-bootstrap-theme-v1.14.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.14.0...@asu/unity-bootstrap-theme-v1.14.1) (2024-09-04)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** update ranking card styles ([7730295](https://github.com/ASU/asu-unity-stack/commit/77302957faefc9dd85385dffc3dc2a05400f555e))
+
+# [@asu/unity-bootstrap-theme-v1.14.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.13.1...@asu/unity-bootstrap-theme-v1.14.0) (2024-09-04)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** added css for long pagination on mobile ([7b99512](https://github.com/ASU/asu-unity-stack/commit/7b9951283d5b2d9bf2999362f2e4f4ca090bd3a8))
+
+
+### Features
+
+* **unity-bootstrap-theme:** add table caption styles ([310739c](https://github.com/ASU/asu-unity-stack/commit/310739c0f973328152d08cc890ad80d5864857e9))
+
+# [@asu/unity-bootstrap-theme-v1.13.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.13.0...@asu/unity-bootstrap-theme-v1.13.1) (2024-08-16)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** removed width from span in commons styles ([c230a6b](https://github.com/ASU/asu-unity-stack/commit/c230a6b89deb8b97db2b19ac9c0d5d29edd6c33b))
+
+# [@asu/unity-bootstrap-theme-v1.13.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.12.0...@asu/unity-bootstrap-theme-v1.13.0) (2024-08-08)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** added margin-bottom=0 on p ([a692f16](https://github.com/ASU/asu-unity-stack/commit/a692f161a1edf544708f47638c26850cc615d4f1))
+
+
+### Features
+
+* **unity-bootstrap-theme:** added css styles for p in donuts ([cc4a536](https://github.com/ASU/asu-unity-stack/commit/cc4a536486291725c67793c751170cffdd204c1e))
+* **unity-bootstrap-theme:** added new styles to the donut chart ([b3d10e7](https://github.com/ASU/asu-unity-stack/commit/b3d10e7b9b38ed6b3f0bd5aff18a9224cd8cd7ee))
+* **unity-bootstrap-theme:** update markup for charts and graphs ([86f7a04](https://github.com/ASU/asu-unity-stack/commit/86f7a041a7870c15c7062dc8fa11aa1f87911368))
+
+# [@asu/unity-bootstrap-theme-v1.12.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.11.1...@asu/unity-bootstrap-theme-v1.12.0) (2024-08-07)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** switch anchor to button on accordions header and added styles ([914e9ee](https://github.com/ASU/asu-unity-stack/commit/914e9ee5d57363284558f6f275fa7c6858a05b3b))
+
+
+### Features
+
+* **unity-bootstrap-theme:** added styles for focus on accordions ([145c4a1](https://github.com/ASU/asu-unity-stack/commit/145c4a10faf783a918973b7d300392d44d22d217))
+
 # [@asu/unity-bootstrap-theme-v1.11.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.11.0...@asu/unity-bootstrap-theme-v1.11.1) (2024-08-05)
 
 
