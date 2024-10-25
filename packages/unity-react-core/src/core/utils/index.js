@@ -130,3 +130,9 @@ export {
   initImageCarousel,
   initImageGalleryCarousel,
 };
+import { SidebarMenu } from "../../components/SidebarMenu/SidebarMenu.tsx";
+
+ // @param {ComponentProps} props
+export const initSidebarMenu = ({ targetSelector, props }) =>
+  RenderReact(SidebarMenu, props, document.querySelector(targetSelector));
+
