@@ -2,15 +2,32 @@ import { render, cleanup, RenderResult } from "@testing-library/react";
 import React from "react";
 import { expect, describe, it, afterEach, beforeEach } from 'vitest';
 
-import { CustomPropType, SidebarMenu, SidebarMenuProps } from "./SidebarMenu";
+import { SidebarMenu, SidebarProps } from "./SidebarMenu";
 
-const defaultProps: SidebarMenuProps = {
+const defaultProps: SidebarProps = {
   title: "Header",
-  customProp: CustomPropType.GR,
-  children: "Content",
+  links: [
+    {
+      href: "#",
+      text: "Link 1",
+    },
+    {
+      text: "Link 2 dropdown",
+      items: [
+        {
+          href: "#",
+          text: "Link 2.1",
+        },
+        {
+          href: "#",
+          text: "Link 2.2",
+        },
+      ],
+    }
+  ]
 };
 
-const renderComponent = (props:SidebarMenuProps) => {
+const renderComponent = (props:SidebarProps) => {
   return render(<SidebarMenu {...props} />);
 };
 

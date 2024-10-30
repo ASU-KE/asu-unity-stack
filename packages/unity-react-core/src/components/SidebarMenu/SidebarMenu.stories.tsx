@@ -8,10 +8,31 @@ export default {
 
 const defaultProps = {
   title: "Header",
-  children: "Content",
+  links: [
+    {
+      href: "#",
+      text: "Link 1",
+      isActive: true,
+    },
+    {
+      text: "Link 2 dropdown",
+      items: [
+        {
+          href: "#",
+          text: "Link 2.1",
+        },
+        {
+          href: "#",
+          text: "Link 2.2",
+        },
+      ],
+    }
+  ]
 }
 
-const sidebarMenuTemplate = args => <SidebarMenu {...args} />;
+const sidebarMenuTemplate = args => <div className="container">
+<SidebarMenu {...args} />
+</div>;
 
 export const Overview = {
   render: sidebarMenuTemplate.bind({}),
@@ -23,7 +44,7 @@ export const Overview = {
 
 export const Story2 = {
   render: args => {
-    return <div>
+    return <div className="container">
         <SidebarMenu {...args} />
       </div>
   },
