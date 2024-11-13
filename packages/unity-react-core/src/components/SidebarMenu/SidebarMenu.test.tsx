@@ -8,18 +8,18 @@ const defaultProps: SidebarProps = {
   title: "Header",
   links: [
     {
-      href: "#",
+      href: "https://example.com",
       text: "Link 1",
     },
     {
       text: "Link 2 dropdown",
       items: [
         {
-          href: "#",
+          href: "https://example.com",
           text: "Link 2.1",
         },
         {
-          href: "#",
+          href: "https://example.com",
           text: "Link 2.2",
         },
       ],

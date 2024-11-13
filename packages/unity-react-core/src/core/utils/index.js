@@ -20,6 +20,7 @@ import { Hero } from "../../components/Hero/Hero";
 import { Image } from "../../components/Image/Image";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { RankingCard } from "../../components/RankingCard/RankingCard";
+import { SidebarMenu } from "../../components/SidebarMenu/SidebarMenu.tsx";
 import { TabbedPanels } from "../../components/TabbedPanels/TabbedPanels";
 import { Testimonial } from "../../components/Testimonial/Testimonial";
 import { Video } from "../../components/Video/Video";
@@ -96,15 +97,27 @@ export const initImage = ({ targetSelector, props }) =>
 
 /**
  * @param {ComponentProps} props
+*/
+export const initPagination = ({ targetSelector, props }) =>
+  RenderReact(Pagination, props, document.querySelector(targetSelector));
+
+/**
+ * @param {ComponentProps} props
  */
 export const initRankingCard = ({ targetSelector, props }) =>
   RenderReact(RankingCard, props, document.querySelector(targetSelector));
 
 /**
  * @param {ComponentProps} props
+ *  */
+export const initSidebarMenu = ({ targetSelector, props }) =>
+  RenderReact(SidebarMenu, props, document.querySelector(targetSelector));
+
+/**
+ * @param {ComponentProps} props
  */
-export const initPagination = ({ targetSelector, props }) =>
-  RenderReact(Pagination, props, document.querySelector(targetSelector));
+export const initTabbedPanels = ({ targetSelector, props }) =>
+  RenderReact(TabbedPanels, props, document.querySelector(targetSelector));
 
 /**
  * @param {ComponentProps} props
@@ -118,11 +131,6 @@ export const initTestimonial = ({ targetSelector, props }) =>
 export const initVideo = ({ targetSelector, props }) =>
   RenderReact(Video, props, document.querySelector(targetSelector));
 
-/**
- * @param {ComponentProps} props
- */
-export const initTabbedPanels = ({ targetSelector, props }) =>
-  RenderReact(TabbedPanels, props, document.querySelector(targetSelector));
 
 export {
   initCardCarousel,
@@ -130,9 +138,3 @@ export {
   initImageCarousel,
   initImageGalleryCarousel,
 };
-import { SidebarMenu } from "../../components/SidebarMenu/SidebarMenu.tsx";
-
- // @param {ComponentProps} props
-export const initSidebarMenu = ({ targetSelector, props }) =>
-  RenderReact(SidebarMenu, props, document.querySelector(targetSelector));
-
