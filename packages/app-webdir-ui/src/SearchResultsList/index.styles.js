@@ -46,6 +46,20 @@ const SearchResultsList = styled.div`
     span {
       font-weight: bold;
     }
+    // These styles are duplicated from the _person-profile.scss file in unity-bootstrap-theme
+    ul.person-contact-info {
+      flex-wrap: wrap;
+      gap: .5rem 1rem;
+      li {
+        margin: 0;
+      }
+      li:nth-child(-n + 2) {
+        white-space: nowrap;
+      }
+    }
+    .person-address span {
+      font-weight: normal;
+    }
   }
   .results-title-small {
     margin-bottom: 32px;

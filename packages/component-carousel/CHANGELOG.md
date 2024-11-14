@@ -1,3 +1,10 @@
+# [@asu/component-carousel-v2.1.1](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.1.0...@asu/component-carousel-v2.1.1) (2024-11-05)
+
+
+### Bug Fixes
+
+* **component-carousel:** added style for pich zoom on carousels ([f6a1b47](https://github.com/asu/asu-unity-stack/commit/f6a1b47340bc1f9eb49965e2f9adf3598df1b8a3))
+
 # [@asu/component-carousel-v2.1.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.0.5...@asu/component-carousel-v2.1.0) (2024-09-05)
 
 

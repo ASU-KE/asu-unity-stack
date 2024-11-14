@@ -56,6 +56,7 @@ resolver.getInstitution())
 # ASU Unity Design System (UDS)
 
 ## Table of Contents
+
 - [ASU Unity Design System (UDS)](#asu-unity-design-system-uds)
   - [Quickstart Guide](#quickstart-guide)
   - [Consuming Unity packages in your project:](#consuming-unity-packages-in-your-project)

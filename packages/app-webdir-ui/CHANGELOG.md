@@ -1,3 +1,18 @@
+# [@asu/app-webdir-ui-v3.6.4](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.3...@asu/app-webdir-ui-v3.6.4) (2024-11-12)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** remove lowercasing of emails ([52e993c](https://github.com/asu/asu-unity-stack/commit/52e993cdc23df1b97cd689c785af55dcfea2dd15))
+
+# [@asu/app-webdir-ui-v3.6.3](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.2...@asu/app-webdir-ui-v3.6.3) (2024-10-30)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** unbold person address in profile card ([20bbfef](https://github.com/asu/asu-unity-stack/commit/20bbfef17440a8f1cd948f3eef2a7039a8b30220))
+* **app-webdir-ui:** update styles for person profile ([295bfa5](https://github.com/asu/asu-unity-stack/commit/295bfa53dd14df80b485f3d1b735dcdadd3237db))
+
 # [@asu/app-webdir-ui-v3.6.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.1...@asu/app-webdir-ui-v3.6.2) (2024-09-20)
 
 

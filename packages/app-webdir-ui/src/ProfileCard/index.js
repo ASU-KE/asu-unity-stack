@@ -87,11 +87,11 @@ const ProfileCard = ({ ...props }) => {
           <ul className="person-contact-info">
             <li>
               <a
-                onClick={() => sendEvent(props.email.toLowerCase())}
+                onClick={() => sendEvent(props.email)}
                 href={`mailto:${props.email.toLowerCase()}`}
                 aria-label="Email user"
               >
-                {props.email.toLowerCase()}
+                {props.email}
               </a>
             </li>
             <li>

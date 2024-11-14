@@ -1,3 +1,10 @@
+# [@asu/component-footer-v2.2.2](https://github.com/asu/asu-unity-stack/compare/@asu/component-footer-v2.2.1...@asu/component-footer-v2.2.2) (2024-11-13)
+
+
+### Bug Fixes
+
+* **component-footer:** update innovation logo ([5202979](https://github.com/asu/asu-unity-stack/commit/5202979587887a2ef089e4c89f892d83120ee056))
+
 # [@asu/component-footer-v2.2.1](https://github.com/asu/asu-unity-stack/compare/@asu/component-footer-v2.2.0...@asu/component-footer-v2.2.1) (2024-06-26)
 
 

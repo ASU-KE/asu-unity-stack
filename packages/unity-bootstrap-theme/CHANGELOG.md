@@ -1,3 +1,33 @@
+# [@asu/unity-bootstrap-theme-v1.15.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.2...@asu/unity-bootstrap-theme-v1.15.3) (2024-11-13)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** rename innovation logo and reduce duplicate ([638d861](https://github.com/ASU/asu-unity-stack/commit/638d8617ea4d00a9412f3509cda1386de0d6807f))
+* **unity-bootstrap-theme:** updated footer ranking logo ([e340bb8](https://github.com/ASU/asu-unity-stack/commit/e340bb886571440aab9bee93507723dc3ca3d9a2))
+
+# [@asu/unity-bootstrap-theme-v1.15.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.1...@asu/unity-bootstrap-theme-v1.15.2) (2024-10-30)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** update web directory profile address and email ([444e16f](https://github.com/ASU/asu-unity-stack/commit/444e16f283522601bf388a9ae5d0ddc58f31afdb))
+* **unity-bootstrap-theme:** update webdir styles ([e9602f0](https://github.com/ASU/asu-unity-stack/commit/e9602f01c9a150d8d8a46cbd9a2a513f351f2af3))
+
+# [@asu/unity-bootstrap-theme-v1.15.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.0...@asu/unity-bootstrap-theme-v1.15.1) (2024-10-16)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** remove period. initial commit ignored benign file change ([641ec24](https://github.com/ASU/asu-unity-stack/commit/641ec24375465e2b288ead8f97447a6110cf910b))
+
+# [@asu/unity-bootstrap-theme-v1.15.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.14.2...@asu/unity-bootstrap-theme-v1.15.0) (2024-10-11)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added blockquote animated block ([d61863f](https://github.com/ASU/asu-unity-stack/commit/d61863f4e3cdcfd1410595b2ec030548098b7959))
+
 # [@asu/unity-bootstrap-theme-v1.14.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.14.1...@asu/unity-bootstrap-theme-v1.14.2) (2024-09-23)
 
 
