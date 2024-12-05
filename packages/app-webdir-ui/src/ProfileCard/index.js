@@ -88,8 +88,8 @@ const ProfileCard = ({ ...props }) => {
             <li>
               <a
                 onClick={() => sendEvent(props.email)}
-                href={`mailto:${props.email.toLowerCase()}`}
-                aria-label={`Mail to :${props.email.toLowerCase()}`}
+                href={`mailto:${props.email}`}
+                aria-label={`Mail to :${props.email}`}
               >
                 {props.email}
               </a>
