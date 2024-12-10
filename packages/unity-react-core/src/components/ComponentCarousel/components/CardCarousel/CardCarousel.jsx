@@ -4,6 +4,7 @@ import React from "react";
 
 import { Card } from "../../../Card/Card";
 import { BaseCarousel } from "../../core/components/BaseCarousel";
+import { useEffect, useState } from "react";
 
 /**
  * @typedef {import('../../core/components/BaseCarousel').CarouselItem} CarouselItem
@@ -79,20 +80,55 @@ const CardCarousel = ({
   imageAutoSize = true,
 }) => {
   const perView = parseInt(`${perViewProp}`, 10);
+  const [currentPerView, setCurrentPerView] = useState(perView);
+
+  const BREAKPOINT_LARGE = 1024;
+  const BREAKPOINT_MEDIUM = 768;
+
+  useEffect(() => {
+    const updatePerView = () => {
+      const screenWidth = window.innerWidth;
+      let perViewValue;
+      switch (perView) {
+        case 3:
+          if (screenWidth > BREAKPOINT_LARGE) {
+            perViewValue = 3;
+          } else if (screenWidth > BREAKPOINT_MEDIUM) {
+            perViewValue = 2;
+          } else {
+            perViewValue = 1;
+          }
+          break;
+        case 2:
+          perViewValue = screenWidth < BREAKPOINT_MEDIUM ? 1 : 2;
+          break;
+        default:
+          perViewValue = 1;
+          break;
+      }
+      setCurrentPerView(perViewValue);
+    };
+
+    updatePerView();
+    window.addEventListener("resize", updatePerView);
+
+    return () => window.removeEventListener("resize", updatePerView);
+  }, [perView]);
+
   const carouselItems = cardItems.map(item =>
     htmlTemplate(item, cardType, cardHorizontal, cardEventFormat)
   );
-  const activateGlideActions = cardItems.length > perView;
+  const activateGlideActions = cardItems.length > currentPerView;
 
   return (
     <BaseCarousel
-      perView={+perView}
+      perView={+currentPerView}
       maxWidth={maxWidth}
       width={width}
       carouselItems={carouselItems}
       cssClass="aligned-carousel"
       imageAutoSize={imageAutoSize}
-      removeSideBackground={cardItems.length <= perView}
+      removeSideBackground={cardItems.length <= currentPerView}
       hasPositionIndicators={activateGlideActions}
       hasNavButtons={activateGlideActions}
       isDraggable={activateGlideActions}

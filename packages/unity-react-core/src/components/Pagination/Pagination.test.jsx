@@ -1,9 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 // @ts-check
 import { render, cleanup, fireEvent, screen } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
 import React from "react";
-import { expect, describe, it, afterEach, test, beforeEach, vi } from "vitest";
+import { expect, describe, it, afterEach, beforeEach, vi } from "vitest";
 
 import { Pagination } from "./Pagination";
 

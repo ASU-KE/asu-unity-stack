@@ -18,7 +18,7 @@ export default defineConfig({
       output: {
         globals: {
           "react": "React",
-          "render": "ReactDOM.render",
+          "react-dom": "ReactDOM",
         },
       },
     },
@@ -64,7 +64,10 @@ export default defineConfig({
               })();`;
             }
             // eslint-disable-next-line no-param-reassign
-            delete bundle[file.fileName];
+            // TODO: Check with Dave.
+            // Why was this here? At least during Storybook build,
+            // it was causing the CSS to be removed from the build.
+            // delete bundle[file.fileName];
           }
         });
       },

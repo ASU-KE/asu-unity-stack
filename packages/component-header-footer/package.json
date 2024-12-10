@@ -1,11 +1,19 @@
 {
   "name": "@asu/component-header-footer",
   "version": "0.0.1",
-  "description": "ASU Global Header",
-  "main": "./dist/asuHeader.cjs.js",
-  "browser": "./dist/asuHeader.umd.js",
-  "module": "./dist/asuHeader.es.js",
+  "description": "ASU Global Header and Footer",
+  "main": "./dist/asuHeaderFooter.cjs.js",
+  "browser": "./dist/asuHeaderFooter.umd.js",
+  "module": "./dist/asuHeaderFooter.es.js",
   "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/asuHeaderFooter.es.js",
+      "require": "./dist/asuHeaderFooter.cjs.js",
+      "types": "./dist/main.d.ts"
+    },
+    "./*": "./*"
+  },
   "author": "UDS Team",
   "license": "MIT",
   "files": [

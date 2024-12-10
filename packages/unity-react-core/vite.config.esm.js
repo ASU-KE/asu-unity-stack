@@ -110,7 +110,11 @@ export default defineConfig({
                 document.head.appendChild(style);
               })();`;
             }
-            delete bundle[file.fileName];
+            // eslint-disable-next-line no-param-reassign
+            // TODO: Check with Dave.
+            // Why was this here? At least during Storybook build,
+            // it was causing the CSS to be removed from the build.
+            // delete bundle[file.fileName];
           }
         }
       }

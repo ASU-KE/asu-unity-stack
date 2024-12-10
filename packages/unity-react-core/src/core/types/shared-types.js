@@ -26,6 +26,7 @@
  * @property {function():void} [onClick]
  * @property {"large"|"small"} [size]
  * @property {string}   [cardTitle]
+ * @property {string}   [className]
  */
 
 /**

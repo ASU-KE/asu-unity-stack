@@ -7,6 +7,7 @@ const toolBar = `
           <div class="uds-quicklinks uds-quicklinks-expanded-md">
             <div id="collapseExample" class="card">
               <nav class="nav" aria-label="Same Page">
+                <a class="nav-link" href="grid-links.html"><span class="fas fa-hand-spock"></span>GridLinks</a>
                 <a class="nav-link" href="sidebar-menu.html"><span class="fas fa-hand-spock"></span>SidebarMenu</a>
                 <a class="nav-link" href="accordion.html"><span class="fas fa-hand-spock"></span>Accordion</a>
                 <a class="nav-link" href="anchorMenu.html"><span class="fas fa-hand-spock"></span>Anchor Menu</a>
@@ -15,9 +16,13 @@ const toolBar = `
                 <a class="nav-link" href="buttonIconOnly.html"><span class="fas fa-hand-spock"></span>Button Icon Only</a>
                 <a class="nav-link" href="buttonTag.html"><span class="fas fa-hand-spock"></span>Button Tag</a>
                 <a class="nav-link" href="card.html"><span class="fas fa-hand-spock"></span>Card</a>
+                <a class="nav-link" href="divider.html"><span class="fas fa-hand-spock"></span>Divider</a>
                 <a class="nav-link" href="hero.html"><span class="fas fa-hand-spock"></span>Hero</a>
+                <a class="nav-link" href="list.html"><span class="fas fa-hand-spock"></span>List</a>
                 <a class="nav-link" href="pagination.html"><span class="fas fa-hand-spock"></span>Pagination</a>
+                <a class="nav-link" href="system-alert.html"><span class="fas fa-hand-spock"></span>System Alert</a>
                 <a class="nav-link" href="testimonial.html"><span class="fas fa-hand-spock"></span>Testimonial</a>
+                <a class="nav-link" href="tooltip.html"><span class="fas fa-hand-spock"></span>Tooltip</a>
                 <a class="nav-link" href="video.html"><span class="fab fa-youtube"></span>Video</a>
               </nav>
             </div>

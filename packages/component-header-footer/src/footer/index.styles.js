@@ -139,7 +139,7 @@ const StyledFooter = styled.footer`
       }
 
       .nav-link {
-        padding: 1rem 0.5rem;
+        padding: 0.75rem 1rem 0.5rem 1rem;
         font-size: 2rem;
         color: var(--color-base-grey-4);
         line-height: 1;
@@ -251,14 +251,17 @@ const StyledFooter = styled.footer`
       }
 
       .accordion-body {
-        max-height: 0px;
+        display: none;
         overflow: hidden;
-        transition: max-height 0.35s ease-out;
+        padding: 0 0 0 1.5rem;
 
+        &.collapsing {
+          display: block;
+          max-height: 0px;
+        }
         &.show {
           display: block;
-          max-height: 800px;
-          transition: max-height 0.4s ease-in-out;
+          max-height: 1000px;
         }
 
         .nav-link {
@@ -268,7 +271,8 @@ const StyledFooter = styled.footer`
           text-decoration: none;
           display: block;
 
-          &:hover {
+          &:hover,
+          &:focus {
             color: var(--color-base-gold);
             text-decoration: underline;
           }

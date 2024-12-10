@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { trackGAEvent } from "../../../../../shared";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
 const gaDefaultObject = {
   name: "onclick",
@@ -27,24 +27,35 @@ export const ButtonIconOnly = ({
   onClick,
   size,
   cardTitle,
+  className,
+  ...rest
 }) => {
-  const handleClick = text => {
-    trackGAEvent({ ...gaDefaultObject, text, section: cardTitle });
+  const handleClick = () => {
     onClick?.();
   };
 
   return (
-    <button
-      type="button"
-      className={`btn btn-circle btn-circle-alt-${color} ${
-        size === "large" && "btn-circle-large"
-      }`}
-      ref={innerRef}
-      onClick={() => handleClick(`${icon?.[1]} icon`)}
-      aria-label="Close"
+    <GaEventWrapper
+      gaData={{
+        ...gaDefaultObject,
+        text: `${icon?.[1]} icon`,
+        section: cardTitle,
+      }}
     >
-      <i className={`${icon?.[0]} fa-${icon?.[1]}`} />
-    </button>
+      <button
+        type="button"
+        className={`btn btn-circle btn-circle-alt-${color} ${
+          size === "large" && "btn-circle-large"
+        } ${className}`}
+        ref={innerRef}
+        aria-label="Close"
+        onClick={handleClick}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...rest}
+      >
+        <i className={`${icon?.[0]} fa-${icon?.[1]}`} />
+      </button>
+    </GaEventWrapper>
   );
 };
 
@@ -78,6 +89,7 @@ ButtonIconOnly.propTypes = {
     Button size
   */
   size: PropTypes.oneOf(["large", "small"]),
+  className: PropTypes.string,
 };
 
 ButtonIconOnly.defaultProps = {

@@ -4,7 +4,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { trackGAEvent } from "../../../../../shared";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
 const gaDefaultObject = {
   name: "onclick",
@@ -53,24 +53,27 @@ export const Button = ({
   }
 
   const handleClick = text => {
-    trackGAEvent({ ...gaDefaultObject, text, section: cardTitle });
     onClick?.();
   };
 
   return (
-    <Tag
-      type={Tag === "button" && onClick ? "button" : undefined}
-      {...props}
-      className={classNames(classes) || btnClasses}
-      href={href}
-      ref={innerRef}
-      onClick={() => handleClick(label)}
-      aria-label={ariaLabel}
-      target={Tag === "a" ? target : null}
+    <GaEventWrapper
+      gaData={{ ...gaDefaultObject, text: label, section: cardTitle }}
     >
-      {icon && <i className={`${icon?.[0]} fa-${icon?.[1]} me-1`} />}
-      {label}
-    </Tag>
+      <Tag
+        type={Tag === "button" && onClick ? "button" : undefined}
+        {...props}
+        className={classNames(classes) || btnClasses}
+        href={href}
+        ref={innerRef}
+        onClick={handleClick}
+        aria-label={ariaLabel}
+        target={Tag === "a" ? target : null}
+      >
+        {icon && <i className={`${icon?.[0]} fa-${icon?.[1]} me-1`} />}
+        {label}
+      </Tag>
+    </GaEventWrapper>
   );
 };
 

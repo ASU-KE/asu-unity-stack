@@ -1,5 +1,6 @@
 import "@asu/unity-bootstrap-theme/src/scss/unity-bootstrap-theme.bundle.scss";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import { globalDecorators } from "./decorators.tsx";
 
 const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -15,11 +16,36 @@ const parameters = {
       },
     ],
   },
+  html: {
+    prettier: {
+      tabWidth: 4,
+      htmlWhitespaceSensitivity: "ignore",
+    },
+    root: "#html-root",
+  },
 };
+
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
-  parameters
+  parameters,
+  decorators: globalDecorators,
+  globalTypes: {
+    framework: {
+      name: 'Framework',
+      description: 'Framework to use',
+      defaultValue: 'bootstrap',
+      toolbar: {
+        title: 'Framework',
+        icon: 'cog',
+        items: [
+          { value: 'react', icon: 'beaker', title: 'React Framework' },
+          { value: 'bootstrap', icon: 'markup', title: 'Bootstrap Framework' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
 };
 
 export default preview;
