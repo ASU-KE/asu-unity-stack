@@ -1,6 +1,6 @@
 import { render, cleanup, RenderResult } from "@testing-library/react";
 import React from "react";
-import { expect, describe, it, afterEach, beforeEach } from 'vitest';
+import { expect, describe, it, afterEach, beforeEach } from "vitest";
 
 import { SidebarMenu, SidebarProps } from "./SidebarMenu";
 

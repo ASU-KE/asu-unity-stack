@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from "react";
 
 interface Link {
   href?: string;
@@ -18,7 +18,7 @@ export interface SidebarProps {
 
 export const SidebarMenu: React.FC<SidebarProps> = ({ title, links }) => {
   return (
-    <div className="col-md-4">
+    <div className="col-xl-3 col-lg-4 col-md-5 col-sm-12">
       <h2>{title}</h2>
       <div
         className="sidebar-toggler"
@@ -26,18 +26,16 @@ export const SidebarMenu: React.FC<SidebarProps> = ({ title, links }) => {
         data-bs-target="#sidebar-left"
         aria-expanded="false"
         aria-controls="sidebar-left"
-        data-ga-name="onclick"
-        data-ga-event="collapse"
-        data-ga-type="click"
-        data-ga-region="main content"
-        data-ga-section={title}
-        data-ga="Select section"
       >
         <p>Select Section</p>
         <span className="fas fa-chevron-up" />
       </div>
 
-      <nav id="sidebar-left" className="sidebar collapse" aria-label="Secondary">
+      <nav
+        id="sidebar-left"
+        className="sidebar collapse"
+        aria-label="Secondary"
+      >
         {links.map((link, index) => {
           if (link.items) {
             // Render dropdown card
@@ -60,7 +58,7 @@ export const SidebarMenu: React.FC<SidebarProps> = ({ title, links }) => {
                     data-ga={link.text}
                   >
                     {link.text}
-                    <span className="fas fa-chevron-down ms-1"></span>
+                    <span className="fas fa-chevron-down ms-1" />
                   </a>
                 </div>
                 <div
@@ -73,7 +71,7 @@ export const SidebarMenu: React.FC<SidebarProps> = ({ title, links }) => {
                     <a
                       key={itemIndex}
                       href={item.href}
-                      className={`nav-link${item.isActive ? ' is-active' : ''}`}
+                      className={`nav-link${item.isActive ? " is-active" : ""}`}
                     >
                       {item.text}
                     </a>
@@ -86,7 +84,7 @@ export const SidebarMenu: React.FC<SidebarProps> = ({ title, links }) => {
             return (
               <div key={index} className="nav-link-container">
                 <a
-                  className={`nav-link${link.isActive ? ' is-active' : ''}`}
+                  className={`nav-link${link.isActive ? " is-active" : ""}`}
                   href={link.href}
                 >
                   {link.text}
