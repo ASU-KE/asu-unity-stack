@@ -1,3 +1,19 @@
+# [@asu/unity-bootstrap-theme-v1.18.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.17.0...@asu/unity-bootstrap-theme-v1.18.0) (2024-12-11)
+
+
+### Features
+
+* **unity-bootstrap-theme:** add grid styles ([1c4b32f](https://github.com/ASU/asu-unity-stack/commit/1c4b32f18b0cc83c3024d2a2097f6e79d581e925))
+* **unity-bootstrap-theme:** add grid view styles ([b092585](https://github.com/ASU/asu-unity-stack/commit/b092585eaedead8c8bb19189e633211ec2bede81))
+
+# [@asu/unity-bootstrap-theme-v1.17.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.16.0...@asu/unity-bootstrap-theme-v1.17.0) (2024-12-09)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added padding to a tags in card-link ([b4721a2](https://github.com/ASU/asu-unity-stack/commit/b4721a25d38c26da9403a4fbc00eb00096264674))
+* **unity-bootstrap-theme:** changed padding to mins to ensure that the minimums are corrects ([afe7cec](https://github.com/ASU/asu-unity-stack/commit/afe7cece6676b27b51257450468644b15e433772))
+
 # [@asu/unity-bootstrap-theme-v1.16.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.4...@asu/unity-bootstrap-theme-v1.16.0) (2024-11-28)
 
 

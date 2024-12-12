@@ -7,14 +7,37 @@
   .cassie-pre-banner {
     flex-direction: column;
     align-items: center;
-    max-width: 1200px;
+    width: 85% !important;
     border: 2px solid #D0D0D0 !important;
+    bottom: 2rem;
+    max-width: 900px;
+  }
+
+  #cassie_pre_banner_text {
+    position: relative;
+  }
+
+  .cassie-pre-banner .close-button {
+    background-color: #FFFFFF !important;
+    color: #191919 !important;
+    font-size: .8rem !important;
+    padding: 0 !important;
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+    border: 1px solid #D0D0D0 !important;
+    position: absolute;
+    top: 1.25rem;
+    right: 0;
+    color: #191919;
   }
 
   .cassie-cookie-module .cassie-bottom {
     margin: 0 auto;
     padding: 1rem 2rem;
     background-color: #E8E8E8;
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 1rem 1rem 0;
+    }
   }
 
   button.cassie-pre-banner--button.cassie-view-all {
@@ -42,8 +65,17 @@
 
   .cassie-pre-banner--button--container {
     justify-content: flex-start !important;
+    padding-left: 30px;
     width: 100% !important;
     gap: 1.5rem;
+  }
+
+  .cassie-pre-banner>.cassie-pre-banner--text  {
+    padding: 1.25rem;
+    margin: 0;
+  }
+  .cassie-pre-banner .cassie-pre-banner--button--container {
+    margin: 0;
   }
 
 
@@ -80,10 +112,6 @@
     border-right: unset;
   }
 
-  .cassie-cookie-modal--top-header {
-    display: none !important;
-  }
-
   .cassie-cookie-modal--footer .cassie-cookie-modal--footer-extra {
     padding-top: 30px;
   }
@@ -117,10 +145,11 @@
     font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
   }
 
-  .cassie-cookie-module,
+  .cassie-cookie-module *,
   .cassie-cookie-module button
   {
     font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif !important;
+    box-sizing: border-box;
   }
 
   .cassie-expand-cookies--container .cassie-cookie-group--heading {
@@ -150,7 +179,7 @@
   }
 
   .cassie-cookie-module>.cassie-cookie-modal--center {
-    height: auto;
+    height: fit-content;
     width: 30%;
     margin: auto;
   }
@@ -233,7 +262,6 @@
   /* Tablets */
   @media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
     .cassie-cookie-module>.cassie-cookie-modal--center {
-      height: -webkit-fill-available;
       width: 50%;
       margin-top: 1%;
       margin-bottom: 1%;
@@ -250,14 +278,13 @@
   /* Phones */
   @media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
     .cassie-cookie-module>.cassie-cookie-modal--center {
-      height: -webkit-fill-available;
       width: 50%;
       margin-top: 1%;
       margin-bottom: 1%;
     }
   }
 
-  @media only screen and (min-width: 320px)and (orientation: portrait) {
+  @media only screen and (min-width: 200px) {
 
     .cassie-cookie-modal .cassie-cookie-modal--footer {
       margin-top: inherit;
@@ -268,21 +295,22 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      width: 100%;
     }
+
+
 
     .cassie-cookie-modal--save-preferences--container .cassie-cookie-modal--save-preferences {
       width: 90%;
     }
 
     .cassie-cookie-modal--group-head-container .cassie-expand-cookies--container {
-      width: 77%;
+      width: 73%;
     }
 
 
     .cassie-cookie-module>.cassie-cookie-modal--center {
-      height: -webkit-fill-available;
-      margin: 5% 5% 5% 5%;
-      width: 80%;
+      width: 90%;
     }
 
   }

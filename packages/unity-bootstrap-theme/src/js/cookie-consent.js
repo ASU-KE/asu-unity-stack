@@ -130,11 +130,25 @@ function addCookieConsentAccessibility() {
       setupEventListeners(element, targetId);
     });
   });
-};
+  document.addEventListener("CassieTemplateInitialized", function () {
+    const preBannerDiv = document.querySelector("#cassie_pre_banner_text");
+    const CloseX = document.createElement("button");
+    const XIcon = document.createElement("i");
+    XIcon.classList.add("fas");
+    XIcon.classList.add("fa-times");
+    CloseX.classList.add("close-button");
+    CloseX.setAttribute("aria-label", "Close cookie consent banner");
+    preBannerDiv.appendChild(CloseX);
+    CloseX.appendChild(XIcon);
+    CloseX.addEventListener("click", () => {
+      CassieWidgetLoader.Widget.hideBanner();
+    });
+  });
+}
 
 function allCookieConsentJS() {
   initializeCookieConsent();
   addCookieConsentAccessibility();
-};
+}
 
 export { allCookieConsentJS };

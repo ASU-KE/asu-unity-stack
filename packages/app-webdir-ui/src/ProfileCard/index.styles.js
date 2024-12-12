@@ -7,6 +7,16 @@ const ProfileCardLayout = styled.div`
     display: block;
     font-weight: bold;
   }
+  .fas {
+    display: none;
+  }
+  &.uds-grid-profile {
+  .fas {
+    display: inline;
+    color: #8C1D40;
+    padding-right: 8px;
+  }
+}
 `;
 
 export { ProfileCardLayout };
