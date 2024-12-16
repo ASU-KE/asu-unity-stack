@@ -63,8 +63,7 @@ form.uds-form {
   textarea:focus,
   select:focus {
     outline: none!important;
-    box-shadow: 0 0 0 1px $uds-color-base-gray-7 !important;
-    border: 1px solid $uds-color-base-gray-7 !important;
+    box-shadow: $uds-color-base-white 0px 0px 0px 2px, $uds-color-base-gray-7 0px 0px 0px 4px !important;
     border-radius: none;
   }
 
