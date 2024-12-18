@@ -51,7 +51,7 @@ export const ButtonColorsComponent = () => (
     </button>
     <hr />
     <form className="uds-form">
-    <input class="btn-maroon btn btn-primary" type="submit" value="Send message"></input>
+      <input className="btn-maroon btn btn-primary" type="submit" value="Send message"></input>
     </form>
     <hr />
   </div>

@@ -63,8 +63,14 @@ form.uds-form {
   textarea:focus,
   select:focus {
     outline: none!important;
-    box-shadow: $uds-color-base-white 0px 0px 0px 2px, $uds-color-base-gray-7 0px 0px 0px 4px !important;
+    box-shadow: 0 0 0 1px $uds-color-base-gray-7 !important;
+    border: 1px solid $uds-color-base-gray-7 !important;
     border-radius: none;
+  }
+
+  input[type="submit"]:focus {
+    box-shadow: $uds-color-base-white 0 0 0 2px, $uds-color-base-gray-7 0px 0px 0px 4px !important;
+    border: 0 !important;
   }
 
   /* Radios and Checkboxes - For more flexible control, this is a departure
