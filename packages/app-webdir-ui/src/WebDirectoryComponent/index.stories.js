@@ -4,17 +4,15 @@ import { WebDirectory } from "./index";
 
 import { FullLayout } from "../../../../shared/components/Layout";
 
-const argTypes = {
-  alphaFilter: {
-    name: "Alphabetical Filtering",
-    control: { type: "boolean" },
-  },
-};
-
 export default {
   title: "Organisms/Web Directory/Templates",
-  argTypes,
-  args: { alphaFilter: false },
+  argTypes: {
+    alphaFilter: {
+      control: "select",
+      options: ["true", "false"],
+    },
+  },
+  args: { alphaFilter: "false" },
   decorators: [story => <FullLayout>{story()}</FullLayout>],
 };
 
@@ -48,7 +46,7 @@ export const webDirectoryExampleDepartments = args => {
         API_URL="https://test-asu-isearch.ws.asu.edu"
         searchApiVersion="/api/v1/"
         filters={filters}
-        display={display}
+        display={{...display, grid: "true"}}
         alphaFilter={args.alphaFilter}
         // appPathFolder="/my/custom/path/to/component/root/example"
       />

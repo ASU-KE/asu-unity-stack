@@ -5,20 +5,17 @@ const WebDirLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "filter sort"
+    "view ."
+    "sort ."
+    "filter filter"
     "results results";
   grid-column-gap: 100px;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "sort sort"
-      "filter filter"
-      "results results";
-  }
-
   .sort {
     grid-area: sort;
+  }
+  .view-toggle {
+    grid-area: view;
   }
   .filter-container {
     grid-area: filter;
@@ -37,6 +34,18 @@ const WebDirLayout = styled.div`
   }
 `;
 
-const FacultyRankLayout = styled.div``;
+const FacultyRankLayout = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  .view-toggle {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+
+  div:has(.uds-tabbed-panels) {
+    width: 100%;
+  }
+`;
 
 export { WebDirLayout, FacultyRankLayout };

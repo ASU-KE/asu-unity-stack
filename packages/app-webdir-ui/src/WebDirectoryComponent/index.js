@@ -10,6 +10,7 @@ import { FilterComponent } from "../helpers/Filter";
 import { engineNames, engines } from "../helpers/search";
 import { SortPicker } from "../SearchPage/components/sort";
 import { ASUSearchResultsList } from "../SearchResultsList";
+import { ViewSelector } from "./GridViewSelector/GridView";
 import { WebDirLayout, FacultyRankLayout } from "./index.styles";
 
 /**
@@ -43,6 +44,9 @@ function WebDirectory({
 }) {
   const [sort, setSort] = useState(defaultSortSetter);
   const [requestFilters, setRequestFilters] = useState(doSearch);
+  const [gridView, setGridView] = useState(
+    display.grid === "true" || display.grid === true
+  );
   const RES_PER_PAGE = 6;
 
   useEffect(() => {
@@ -79,7 +83,6 @@ function WebDirectory({
   function defaultSortSetter() {
     const defaultCMSOptions = {
       last_name: "last_name_asc",
-      webdir_customized: "employee_weight",
       people_order: "people_order",
     };
     if (
@@ -103,7 +106,6 @@ function WebDirectory({
         { value: "default", label: "Choose Sort", disabled: true },
         { value: "last_name_asc", label: "Last Name (ascending)" },
         { value: "last_name_desc", label: "Last Name (descending)" },
-        { value: "employee_weight", label: "Department Defined" },
       ];
     }
     return [
@@ -159,7 +161,7 @@ function WebDirectory({
   if (searchType !== "faculty_rank") {
     return (
       <>
-        <WebDirLayout>
+        <WebDirLayout className={gridView ? "grid-view" : ""}>
           {alphaFilter === "true" && (
             <FilterComponent
               filterLabel="Filter By Last Initial"
@@ -172,6 +174,7 @@ function WebDirectory({
               }
             />
           )}
+          <ViewSelector view={gridView} setView={setGridView} label="View" />
           <div className="sort">
             <SortPicker
               customSortOptions={customSortOptions}
@@ -192,6 +195,7 @@ function WebDirectory({
               display={display}
               appPathFolder={appPathFolder}
               restClientTag="webdir"
+              grid={gridView}
             />
           </div>
         </WebDirLayout>
@@ -199,11 +203,15 @@ function WebDirectory({
     );
   }
   return (
-    <FacultyRankLayout>
+    <FacultyRankLayout className={gridView ? "grid-view" : ""}>
+      <ViewSelector view={gridView} setView={setGridView} label="View" />
       <FacultyRankTabPanels
         {...enginesWithParams[searchTypeEngineMap[searchType]]}
         alphaFilter={alphaFilter}
         filters={requestFilters}
+        grid={gridView}
+        setGridView={setGridView}
+        className="tabbed-panels"
       />
     </FacultyRankLayout>
   );
@@ -222,6 +230,7 @@ WebDirectory.propTypes = {
     doNotDisplayProfiles: PropTypes.string,
     profilesPerPage: PropTypes.string,
     usePager: PropTypes.string,
+    grid: PropTypes.string || PropTypes.bool,
   }),
   filters: PropTypes.shape({
     employee: PropTypes.string,

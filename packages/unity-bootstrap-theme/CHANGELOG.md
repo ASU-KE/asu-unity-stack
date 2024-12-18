@@ -1,3 +1,40 @@
+# [@asu/unity-bootstrap-theme-v1.18.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.0...@asu/unity-bootstrap-theme-v1.18.1) (2024-12-17)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** added display block to card-link ([ae0fba0](https://github.com/ASU/asu-unity-stack/commit/ae0fba0855e29ace0d45ecd1bd4f4aaefe7396a8))
+
+# [@asu/unity-bootstrap-theme-v1.18.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.17.0...@asu/unity-bootstrap-theme-v1.18.0) (2024-12-11)
+
+
+### Features
+
+* **unity-bootstrap-theme:** add grid styles ([1c4b32f](https://github.com/ASU/asu-unity-stack/commit/1c4b32f18b0cc83c3024d2a2097f6e79d581e925))
+* **unity-bootstrap-theme:** add grid view styles ([b092585](https://github.com/ASU/asu-unity-stack/commit/b092585eaedead8c8bb19189e633211ec2bede81))
+
+# [@asu/unity-bootstrap-theme-v1.17.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.16.0...@asu/unity-bootstrap-theme-v1.17.0) (2024-12-09)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added padding to a tags in card-link ([b4721a2](https://github.com/ASU/asu-unity-stack/commit/b4721a25d38c26da9403a4fbc00eb00096264674))
+* **unity-bootstrap-theme:** changed padding to mins to ensure that the minimums are corrects ([afe7cec](https://github.com/ASU/asu-unity-stack/commit/afe7cece6676b27b51257450468644b15e433772))
+
+# [@asu/unity-bootstrap-theme-v1.16.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.4...@asu/unity-bootstrap-theme-v1.16.0) (2024-11-28)
+
+
+### Features
+
+* **unity-bootstrap-theme:** add ranking image css ([a391a3e](https://github.com/ASU/asu-unity-stack/commit/a391a3e727b50963dcd3b3c64ebccc221e463c95))
+
+# [@asu/unity-bootstrap-theme-v1.15.4](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.3...@asu/unity-bootstrap-theme-v1.15.4) (2024-11-20)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix rounded corners on mobile modals ([b53ed79](https://github.com/ASU/asu-unity-stack/commit/b53ed790737e87c01ae31fd1baad88ad1edb030c))
+
 # [@asu/unity-bootstrap-theme-v1.15.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.2...@asu/unity-bootstrap-theme-v1.15.3) (2024-11-13)
 
 

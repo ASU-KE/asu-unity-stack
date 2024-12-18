@@ -58,11 +58,13 @@ resolver.getInstitution())
 ## Table of Contents
 
 - [ASU Unity Design System (UDS)](#asu-unity-design-system-uds)
+  - [Table of Contents](#table-of-contents)
   - [Quickstart Guide](#quickstart-guide)
   - [Consuming Unity packages in your project:](#consuming-unity-packages-in-your-project)
   - [How to use the private package registry:](#how-to-use-the-private-package-registry)
     - [TROUBLESHOOTING ERRORS](#troubleshooting-errors)
   - [Packages in this repository](#packages-in-this-repository)
+  - [Cookie Consent](#cookie-consent)
   - [Deprecated packages](#deprecated-packages)
   - [Package Multi Output Targets](#package-multi-output-targets)
   - [Advanced Details for Unity Developers and Contributors](#advanced-details-for-unity-developers-and-contributors)
@@ -152,6 +154,10 @@ This repository contains multiple packages which are managed and published using
 9. [component-header](./packages/component-header/README.md) - standalone header component that doesn't require the ```unity-bootstrap-theme``` styles
 10. [component-news](./packages/component-news/README.md)
 11. [components-core](./packages/components-core/README.md)
+
+## Cookie Consent
+
+The CSS for the cookie consent banner can be found in [unity-bootstrap-theme](./packages/unity-bootstrap-theme/src/css/cookie-consent.css). The JavaScript for the cookie consent banner can be found in [unity-bootstrap-theme as well in the JS location](./packages/unity-bootstrap-theme/src/js/cookie-consent.js). The Javascript can be placed in a script tag or included in a bundle. The CSS can be included in a bundle or included in a style tag.
 
 ## Deprecated packages
 

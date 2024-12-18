@@ -43,18 +43,24 @@ const SearchResultsList = styled.div`
   }
   .results-found {
     margin-bottom: 32px;
-    span {
+    span:not(.dept) {
       font-weight: bold;
     }
     // These styles are duplicated from the _person-profile.scss file in unity-bootstrap-theme
     ul.person-contact-info {
       flex-wrap: wrap;
-      gap: .5rem 1rem;
+      gap: 0.5rem 1rem;
       li {
         margin: 0;
       }
       li:nth-child(-n + 2) {
         white-space: nowrap;
+      }
+    }
+
+    .uds-grid-profile {
+      ul.person-contact-info {
+        gap: 8px;
       }
     }
     .person-address span {

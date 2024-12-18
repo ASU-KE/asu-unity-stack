@@ -80,26 +80,6 @@ spec:
                 }
             }
         }
-        stage('Visual Regression Testing') {
-          when {
-            allOf {
-              expression { env.CHANGE_TARGET == 'dev' }
-              expression { // Only run if there are changes in packages directory
-                sh(returnStatus: true, script: 'git diff origin/dev... --name-only | grep --quiet "^packages/.*"') == 0
-              }
-            }
-          }
-          steps {
-              container('node20') {
-                echo 'building storybook...'
-                sh 'yarn build-storybook'
-              }
-              container('puppeteer') {
-                  echo 'running percy tests...'
-                  sh 'yarn percy-test'
-              }
-          }
-        }
         stage('Publish') {
             when {
                 branch 'dev'

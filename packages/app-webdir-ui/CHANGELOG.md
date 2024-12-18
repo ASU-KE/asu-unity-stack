@@ -1,3 +1,29 @@
+# [@asu/app-webdir-ui-v4.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.0...@asu/app-webdir-ui-v4.0.1) (2024-12-16)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** updated grid profile styles ([d488ea1](https://github.com/asu/asu-unity-stack/commit/d488ea11ec49392eb67af54e032e683c8f274f25))
+
+# [@asu/app-webdir-ui-v4.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.4...@asu/app-webdir-ui-v4.0.0) (2024-12-11)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** accessibility fixes ([0ca861e](https://github.com/asu/asu-unity-stack/commit/0ca861e3a2c76409eed578a91a8b23791f952381))
+* **app-webdir-ui:** made pr changes ([463df62](https://github.com/asu/asu-unity-stack/commit/463df62e31b8cbfed712707c967df9d0991f7cd0))
+
+
+### Features
+
+* **app-webdir-ui:** add grid view for web directpry ([f9bcf42](https://github.com/asu/asu-unity-stack/commit/f9bcf427092048d220633d6192f50f50f28261e9))
+* **app-webdir-ui:** remove employee weight sorting ([e5e3d40](https://github.com/asu/asu-unity-stack/commit/e5e3d4074aba71314dc9170e0c9a3252d8830fd3))
+
+
+### BREAKING CHANGES
+
+* **app-webdir-ui:** The employee weight sorting functionality has been removed
+
 # [@asu/app-webdir-ui-v3.6.4](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.3...@asu/app-webdir-ui-v3.6.4) (2024-11-12)
 
 

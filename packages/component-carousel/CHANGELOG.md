@@ -1,3 +1,27 @@
+# [@asu/component-carousel-v2.4.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.3.0...@asu/component-carousel-v2.4.0) (2024-12-04)
+
+
+### Features
+
+* **component-carousel:** added margin to carousel dots ([d050ecc](https://github.com/asu/asu-unity-stack/commit/d050eccf618b9e8f8c6b1ca040a9eb4abfd756eb))
+
+# [@asu/component-carousel-v2.3.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.2.0...@asu/component-carousel-v2.3.0) (2024-12-02)
+
+
+### Features
+
+* **component-carousel:** added constants ([7b7db58](https://github.com/asu/asu-unity-stack/commit/7b7db5846e337227c93ee19b8337695d59b5226a))
+* **component-carousel:** added functionality to check screen width for modified perview value ([e057708](https://github.com/asu/asu-unity-stack/commit/e057708f44721e35a0ce25a99b0209049ba78027))
+* **component-carousel:** refactoring ternarie ([4f34f4e](https://github.com/asu/asu-unity-stack/commit/4f34f4ecaba0b88899e80ce089c494d36740e5cc))
+* **component-carousel:** removed case 1 on switch ([ebce702](https://github.com/asu/asu-unity-stack/commit/ebce702c4408d395af1c75d6ae03774c6b23806e))
+
+# [@asu/component-carousel-v2.2.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.1.1...@asu/component-carousel-v2.2.0) (2024-11-21)
+
+
+### Features
+
+* **component-carousel:** added aria-disabled for disabled buttons ([2d5ad7a](https://github.com/asu/asu-unity-stack/commit/2d5ad7a3d00a2e321474ce61a64abcafc4a4fd55))
+
 # [@asu/component-carousel-v2.1.1](https://github.com/asu/asu-unity-stack/compare/@asu/component-carousel-v2.1.0...@asu/component-carousel-v2.1.1) (2024-11-05)
 
 

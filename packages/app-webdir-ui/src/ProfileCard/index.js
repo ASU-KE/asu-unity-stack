@@ -30,12 +30,18 @@ import { profileCardType } from "./models";
  */
 
 const ProfileCard = ({ ...props }) => {
-  let title = props.matchedAffiliationTitle
-    ? `${props.matchedAffiliationTitle}, `
+  const hasSocialsOrWebsite =
+    props.facebookLink ||
+    props.linkedinLink ||
+    props.twitterLink ||
+    props.website;
+  const title = props.matchedAffiliationTitle
+    ? `${props.matchedAffiliationTitle}`
     : "";
-  if (props.matchedAffiliationDept && props.size !== "micro") {
-    title += props.matchedAffiliationDept;
-  }
+  const department =
+    props.matchedAffiliationDept && props.size !== "micro"
+      ? props.matchedAffiliationDept
+      : "";
 
   const hideNonExistantImages = e => {
     e.target.style.display = "none";
@@ -61,7 +67,9 @@ const ProfileCard = ({ ...props }) => {
   };
   return (
     <ProfileCardLayout
-      className={`uds-person-profile ${props.size} ${props.fill ? "fill" : ""}`}
+      className={`uds-person-profile ${props.size} ${
+        props.grid ? "uds-grid-profile" : ""
+      } ${props.fill ? "fill" : ""}`}
     >
       <a href={props.profileURL} className="profile-img-container">
         <div className="profile-img-placeholder">
@@ -75,46 +83,61 @@ const ProfileCard = ({ ...props }) => {
       </a>
       <div className="person">
         {props.profileURL && (
-          <a href={props.profileURL}>
-            <span className="person-name">{props.name}</span>
+          <a className="person-name" href={props.profileURL}>
+            {props.name}
           </a>
         )}
         {!props.profileURL && <h3 className="person-name">{props.name}</h3>}
         <div className="person-profession">
           <h4>{title}</h4>
+          {department && <span className="dept">{department}</span>}
         </div>
         {props.size !== "micro" && (
           <ul className="person-contact-info">
-            <li>
-              <a
-                onClick={() => sendEvent(props.email)}
-                href={`mailto:${props.email.toLowerCase()}`}
-                aria-label="Email user"
-              >
-                {props.email}
-              </a>
-            </li>
-            <li>
-              <a
-                onClick={() => sendEvent(formattedTelephone)}
-                href={`tel:${formattedTelephone}`}
-                aria-label="Call user"
-              >
-                {formattedTelephone}
-              </a>
-            </li>
-            <li>
-              <div aria-label="See user address">
-                <address className="person-address">
-                  <span className="person-street">{props.addressLine1}</span>
-                  <span className="person-city">{props.addressLine2}</span>
-                </address>
-              </div>
-            </li>
+            {props.email && (
+              <li>
+                <span className="fas fa-envelope"/>
+                <a
+                  onClick={() => sendEvent(props.email)}
+                  href={`mailto:${props.email.toLowerCase()}`}
+                  aria-label="Email user"
+                >
+                  {props.email}
+                </a>
+              </li>
+            )}
+            {formattedTelephone && (
+              <li>
+                <span className="fas fa-phone"/>
+                <a
+                  onClick={() => sendEvent(formattedTelephone)}
+                  href={`tel:${formattedTelephone}`}
+                  aria-label="Call user"
+                >
+                  {formattedTelephone}
+                </a>
+              </li>
+            )}
+            {(props.addressLine1 || props.addressLine2) && (
+              <li>
+                <div aria-label="See user address">
+                  <address className="person-address">
+                    {props.addressLine1 && (
+                      <span className="person-street">
+                        {props.addressLine1}
+                      </span>
+                    )}
+                    {props.addressLine2 && (
+                      <span className="person-city">{props.addressLine2}</span>
+                    )}
+                  </address>
+                </div>
+              </li>
+            )}
           </ul>
         )}
-        {["default", "large"].includes(props.size) && (
-          <div>
+        {["default", "large"].includes(props.size) && hasSocialsOrWebsite && (
+          <div className="description-and-social">
             <p className="person-description">
               {props.shortBio?.slice(0, 250)}
             </p>
