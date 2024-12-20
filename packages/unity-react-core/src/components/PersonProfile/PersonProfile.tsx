@@ -68,9 +68,7 @@ const PersonProfile: React.FC<PersonProfileProps> = ({
   return (
     <div className="uds-person-profile">
       <div className="profile-img-container">
-        <div
-          className="profile-img-placeholder"
-        >
+        <div className="profile-img-placeholder">
           <img
             className="profile-img"
             src={imageUrl}
@@ -99,27 +97,18 @@ const PersonProfile: React.FC<PersonProfileProps> = ({
           <li>
             <GaEventWrapper
               {...gaData}
-              gaData={{...gaData, section: name.toLowerCase()}}
-              >
-            <a
-              href={`mailto:${contactInfo.email}`}
-              aria-label="Email user"
+              gaData={{ ...gaData, section: name.toLowerCase() }}
             >
-              {contactInfo.email}
-            </a>
+              <a href={`mailto:${contactInfo.email}`} aria-label="Email user">
+                {contactInfo.email}
+              </a>
             </GaEventWrapper>
           </li>
           <li>
-          <GaEventWrapper
-              {...gaData}
-              gaData={{...gaData, section: name.toLowerCase()}}
-              >
-            <a
-              href={`tel:${contactInfo.phone}`}
-              aria-label="Call user"
-            >
-              {contactInfo.phone}
-            </a>
+            <GaEventWrapper gaData={{ ...gaData, section: name.toLowerCase() }}>
+              <a href={`tel:${contactInfo.phone}`} aria-label="Call user">
+                {contactInfo.phone}
+              </a>
             </GaEventWrapper>
           </li>
           <li>
@@ -139,19 +128,18 @@ const PersonProfile: React.FC<PersonProfileProps> = ({
           <ul className="person-social-medias">
             {socialMedia.map((social, index) => (
               <li key={index}>
-                <a
-                  href={social.url}
-                  aria-label={`Go to user ${social.platform} profile`}
-                  data-ga-event="link"
-                  data-ga-action="click"
-                  data-ga-name="onclick"
-                  data-ga-type="external link"
-                  data-ga-region="main content"
-                  data-ga-section={name.toLowerCase()}
-                  data-ga={`${social.platform} icon`}
+                <GaEventWrapper
+                  gaData={{ ...gaData, section: name.toLowerCase() }}
                 >
-                  <span className={getSocialMediaIcon(social.platform)}></span>
-                </a>
+                  <a
+                    href={social.url}
+                    aria-label={`Go to user ${social.platform} profile`}
+                  >
+                    <span
+                      className={getSocialMediaIcon(social.platform)}
+                    ></span>
+                  </a>
+                </GaEventWrapper>
               </li>
             ))}
           </ul>
