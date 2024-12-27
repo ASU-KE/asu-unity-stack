@@ -21,8 +21,6 @@ const listRow = (feed, cardButton) => (
       eventFormat="inline"
       eventLocation={feed.location}
       clickable={!!feed.buttonLink}
-      cardLink={feed.alias}
-      clickHref={feed.buttonLink}
       title={feed.title}
       body={`<p class="card-text text-dark">${feed.content}</p>`}
       image={feed.imageUrl}
