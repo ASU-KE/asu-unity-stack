@@ -8,7 +8,6 @@ const toolBar = `
             <div id="collapseExample" class="card">
               <nav class="nav" aria-label="Same Page">
                 <a class="nav-link" href="grid-links.html"><span class="fas fa-hand-spock"></span>GridLinks</a>
-                <a class="nav-link" href="sidebar-menu.html"><span class="fas fa-hand-spock"></span>SidebarMenu</a>
                 <a class="nav-link" href="accordion.html"><span class="fas fa-hand-spock"></span>Accordion</a>
                 <a class="nav-link" href="anchorMenu.html"><span class="fas fa-hand-spock"></span>Anchor Menu</a>
                 <a class="nav-link" href="article.html"><span class="fas fa-hand-spock"></span>Article</a>

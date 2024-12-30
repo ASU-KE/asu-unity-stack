@@ -4,7 +4,8 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 
-import { trackGAEvent } from "../../../../../shared";
+import { gaDataType } from "../../core/models/shared-prop-types";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
 const gaDefaultObject = {
   name: "onclick",
@@ -15,7 +16,7 @@ const gaDefaultObject = {
 };
 
 /**
- * @typedef {import('../../core/types/shared-types').TagsProps} ButtonTagProps
+ * @typedef {React.ComponentProps<"button" | "a"> & import('../../core/types/shared-types').TagsProps} ButtonTagProps
  */
 
 /**
@@ -25,6 +26,7 @@ const gaDefaultObject = {
 export const ButtonTag = ({
   label,
   cardTitle,
+  gaData,
   ariaLabel,
   color,
   disabled,
@@ -46,24 +48,28 @@ export const ButtonTag = ({
     Tag = "a";
   }
 
-  const handleClick = text => {
-    trackGAEvent({ ...gaDefaultObject, text, section: cardTitle });
-    onClick?.();
-  };
-
   return (
-    // @ts-ignore
-    <Tag
-      type={Tag === "button" && onClick ? "button" : undefined}
-      {...props}
-      className={btnClasses}
-      href={href}
-      ref={innerRef}
-      onClick={() => handleClick(label)}
-      aria-label={ariaLabel}
+    <GaEventWrapper
+      gaData={{
+        ...gaDefaultObject,
+        section: cardTitle, // @deprecated - remove at some point
+        ...gaData,
+        text: label,
+      }}
     >
-      {label}
-    </Tag>
+      {/* @ts-ignore */}
+      <Tag
+        type={Tag === "button" && onClick ? "button" : undefined}
+        {...props}
+        className={btnClasses}
+        href={href}
+        ref={innerRef}
+        onClick={onClick}
+        aria-label={ariaLabel}
+      >
+        {label}
+      </Tag>
+    </GaEventWrapper>
   );
 };
 
@@ -73,9 +79,14 @@ ButtonTag.propTypes = {
   */
   label: PropTypes.string,
   /**
-   * Card title
+   * @deprecated
+   * Card title, use `gaData.section` instead
    */
   cardTitle: PropTypes.string,
+  /**
+   * Google Analytics event data
+   */
+  gaData: gaDataType,
   /**
     ARIA label for accessibility
   */

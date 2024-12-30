@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { trackGAEvent } from "../../../../../../../../../shared";
+import { GaEventWrapper } from "../../../../../GaEventWrapper/GaEventWrapper";
 import { NextButton } from "./NextButton";
 import { PrevButton } from "./PrevButton";
 
@@ -37,19 +37,13 @@ BaseNavButtonContainer.propTypes = {
  */
 const NavButtons = ({ onClick = () => null, children = null }) => (
   <BaseNavButtonContainer>
-    <PrevButton
-      onClick={() => {
-        onClick();
-        trackGAEvent({ ...defaultGAEvent, text: "left chevron" });
-      }}
-    />
+    <GaEventWrapper gaData={{ ...defaultGAEvent, text: "left chevron" }}>
+      <PrevButton onClick={onClick} />
+    </GaEventWrapper>
     {children}
-    <NextButton
-      onClick={() => {
-        onClick();
-        trackGAEvent({ ...defaultGAEvent, text: "right chevron" });
-      }}
-    />
+    <GaEventWrapper gaData={{ ...defaultGAEvent, text: "right chevron" }}>
+      <NextButton onClick={onClick} />
+    </GaEventWrapper>
   </BaseNavButtonContainer>
 );
 

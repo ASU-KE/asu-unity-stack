@@ -1,10 +1,17 @@
 // @ts-check
+/**
+ *
+ *
+ * TODO: Does not work with Bootstrap Framework
+ * Requires functionality UDS-1664
+ *
+ *
+ */
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Card } from "../../../Card/Card";
 import { BaseCarousel } from "../../core/components/BaseCarousel";
-import { useEffect, useState } from "react";
 
 /**
  * @typedef {import('../../core/components/BaseCarousel').CarouselItem} CarouselItem

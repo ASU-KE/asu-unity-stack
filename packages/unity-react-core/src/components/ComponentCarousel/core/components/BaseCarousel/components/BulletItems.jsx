@@ -3,7 +3,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { trackGAEvent } from "../../../../../../../../../shared";
+import { GaEventWrapper } from "../../../../../GaEventWrapper/GaEventWrapper";
 
 const defaultGAEvent = {
   event: "select",
@@ -51,14 +51,14 @@ const BulletItems = ({ buttonCount }) => {
   const bulletItems = [];
   for (let i = 0; i < buttonCount; i += 1) {
     bulletItems.push(
-      <button
-        type="button"
-        key={`bullet-${i}`}
-        className="glide__bullet"
-        data-glide-dir={`=${i}`}
-        aria-label={`Slide view ${i + 1}`}
-        onClick={() => trackGAEvent({ ...defaultGAEvent })}
-      />
+      <GaEventWrapper gaData={defaultGAEvent} key={`bullet-${i}`}>
+        <button
+          type="button"
+          className="glide__bullet"
+          data-glide-dir={`=${i}`}
+          aria-label={`Slide view ${i + 1}`}
+        />
+      </GaEventWrapper>
     );
   }
   return <BaseBulletItemContainer>{bulletItems}</BaseBulletItemContainer>;

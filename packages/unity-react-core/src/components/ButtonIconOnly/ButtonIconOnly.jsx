@@ -2,6 +2,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import { gaDataType } from "../../core/models/shared-prop-types";
 import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
 const gaDefaultObject = {
@@ -28,6 +29,7 @@ export const ButtonIconOnly = ({
   size,
   cardTitle,
   className,
+  gaData,
   ...rest
 }) => {
   const handleClick = () => {
@@ -38,8 +40,9 @@ export const ButtonIconOnly = ({
     <GaEventWrapper
       gaData={{
         ...gaDefaultObject,
+        section: cardTitle, // @deprecated - remove at some point
+        ...gaData,
         text: `${icon?.[1]} icon`,
-        section: cardTitle,
       }}
     >
       <button
@@ -82,9 +85,14 @@ ButtonIconOnly.propTypes = {
   */
   onClick: PropTypes.func,
   /**
-   * Card title
+   * @deprecated
+   * Card title, use `gaData.section` instead
    */
   cardTitle: PropTypes.string,
+  /**
+   * Google Analytics event data
+   */
+  gaData: gaDataType,
   /**
     Button size
   */

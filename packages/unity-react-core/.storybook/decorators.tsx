@@ -2,7 +2,7 @@
  * This file houses all non-addon related decorators
  */
 import { Decorator } from '@storybook/react';
-import React, { useEffect, forwardRef, useLayoutEffect, StrictMode } from 'react';
+import React, { useLayoutEffect, StrictMode } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 import { identifierPrefix } from '../src/components/GaEventWrapper/useBaseSpecificFramework';
@@ -28,9 +28,10 @@ const StaticStory = ({args, Container, children, rootRef}) => {
     /**
      * Storybook only useId() will prefix the id with this identifier allowing
      * us to identify when the output is meant for bootstrap (non react)
-     */
+    */
     rootRef.current.innerHTML = renderToStaticMarkup(children, { identifierPrefix: identifierPrefix });
 
+    window.initDataLayer()
   }, [args]);
   return <Container rootRef={rootRef}></Container>;
 }

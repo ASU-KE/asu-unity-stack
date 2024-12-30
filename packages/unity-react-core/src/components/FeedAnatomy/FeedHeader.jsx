@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { trackGAEvent } from "../../../../../shared";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 import {
   feedComponentShape,
   feedCtaButtonShape,
@@ -44,23 +44,21 @@ const FeedHeader = ({
         <h2 className={`text-${header.color}`}>{header.text}</h2>
       </div>
       <ButtonColumn className="col-sm-12 col-md-3">
-        <a
-          className={`btn btn-${ctaButton.color}`}
-          href={ctaButton.url}
-          onClick={() =>
-            trackGAEvent({
-              event: "link",
-              action: "click",
-              name: "onclick",
-              type: "internal link",
-              region: "main content",
-              section: header.text,
-              text: ctaButton.text,
-            })
-          }
+        <GaEventWrapper
+          gaData={{
+            event: "link",
+            action: "click",
+            name: "onclick",
+            type: "internal link",
+            region: "main content",
+            section: header.text,
+            text: ctaButton.text,
+          }}
         >
-          {ctaButton.text}
-        </a>
+          <a className={`btn btn-${ctaButton.color}`} href={ctaButton.url}>
+            {ctaButton.text}
+          </a>
+        </GaEventWrapper>
       </ButtonColumn>
     </div>
   );

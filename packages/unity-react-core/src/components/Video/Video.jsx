@@ -3,7 +3,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import React, { useRef } from "react";
 
-import { trackGAEvent } from "../../../../../shared";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
 const defaultGAEvent = {
   name: "onclick",
@@ -34,10 +34,6 @@ const videoTemplate = ({
   /** @type {React.MutableRefObject<HTMLVideoElement | null>} */
   const videoRef = useRef(null);
 
-  const onVideoClick = () => {
-    trackGAEvent({ ...defaultGAEvent, section: title });
-  };
-
   return (
     <div
       className={classNames(`uds-video-container ${className}`, {
@@ -45,22 +41,23 @@ const videoTemplate = ({
       })}
     >
       <div className="uds-video-player">
-        <video
-          ref={videoRef}
-          title={title}
-          onClick={onVideoClick}
-          playsInline
-          controls={controls || true}
-        >
-          <source src={url} />
+        <GaEventWrapper gaData={{ ...defaultGAEvent, section: title }}>
+          <video
+            ref={videoRef}
+            title={title}
+            playsInline
+            controls={controls || true}
+          >
+            <source src={url} />
 
-          <track
-            src={vttUrl}
-            kind="captions"
-            srcLang="en"
-            label="english_captions"
-          />
-        </video>
+            <track
+              src={vttUrl}
+              kind="captions"
+              srcLang="en"
+              label="english_captions"
+            />
+          </video>
+        </GaEventWrapper>
       </div>
       {caption && (
         <figure data-testid="video-caption">

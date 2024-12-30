@@ -1,11 +1,11 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useState, useId } from "react";
 
-import { trackGAEvent, sanitizeDangerousMarkup } from "../../../../../shared";
+import { sanitizeDangerousMarkup } from "../../../../../shared";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
+import { useBaseSpecificFramework } from "../GaEventWrapper/useBaseSpecificFramework";
 import { Image } from "../Image/Image";
-
-// eslint-disable-next-line import/no-cycle
 
 const gaDefaultObject = {
   name: "onclick",
@@ -27,120 +27,87 @@ const AVAILABLE_SIZES = {
 
 const isSmallSize = size => size === AVAILABLE_SIZES.SMALL;
 
-const ImageWrapper = ({ size, image, imageAlt }) => {
-  return isSmallSize(size) ? (
-    <div className="image-wrapper">
-      <Image src={image} alt={imageAlt} fetchPriority="high" />
-    </div>
-  ) : (
-    <Image src={image} alt={imageAlt} fetchPriority="high" />
-  );
-};
-
-ImageWrapper.propTypes = {
-  size: PropTypes.oneOf(["small", "large"]),
-  image: PropTypes.string.isRequired,
-  imageAlt: PropTypes.string.isRequired,
-};
-
-const CitationWrapper = ({ heading, citation }) => {
-  return (
-    <div className="citation">
-      <h4>{heading}</h4>
-      <p>— {citation}</p>
-    </div>
-  );
-};
-
-CitationWrapper.propTypes = {
-  heading: PropTypes.string.isRequired,
-  citation: PropTypes.string.isRequired,
-};
-
 const InfoLayerWrapper = ({ imageSize, body, heading, readMoreLink }) => {
   const [open, setOpen] = useState(false);
-  // TODO: Switch to useId when we upgrade to React 18
-  const uniqueId = `info-layer-${Math.floor(Math.random() * 100000)}`;
-
+  const id = useId();
+  const { isReact, isBootstrap } = useBaseSpecificFramework();
+  const uniqueId = `info-layer-${id}`;
+  const isSmall = isSmallSize(imageSize);
   const handleButtonClick = event => {
     if (event.type === "click" || event.key === "Enter" || event.key === " ") {
       setOpen(!open);
-      trackGAEvent({
-        ...gaDefaultObject,
-        text: "Expand ranking",
-        action: open ? AVAILABLE_GA_ACTIONS.OPEN : AVAILABLE_GA_ACTIONS.CLOSE,
-        section: heading,
-      });
     }
   };
 
   return (
     <div
-      className={classNames("info-layer", { [`active`]: open })}
+      className={classNames("info-layer", { [`show`]: open })}
       data-testid="info-layer"
       id={uniqueId}
     >
       <div className="content">
         <div
           className={classNames("header", {
-            [`closed`]: isSmallSize(imageSize) && !open,
+            [`closed`]: isSmall && !open,
           })}
         >
-          {isSmallSize(imageSize) && (
+          {isSmall && (
             // eslint-disable-next-line react/no-danger
             <p dangerouslySetInnerHTML={sanitizeDangerousMarkup(body)} />
           )}
-          {!isSmallSize(imageSize) && (
-            <>
-              <button
-                onClick={handleButtonClick}
-                className="btn-expand"
-                type="button"
-                aria-expanded={open}
-                aria-controls={uniqueId}
-              >
-                <h4>{heading}</h4>
-                <i className="fas fa-chevron-up" />
-              </button>
-            </>
-          )}
-          {isSmallSize(imageSize) && (
-            <>
-              <button
-                onClick={handleButtonClick}
-                className="btn btn-expand"
-                type="button"
-                aria-expanded={open}
-                aria-controls={uniqueId}
-              >
+          <GaEventWrapper
+            gaData={{
+              ...gaDefaultObject,
+              text: "Expand ranking",
+              // TODO: for bootstrap can we use aria-expanded value of the button to populate the "action" field
+              action: open
+                ? AVAILABLE_GA_ACTIONS.OPEN
+                : AVAILABLE_GA_ACTIONS.CLOSE,
+              section: heading,
+            }}
+          >
+            <button
+              // Framework specific code start
+              data-bs-toggle={isBootstrap && "collapse"}
+              data-bs-target={isBootstrap && `#${uniqueId}`}
+              onClick={isReact && handleButtonClick}
+              // Framework specific code end
+              className={classNames("btn-expand", {
+                btn: isSmall,
+              })}
+              type="button"
+              aria-expanded={open}
+              aria-controls={uniqueId}
+            >
+              {isSmall ? (
                 <span className="visually-hidden">{heading}</span>
-                <i className="fas fa-chevron-up" />
-              </button>
-            </>
-          )}
+              ) : (
+                <h4>{heading}</h4>
+              )}
+              <i className="fas fa-chevron-up" />
+            </button>
+          </GaEventWrapper>
         </div>
-        {!isSmallSize(imageSize) && (
+        {!isSmall && (
           // eslint-disable-next-line react/no-danger
           <p dangerouslySetInnerHTML={sanitizeDangerousMarkup(body)} />
         )}
         {readMoreLink && (
-          <a
-            href={readMoreLink}
-            className="read-more"
-            onClick={() => {
-              trackGAEvent({
-                ...gaDefaultObject,
-                section: heading,
-                text: "read more",
-              });
+          <GaEventWrapper
+            gaData={{
+              ...gaDefaultObject,
+              section: heading,
+              text: "read more",
             }}
           >
-            Read more <span className="visually-hidden">{heading}</span>
-            <span
-              className="fas icon-small fa-arrow-right"
-              aria-hidden="true"
-            />
-          </a>
+            <a href={readMoreLink} className="read-more">
+              Read more <span className="visually-hidden">{heading}</span>
+              <span
+                className="fas icon-small fa-arrow-right"
+                aria-hidden="true"
+              />
+            </a>
+          </GaEventWrapper>
         )}
       </div>
     </div>
@@ -163,17 +130,27 @@ export const RankingCard = ({
   readMoreLink = "",
   citation,
 }) => {
+  const isSmall = isSmallSize(imageSize);
   return (
     <div
       className={classNames("card-ranking", {
-        [`large-image`]: imageSize === "large",
-        [`small-image`]: imageSize === "small",
+        [`large-image`]: !isSmall,
+        [`small-image`]: isSmall,
       })}
     >
-      <ImageWrapper size={imageSize} image={image} imageAlt={imageAlt} />
+      {isSmall ? (
+        <div className="image-wrapper">
+          <Image src={image} alt={imageAlt} fetchPriority="high" />
+        </div>
+      ) : (
+        <Image src={image} alt={imageAlt} fetchPriority="high" />
+      )}
 
-      {isSmallSize(imageSize) && (
-        <CitationWrapper heading={heading} citation={citation} />
+      {isSmall && (
+        <div className="citation">
+          <h4>{heading}</h4>
+          <p>— {citation}</p>
+        </div>
       )}
 
       <InfoLayerWrapper

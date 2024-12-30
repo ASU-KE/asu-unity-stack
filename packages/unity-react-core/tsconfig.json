@@ -9,7 +9,7 @@
     "noEmit": true,
     "jsx": "react",
     "moduleResolution": "bundler",
-    "module": "ES2015",
+    "module": "ES2020",
     "declaration": true,
     "declarationDir": "dist/types",
     "sourceMap": true,
@@ -20,7 +20,9 @@
     "types": ["@vitest/browser/providers/playwright"],
     "paths": {
       "@shared": [ "./../../shared" ],
-      "@shared/*": [ "./../../shared/*" ]
+      "@shared/*": [ "./../../shared/*" ],
+      "@asu/unity-bootstrap-theme": [ "./../unity-bootstrap-theme" ],
+      "@asu/unity-bootstrap-theme/*": [ "./../unity-bootstrap-theme/*" ],
     }
   },
   "include": [

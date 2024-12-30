@@ -1,8 +1,16 @@
 // @ts-nocheck
+/**
+ *
+ *
+ * TODO: Does not work with Bootstrap Framework
+ * Requires functionality UDS-1664
+ *
+ *
+ */
 import PropTypes from "prop-types";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
-import { trackGAEvent } from "../../../../../shared";
+import { useBaseSpecificFramework } from "../GaEventWrapper/useBaseSpecificFramework";
 import { NavControls, TabHeader } from "./components";
 
 function useRefs() {
@@ -52,6 +60,7 @@ const TabbedPanels = ({
   );
   const headerTabs = useRef(null);
   const [headerTabItems, setHeaderTabItems] = useRefs();
+  const { isReact, isBootstrap } = useBaseSpecificFramework();
 
   const updateActiveTabID = tab => {
     onTabChange(tab);
@@ -110,25 +119,21 @@ const TabbedPanels = ({
     isMounted.current = true;
   }, []);
 
-  const trackArrowsEvent = text => {
-    trackGAEvent({
-      event: "select",
-      action: "click",
-      name: "onclick",
-      type: "carousel",
-      region: "main content",
-      text,
-    });
+  const trackArrowsEvent = {
+    event: "select",
+    action: "click",
+    name: "onclick",
+    type: "carousel",
+    region: "main content",
+    text: "",
   };
 
-  const trackLinkEvent = text => {
-    trackGAEvent({
-      event: "link",
-      action: "click",
-      name: "onclick",
-      type: "internal link",
-      text,
-    });
+  const trackLinkEvent = {
+    event: "link",
+    action: "click",
+    name: "onclick",
+    type: "internal link",
+    text: "",
   };
 
   const tabs = childrenArray.map(el => {
@@ -155,7 +160,7 @@ const TabbedPanels = ({
   };
 
   const switchToTab = (e, tabID, title) => {
-    trackLinkEvent(title);
+    // trackLinkEvent(title);
     e.preventDefault();
     updateActiveTabID(tabID);
   };
@@ -184,27 +189,23 @@ const TabbedPanels = ({
                 id={child.props.id}
                 title={child.props.title}
                 selected={activeTabID === child.props.id}
-                selectTab={switchToTab}
+                gaData={trackLinkEvent}
+                selectTab={isReact && switchToTab}
                 key={child.props.id}
-                leftKeyPressed={() => incrementIndex(false)}
-                rightKeyPressed={() => incrementIndex()}
+                leftKeyPressed={isReact && (() => incrementIndex(false))}
+                rightKeyPressed={isReact && (() => incrementIndex())}
                 icon={child.props.icon}
                 index={index}
               />
             );
           })}
         </div>
+
         <NavControls
           hidePrev={scrollLeft <= 0}
           hideNext={scrollLeft >= scrollableWidth}
-          clickPrev={() => {
-            slideNav(-1);
-            trackArrowsEvent("left chevron");
-          }}
-          clickNext={() => {
-            slideNav(1);
-            trackArrowsEvent("right chevron");
-          }}
+          gaData={trackArrowsEvent}
+          slideNav={isReact && slideNav}
         />
       </nav>
       <div

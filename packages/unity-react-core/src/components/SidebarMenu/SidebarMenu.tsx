@@ -1,4 +1,5 @@
 import React from "react";
+import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
 interface Link {
   href?: string;
@@ -9,7 +10,14 @@ interface Link {
     text: string;
     isActive?: boolean;
   }>;
-}
+};
+
+const defaultGaProps = {
+  name: "onclick",
+  event: "collapse",
+  type: "click",
+  region: "main content",
+};
 
 export interface SidebarProps {
   title: string;
@@ -42,24 +50,22 @@ export const SidebarMenu: React.FC<SidebarProps> = ({ title, links }) => {
             return (
               <div key={index} className="card card-foldable">
                 <div className="card-header">
-                  <a
-                    id={`card${index}`}
-                    className="collapsed nav-link"
-                    href={`#cardBody${index}`}
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#cardBody${index}`}
-                    aria-expanded="false"
-                    aria-controls={`cardBody${index}`}
-                    data-ga-name="onclick"
-                    data-ga-event="collapse"
-                    data-ga-type="click"
-                    data-ga-region="main content"
-                    data-ga-section={title}
-                    data-ga={link.text}
+                  <GaEventWrapper
+                    gaData={{ ...defaultGaProps, section: title }}
                   >
-                    {link.text}
-                    <span className="fas fa-chevron-down ms-1" />
-                  </a>
+                    <a
+                      id={`card${index}`}
+                      className="collapsed nav-link"
+                      href={`#cardBody${index}`}
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#cardBody${index}`}
+                      aria-expanded="false"
+                      aria-controls={`cardBody${index}`}
+                    >
+                      {link.text}
+                      <span className="fas fa-chevron-down ms-1" />
+                    </a>
+                  </GaEventWrapper>
                 </div>
                 <div
                   id={`cardBody${index}`}
@@ -67,9 +73,9 @@ export const SidebarMenu: React.FC<SidebarProps> = ({ title, links }) => {
                   aria-labelledby={`card${index}`}
                   data-bs-parent=".sidebar"
                 >
-                  {link.items.map((item, itemIndex) => (
+                  {link.items.map(item => (
                     <a
-                      key={itemIndex}
+                      key={link.href}
                       href={item.href}
                       className={`nav-link${item.isActive ? " is-active" : ""}`}
                     >

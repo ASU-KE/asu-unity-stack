@@ -1,8 +1,21 @@
 .breadcrumb {
-  padding-left: 0;
+  & {
+    padding-left: 0;
+  }
   &.bg-gray-7 {
     li.active {
       color: $uds-color-base-gray-1;
+    }
+  }
+  .breadcrumb-item {
+    & {
+      min-height: $a11y-target-size-minimum;
+      min-width: $a11y-target-size-minimum;
+    }
+    a {
+      min-height: $a11y-target-size-minimum;
+      min-width: $a11y-target-size-minimum;
+      display: flex;
     }
   }
 }

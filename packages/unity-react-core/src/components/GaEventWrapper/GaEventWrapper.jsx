@@ -2,13 +2,13 @@
  * GaEventType represents the structure of Google Analytics event data.
  *
  * @typedef {Object} GaEventType
- * @property {string} text - The text associated with the event.
- * @property {string} name - The name of the event.
- * @property {string} event - The event type.
- * @property {string} action - The action taken.
- * @property {string} type - The type of event.
- * @property {string} region - The region where the event occurred.
- * @property {string} section - The section of the application.
+ * @property {string} [text] - The text associated with the event.
+ * @property {string} [name] - The name of the event.
+ * @property {string} [event] - The event type.
+ * @property {string} [action] - The action taken.
+ * @property {string} [type] - The type of event.
+ * @property {string} [region] - The region where the event occurred.
+ * @property {string} [section] - The section of the application.
  * @property {string} [component] - The component associated with the event.
  */
 

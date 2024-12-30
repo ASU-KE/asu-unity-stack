@@ -1,4 +1,12 @@
 // @ts-check
+/**
+ *
+ *
+ * TODO: Does not work with Bootstrap Framework
+ * Requires functionality UDS-1664
+ *
+ *
+ */
 import PropTypes from "prop-types";
 import React from "react";
 

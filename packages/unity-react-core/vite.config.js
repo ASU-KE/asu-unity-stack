@@ -76,6 +76,10 @@ export default defineConfig({
   resolve: {
     alias: {
       "@shared": path.resolve(__dirname, "./../../shared"),
+      "@asu/unity-bootstrap-theme": path.resolve(
+        __dirname,
+        "./../unity-bootstrap-theme"
+      ),
     },
   },
 });

@@ -2,6 +2,7 @@ import "@asu/unity-bootstrap-theme/src/scss/unity-bootstrap-theme.bundle.scss";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import { globalDecorators } from "./decorators.tsx";
 
+import "@asu/unity-bootstrap-theme/src/js/data-layer.js";
 const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {

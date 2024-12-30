@@ -6,6 +6,15 @@
 import PropTypes from "prop-types";
 import React, { forwardRef, useRef, useImperativeHandle } from "react";
 
+import { GaEventWrapper } from "../../GaEventWrapper/GaEventWrapper";
+
+/**
+ * @typedef {Object} TabHeaderProps
+ * @property {import("../../GaEventWrapper/GaEventWrapper").GaEventType} gaData
+ * @property {boolean} hidePrev
+ * @property {boolean} hideNext
+ * @property {() => void} slideNav
+ */
 const TabHeader = forwardRef(function TabHeader(props, ref) {
   const {
     id,
@@ -15,6 +24,7 @@ const TabHeader = forwardRef(function TabHeader(props, ref) {
     leftKeyPressed,
     rightKeyPressed,
     icon,
+    gaData,
   } = props;
 
   const inputRef = useRef(null);
@@ -52,24 +62,28 @@ const TabHeader = forwardRef(function TabHeader(props, ref) {
     }
   };
   return (
-    <a
-      ref={inputRef}
-      className={`nav-item nav-link ${selected ? "active" : ""}`}
-      id={id}
-      href={`#nav-${id}`}
-      role="tab"
-      aria-controls={`nav-${id}`}
-      aria-selected={selected}
-      onClick={e => selectTab(e, id, title)}
-      onKeyDown={func}
-      tabIndex={selected ? "" : "-1"}
-    >
-      {title} {icon && <i className={`${icon?.[0]} fa-${icon?.[1]} me-1`} />}
-    </a>
+    <GaEventWrapper gaData={{ ...gaData, text: title }}>
+      <a
+        ref={inputRef}
+        className={`nav-item nav-link ${selected ? "active" : ""}`}
+        id={id}
+        href={`#nav-${id}`}
+        role="tab"
+        aria-controls={`nav-${id}`}
+        aria-selected={selected}
+        onClick={e => selectTab(e, id, title)}
+        onKeyDown={func}
+        tabIndex={selected ? "" : "-1"}
+      >
+        {title} {icon && <i className={`${icon?.[0]} fa-${icon?.[1]} me-1`} />}
+      </a>
+    </GaEventWrapper>
   );
 });
 
 TabHeader.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  gaData: PropTypes.object,
   id: PropTypes.string.isRequired,
   selected: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,

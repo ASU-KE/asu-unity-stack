@@ -45,7 +45,7 @@ describe("RankingCard large layout", () => {
     const buttonChevron = component.getByRole("button");
     const infoLayer = component.getByTestId("info-layer");
     fireEvent.click(buttonChevron);
-    expect(infoLayer).toHaveClass("active");
+    expect(infoLayer).toHaveClass("show");
   });
 });
 
@@ -66,6 +66,6 @@ describe("RankingCard small layout", () => {
     const buttonChevron = component.getByRole("button");
     const infoLayer = component.getByTestId("info-layer");
     fireEvent.click(buttonChevron);
-    expect(infoLayer).toHaveClass("active");
+    expect(infoLayer).toHaveClass("show");
   });
 });

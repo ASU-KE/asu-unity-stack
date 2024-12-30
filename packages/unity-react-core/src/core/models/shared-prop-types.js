@@ -24,4 +24,15 @@ const accordionCardPropTypes = PropTypes.shape({
   }),
 });
 
-export { imagePropType, contentPropType, accordionCardPropTypes };
+const gaDataType = PropTypes.shape({
+  text: PropTypes.string,
+  name: PropTypes.string,
+  event: PropTypes.string,
+  action: PropTypes.string,
+  type: PropTypes.string,
+  region: PropTypes.string,
+  section: PropTypes.string,
+  component: PropTypes.string,
+});
+
+export { imagePropType, contentPropType, accordionCardPropTypes, gaDataType };

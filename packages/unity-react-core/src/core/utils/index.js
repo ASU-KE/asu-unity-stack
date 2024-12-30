@@ -23,7 +23,6 @@ import { Image } from "../../components/Image/Image";
 import { List } from "../../components/List/List.tsx";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { RankingCard } from "../../components/RankingCard/RankingCard";
-import { SidebarMenu } from "../../components/SidebarMenu/SidebarMenu.tsx";
 import { SystemAlert } from "../../components/SystemAlert/SystemAlert.tsx";
 import { TabbedPanels } from "../../components/TabbedPanels/TabbedPanels";
 import { Testimonial } from "../../components/Testimonial/Testimonial";
@@ -117,12 +116,6 @@ export const initPagination = ({ targetSelector, props }) =>
  */
 export const initRankingCard = ({ targetSelector, props }) =>
   RenderReact(RankingCard, props, document.querySelector(targetSelector));
-
-/**
- * @param {ComponentProps} props
- *  */
-export const initSidebarMenu = ({ targetSelector, props }) =>
-  RenderReact(SidebarMenu, props, document.querySelector(targetSelector));
 
 /**
  * @param {ComponentProps} props
