@@ -1,1 +1,0 @@
-export { initSidebarMenu as default } from "../../core/utils";
