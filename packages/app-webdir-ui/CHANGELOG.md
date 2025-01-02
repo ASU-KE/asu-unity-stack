@@ -1,3 +1,10 @@
+# [@asu/app-webdir-ui-v4.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.1...@asu/app-webdir-ui-v4.0.2) (2025-01-02)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** fixed social media links not showing ([c1a3bfd](https://github.com/asu/asu-unity-stack/commit/c1a3bfd25d88768721c7a43890c3f5540aaeb7d6))
+
 # [@asu/app-webdir-ui-v4.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.0...@asu/app-webdir-ui-v4.0.1) (2024-12-16)
 
 
