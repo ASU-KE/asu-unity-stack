@@ -697,8 +697,12 @@ Cards - Table of Contents
   }
   .accordion-header .accordion-icon {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0;
+  }
+
+  .accordion-header button{
+    text-align: left;
   }
 }
 
