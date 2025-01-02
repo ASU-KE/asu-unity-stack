@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.18.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.2...@asu/unity-bootstrap-theme-v1.18.3) (2025-01-02)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** left aligned the heading ([c2d1cc5](https://github.com/ASU/asu-unity-stack/commit/c2d1cc589f051fccc8130a1953acf5302b99c7d7))
+
 # [@asu/unity-bootstrap-theme-v1.18.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.1...@asu/unity-bootstrap-theme-v1.18.2) (2024-12-19)
 
 
