@@ -1,3 +1,15 @@
+# [@asu/app-webdir-ui-v4.1.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.2...@asu/app-webdir-ui-v4.1.0) (2025-01-06)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** changed mailto and phone number aria-label ([962ab0b](https://github.com/asu/asu-unity-stack/commit/962ab0bb47eb7846e3dca968e728370cb77bee97))
+
+
+### Features
+
+* **app-webdir-ui:** removed toLowerCase() on email ([6c53e4e](https://github.com/asu/asu-unity-stack/commit/6c53e4ec4a517d84647e7394797c019797d6e102))
+
 # [@asu/app-webdir-ui-v4.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.1...@asu/app-webdir-ui-v4.0.2) (2025-01-02)
 
 
