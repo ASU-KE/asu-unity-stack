@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.20.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.19.1...@asu/unity-bootstrap-theme-v1.20.0) (2025-01-06)
+
+
+### Features
+
+* **unity-bootstrap-theme:** removed unnecessary display none for input validation on webform ([1133684](https://github.com/ASU/asu-unity-stack/commit/1133684b2a97e2aea935518d46eaf8f75a9f9e49))
+
 # [@asu/unity-bootstrap-theme-v1.19.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.19.0...@asu/unity-bootstrap-theme-v1.19.1) (2025-01-06)
 
 
