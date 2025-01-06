@@ -100,7 +100,7 @@ const ProfileCard = ({ ...props }) => {
                 <a
                   onClick={() => sendEvent(props.email)}
                   href={`mailto:${props.email.toLowerCase()}`}
-                  aria-label="Email user"
+                  aria-label={`Mail to :${props.email}`}
                 >
                   {props.email}
                 </a>
@@ -112,7 +112,7 @@ const ProfileCard = ({ ...props }) => {
                 <a
                   onClick={() => sendEvent(formattedTelephone)}
                   href={`tel:${formattedTelephone}`}
-                  aria-label="Call user"
+                  aria-label={`User phone number: ${formattedTelephone}`}
                 >
                   {formattedTelephone}
                 </a>
