@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.19.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.19.0...@asu/unity-bootstrap-theme-v1.19.1) (2025-01-06)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** pagination hover color fix ([952e974](https://github.com/ASU/asu-unity-stack/commit/952e9741be1453a925272dcee7ce0403974ea2a1))
+
 # [@asu/unity-bootstrap-theme-v1.19.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.3...@asu/unity-bootstrap-theme-v1.19.0) (2025-01-06)
 
 
