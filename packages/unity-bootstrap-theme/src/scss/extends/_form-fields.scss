@@ -237,15 +237,6 @@ form.uds-form {
       color: $uds-color-base-gray-7;
     }
   }
-  &.needs-validation {
-    .invalid-feedback {
-      display: none;
-    }
-
-    .valid-feedback {
-      display: none;
-    }
-  }
 
   /* ERROR/SUCCESS VALIDATION - SERVER-SIDE
     using Bootstrap 4 .is-valid and .is-invalid classes. */
