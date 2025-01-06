@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.19.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.3...@asu/unity-bootstrap-theme-v1.19.0) (2025-01-06)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added custom selector for input type submit ([467009e](https://github.com/ASU/asu-unity-stack/commit/467009e43ee4efb040560c91cee6ec83a41a404c))
+* **unity-bootstrap-theme:** added style and example for input type submit ([2feb907](https://github.com/ASU/asu-unity-stack/commit/2feb907ac4c1367dbda107ad6bbe680c65472058))
+
 # [@asu/unity-bootstrap-theme-v1.18.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.2...@asu/unity-bootstrap-theme-v1.18.3) (2025-01-02)
 
 
