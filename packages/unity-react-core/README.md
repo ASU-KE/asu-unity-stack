@@ -2,7 +2,7 @@
 
 ASU React Core Components.
 
-This component is the react implementation of some of the components of the Bootstrap 4 theme package.
+This component is the react implementation of some of the components of the Bootstrap 5 theme package.
 All of these components are listed [below](#examples---quick-links).
 
 ## Importing Components
@@ -66,11 +66,11 @@ This init component function already contains the correct React initialization c
 ## Architecture details
 
 As this package is intended to be the react core components package, each of these components are built in isolation, thats mean that, each component, was thougth to be used in different scenarios in the same way.
-For each component there is a `.js` file, that contains the code of that component, a `.test.js` file, that has the unit test within that component. For this last file, we use [React testing library](https://testing-library.com/docs/react-testing-library/intro), that is use in combination with [Jest](https://jestjs.io/). This provide us a nice way to test all the components in terms of what that component paints in the DOM and what user sees. There might be another file on some component folder that contains some specific styling for that component(`.styles.js`). As you may noticed, we are using css in js to code the styles. For this, we make use of [styled-components](https://styled-components.com/) that has a great integration and support in the react ecosystem. The last file included, for each component, is the `.stories.js` one, that one, has the configuration for all the stories that are shown in [Storybook](https://storybook.js.org/) page.
+For each component there is a `.js` file, that contains the code of that component, a `.test.js` file, that has the unit test within that component. For this last file, we use [React testing library](https://testing-library.com/docs/react-testing-library/intro), that is use in combination with [Vitest](https://vitest.dev/). This provide us a nice way to test all the components in terms of what that component paints in the DOM and what user sees. There might be another file on some component folder that contains some specific styling for that component(`.styles.js`). As you may noticed, we are using css in js to code the styles. For this, we make use of [styled-components](https://styled-components.com/) that has a great integration and support in the react ecosystem. The last file included, for each component, is the `.stories.js` one, that one, has the configuration for all the stories that are shown in [Storybook](https://storybook.js.org/) page.
 The initialization, for plain Javascript, of each component is the same as all the packages, so it can keep uniqueness between all of them. For this, we use two methods:
 
-- `createElement`: this is provided by React. It creates a new React element. Click to read more about [createElement](https://reactjs.org/docs/react-api.html#createelement) and [react without jsx](https://reactjs.org/docs/react-without-jsx.html).
-- `render`: this is provided by ReactDOM library. It is used to render the react element in the DOM. Click to read more about [render](https://reactjs.org/docs/react-dom.html).
+- `createElement`: this is provided by React. It creates a new React element. Click to read more about [createElement](https://react.dev/reference/react/createElement) and [react without jsx](https://react.dev/reference/react/createElement#creating-an-element-without-jsx).
+- `createRoot`: this is provided by ReactDOM library. It is used to render the react element in the DOM. Click to read more about [createRoot](https://react.dev/reference/react-dom/client/createRoot).
   The way it works is: when the initializer function is called, this creates the element with the props provided and the react component.Then it is rendered on the DOM.
 
 
@@ -165,7 +165,7 @@ yarn test
 <script src="/node_modules/@asu/component-carousel/dist/core.production.js"></script>
 <script>
   // Setup and initialize one card.
-  AsuWebCore.initCard({
+  unityReactCore.initCard({
     targetSelector: "#default-card",
     props: {
       type: "default",
@@ -195,7 +195,7 @@ yarn test
     },
   });
   // Setup and initialize second card.
-  AsuWebCore.initCard({
+  unityReactCore.initCard({
     targetSelector: "#icon-card",
     props: {
       type: "default",
@@ -249,12 +249,3 @@ For example, if you want to use the `npm` package `lite-server` follow these ste
 - open the broweser to the url `http://localhost:3000/examples/card.html`
   (port number may be different)
 
-## Future improvements
-
-All the requirements for this component were covered, so there is no need of any further enhancements at the moment this is being written.
-
-## Tools
-
-
-- [How to convert prop types to definition types](https://github.com/mskelton/ratchet)
-  - [Online tool](https://mskelton.dev/ratchet)
