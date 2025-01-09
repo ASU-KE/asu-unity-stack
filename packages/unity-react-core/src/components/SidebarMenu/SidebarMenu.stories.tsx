@@ -71,15 +71,3 @@ export const Overview = {
     ...defaultProps,
   }
 };
-
-export const Story2 = {
-  render: args => {
-    return <div className="row">
-        <SidebarMenu {...args} />
-      </div>
-  },
-  args: {
-    ...defaultProps,
-    children: <p>paragraph</p>
-  }
-};
