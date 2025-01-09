@@ -21,7 +21,7 @@ const meta: Meta<typeof TextInput & { background?: typeof formBackground }> = {
     disabled: { control: "boolean" },
     required: { control: "boolean" },
     feedback: { control: "radio" },
-    // displaySize: { control: { type: "radio" } },
+    // @ts-expect-error
     background: {
       name: "Form Background",
       control: {
@@ -37,6 +37,7 @@ const meta: Meta<typeof TextInput & { background?: typeof formBackground }> = {
     placeholder: "Input Placeholder",
   },
   decorators: [
+    // @ts-expect-error
     (Story, { args: { background, ...rest } }) => (
       <Form background={background}>
         <Story {...rest} />
