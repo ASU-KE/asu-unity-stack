@@ -20,7 +20,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Default radio"
         />
-        <label className="form-check-label" for="exampleRadios1">
+        <label className="form-check-label" htmlFor="exampleRadios1">
           Default radio
         </label>
       </div>
@@ -38,7 +38,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Second default radio"
         />
-        <label className="form-check-label" for="exampleRadios2">
+        <label className="form-check-label" htmlFor="exampleRadios2">
           Second default radio
         </label>
       </div>
@@ -56,7 +56,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Third default radio"
         />
-        <label className="form-check-label" for="exampleRadios3">
+        <label className="form-check-label" htmlFor="exampleRadios3">
           Third default radio
         </label>
       </div>
@@ -75,7 +75,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Disabled radio"
         />
-        <label className="form-check-label" for="exampleRadios4">
+        <label className="form-check-label" htmlFor="exampleRadios4">
           Disabled radio
         </label>
       </div>
@@ -103,7 +103,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Default radio"
         />
-        <label className="form-check-label" for="invalidRadios1">
+        <label className="form-check-label" htmlFor="invalidRadios1">
           Default radio
         </label>
       </div>
@@ -122,7 +122,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Second default radio"
         />
-        <label className="form-check-label" for="invalidRadios2">
+        <label className="form-check-label" htmlFor="invalidRadios2">
           Second default radio
         </label>
       </div>
@@ -141,7 +141,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Third default radio"
         />
-        <label className="form-check-label" for="invalidRadios3">
+        <label className="form-check-label" htmlFor="invalidRadios3">
           Third default radio
         </label>
       </div>
@@ -161,7 +161,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Disabled radio"
         />
-        <label className="form-check-label" for="invalidRadios4">
+        <label className="form-check-label" htmlFor="invalidRadios4">
           Disabled radio
         </label>
       </div>
@@ -189,7 +189,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Default radio"
         />
-        <label className="form-check-label" for="validRadios1">
+        <label className="form-check-label" htmlFor="validRadios1">
           Default radio
         </label>
       </div>
@@ -208,7 +208,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Second default radio"
         />
-        <label className="form-check-label" for="validRadios2">
+        <label className="form-check-label" htmlFor="validRadios2">
           Second default radio
         </label>
       </div>
@@ -227,7 +227,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Third default radio"
         />
-        <label className="form-check-label" for="validRadios3">
+        <label className="form-check-label" htmlFor="validRadios3">
           Third default radio
         </label>
       </div>
@@ -247,7 +247,7 @@ export const Radios = () => (
           data-ga-input-region="main content"
           data-ga-input-section="Disabled radio"
         />
-        <label className="form-check-label" for="validRadios4">
+        <label className="form-check-label" htmlFor="validRadios4">
           Disabled radio
         </label>
       </div>

@@ -16,7 +16,7 @@ export const Checkboxes = () => (
         data-ga-input-region="main content"
         data-ga-input-section="I like checkboxes"
       />
-      <label className="form-check-label" for="loneCheckbox1">
+      <label className="form-check-label" htmlFor="loneCheckbox1">
         I like checkboxes
       </label>
     </div>
@@ -34,7 +34,7 @@ export const Checkboxes = () => (
         data-ga-input-region="main content"
         data-ga-input-section="Multi-line content Multi-line content Multi-line content..."
       />
-      <label className="form-check-label" for="loneCheckbox2">
+      <label className="form-check-label" htmlFor="loneCheckbox2">
         Multi-line content Multi-line content Multi-line content Multi-line
         content Multi-line content Multi-line content Multi-line content
         Multi-line content Multi-line content Multi-line content Multi-line
@@ -66,7 +66,7 @@ export const Checkboxes = () => (
         data-ga-input-region="main content"
         data-ga-input-section="I accept"
       />
-      <label className="form-check-label" for="validLoneCheckbox">
+      <label className="form-check-label" htmlFor="validLoneCheckbox">
         I accept
       </label>
       <small id="myValidCheckMsg" className="valid-feedback is-valid">
@@ -89,7 +89,7 @@ export const Checkboxes = () => (
         data-ga-input-region="main content"
         data-ga-input-section="I also accept"
       />
-      <label className="form-check-label" for="invalidLoneCheckbox">
+      <label className="form-check-label" htmlFor="invalidLoneCheckbox">
         I also accept
       </label>
       <small id="myInvalidCheckMsg" className="invalid-feedback is-invalid">
@@ -113,7 +113,7 @@ export const Checkboxes = () => (
           data-ga-input-region="main content"
           data-ga-input-section="1"
         />
-        <label className="form-check-label" for="checkbox1">
+        <label className="form-check-label" htmlFor="checkbox1">
           1
         </label>
       </div>
@@ -131,7 +131,7 @@ export const Checkboxes = () => (
           data-ga-input-region="main content"
           data-ga-input-section="2"
         />
-        <label className="form-check-label" for="checkbox2">
+        <label className="form-check-label" htmlFor="checkbox2">
           2
         </label>
       </div>
@@ -149,7 +149,7 @@ export const Checkboxes = () => (
           data-ga-input-region="main content"
           data-ga-input-section="3"
         />
-        <label className="form-check-label" for="checkbox3">
+        <label className="form-check-label" htmlFor="checkbox3">
           3 (disabled)
         </label>
       </div>
@@ -175,7 +175,7 @@ export const Checkboxes = () => (
           data-ga-input-region="main content"
           data-ga-input-section="1"
         />
-        <label className="form-check-label" for="validCheckbox1">
+        <label className="form-check-label" htmlFor="validCheckbox1">
           1
         </label>
       </div>
@@ -194,7 +194,7 @@ export const Checkboxes = () => (
           data-ga-input-region="main content"
           data-ga-input-section="2"
         />
-        <label className="form-check-label" for="validCheckbox2">
+        <label className="form-check-label" htmlFor="validCheckbox2">
           2
         </label>
       </div>
@@ -213,7 +213,7 @@ export const Checkboxes = () => (
           data-ga-input-region="main content"
           data-ga-input-section="3"
         />
-        <label className="form-check-label" for="validCheckbox3">
+        <label className="form-check-label" htmlFor="validCheckbox3">
           3 (disabled)
         </label>
       </div>
@@ -239,7 +239,7 @@ export const Checkboxes = () => (
           data-ga-input-region="main content"
           data-ga-input-section="1"
         />
-        <label className="form-check-label" for="invalidCheckbox1">
+        <label className="form-check-label" htmlFor="invalidCheckbox1">
           1
         </label>
       </div>
@@ -258,7 +258,7 @@ export const Checkboxes = () => (
           data-ga-input-region="main content"
           data-ga-input-section="2"
         />
-        <label className="form-check-label" for="invalidCheckbox2">
+        <label className="form-check-label" htmlFor="invalidCheckbox2">
           2
         </label>
       </div>
@@ -277,7 +277,7 @@ export const Checkboxes = () => (
           data-ga-input-region="main content"
           data-ga-input-section="3"
         />
-        <label className="form-check-label" for="invalidCheckbox3">
+        <label className="form-check-label" htmlFor="invalidCheckbox3">
           3 (disabled)
         </label>
       </div>
