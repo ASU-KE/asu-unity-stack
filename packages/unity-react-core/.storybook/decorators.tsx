@@ -3,9 +3,14 @@
  */
 import { Decorator } from '@storybook/react';
 import React, { useLayoutEffect, StrictMode } from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
 
-import { identifierPrefix } from '../src/components/GaEventWrapper/useBaseSpecificFramework';
+import { getBootstrapHTML } from '../src/components/GaEventWrapper/useBaseSpecificFramework';
+
+declare global {
+  interface Window {
+    initDataLayer: () => void;
+  }
+}
 
 const Full = ({ children, rootRef }) => (
   <div ref={rootRef} id="html-root" className="col uds-full-width">
@@ -29,7 +34,7 @@ const StaticStory = ({args, Container, children, rootRef}) => {
      * Storybook only useId() will prefix the id with this identifier allowing
      * us to identify when the output is meant for bootstrap (non react)
     */
-    rootRef.current.innerHTML = renderToStaticMarkup(children, { identifierPrefix: identifierPrefix });
+    rootRef.current.innerHTML = getBootstrapHTML(children);
 
     window.initDataLayer()
   }, [args]);
