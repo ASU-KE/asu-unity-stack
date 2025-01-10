@@ -1,3 +1,10 @@
+# [@asu/app-webdir-ui-v4.1.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.0...@asu/app-webdir-ui-v4.1.1) (2025-01-10)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** fix grid profile squishing on 50% layout ([ee345ae](https://github.com/asu/asu-unity-stack/commit/ee345ae6ffc1097fab858adacbf7c5908235261a))
+
 # [@asu/app-webdir-ui-v4.1.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.2...@asu/app-webdir-ui-v4.1.0) (2025-01-06)
 
 
