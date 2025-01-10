@@ -92,6 +92,9 @@ const htmlTemplate = ({ id, imageSource, imageAltText }) => ({
  * @returns { JSX.Element }
  */
 const CustomNavComponent = ({ instanceName, imageItems, hasContent }) => {
+  if (!imageItems || imageItems.length === 0) {
+    return null;
+  }
   const ATTR_INDEX = "data-current-index";
   const [title, setTitle] = useState(imageItems[0].title);
 
@@ -188,7 +191,7 @@ CustomNavComponent.propTypes = {
 const ImageGalleryCarousel = ({
   width,
   maxWidth,
-  imageItems,
+  imageItems = [],
   hasContent = false,
   imageAutoSize = true,
 }) => {
