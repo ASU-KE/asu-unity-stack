@@ -12,7 +12,6 @@ export interface ImageBasedCardProps {
   buttonText: string;
   buttonHref?: string;
   gaSection?: string;
-  gaButtonText?: string;
 }
 
 const defaultGaProps = {
