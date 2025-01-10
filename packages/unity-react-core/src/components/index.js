@@ -20,4 +20,5 @@ export * from "./Video/Video";
 export * from "./ComponentCarousel/components";
 export * from "./List/List.tsx";
 export * from "./GridLinks/GridLinks.tsx";
+// export * from "./SidebarMenu/SidebarMenu.tsx";
 // export * from "./Modal/Modal.tsx";

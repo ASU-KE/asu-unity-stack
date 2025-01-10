@@ -108,14 +108,20 @@ export const initImage = ({ targetSelector, props }) =>
 /**
  * @param {ComponentProps} props
  */
+export const initPagination = ({ targetSelector, props }) =>
+  RenderReact(Pagination, props, document.querySelector(targetSelector));
+
+/**
+ * @param {ComponentProps} props
+ */
 export const initRankingCard = ({ targetSelector, props }) =>
   RenderReact(RankingCard, props, document.querySelector(targetSelector));
 
 /**
  * @param {ComponentProps} props
  */
-export const initPagination = ({ targetSelector, props }) =>
-  RenderReact(Pagination, props, document.querySelector(targetSelector));
+export const initTabbedPanels = ({ targetSelector, props }) =>
+  RenderReact(TabbedPanels, props, document.querySelector(targetSelector));
 
 /**
  * @param {ComponentProps} props
@@ -128,12 +134,6 @@ export const initTestimonial = ({ targetSelector, props }) =>
  */
 export const initVideo = ({ targetSelector, props }) =>
   RenderReact(Video, props, document.querySelector(targetSelector));
-
-/**
- * @param {ComponentProps} props
- */
-export const initTabbedPanels = ({ targetSelector, props }) =>
-  RenderReact(TabbedPanels, props, document.querySelector(targetSelector));
 
 /**
  * @param {ComponentProps} props
