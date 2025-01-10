@@ -96,7 +96,6 @@ const PersonProfile: React.FC<PersonProfileProps> = ({
         <ul className="person-contact-info">
           <li>
             <GaEventWrapper
-              {...gaData}
               gaData={{ ...gaData, section: name.toLowerCase() }}
             >
               <a href={`mailto:${contactInfo.email}`} aria-label="Email user">
