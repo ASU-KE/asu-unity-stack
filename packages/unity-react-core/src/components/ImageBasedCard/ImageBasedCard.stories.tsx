@@ -37,10 +37,6 @@ const meta: Meta<typeof ImageBasedCard> = {
       control: "text",
       description: "Google Analytics section identifier",
     },
-    gaButtonText: {
-      control: "text",
-      description: "Google Analytics button text",
-    },
   },
 };
 
@@ -53,7 +49,6 @@ const defaultArgs = {
   buttonText: "Learn More",
   buttonHref: "https://example.com",
   gaSection: "Card Section",
-  gaButtonText: "Card Button",
 };
 
 export const Portrait: Story = {
