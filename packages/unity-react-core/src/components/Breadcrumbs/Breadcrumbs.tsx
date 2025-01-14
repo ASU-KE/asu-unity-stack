@@ -17,12 +17,13 @@ export interface BreadcrumbsProps extends ComponentProps<"nav"> {
 export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   linkItems = [],
   backgroundColor = "",
+  ...rest
 }) => {
   if (linkItems.length === 0) {
     return null;
   }
   return (
-    <nav className="uds-content-align" aria-label="breadcrumbs">
+    <nav className="uds-content-align" aria-label="breadcrumbs" {...rest}>
       <ol className={cx("breadcrumb", backgroundColor)}>
         {linkItems.map(item => (
           <li
