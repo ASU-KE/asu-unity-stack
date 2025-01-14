@@ -13,7 +13,7 @@ import { Badge } from '@storybook/components';
 import renderToHTML from './renderToHTML.jsx'
 import React from 'react';
 
-import * as URC from '../src/index.js';
+import * as unityReactCore from '../src/index.js';
 
 export const Container = ({ _, context, ...props }) => {
   // __docgenInfo is present when compiled with build-storybook
@@ -23,16 +23,15 @@ export const Container = ({ _, context, ...props }) => {
     context.attachedCSFFile?.meta?.component?.__docgenInfo?.name ||
     context.attachedCSFFile?.meta?.component?.displayName ||
     context.attachedCSFFile?.meta?.component?.name;
-  const exportedTrue = typeof URC[componentName] !== "undefined";
+  const exportedTrue = typeof unityReactCore[componentName] !== "undefined";
 
   return <DocsContainer context={context} {...props}>
       <Title />
       <div><Badge status="neutral">Bootstrap HTML Example</Badge></div>
-      {exportedTrue &&
-
+      {
+        exportedTrue &&
           <div><Badge status="neutral">Available with Unity React Core</Badge></div>
-
-    }
+      }
       <Subtitle />
       <Description />
 
