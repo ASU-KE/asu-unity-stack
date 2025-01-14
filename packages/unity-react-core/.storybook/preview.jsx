@@ -8,7 +8,6 @@ const sourceCodeRootSelector = "#html-root";
 
 const parameters = {
   controls: { expanded: true },
-  // controls: { expanded: false },
   argTypes: {
     children: {
       control: false,
@@ -38,9 +37,9 @@ const parameters = {
     toc: {
       contentsSelector: '.sbdocs-content',
       headingSelector: 'h1, h2, h3',
-      // ignoreSelector: '#primary',
       title: 'Table of Contents',
       disable: false,
+      // ignoreSelector: '#primary',
       // unsafeTocbotOptions: {
         // orderedList: false,
       // },
