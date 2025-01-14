@@ -18,7 +18,7 @@
       display: flex;
     }
     &.active a {
-      color: var(--bs-breadcrumb-item-active-color) !important;
+      color: var(--bs-breadcrumb-item-active-color);
     }
   }
 }
