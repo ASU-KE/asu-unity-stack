@@ -17,8 +17,12 @@
       min-width: $a11y-target-size-minimum;
       display: flex;
     }
+    &.active a {
+      color: var(--bs-breadcrumb-item-active-color) !important;
+    }
   }
 }
+
 // WS2-1036 and UDS-1129 hide breadcrumb on mobile
 @media screen and (max-width: $uds-breakpoint-sm) {
   .breadcrumb {
