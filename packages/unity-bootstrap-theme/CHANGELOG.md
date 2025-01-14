@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.20.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.0...@asu/unity-bootstrap-theme-v1.20.1) (2025-01-14)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** breadcrumbs final active link changed to black ([debc183](https://github.com/ASU/asu-unity-stack/commit/debc1839b3d0d71da8101290ea492ba1d27ff336))
+* **unity-bootstrap-theme:** requested to remove !important ([9f7e7fa](https://github.com/ASU/asu-unity-stack/commit/9f7e7faf5d96e558805789decfb53a698e341b26))
+
 # [@asu/unity-bootstrap-theme-v1.20.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.19.1...@asu/unity-bootstrap-theme-v1.20.0) (2025-01-06)
 
 
