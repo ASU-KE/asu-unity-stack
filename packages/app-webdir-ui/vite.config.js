@@ -24,7 +24,7 @@ export default defineConfig({
     minify: true,
   },
   esbuild: {
-    legalComments: 'none',
+    legalComments: 'eof',
     keepNames: false,
   },
   define: {
