@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { initializeFixedTable } from "./fixedTable";
 
 const makingUpFakeNumbers = (a, b, c) =>
   Math.round(a * (b + c)).toLocaleString("en-US");
 
-export const Table = ({ columns }) => {
+interface TableProps {
+  columns: number;
+  fixed?: boolean;
+}
+
+const BaseTable = ({ columns }) => {
   let year = 2024;
   const arr = new Array(columns)
     .fill(null)
@@ -90,5 +96,42 @@ export const Table = ({ columns }) => {
         </tr>
       </tbody>
     </table>
+  );
+};
+
+export const Table: React.FC<TableProps> = ({ columns, fixed = false }) => {
+  useEffect(() => {
+    if (fixed) {
+      initializeFixedTable();
+    }
+  }, []);
+
+  if (!fixed) {
+    return (
+      <div className="uds-table" tabIndex={0}>
+        <BaseTable columns={columns} />
+      </div>
+    );
+  }
+  return (
+    <div className="uds-table-fixed-wrapper">
+      <div className="scroll-control previous">
+        <button type="button" className="btn btn-circle btn-circle-alt-gray">
+          <i className="fas fa-chevron-left"></i>
+          <span className="visually-hidden">Previous</span>
+        </button>
+      </div>
+
+      <div className="scroll-control next">
+        <button type="button" className="btn btn-circle btn-circle-alt-gray">
+          <i className="fas fa-chevron-right"></i>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div className="uds-table uds-table-fixed" tabIndex={0}>
+        <BaseTable columns={columns} />
+      </div>
+    </div>
   );
 };
