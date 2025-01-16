@@ -86,11 +86,11 @@ function degreeDataPropResolverService(row = {}) {
         gradRequirement1 = flatRequirement1 ? `<p>${flatRequirement1}</p>` : "";
       } else {
         gradRequirement1 = row["degreeMajorMap"] || "";
-        const gradRequirement2 = row["degreeRequirements"] || "";
-        return `${gradRequirement1}${gradRequirement2}`;
       }
 
       /** @type {string} */
+      const gradRequirement2 = row["degreeRequirements"] || "";
+      return `${gradRequirement1}${gradRequirement2}`;
 
     },
     isOnline: () => row["asuOnlineAcadPlanUrl"], // Returns null if online url is not available
