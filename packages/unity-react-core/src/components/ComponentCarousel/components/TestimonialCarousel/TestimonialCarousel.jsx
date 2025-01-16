@@ -58,7 +58,7 @@ const htmlTemplate = (
 const TestimonialCarousel = ({
   width,
   maxWidth,
-  testimonialItems,
+  testimonialItems = [],
   itemStyle = {},
   hasNavButtons = false,
   hasPositionIndicators = false,

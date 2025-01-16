@@ -2,13 +2,13 @@
  * GaEventType represents the structure of Google Analytics event data.
  *
  * @typedef {Object} GaEventType
- * @property {string} text - The text associated with the event.
- * @property {string} name - The name of the event.
- * @property {string} event - The event type.
- * @property {string} action - The action taken.
- * @property {string} type - The type of event.
- * @property {string} region - The region where the event occurred.
- * @property {string} section - The section of the application.
+ * @property {string} [text] - The text associated with the event.
+ * @property {string} [name] - The name of the event.
+ * @property {string} [event] - The event type.
+ * @property {string} [action] - The action taken.
+ * @property {string} [type] - The type of event.
+ * @property {string} [region] - The region where the event occurred.
+ * @property {string} [section] - The section of the application.
  * @property {string} [component] - The component associated with the event.
  */
 
@@ -16,6 +16,7 @@
  * GaEventWrapper props.
  *
  * @typedef {Object} GaEventWrapper
+ * @property {undefined|""|"input"|"header"|"header-input"} [prefix] - The prefix for the data-ga attributes (data-ga-{prefix}-action).
  * @property {GaEventType} gaData - Google Analytics data.
  * @property {import("react").ReactElement} children - Expects a single child element.
  */
@@ -31,13 +32,12 @@ import React from "react";
 import { trackGAEvent } from "../../../../../shared";
 import { useBaseSpecificFramework } from "./useBaseSpecificFramework";
 
-// TODO: Add environment variable passed in by storybook to remove the possibilty of adding code meant for bootstrap in react
 /**
  *
  * @param GaEventWrapper
  * @returns
  */
-export const GaEventWrapper = ({ gaData, children: child }) => {
+export const GaEventWrapper = ({ gaData, prefix = "", children: child }) => {
   const { isReact } = useBaseSpecificFramework();
   const { onClick: initialOnClick, ...props } = child.props;
 
@@ -53,16 +53,24 @@ export const GaEventWrapper = ({ gaData, children: child }) => {
       },
     });
   }
+
+  let overridePrefix = "";
+  if (["input", "header", "header-input"].includes(prefix)) {
+    overridePrefix = `-${prefix}`;
+  }
+  const gaProps = {
+    [`data-ga${overridePrefix}`]: gaData.text,
+    [`data-ga${overridePrefix}-name`]: gaData.name,
+    [`data-ga${overridePrefix}-event`]: gaData.event,
+    [`data-ga${overridePrefix}-action`]: gaData.action,
+    [`data-ga${overridePrefix}-type`]: gaData.type,
+    [`data-ga${overridePrefix}-region`]: gaData.region,
+    [`data-ga${overridePrefix}-section`]: gaData.section,
+    [`data-ga${overridePrefix}-component`]: gaData.component,
+  };
   return React.cloneElement(child, {
     ...props,
-    "onClick": initialOnClick,
-    "data-ga": gaData.text,
-    "data-ga-name": gaData.name,
-    "data-ga-event": gaData.event,
-    "data-ga-action": gaData.action,
-    "data-ga-type": gaData.type,
-    "data-ga-region": gaData.region,
-    "data-ga-section": gaData.section,
-    "data-ga-component": gaData.component,
+    onClick: initialOnClick,
+    ...gaProps,
   });
 };

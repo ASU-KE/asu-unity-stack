@@ -8,11 +8,10 @@
  *
  */
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Card } from "../../../Card/Card";
 import { BaseCarousel } from "../../core/components/BaseCarousel";
-import { useEffect, useState } from "react";
 
 /**
  * @typedef {import('../../core/components/BaseCarousel').CarouselItem} CarouselItem
@@ -79,7 +78,7 @@ const htmlTemplate = (
  */
 const CardCarousel = ({
   perView: perViewProp = 0,
-  cardItems,
+  cardItems = [],
   cardType = "default",
   cardEventFormat = "stack",
   cardHorizontal = false,

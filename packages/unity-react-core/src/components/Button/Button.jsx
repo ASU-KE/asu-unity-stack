@@ -4,6 +4,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 
+import { gaDataType } from "../../core/models/shared-prop-types";
 import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
 const gaDefaultObject = {
@@ -25,6 +26,7 @@ const gaDefaultObject = {
 export const Button = ({
   label,
   cardTitle,
+  gaData,
   ariaLabel,
   block,
   color,
@@ -52,13 +54,14 @@ export const Button = ({
     Tag = "a";
   }
 
-  const handleClick = text => {
-    onClick?.();
-  };
-
   return (
     <GaEventWrapper
-      gaData={{ ...gaDefaultObject, text: label, section: cardTitle }}
+      gaData={{
+        ...gaDefaultObject,
+        section: cardTitle, // @deprecated - remove at some point
+        ...gaData,
+        text: label,
+      }}
     >
       <Tag
         type={Tag === "button" && onClick ? "button" : undefined}
@@ -66,7 +69,7 @@ export const Button = ({
         className={classNames(classes) || btnClasses}
         href={href}
         ref={innerRef}
-        onClick={handleClick}
+        onClick={onClick}
         aria-label={ariaLabel}
         target={Tag === "a" ? target : null}
       >
@@ -83,9 +86,14 @@ Button.propTypes = {
    */
   label: PropTypes.string,
   /**
-   * Card title
+   * @deprecated
+   * Card title, use `gaData.section` instead
    */
   cardTitle: PropTypes.string,
+  /**
+   * Google Analytics event data
+   */
+  gaData: gaDataType,
   /**
     ARIA label for accessibility
   */
