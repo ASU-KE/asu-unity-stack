@@ -1,3 +1,10 @@
+# [@asu/app-webdir-ui-v4.1.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.1...@asu/app-webdir-ui-v4.1.2) (2025-01-17)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** fix profile squishing ([d8a39aa](https://github.com/asu/asu-unity-stack/commit/d8a39aaa6f0b4d64b0bc742e766d415d943b72fa))
+
 # [@asu/app-webdir-ui-v4.1.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.0...@asu/app-webdir-ui-v4.1.1) (2025-01-10)
 
 
