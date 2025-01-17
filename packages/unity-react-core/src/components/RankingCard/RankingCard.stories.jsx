@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 
-import { imageAny } from "../../../../../shared/assets";
+import img from "../../../../../shared/assets/img/named/img001.jpg";
 import { RankingCard } from "./RankingCard";
 
 export default {
@@ -22,7 +22,7 @@ const Template = args => (
 export const Large = Template.bind({});
 Large.args = {
   imageSize: "large",
-  image: imageAny(),
+  image: img,
   imageAlt: "Image alt text",
   heading: "Ranking title goes here, under the photo",
   body: "ASU has topped U.S. News & World Report’s “Most Innovative Schools list since the inception of the category in 2016. ASU again placed ahead of Stanford and MIT on the list, based on a survey of peers. College presidents, provosts and admissions deans around the country nominated up to 10 colleges or universities that are making the most innovative improvements.",
@@ -32,7 +32,7 @@ Large.args = {
 export const Small = Template.bind({});
 Small.args = {
   imageSize: "small",
-  image: imageAny(),
+  image: img,
   imageAlt: "Image alt text",
   heading: "Ranking title goes here, under the photo",
   body: "ASU has topped U.S. News & World Report’s “Most Innovative Schools list since the inception of the category in 2016. ASU again placed ahead of Stanford and MIT on the list, based on a survey of peers. College presidents, provosts and admissions deans around the country nominated up to 10 colleges or universities that are making the most innovative improvements.",

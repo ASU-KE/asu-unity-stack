@@ -2,6 +2,7 @@
 // @ts-check
 import React from "react";
 
+import img from "../../../../../shared/assets/img/named/img006.jpg";
 import { Testimonial } from "./Testimonial";
 
 export default {
@@ -87,7 +88,7 @@ WithImage.args = {
       name: `Han Solo`,
     },
   },
-  imageSource: "https://source.unsplash.com/WLUHO9A_xik/400x400",
+  imageSource: img,
   imageAltText: "Pretend this is Han Solo",
   itemStyle: {
     containerCssClass: itemColorCombinations.Gold,
@@ -118,7 +119,7 @@ WithCitation.args = {
       description: `ASU Charter`,
     },
   },
-  imageSource: "https://source.unsplash.com/WLUHO9A_xik/400x400",
+  imageSource: img,
   imageAltText: "Pretend this is Michael M. Crow, President of ASU",
   itemStyle: {
     containerCssClass: itemColorCombinations.Gold,
@@ -132,7 +133,7 @@ HightlightGold.args = {
     content:
       "Laughter is timeless, imagination has no age, dreams are forever.",
   },
-  imageSource: "https://source.unsplash.com/WLUHO9A_xik/300x300",
+  imageSource: img,
   imageAltText: "Image of Walt DisneyImage of Walt Disney",
   itemStyle: {
     containerCssClass: itemColorCombinations.Gold,

@@ -2,6 +2,7 @@
 import classNames from "classnames";
 import React from "react";
 
+import img1 from "../../../../../shared/assets/img/named/hero01.jpg";
 import { Card } from "./Card";
 
 export default {
@@ -49,7 +50,7 @@ export const Default = Template.bind({});
 Default.args = {
   type: "default",
   horizontal: false,
-  image: "https://source.unsplash.com/WLUHO9A_xik/300x200",
+  image: img1,
   imageAltText: "An example image",
   title: "Default title",
   body: "<span style='font-weight: bold;'>(Bold!) Body copy goes here.</span> Limit to 5 lines max. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempo.",
@@ -103,7 +104,7 @@ export const Degree = Template.bind({});
 Degree.args = {
   type: "degree",
   horizontal: false,
-  image: "https://source.unsplash.com/WLUHO9A_xik/300x200",
+  image: img1,
   imageAltText: "An example image",
   title: "Default title",
   body: "<span style='font-weight: bold;'>(Bold!) Body copy goes here.</span> Limit to 5 lines max. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempo.",
@@ -115,7 +116,7 @@ Degree.parameters = {
 
     <Card
         body="<span style='font-weight: bold;'>(Bold!) Body copy goes here.</span> Limit to 5 lines max. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempo."
-        image="https://source.unsplash.com/WLUHO9A_xik/300x200"
+        image=img1
         imageAltText="An example image"
         title="Default title"
         type="degree"
@@ -128,7 +129,7 @@ export const Event = Template.bind({});
 Event.args = {
   type: "event",
   horizontal: false,
-  image: "https://source.unsplash.com/WLUHO9A_xik/300x200",
+  image: img1,
   imageAltText: "An example image",
   title:
     "Event title Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore exercitationem ad voluptatem dolore dolores nulla ipsam quo distinctio expedita doloribus nisi similique obcaecati velit illo autem numquam iusto, rem nesciunt repellendus laborum. Rerum quisquam, soluta aspernatur a harum dolor ducimus nulla. Itaque aliquam cum fugiat error esse ipsam rerum consectetur!",
@@ -164,7 +165,7 @@ The event props, \`eventLocation\` and \`eventTime\` are allowed to contain basi
         eventFormat="stack"
         eventLocation="Downtown Phoenix campus"
         eventTime="Wed, November 21st, 2021<br>11:30 a.m - 12:30 p.m."
-        image="https://source.unsplash.com/WLUHO9A_xik/300x200"
+        image=img1
         imageAltText="An example image"
         title="Event title"
         type="event"
@@ -177,7 +178,7 @@ export const Story = Template.bind({});
 Story.args = {
   type: "story",
   horizontal: false,
-  image: "https://source.unsplash.com/WLUHO9A_xik/300x200",
+  image: img1,
   imageAltText: "An example image",
   title: "Story title",
   body: "<span style='font-weight: bold;'>(Bold!) Body copy goes here.</span> Limit to 5 lines max. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempo.",
@@ -212,7 +213,7 @@ Story.parameters = {
             size: 'default'
           }
         ]}
-        image="https://source.unsplash.com/WLUHO9A_xik/300x200"
+        image=img1
         imageAltText="An example image"
         linkLabel="Default link"
         linkUrl="http://google.com"
@@ -244,7 +245,7 @@ export const HorizontalStoryCard = HorizontalTemplate.bind({});
 HorizontalStoryCard.args = {
   type: "story",
   horizontal: true,
-  image: "https://source.unsplash.com/WLUHO9A_xik/300x200",
+  image: img1,
   imageAltText: "An example image",
   title: "Horizontal story",
   body: "<span style='font-weight: bold;'>(Bold!) Body copy goes here.</span> Limit to 5 lines max. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempo.",
@@ -262,7 +263,7 @@ HorizontalStoryCard.parameters = {
     <Card
         body="<span style='font-weight: bold;'>(Bold!) Body copy goes here.</span> Limit to 5 lines max. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempo."
         horizontal
-        image="https://source.unsplash.com/WLUHO9A_xik/300x200"
+        image=img1
         imageAltText="An example image"
         tags={[
           {
@@ -292,7 +293,7 @@ export const AsuNewsStory = Template.bind({});
 AsuNewsStory.args = {
   type: "story",
   horizontal: false,
-  image: "https://source.unsplash.com/WLUHO9A_xik/300x200",
+  image: img1,
   imageAltText: "An example image",
   title: "ASU News Story title",
   body: "<span style='font-weight: bold;'>(Bold!) Body copy goes here.</span> Limit to 5 lines max. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod tempo.",
@@ -318,7 +319,7 @@ AsuNewsStory.parameters = {
             size: 'default'
           }
         ]}
-        image="https://source.unsplash.com/WLUHO9A_xik/300x200"
+        image=img1
         imageAltText="An example image"
         title="ASU News Story title"
         type="story"
