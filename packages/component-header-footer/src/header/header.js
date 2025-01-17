@@ -19,10 +19,10 @@ import { Header, HeaderDiv } from "./header.styles";
  */
 
 const ASUHeader = ({
-  isPartner,
+  isPartner = false,
   navTree: rawNavTree,
   title,
-  baseUrl,
+  baseUrl = "/",
   parentOrg,
   parentOrgUrl,
   partnerLogo,
@@ -34,9 +34,9 @@ const ASUHeader = ({
   logoutLink,
   onLogoutClick,
   buttons,
-  breakpoint,
+  breakpoint = "Xl",
   animateTitle,
-  expandOnHover,
+  expandOnHover = false,
   mobileNavTree: rawMobileNavTree,
   searchUrl,
   site,
@@ -90,7 +90,7 @@ const ASUHeader = ({
     const Wrapper = renderDiv === "true" ? HeaderDiv : Header;
 
     return (
-      <Wrapper id="asuHeader" ref={headerRef}>
+      <Wrapper id="asuHeader" ref={headerRef} breakpoint={breakpoint}>
         <HeaderMain />
       </Wrapper>
     );
@@ -129,12 +129,5 @@ const ASUHeader = ({
 };
 
 ASUHeader.propTypes = { ...HeaderPropTypes };
-
-ASUHeader.defaultProps = {
-  isPartner: false,
-  baseUrl: "/",
-  breakpoint: "Xl",
-  expandOnHover: false,
-};
 
 export { ASUHeader };
