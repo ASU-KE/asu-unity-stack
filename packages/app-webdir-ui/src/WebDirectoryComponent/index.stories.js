@@ -39,7 +39,10 @@ const filters = {
 
 export const webDirectoryExampleDepartments = args => {
   return (
+    <div className="container">
     <div className="uds-content-align">
+      <div className="row">
+        <div className="col-md-6">
       <WebDirectory
         searchType="departments"
         deptIds="1349,1353,32397,1518,1520,3534,1350,334996,1504,2000,2003,159390"
@@ -50,12 +53,16 @@ export const webDirectoryExampleDepartments = args => {
         alphaFilter={args.alphaFilter}
         // appPathFolder="/my/custom/path/to/component/root/example"
       />
+      </div>
+      </div>
+    </div>
     </div>
   );
 };
 
 export const webDirectoryExamplePeople = args => {
   return (
+    <div className="container">
     <div className="uds-content-align">
       <WebDirectory
         searchType="people"
@@ -67,11 +74,13 @@ export const webDirectoryExamplePeople = args => {
         // appPathFolder="/my/custom/path/to/component/root/example"
       />
     </div>
+    </div>
   );
 };
 
 export const webDirectoryExampleDepartmentsAndPeople = args => {
   return (
+    <div className="container">
     <div className="uds-content-align">
       <WebDirectory
         searchType="people_departments"
@@ -82,6 +91,7 @@ export const webDirectoryExampleDepartmentsAndPeople = args => {
         alphaFilter={args.alphaFilter}
         // appPathFolder="/my/custom/path/to/component/root/example"
       />
+    </div>
     </div>
   );
 };
