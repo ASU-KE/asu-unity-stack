@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.20.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.1...@asu/unity-bootstrap-theme-v1.20.2) (2025-01-17)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix profile squishing grid view ([a53688f](https://github.com/ASU/asu-unity-stack/commit/a53688f022c35b7e33fe706360da150fe115b597))
+
 # [@asu/unity-bootstrap-theme-v1.20.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.0...@asu/unity-bootstrap-theme-v1.20.1) (2025-01-14)
 
 
