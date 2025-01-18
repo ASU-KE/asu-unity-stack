@@ -1,18 +1,31 @@
 export const getBaseUrl = () => {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined') return '/';
 
   const host = window.location.host;
   const pathname = window.location.pathname;
+  const isS3Hosting = host.includes('amazonaws.com');
 
-  let basename = "/";
-  if(host.indexOf(".github.io")>-1) {
-    basename = "/asu-unity-stack";
-  } else if(pathname.indexOf("/build/") > -1) {
-    basename = window.location.pathname.replace(/(.*?\/build\/).*/, "$1");
+  let basename = '/';
+
+  // GitHub Pages
+  if (host.includes('.github.io')) {
+    basename = '/asu-unity-stack';
+  }
+  // S3 Static Hosting
+  else if (isS3Hosting) {
+    basename = './';
+  }
+  // Local Build
+  else if (pathname.includes('/build/')) {
+    basename = pathname.replace(/(.*?\/build\/).*/, '$1');
   }
 
   return basename;
-}
+};
 
 export const getRelativePath = (path: string): string => {
-  return `${getBaseUrl()}${path}`.replace(/\/\//g, "/");
-}
+  const baseUrl = getBaseUrl();
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return `${baseUrl}${normalizedPath}`.replace(/\/+/g, '/');
+};
