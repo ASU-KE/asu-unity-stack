@@ -99,8 +99,43 @@ spec:
               withEnv(["AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}", "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"]) {
                 script {
                   echo '## Deploying to S3..'
-                  sh "aws s3 sync ./build/ s3://aws-config-asu-uto-webdev-us-west-2/pr-${env.CHANGE_ID}/"
-                }
+                  sh "aws s3 sync ./build/ s3://aws-config-asu-uto-webdev-us-west-2/pr-${env.CHANGE_ID}/ --delete"
+                  // comment on the github pr the link to the deployed storybook but only if there is not alreafy a comment
+                  def prNumber = env.CHANGE_ID
+                  def prComments = httpRequest(
+                    url: "https://api.github.com/repos/ASU/asu-unity-stack/issues/${prNumber}/comments",
+                    httpMode: 'GET',
+                    contentType: 'APPLICATION_JSON',
+                    customHeaders: [
+                        [name: 'Authorization', value: "Bearer ${RAW_GH_TOKEN_PSW}"],
+                        [name: 'Accept', value: 'application/vnd.github.v3+json']
+                    ]
+                ).content
+                  def prCommentsJson = readJSON text: prComments
+                  def commentExists = false
+
+                  for (comment in prCommentsJson) {
+                    if (comment.body.contains("Storybook deployed")) {
+                      commentExists = true
+                      break
+                    }
+                  }
+                  if (!commentExists) {
+                    httpRequest(
+                        url: "https://api.github.com/repos/ASU/asu-unity-stack/issues/${prNumber}/comments",
+                        httpMode: 'POST',
+                        contentType: 'APPLICATION_JSON',
+                        customHeaders: [
+                            [name: 'Authorization', value: "Bearer ${RAW_GH_TOKEN_PSW}"],
+                            [name: 'Accept', value: 'application/vnd.github.v3+json']
+                        ],
+                        requestBody: """
+                            {
+                                "body": "Storybook deployed at https://aws-config-asu-uto-webdev-us-west-2.s3.us-west-2.amazonaws.com/pr-${prNumber}/index.html"
+                            }
+                        """
+                    )
+                  }
               }
             }
           }
@@ -152,16 +187,12 @@ spec:
 
                           // List files that would be deleted
                           def filesToDelete = sh(
-                              script: """
-                                  aws s3 ls "s3://${S3_BUCKET}/${prefix}/" --recursive
-                              """,
+                              script: "aws s3 ls s3://${S3_BUCKET}/${prefix}/ --recursive",
                               returnStdout: true
                           ).trim()
 
                           echo "Cleaning up S3 files for merged PR: ${prNumber}"
-                          sh """
-                              aws s3 rm "s3://${S3_BUCKET}/${prefix}/" --recursive
-                          """
+                          sh "aws s3 rm s3://${S3_BUCKET}/${prefix}/ --recursive"
                       }
                     }
                 }
