@@ -227,7 +227,7 @@ const StyledFooter = styled.footer`
             margin-left: 1rem;
             transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
             margin-left: 0.5rem;
-            font-size: 0.75rem;
+            font-size: 1rem;
 
             &.open {
               transform: rotate(180deg);
@@ -313,10 +313,13 @@ const StyledFooter = styled.footer`
         order: 2;
         margin-right: 0;
         transform: translate(1.5rem, 0);
+        padding-top: 24px;
+        padding-bottom: 24px;
 
         img {
-          height: 100px;
+          height: auto;
           width: auto;
+          max-width: 320px;
         }
       }
 
@@ -354,6 +357,11 @@ const StyledFooter = styled.footer`
               justify-self: end;
             }
           }
+        }
+      }
+      @media (min-width: 991.98px) {
+        .img-link {
+        padding-right: 16px;
         }
       }
     }
