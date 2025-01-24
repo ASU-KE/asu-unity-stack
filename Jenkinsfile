@@ -99,7 +99,7 @@ spec:
               withEnv(["AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}", "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"]) {
                 script {
                   echo '## Deploying to S3..'
-                  sh "aws s3 sync ./build/ s3://aws-config-asu-uto-webdev-us-west-2/pr-${env.CHANGE_ID}/ --delete"
+                  sh "aws s3 sync ./build/ s3://${S3_BUCKET}/pr-${env.CHANGE_ID}/ --delete"
                   // comment on the github pr the link to the deployed storybook but only if there is not alreafy a comment
                   def prNumber = env.CHANGE_ID
                   def prComments = httpRequest(
@@ -131,7 +131,7 @@ spec:
                         ],
                         requestBody: """
                             {
-                                "body": "Storybook deployed at https://aws-config-asu-uto-webdev-us-west-2.s3.us-west-2.amazonaws.com/pr-${prNumber}/index.html"
+                                "body": "Storybook deployed at https://${S3_BUCKET}.s3.us-west-2.amazonaws.com/pr-${prNumber}/index.html"
                             }
                         """
                     )
