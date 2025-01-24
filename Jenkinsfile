@@ -136,12 +136,11 @@ spec:
                         """
                     )
                   }
+                }
               }
             }
           }
         }
-
-
         stage('Cleanup S3 PR Environments') {
             when {
               changeRequest target: 'dev'
@@ -174,7 +173,7 @@ spec:
                       prList.each { prNumber ->
                           def prefix = "pr-${prNumber}"
 
-                          // Check if directory exists using s3 ls
+                          // Check if directory exists
                           def hasFiles = sh(
                               script: "aws s3 ls s3://${S3_BUCKET}/${prefix}/",
                               returnStatus: true
