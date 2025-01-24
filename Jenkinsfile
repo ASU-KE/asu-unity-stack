@@ -28,7 +28,7 @@ spec:
     - cat
     tty: true
   - name: aws-cli
-    image: 'amazon/aws-cli:2.11.20'
+    image: 'amazon/aws-cli:2.23.2'
     imagePullPolicy: Always
     command:
     - cat
