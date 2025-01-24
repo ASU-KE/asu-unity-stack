@@ -45,7 +45,7 @@ spec:
         NODE_AUTH_TOKEN = credentials('github-org-asu-pac')
         AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
-        S3_BUCKET = 'aws-config-asu-uto-webdev-us-west-2'
+        S3_BUCKET = 'unity-uds-staging'
         DAYS_TO_SCAN = 14
     }
     options {
