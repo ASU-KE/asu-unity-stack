@@ -2,6 +2,7 @@ import { render, cleanup } from "@testing-library/react";
 import React from "react";
 import { expect, describe, it, afterEach, beforeEach } from "vitest";
 
+import img from "../../../../../shared/assets/img/named/img001.jpg";
 import { Image } from "./Image";
 
 const renderImage = props => {
@@ -13,7 +14,7 @@ describe("#Image", () => {
 
   beforeEach(() => {
     component = renderImage({
-      src: "https://source.unsplash.com/WLUHO9A_xik/800x600",
+      src: img,
       alt: "Placeholder image",
     });
   });

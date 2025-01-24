@@ -2,6 +2,7 @@
 // @ts-check
 import React from "react";
 
+import img1 from "../../../../../shared/assets/img/named/hero01.jpg";
 import { Hero } from "./Hero";
 
 /**
@@ -48,7 +49,7 @@ export const HeroSmall = Template.bind({});
 
 HeroSmall.args = {
   image: {
-    url: "https://source.unsplash.com/WLUHO9A_xik/800x400?a=1",
+    url: img1,
     altText: "Hero image",
     size: "small",
   },
@@ -72,7 +73,7 @@ export const HeroLongTitle = Template.bind({});
 
 HeroLongTitle.args = {
   image: {
-    url: "https://source.unsplash.com/WLUHO9A_xik/800x400?a=1",
+    url: img1,
     altText: "Hero image",
     size: "small",
   },
@@ -97,7 +98,7 @@ export const HeroMedium = Template.bind({});
 
 HeroMedium.args = {
   image: {
-    url: "https://source.unsplash.com/WLUHO9A_xik/800x400?a=1",
+    url: img1,
     altText: "Hero image",
     size: "medium",
   },
@@ -128,7 +129,7 @@ export const HeroLarge = Template.bind({});
 
 HeroLarge.args = {
   image: {
-    url: "https://source.unsplash.com/WLUHO9A_xik/800x400?a=1",
+    url: img1,
     altText: "Hero image",
     size: "large",
   },

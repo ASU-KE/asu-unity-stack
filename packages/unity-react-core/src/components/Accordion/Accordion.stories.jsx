@@ -10,14 +10,14 @@ export default {
     docs: {
       description: {
         component: `The Accordion component can be used to generate an accordion of editable content cards.
-        ## Usage
+## Usage
 
-        Accordion users are responsible to meet all UDS design guidelines with their menu,
-        including rules on the use of Call-to-Action buttons and tags.
+Accordion users are responsible to meet all UDS design guidelines with their menu,
+including rules on the use of Call-to-Action buttons and tags.
 
-        View component examples and source code below.
+View component examples and source code below.
 
-        This story includes another components for demostration purposes.
+This story includes another components for demostration purposes.
         `,
       },
     },

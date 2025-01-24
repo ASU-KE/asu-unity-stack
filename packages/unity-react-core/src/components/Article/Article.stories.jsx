@@ -1,6 +1,7 @@
 /* eslint react/jsx-props-no-spreading: "off" */
 import React from "react";
 
+import img from "../../../../../shared/assets/img/named/hero01.jpg";
 import { Article } from "./Article";
 
 export default {
@@ -44,7 +45,7 @@ export const News = Template.bind({});
 News.args = {
   type: "news",
   articleUrl: "https://example.com",
-  headerImageUrl: "https://source.unsplash.com/WLUHO9A_xik/1920x512",
+  headerImageUrl: img,
   title:
     "Clarisse Machanguana takes her skill set to the next level at ASU Thunderbird",
   publicationDate: "March 18, 2021",

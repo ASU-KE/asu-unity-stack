@@ -4,11 +4,12 @@ import { render, cleanup } from "@testing-library/react";
 import React from "react";
 import { expect, describe, it, afterEach, beforeEach, test } from "vitest";
 
+import img1 from "../../../../../shared/assets/img/named/hero01.jpg";
 import { Hero } from "./Hero";
 
 const defaultArgs = {
   image: {
-    url: "https://source.unsplash.com/random/800x400?a=1",
+    url: img1,
     altText: "Hero image",
     size: "large",
   },
@@ -18,7 +19,7 @@ const defaultArgs = {
   contents: [
     {
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     },
   ],
 };
@@ -56,7 +57,7 @@ describe("#Hero without content and subtitle", () => {
   it("should render the title only", () => {
     const props = {
       image: {
-        url: "https://source.unsplash.com/random/800x400?a=1",
+        url: img1,
         altText: "Hero image",
         size: "small",
       },
