@@ -86,7 +86,7 @@ spec:
         }
         stage('Deploy to s3') {
           when {
-            changeRequest target: 'component-consolidation'
+              changeRequest target: 'dev'
           }
           steps {
             container('node20') {
@@ -143,7 +143,7 @@ spec:
         }
         stage('Cleanup S3 PR Environments') {
             when {
-              changeRequest target: 'dev'
+                branch 'dev'
             }
             steps {
               container('aws-cli') {
