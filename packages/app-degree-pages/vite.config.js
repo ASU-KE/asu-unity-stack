@@ -22,11 +22,11 @@ export default defineConfig({
         },
     },
     },
-    minify: false,
+    minify: true,
   },
   esbuild: {
-    legalComments: 'none',
-    keepNames: true,
+    legalComments: 'eof',
+    keepNames: false,
   },
   define: {
     process: {env: {NODE_ENV: process.env.NODE_ENV}},

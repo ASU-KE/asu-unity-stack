@@ -30,7 +30,7 @@ export const ButtonTag = ({
   ariaLabel,
   color,
   disabled,
-  element,
+  element = "button",
   innerRef,
   href,
   onClick,

@@ -1,9 +1,18 @@
 import "@asu/unity-bootstrap-theme/src/scss/unity-bootstrap-theme.bundle.scss";
-import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { globalDecorators } from "./decorators.tsx";
-
+import { Container } from "./docPage.tsx";
 import "@asu/unity-bootstrap-theme/src/js/data-layer.js";
+
+const sourceCodeRootSelector = "#html-root";
+
 const parameters = {
+  controls: { expanded: true },
+  argTypes: {
+    children: {
+      control: false,
+    },
+  },
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
     values: [
@@ -22,7 +31,23 @@ const parameters = {
       tabWidth: 4,
       htmlWhitespaceSensitivity: "ignore",
     },
-    root: "#html-root",
+    root: sourceCodeRootSelector,
+  },
+  docs: {
+    toc: {
+      contentsSelector: '.sbdocs-content',
+      headingSelector: 'h1, h2, h3',
+      title: 'Table of Contents',
+      disable: false,
+      // ignoreSelector: '#primary',
+      // unsafeTocbotOptions: {
+        // orderedList: false,
+      // },
+    },
+    controls: {
+      sort: "requiredFirst",
+    },
+    container: Container,
   },
 };
 

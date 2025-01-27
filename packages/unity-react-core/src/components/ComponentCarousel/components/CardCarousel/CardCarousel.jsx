@@ -78,7 +78,7 @@ const htmlTemplate = (
  */
 const CardCarousel = ({
   perView: perViewProp = 0,
-  cardItems,
+  cardItems = [],
   cardType = "default",
   cardEventFormat = "stack",
   cardHorizontal = false,

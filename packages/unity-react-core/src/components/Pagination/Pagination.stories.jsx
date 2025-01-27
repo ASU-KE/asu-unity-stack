@@ -11,14 +11,14 @@ export default {
     docs: {
       description: {
         component: `The Pagintaion component can be used to generate pagination.
-        ## Usage
+## Usage
 
-        All props are valid options for all pagination types.
-        Pagination users are responsible to meet all UDS design guidelines with their Pagination,
-        including rules on the use of Call-to-Action buttons and tags.
+All props are valid options for all pagination types.
+Pagination users are responsible to meet all UDS design guidelines with their Pagination,
+including rules on the use of Call-to-Action buttons and tags.
 
-        View component examples and source code below.
-        `,
+View component examples and source code below.
+`,
       },
     },
   },

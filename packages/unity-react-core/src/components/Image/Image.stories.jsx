@@ -1,6 +1,10 @@
 // @ts-check
 import React from "react";
 
+import img1 from "../../../../../shared/assets/img/named/img001.jpg";
+import img2 from "../../../../../shared/assets/img/named/img002.jpg";
+import img3 from "../../../../../shared/assets/img/named/img003.jpg";
+import img4 from "../../../../../shared/assets/img/named/img004.jpg";
 import { Image } from "./Image";
 
 export default {
@@ -20,21 +24,21 @@ const Template = args => <Image {...args} />;
 
 export const ImageWithNoCaption = Template.bind({});
 ImageWithNoCaption.args = {
-  src: "https://source.unsplash.com/WLUHO9A_xik/800x600",
+  src: img1,
   alt: "Placeholder image",
   border: true,
 };
 
 export const ImageWithNoCaptionBorderless = Template.bind({});
 ImageWithNoCaptionBorderless.args = {
-  src: "https://source.unsplash.com/WLUHO9A_xik/800x600",
+  src: img1,
   alt: "Placeholder image",
   border: false,
 };
 
 export const ImageWithCaption = Template.bind({});
 ImageWithCaption.args = {
-  src: "https://source.unsplash.com/WLUHO9A_xik/800x600",
+  src: img2,
   alt: "Placeholder image",
   caption: "This is a <a href='#'>caption</a>.",
   captionTitle: "Caption title",
@@ -43,7 +47,7 @@ ImageWithCaption.args = {
 
 export const ImageWithCaptionAndDropshadow = Template.bind({});
 ImageWithCaptionAndDropshadow.args = {
-  src: "https://source.unsplash.com/WLUHO9A_xik/800x600",
+  src: img3,
   alt: "Placeholder image",
   caption: "This is a <a href='#'>caption</a>.",
   captionTitle: "Caption title",
@@ -72,5 +76,5 @@ export const GridImages = GridTemplate.bind({});
 GridImages.args = {
   alt: "Placeholder image",
   width: "100%",
-  src: "https://source.unsplash.com/WLUHO9A_xik/800x600",
+  src: img4,
 };
