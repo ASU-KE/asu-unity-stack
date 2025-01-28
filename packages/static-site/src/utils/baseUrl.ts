@@ -1,18 +1,18 @@
 export const getBaseUrl = () => {
 
-  const host = window.location.host;
+  if (typeof window === 'undefined') return '/';
+
   const pathname = window.location.pathname;
 
-  let basename = "/";
-  if(host.indexOf(".github.io")>-1) {
-    basename = "/asu-unity-stack";
-  } else if(pathname.indexOf("/build/") > -1) {
-    basename = window.location.pathname.replace(/(.*?\/build\/).*/, "$1");
-  }
+  const segments = pathname.split('/').filter(Boolean);
+  return segments.length > 0 ? `/${segments[0]}` : '/';
 
-  return basename;
-}
+};
 
 export const getRelativePath = (path: string): string => {
-  return `${getBaseUrl()}${path}`.replace(/\/\//g, "/");
-}
+  const baseUrl = getBaseUrl();
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  const fullPath = `${baseUrl}${normalizedPath}`;
+
+  return fullPath.replace(/\/{2,}/g, '/');
+};

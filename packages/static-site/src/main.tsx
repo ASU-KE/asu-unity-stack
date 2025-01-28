@@ -7,7 +7,7 @@ import { RouteObject, RouterProvider, createBrowserRouter } from "react-router-d
 import Pages, { AppPagesType } from "~/pages/index";
 import { configRoutes } from "~/routes/config";
 import { Page } from "vite-plugin-virtual-mpa";
-import { getBaseUrl } from "~/utils/baseUrl";
+import { getBaseUrl } from "./utils/baseUrl";
 
 /**
  * Create duplicate routes for paths ending with "/" and "/index.html"

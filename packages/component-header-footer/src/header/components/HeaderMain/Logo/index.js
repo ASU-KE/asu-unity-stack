@@ -1,17 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 
-import {
-  getCurrentScriptPath,
-  trackGAEvent,
-} from "../../../../../../../shared";
+import { trackGAEvent } from "../../../../../../../shared";
+import vertLogo from "../../../assets/img/arizona-state-university-logo-vertical.png";
+import horizLogo from "../../../assets/img/arizona-state-university-logo.png";
 import { useAppContext } from "../../../core/context/app-context";
 import { LogoWrapper } from "./index.styles";
-
-const currentScriptPath = getCurrentScriptPath();
-
-const vertLogo = `${currentScriptPath}assets/img/arizona-state-university-logo-vertical.png`;
-const horizLogo = `${currentScriptPath}assets/img/arizona-state-university-logo.png`;
 
 const Logo = () => {
   const { logo } = useAppContext();

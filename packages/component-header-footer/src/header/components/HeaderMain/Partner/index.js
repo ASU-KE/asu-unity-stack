@@ -1,18 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 
-import {
-  getCurrentScriptPath,
-  trackGAEvent,
-} from "../../../../../../../shared";
+import { trackGAEvent } from "../../../../../../../shared";
 // @ts-check
+import asuVertLogo from "../../../assets/img/arizona-state-university-logo-vertical.png";
+import asuHorizLogo from "../../../assets/img/arizona-state-university-logo.png";
+import starbucksLogo from "../../../assets/img/asu-starbucks.png";
 import { useAppContext } from "../../../core/context/app-context";
 import { PartnerLogosWrapper } from "./index.styles";
-
-const currentScriptPath = getCurrentScriptPath();
-const asuVertLogo = `${currentScriptPath}/assets/img/arizona-state-university-logo-vertical.png`;
-const asuHorizLogo = `${currentScriptPath}/assets/img/arizona-state-university-logo.png`;
-const starbucksLogo = `${currentScriptPath}/assets/img/asu-starbucks.png`;
 
 const Partner = () => {
   const { partnerLogo, logo: asuLogo, breakpoint } = useAppContext();
