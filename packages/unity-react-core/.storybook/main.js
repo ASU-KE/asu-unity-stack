@@ -26,7 +26,7 @@ export default {
   },
 
   typescript: {
-    reactDocgen: "react-docgen"
+    reactDocgen: "react-docgen-typescript",
   }
 };
 
