@@ -2,16 +2,13 @@
 import React from "react";
 
 import { trackGAEvent } from "../../../../../../shared";
-import { getCurrentScriptPath } from "../../../../../../shared/utils";
+import innovationLogo from "../../assets/images/innovationLogo.png";
 import { FOOTER_URLS } from "../../core/constants";
 
 const DEFAULT_GA_EVENT = {
   type: "internal link",
   section: "secondary footer",
 };
-
-const currentScriptPath = getCurrentScriptPath();
-const innovationLogo = `${currentScriptPath}assets/images/innovationLogo.png`;
 
 const Innovation = () => {
   return (
