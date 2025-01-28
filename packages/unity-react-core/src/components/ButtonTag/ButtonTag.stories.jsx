@@ -74,7 +74,7 @@ const ReactRouterTemplate = args => (
 export const ReactRouterLinkTag = ReactRouterTemplate.bind({});
 ReactRouterLinkTag.args = {
   color: "white",
-  label: "Ract Router Link",
+  label: "React Router Link",
   element: Link,
   to: "/#example-link",
 };
