@@ -87,6 +87,10 @@
 | --- | --- |
 | props | <code>Object</code> | 
 
+<a name="ColumnSection..accordionBodyRef"></a>
+
+### ColumnSection~accordionBodyRef : <code>React.RefObject.&lt;HTMLDivElement&gt;</code> \| <code>null</code>
+**Kind**: inner constant of [<code>ColumnSection</code>](#ColumnSection)  
 <a name="Social"></a>
 
 ## Social(props) ⇒ <code>JSX.Element</code>
@@ -108,7 +112,7 @@
 | title | <code>string</code> | 
 | src | <code>string</code> | 
 | mobileSrc | <code>string</code> | 
-| brandLink | <code>string</code> | 
+| [brandLink] | <code>string</code> | 
 
 <a name="Button"></a>
 

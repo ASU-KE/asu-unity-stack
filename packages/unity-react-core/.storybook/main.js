@@ -4,6 +4,8 @@ export default {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
 
   addons: [
+    "../../../.storybook-config",
+    "../../../.storybook-config/dataLayerListener",
     getAbsolutePath("@whitespace/storybook-addon-html"),
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-actions"),
@@ -12,20 +14,19 @@ export default {
     getAbsolutePath("@storybook/addon-a11y"),
     getAbsolutePath("storybook-css-modules-preset"),
   ],
-
+  core: {
+    builder: '@storybook/builder-vite'
+  },
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {}
-  },
-  features: {
-    interactionsDebugger: true,
   },
   docs: {
     autodocs: "tag",
   },
 
   typescript: {
-    reactDocgen: "react-docgen-typescript"
+    reactDocgen: "react-docgen"
   }
 };
 

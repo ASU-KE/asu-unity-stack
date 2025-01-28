@@ -72,7 +72,7 @@
 | title | <code>string</code> | 
 | src | <code>string</code> | 
 | mobileSrc | <code>string</code> | 
-| brandLink | <code>string</code> | 
+| [brandLink] | <code>string</code> | 
 
 <a name="Button"></a>
 

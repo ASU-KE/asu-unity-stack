@@ -19,12 +19,6 @@
 <dd></dd>
 <dt><a href="#ImageComponentProps">ImageComponentProps</a> : <code>Object</code></dt>
 <dd></dd>
-<dt><a href="#ButtonProps">ButtonProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#ButtonIconOnlyProps">ButtonIconOnlyProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#TagsProps">TagsProps</a> : <code>Object</code></dt>
-<dd></dd>
 <dt><a href="#BreadcrumbProps">BreadcrumbProps</a> : <code>Object</code></dt>
 <dd></dd>
 <dt><a href="#ImageProps">ImageProps</a> : <code>Object</code></dt>
@@ -36,8 +30,6 @@
 <dt><a href="#AccordionProps">AccordionProps</a> : <code>Object</code></dt>
 <dd></dd>
 <dt><a href="#ReactMouseEvent">ReactMouseEvent</a> ⇒ <code>void</code></dt>
-<dd></dd>
-<dt><a href="#AccordionCardItemProps">AccordionCardItemProps</a> : <code>Object</code></dt>
 <dd></dd>
 <dt><a href="#AnchorMenuItem">AnchorMenuItem</a> : <code>Object</code></dt>
 <dd></dd>
@@ -223,4 +215,12 @@
 | [cssClasses] | <code>Array.&lt;string&gt;</code> | 
 | [loading] | <code>&quot;lazy&quot;</code> \| <code>&quot;eager&quot;</code> | 
 | [decoding] | <code>&quot;sync&quot;</code> \| <code>&quot;async&quot;</code> \| <code>&quot;auto&quot;</code> | 
-| [fetchPriority] | <code>&quot;auto&quot;</code> 
+| [fetchPriority] | <code>&quot;auto&quot;</code> \| <code>&quot;high&quot;</code> \| <code>&quot;low&quot;</code> | 
+| [width] | <code>string</code> | 
+| [height] | <code>string</code> | 
+| [dataTestId] | <code>string</code> | 
+| [cardLink] | <code>string</code> | 
+| [title] | <code>string</code> | 
+| [caption] | <code>string</code> | 
+| [captionTitle] | <code>string</code> | 
+| [border] | <code>bool
