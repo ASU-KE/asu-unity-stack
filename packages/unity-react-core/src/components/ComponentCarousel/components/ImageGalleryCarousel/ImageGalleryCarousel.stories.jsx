@@ -68,6 +68,10 @@ const mockItemWithMoreContent = () => {
 export default {
   title: "Components/Image Gallery Carousel",
   component: ImageGalleryCarousel,
+  globals: {
+    framework: "react",
+  },
+  tags: ["!bootstrap"],
   parameters: { controls: { disable: true } },
 };
 
