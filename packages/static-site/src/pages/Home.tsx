@@ -44,14 +44,14 @@ const Home = () => {
                 title="ASU Header"
                 description="Guidelines, requirements and best practices for using the ASU
               Branded Header in your site."
-                href={PagePaths.HEADERGUIDE}
+                href={PagePaths.HEADERGUIDE + "index.html"}
                 isRoute={true}
                 linkLabel="View the guide"
                 />
             <Card
               title="Google Tag Manager and data layer"
               description="Ensure your site or application has the necessary analytics integrations."
-              href={PagePaths.DATALAYERGUIDE}
+              href={PagePaths.DATALAYERGUIDE + "index.html"}
               isRoute={true}
               linkLabel="GTM and data layer guide"
               />

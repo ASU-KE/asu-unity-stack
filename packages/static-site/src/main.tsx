@@ -3,10 +3,11 @@ import ReactDOM from "react-dom/client";
 import App from "~/App.tsx";
 import "~/index.css";
 
-import { RouteObject, RouterProvider, createHashRouter } from "react-router-dom";
+import { RouteObject, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Pages, { AppPagesType } from "~/pages/index";
 import { configRoutes } from "~/routes/config";
 import { Page } from "vite-plugin-virtual-mpa";
+import { getBaseUrl } from "./utils/baseUrl";
 
 /**
  * Create duplicate routes for paths ending with "/" and "/index.html"
@@ -33,13 +34,13 @@ const createRoutesFromConfig = (c: Page[]) => {
   return r;
 };
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: createRoutesFromConfig(configRoutes as Page[]),
   },
-]);
+], { basename: getBaseUrl() });
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
