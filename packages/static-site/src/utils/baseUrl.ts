@@ -5,7 +5,6 @@ export const getBaseUrl = () => {
   const pathname = window.location.pathname;
 
   const segments = pathname.split('/').filter(Boolean);
-  console.log({segments});
   return segments.length > 0 ? `/${segments[0]}` : '/';
 
 };
