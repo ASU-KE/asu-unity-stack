@@ -10,7 +10,6 @@ export const useTryGAEvent = () => {
   if (dataLayerEnabled) {
     return fn;
   }
-  // UDS-1943 : allow some fields to be exempted from data layer (PII)
   // return NOOP function
   return () => {};
 };
