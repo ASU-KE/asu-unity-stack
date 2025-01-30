@@ -23,7 +23,6 @@ export const defaultArgs = {
   country: undefined,
   stateProvince: undefined, // Only US states or CA provinces - use full name.
   successMsg: undefined,
-  dataLayerEnabled: false,
   test: false,
   dataSourceDegreeSearch: undefined, // "https://degrees.apps.asu.edu/t5/service",
   dataSourceAsuOnline: undefined, // "https://cms.asuonline.asu.edu/lead-submissions-v3.5/programs",

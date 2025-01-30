@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+import { gaEventPropTypes, trackGAEvent } from "../../../../../../shared";
 import { fetchCountries } from "../../../core/utils/fetchCountries";
 import { useRfiContext } from "../../../core/utils/rfiContext";
-import {
-  gaEventPropTypes,
-  useTryGAEvent,
-} from "../../../core/utils/useDataLayer";
 import { RfiSelect } from "../../controls";
 
 // Options
@@ -48,8 +45,6 @@ export const Country = ({ gaData }) => {
     });
   }, []); // Run only once
 
-  const tryGAEvent = useTryGAEvent();
-
   return (
     <RfiSelect
       label={label}
@@ -57,7 +52,7 @@ export const Country = ({ gaData }) => {
       name={name}
       options={countryOptions}
       onBlur={e =>
-        tryGAEvent({
+        trackGAEvent({
           ...gaData,
           event: "select",
           type: label,

@@ -1,9 +1,6 @@
 import React from "react";
 
-import {
-  gaEventPropTypes,
-  useTryGAEvent,
-} from "../../../core/utils/useDataLayer";
+import { gaEventPropTypes, trackGAEvent } from "../../../../../../shared";
 import { RfiEmailInput } from "../../controls";
 
 /**
@@ -13,8 +10,6 @@ export const EmailAddress = ({ gaData }) => {
   const label = "Email Address";
   const name = "EmailAddress";
 
-  const tryGAEvent = useTryGAEvent();
-
   return (
     <RfiEmailInput
       label={label}
@@ -23,7 +18,7 @@ export const EmailAddress = ({ gaData }) => {
       requiredIcon
       required
       onBlur={e =>
-        tryGAEvent({
+        trackGAEvent({
           ...gaData,
           type: label,
           text: e.target.value,

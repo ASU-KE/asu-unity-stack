@@ -1,9 +1,6 @@
 import React from "react";
 
-import {
-  gaEventPropTypes,
-  useTryGAEvent,
-} from "../../../core/utils/useDataLayer";
+import { gaEventPropTypes, trackGAEvent } from "../../../../../../shared";
 import { RfiPhone } from "../../controls";
 
 /**
@@ -13,8 +10,6 @@ export const Phone = ({ gaData }) => {
   const label = "Phone";
   const name = "Phone";
 
-  const tryGAEvent = useTryGAEvent();
-
   return (
     <RfiPhone
       label={label}
@@ -23,7 +18,7 @@ export const Phone = ({ gaData }) => {
       requiredIcon
       required
       onBlur={e =>
-        tryGAEvent({
+        trackGAEvent({
           ...gaData,
           type: label,
           text: e.target.value,
