@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 
-import { gaEventPropTypes, trackGAEvent } from "../../../../../../shared";
 import { KEY } from "../../../core/utils/constants";
 import { useRfiContext } from "../../../core/utils/rfiContext";
+import {
+  gaEventPropTypes,
+  useTryGAEvent,
+} from "../../../core/utils/useDataLayer";
 import { RfiTextInput } from "../../controls";
 
 /**
@@ -31,6 +34,8 @@ export const ZipCode = ({ gaData }) => {
     return <></>;
   }
 
+  const tryGAEvent = useTryGAEvent();
+
   return (
     <RfiTextInput
       label={label}
@@ -39,7 +44,7 @@ export const ZipCode = ({ gaData }) => {
       requiredIcon
       required
       onBlur={e =>
-        trackGAEvent({
+        tryGAEvent({
           ...gaData,
           type: label,
           text: e.target.value,
