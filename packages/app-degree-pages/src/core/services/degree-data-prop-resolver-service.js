@@ -85,14 +85,13 @@ function degreeDataPropResolverService(row = {}) {
         // AdmissionsDegRequirements
         gradRequirement1 = flatRequirement1 ? `<p>${flatRequirement1}</p>` : "";
       } else {
-        gradRequirement1 = row["degreeMajorMap"];
-        return `${gradRequirement1}`;
+        gradRequirement1 = row["degreeMajorMap"] || "";
       }
 
       /** @type {string} */
-      const gradRequirement2 = row["degreeRequirements"]; // Only availble in graduate programs
-
+      const gradRequirement2 = row["degreeRequirements"] || "";
       return `${gradRequirement1}${gradRequirement2}`;
+
     },
     isOnline: () => row["asuOnlineAcadPlanUrl"], // Returns null if online url is not available
     // See getGeneralDegreeMajorMap for more info
@@ -219,6 +218,14 @@ function degreeDataPropResolverService(row = {}) {
       return "Major";
     },
     getStemOptText: () => row["stemOptText"],
+    hasStemOptText: () => {
+      const text = row["stemOptText"];
+      if (text && text !== "") {
+        return "Yes";
+      } else {
+        return "No";
+      }
+    },
     getSubPlnMajorMaps: () => {
       if (!row["subplans"] || !row["majorMapSubplans"]) return [];
       let subplans = [...row["subplans"]]?.filter(

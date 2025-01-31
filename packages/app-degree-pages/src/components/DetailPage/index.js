@@ -134,6 +134,7 @@ const DetailPage = ({
   const filteredAnchorMenu = filterAnchorMenu(anchorMenu, resolver);
   return (
     <>
+      // @ts-ignore
       <ThemeStyle />
 
       {error && <ErrorAlert message={ERROR_MESSAGE} />}
@@ -230,6 +231,10 @@ const DetailPage = ({
                       mathIntensity={
                         atAGlance?.mathIntensity || resolver.getMathIntensity()
                       }
+                      stemOptText={
+                        resolver.hasStemOptText()
+                      }
+
                     />
                   )}
                   {!introContent?.hideRequiredCourses &&

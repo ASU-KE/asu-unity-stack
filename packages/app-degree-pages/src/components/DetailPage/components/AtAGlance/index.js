@@ -21,6 +21,7 @@ export const AtAGlance = ({
   firstRequirementMathCourse,
   mathIntensity,
   timeCommitment,
+  stemOptText,
 }) => {
   return (
     <section
@@ -44,6 +45,9 @@ export const AtAGlance = ({
         )}
         {timeCommitment && (
           <GlanceItem item={timeCommitment} type="timeCommitment" />
+        )}
+        {stemOptText && (
+          <GlanceItem item={stemOptText} type="stemOptText" />
         )}
       </ul>
     </section>
