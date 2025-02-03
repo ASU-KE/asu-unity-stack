@@ -1,5 +1,5 @@
 // @ts-check
-import { Pagination } from "@asu/components-core";
+import { Pagination } from "@asu/unity-react-core";
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import { createGlobalStyle } from "styled-components";

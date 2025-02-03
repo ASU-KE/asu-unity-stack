@@ -1,6 +1,5 @@
 // @ts-check
-// import * as componentsCore from "@asu/components-core";
-import { Hero } from "@asu/components-core";
+import { Hero } from "@asu/unity-react-core";
 import { render, act, cleanup } from "@testing-library/react";
 import React from "react";
 

@@ -1,5 +1,5 @@
 // @ts-check
-import { Video } from "@asu/components-core";
+import { Video } from "@asu/unity-react-core";
 import React from "react";
 import styled from "styled-components";
 

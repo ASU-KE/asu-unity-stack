@@ -8,11 +8,11 @@ module.exports = {
     "\\.(jpg|jpeg|png|gif|webp|svg)$": "jest-transform-file",
   },
   moduleNameMapper: {
-    "^@asu/components-core$": "<rootDir>/../components-core/src/index.js",
+    "^@asu/unity-react-core$": "<rootDir>/../unity-react-core/src/index.js",
   },
   transformIgnorePatterns: ["/node_modules/"],
   testPathIgnorePatterns: [
-    "@asu/components-core",
+    "@asu/unity-react-core",
     "/node_modules/(?!@asu/*)(.*)",
   ],
   collectCoverageFrom: [

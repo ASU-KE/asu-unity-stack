@@ -1,5 +1,5 @@
 // @ts-check
-import { Hero } from "@asu/components-core";
+import { Hero } from "@asu/unity-react-core";
 import PropTypes, { arrayOf } from "prop-types";
 import React, { useContext, useEffect, useState } from "react";
 

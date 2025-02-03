@@ -1,5 +1,5 @@
 // @ts-check
-import { Button } from "@asu/components-core";
+import { Button } from "@asu/unity-react-core";
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";

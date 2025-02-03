@@ -1,6 +1,5 @@
 // @ts-check
-// import { Hero } from "@asu/components-core";
-import { Hero } from "@asu/components-core";
+import { Hero } from "@asu/unity-react-core";
 import { render, act, fireEvent, cleanup } from "@testing-library/react";
 import React from "react";
 

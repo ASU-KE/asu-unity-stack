@@ -4,7 +4,7 @@ import {
   detailPageDefaultDataSource,
   listingPageDefaultDataSource,
 } from "../src/core/constants";
-import "./components-core-mock";
+import "./unity-react-core-mock";
 import detailNoNewStudentData from "./data/degree-search-detail-no-new-student.json";
 import detailData from "./data/degree-search-detail.json";
 import listData from "./data/degree-search.json";

@@ -1,5 +1,5 @@
 // @ts-check
-import { Card } from "@asu/components-core";
+import { Card } from "@asu/unity-react-core";
 import React from "react";
 
 import { sanitizeDangerousMarkup } from "../../../../../../../shared";

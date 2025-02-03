@@ -1,12 +1,12 @@
 // @ts-check
-import { AnchorMenu } from "@asu/components-core";
+import { AnchorMenu } from "@asu/unity-react-core";
 import PropTypes from "prop-types";
 import React from "react";
 
 import { anchorMenuPropType, progDetailSectionIds } from "../../models";
 
 /**
- * @typedef {import("@asu/components-core").AnchorMenuItem} AnchorMenuItem
+ * @typedef {import("@asu/unity-react-core").AnchorMenuProps} AnchorMenuItem
  * */
 
 /**
