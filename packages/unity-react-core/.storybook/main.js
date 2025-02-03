@@ -4,9 +4,8 @@ export default {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
 
   addons: [
-    "../../../.storybook-config",
-    "../../../.storybook-config/dataLayerListener",
-    getAbsolutePath("@whitespace/storybook-addon-html"),
+    "../../../.storybook-configv8",
+    "../../../.storybook-configv8/dataLayerListener",
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-actions"),
     getAbsolutePath("@storybook/addon-essentials"),

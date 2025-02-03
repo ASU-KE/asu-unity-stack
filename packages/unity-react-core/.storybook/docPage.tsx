@@ -60,13 +60,13 @@ export const Container = ({ _, context, ...props }) => {
       {
         isBootstrapExampleVisible ?
         <Source dark={true} transform={renderToHTML} /> :
-        <Description>HTML example code</Description>
+        <div>Not supported</div>
       }
       <Heading>Unity React Core</Heading>
       {
         isReactExampleVisible ?
         <Source dark={true} /> :
-        <Description>Not exported</Description>
+        <div>Not exported</div>
       }
     </DocsContainer>;
 };

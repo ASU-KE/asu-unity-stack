@@ -31,7 +31,7 @@ const BaseTable = ({ columns }) => {
         <tr>
           <th scope="row">
             <p>
-              use of <code>&lt;a&gt;</code> in cells{" "}
+              use of <code>&lt; a &gt;</code> in cells{" "}
               <a href="#">example link</a>
             </p>
             Metropolitan campus population
