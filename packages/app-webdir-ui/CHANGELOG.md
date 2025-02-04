@@ -1,3 +1,77 @@
+# [@asu/app-webdir-ui-v4.1.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.1...@asu/app-webdir-ui-v4.1.2) (2025-01-17)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** fix profile squishing ([d8a39aa](https://github.com/asu/asu-unity-stack/commit/d8a39aaa6f0b4d64b0bc742e766d415d943b72fa))
+
+# [@asu/app-webdir-ui-v4.1.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.0...@asu/app-webdir-ui-v4.1.1) (2025-01-10)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** fix grid profile squishing on 50% layout ([ee345ae](https://github.com/asu/asu-unity-stack/commit/ee345ae6ffc1097fab858adacbf7c5908235261a))
+
+# [@asu/app-webdir-ui-v4.1.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.2...@asu/app-webdir-ui-v4.1.0) (2025-01-06)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** changed mailto and phone number aria-label ([962ab0b](https://github.com/asu/asu-unity-stack/commit/962ab0bb47eb7846e3dca968e728370cb77bee97))
+
+
+### Features
+
+* **app-webdir-ui:** removed toLowerCase() on email ([6c53e4e](https://github.com/asu/asu-unity-stack/commit/6c53e4ec4a517d84647e7394797c019797d6e102))
+
+# [@asu/app-webdir-ui-v4.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.1...@asu/app-webdir-ui-v4.0.2) (2025-01-02)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** fixed social media links not showing ([c1a3bfd](https://github.com/asu/asu-unity-stack/commit/c1a3bfd25d88768721c7a43890c3f5540aaeb7d6))
+
+# [@asu/app-webdir-ui-v4.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.0...@asu/app-webdir-ui-v4.0.1) (2024-12-16)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** updated grid profile styles ([d488ea1](https://github.com/asu/asu-unity-stack/commit/d488ea11ec49392eb67af54e032e683c8f274f25))
+
+# [@asu/app-webdir-ui-v4.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.4...@asu/app-webdir-ui-v4.0.0) (2024-12-11)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** accessibility fixes ([0ca861e](https://github.com/asu/asu-unity-stack/commit/0ca861e3a2c76409eed578a91a8b23791f952381))
+* **app-webdir-ui:** made pr changes ([463df62](https://github.com/asu/asu-unity-stack/commit/463df62e31b8cbfed712707c967df9d0991f7cd0))
+
+
+### Features
+
+* **app-webdir-ui:** add grid view for web directpry ([f9bcf42](https://github.com/asu/asu-unity-stack/commit/f9bcf427092048d220633d6192f50f50f28261e9))
+* **app-webdir-ui:** remove employee weight sorting ([e5e3d40](https://github.com/asu/asu-unity-stack/commit/e5e3d4074aba71314dc9170e0c9a3252d8830fd3))
+
+
+### BREAKING CHANGES
+
+* **app-webdir-ui:** The employee weight sorting functionality has been removed
+
+# [@asu/app-webdir-ui-v3.6.4](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.3...@asu/app-webdir-ui-v3.6.4) (2024-11-12)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** remove lowercasing of emails ([52e993c](https://github.com/asu/asu-unity-stack/commit/52e993cdc23df1b97cd689c785af55dcfea2dd15))
+
+# [@asu/app-webdir-ui-v3.6.3](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.2...@asu/app-webdir-ui-v3.6.3) (2024-10-30)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** unbold person address in profile card ([20bbfef](https://github.com/asu/asu-unity-stack/commit/20bbfef17440a8f1cd948f3eef2a7039a8b30220))
+* **app-webdir-ui:** update styles for person profile ([295bfa5](https://github.com/asu/asu-unity-stack/commit/295bfa53dd14df80b485f3d1b735dcdadd3237db))
+
 # [@asu/app-webdir-ui-v3.6.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v3.6.1...@asu/app-webdir-ui-v3.6.2) (2024-09-20)
 
 

@@ -1,3 +1,15 @@
+# [@asu/app-rfi-v2.4.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v2.4.1...@asu/app-rfi-v2.4.2) (2025-01-30)
+
+
+### Bug Fixes
+
+* **app-rfi:** prevent sending pii to data layer ([9bef080](https://github.com/asu/asu-unity-stack/commit/9bef080877a1d855c3949e409cd87f056e49ff52))
+
+
+### Reverts
+
+* Revert "fix(app-rfi): ga track default disabled for pii" ([ca8207e](https://github.com/asu/asu-unity-stack/commit/ca8207e6df7d3473f95173c18b7766148dc1f32a))
+
 # [@asu/app-rfi-v2.4.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v2.4.0...@asu/app-rfi-v2.4.1) (2024-10-04)
 
 

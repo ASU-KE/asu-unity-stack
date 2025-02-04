@@ -1,3 +1,121 @@
+# [@asu/unity-bootstrap-theme-v1.20.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.1...@asu/unity-bootstrap-theme-v1.20.2) (2025-01-17)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix profile squishing grid view ([a53688f](https://github.com/ASU/asu-unity-stack/commit/a53688f022c35b7e33fe706360da150fe115b597))
+
+# [@asu/unity-bootstrap-theme-v1.20.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.0...@asu/unity-bootstrap-theme-v1.20.1) (2025-01-14)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** breadcrumbs final active link changed to black ([debc183](https://github.com/ASU/asu-unity-stack/commit/debc1839b3d0d71da8101290ea492ba1d27ff336))
+* **unity-bootstrap-theme:** requested to remove !important ([9f7e7fa](https://github.com/ASU/asu-unity-stack/commit/9f7e7faf5d96e558805789decfb53a698e341b26))
+
+# [@asu/unity-bootstrap-theme-v1.20.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.19.1...@asu/unity-bootstrap-theme-v1.20.0) (2025-01-06)
+
+
+### Features
+
+* **unity-bootstrap-theme:** removed unnecessary display none for input validation on webform ([1133684](https://github.com/ASU/asu-unity-stack/commit/1133684b2a97e2aea935518d46eaf8f75a9f9e49))
+
+# [@asu/unity-bootstrap-theme-v1.19.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.19.0...@asu/unity-bootstrap-theme-v1.19.1) (2025-01-06)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** pagination hover color fix ([952e974](https://github.com/ASU/asu-unity-stack/commit/952e9741be1453a925272dcee7ce0403974ea2a1))
+
+# [@asu/unity-bootstrap-theme-v1.19.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.3...@asu/unity-bootstrap-theme-v1.19.0) (2025-01-06)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added custom selector for input type submit ([467009e](https://github.com/ASU/asu-unity-stack/commit/467009e43ee4efb040560c91cee6ec83a41a404c))
+* **unity-bootstrap-theme:** added style and example for input type submit ([2feb907](https://github.com/ASU/asu-unity-stack/commit/2feb907ac4c1367dbda107ad6bbe680c65472058))
+
+# [@asu/unity-bootstrap-theme-v1.18.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.2...@asu/unity-bootstrap-theme-v1.18.3) (2025-01-02)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** left aligned the heading ([c2d1cc5](https://github.com/ASU/asu-unity-stack/commit/c2d1cc589f051fccc8130a1953acf5302b99c7d7))
+
+# [@asu/unity-bootstrap-theme-v1.18.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.1...@asu/unity-bootstrap-theme-v1.18.2) (2024-12-19)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** apply a11y breadcrumbs min size ([df962e1](https://github.com/ASU/asu-unity-stack/commit/df962e15f13f872a850cc2545e2af03ed24f896c))
+
+# [@asu/unity-bootstrap-theme-v1.18.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.0...@asu/unity-bootstrap-theme-v1.18.1) (2024-12-17)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** added display block to card-link ([ae0fba0](https://github.com/ASU/asu-unity-stack/commit/ae0fba0855e29ace0d45ecd1bd4f4aaefe7396a8))
+
+# [@asu/unity-bootstrap-theme-v1.18.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.17.0...@asu/unity-bootstrap-theme-v1.18.0) (2024-12-11)
+
+
+### Features
+
+* **unity-bootstrap-theme:** add grid styles ([1c4b32f](https://github.com/ASU/asu-unity-stack/commit/1c4b32f18b0cc83c3024d2a2097f6e79d581e925))
+* **unity-bootstrap-theme:** add grid view styles ([b092585](https://github.com/ASU/asu-unity-stack/commit/b092585eaedead8c8bb19189e633211ec2bede81))
+
+# [@asu/unity-bootstrap-theme-v1.17.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.16.0...@asu/unity-bootstrap-theme-v1.17.0) (2024-12-09)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added padding to a tags in card-link ([b4721a2](https://github.com/ASU/asu-unity-stack/commit/b4721a25d38c26da9403a4fbc00eb00096264674))
+* **unity-bootstrap-theme:** changed padding to mins to ensure that the minimums are corrects ([afe7cec](https://github.com/ASU/asu-unity-stack/commit/afe7cece6676b27b51257450468644b15e433772))
+
+# [@asu/unity-bootstrap-theme-v1.16.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.4...@asu/unity-bootstrap-theme-v1.16.0) (2024-11-28)
+
+
+### Features
+
+* **unity-bootstrap-theme:** add ranking image css ([a391a3e](https://github.com/ASU/asu-unity-stack/commit/a391a3e727b50963dcd3b3c64ebccc221e463c95))
+
+# [@asu/unity-bootstrap-theme-v1.15.4](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.3...@asu/unity-bootstrap-theme-v1.15.4) (2024-11-20)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix rounded corners on mobile modals ([b53ed79](https://github.com/ASU/asu-unity-stack/commit/b53ed790737e87c01ae31fd1baad88ad1edb030c))
+
+# [@asu/unity-bootstrap-theme-v1.15.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.2...@asu/unity-bootstrap-theme-v1.15.3) (2024-11-13)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** rename innovation logo and reduce duplicate ([638d861](https://github.com/ASU/asu-unity-stack/commit/638d8617ea4d00a9412f3509cda1386de0d6807f))
+* **unity-bootstrap-theme:** updated footer ranking logo ([e340bb8](https://github.com/ASU/asu-unity-stack/commit/e340bb886571440aab9bee93507723dc3ca3d9a2))
+
+# [@asu/unity-bootstrap-theme-v1.15.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.1...@asu/unity-bootstrap-theme-v1.15.2) (2024-10-30)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** update web directory profile address and email ([444e16f](https://github.com/ASU/asu-unity-stack/commit/444e16f283522601bf388a9ae5d0ddc58f31afdb))
+* **unity-bootstrap-theme:** update webdir styles ([e9602f0](https://github.com/ASU/asu-unity-stack/commit/e9602f01c9a150d8d8a46cbd9a2a513f351f2af3))
+
+# [@asu/unity-bootstrap-theme-v1.15.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.15.0...@asu/unity-bootstrap-theme-v1.15.1) (2024-10-16)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** remove period. initial commit ignored benign file change ([641ec24](https://github.com/ASU/asu-unity-stack/commit/641ec24375465e2b288ead8f97447a6110cf910b))
+
+# [@asu/unity-bootstrap-theme-v1.15.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.14.2...@asu/unity-bootstrap-theme-v1.15.0) (2024-10-11)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added blockquote animated block ([d61863f](https://github.com/ASU/asu-unity-stack/commit/d61863f4e3cdcfd1410595b2ec030548098b7959))
+
 # [@asu/unity-bootstrap-theme-v1.14.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.14.1...@asu/unity-bootstrap-theme-v1.14.2) (2024-09-23)
 
 

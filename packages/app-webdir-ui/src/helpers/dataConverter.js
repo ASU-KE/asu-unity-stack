@@ -178,6 +178,7 @@ export const staffConverter = ({
     size: "small",
     profileURLBase: null,
     fill: false,
+    grid: false,
   },
   appPathFolder,
 }) => {
@@ -220,6 +221,7 @@ export const staffConverter = ({
           website={filledDatum.website.raw}
           size={options.size}
           fill={options.fill}
+          grid={options.grid}
         />
       ) : null}
     </>

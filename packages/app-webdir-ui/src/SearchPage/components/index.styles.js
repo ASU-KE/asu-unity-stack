@@ -5,6 +5,7 @@ const SortLayout = styled.div`
   .sort-form {
     margin: 0;
     max-width: 75%;
+    min-width: 250px;
 
     label {
       margin-right: 16px;

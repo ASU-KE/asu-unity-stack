@@ -175,6 +175,7 @@ const webDirDeptsFormatter = ({
   cardSize,
   filters,
   appPathFolder,
+  grid,
 }) => {
   let localResults = null;
   let localPage = 1;
@@ -187,7 +188,7 @@ const webDirDeptsFormatter = ({
     });
   } else {
     localResults = results.results;
-    localPage = results.meta.page;
+    localPage = results?.meta?.page;
   }
   if (!!filters && filters.peopleIds) {
     localResults = localResults.filter(r => {
@@ -205,6 +206,7 @@ const webDirDeptsFormatter = ({
           options: {
             size: "large",
             profileURLBase: "https://search.asu.edu",
+            grid,
           },
           appPathFolder,
         });
@@ -315,19 +317,15 @@ export const engines = {
     needsAuth: false,
     converter: staffConverter,
     resultsPerSummaryPage: 6,
-    supportedSortTypes: [
-      "_score_desc",
-      "last_name_desc",
-      "last_name_asc",
-      "employee_weight",
-    ],
+    supportedSortTypes: ["_score_desc", "last_name_desc", "last_name_asc"],
     method: "GET",
-    formatter: ({ results, cardSize, filters, appPathFolder }) =>
+    formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({
         engineName: engineNames.WEB_DIRECTORY_DEPARTMENTS,
         results,
         cardSize,
         filters,
+        grid,
         appPathFolder,
       }),
     needsTerm: false,
@@ -341,10 +339,11 @@ export const engines = {
     resultsPerSummaryPage: 6,
     supportedSortTypes: ["faculty_rank"],
     method: "GET",
-    formatter: ({ results, cardSize, filters, appPathFolder }) =>
+    formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({
         engineName: engineNames.WEB_DIRECTORY_DEPARTMENTS,
         results,
+        grid,
         cardSize,
         filters,
         appPathFolder,
@@ -360,11 +359,12 @@ export const engines = {
     resultsPerSummaryPage: 6,
     supportedSortTypes: ["_score_desc", "last_name_desc", "last_name_asc"],
     method: "POST",
-    formatter: ({ results, cardSize, filters, appPathFolder }) =>
+    formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({
         engineName: engineNames.WEB_DIRECTORY_PEOPLE_AND_DEPS,
         results,
         cardSize,
+        grid,
         filters,
         appPathFolder,
       }),
@@ -400,25 +400,16 @@ export const performSearch = function ({
     if (engine.method === "GET") {
       query = `${query}?sort-by=${currentSort}`;
 
-      // reassign endpoint to new custom endpoint and sort is not
-      // important since endpoint automatically only sorts by employee weight
-      if (currentSort === "employee_weight") {
-        query = `${engine.API_URL}endpoint/v1/department/custom-sort?`;
-      }
       if (term) {
         query = `${query}&query=${term}`;
       }
-      if (page && currentSort === "employee_weight") {
-        query = `${query}&page=${page - 1}`;
-      } else if (page) {
+      if (page) {
         query = `${query}&page=${page}`;
       }
       if (engine.site) {
         query = `${query}&url_host=${engine.site}`;
       }
-      if (itemsPerPage && sort === "employee_weight") {
-        query = `${query}&items_per_page=${itemsPerPage}`;
-      } else if (itemsPerPage) {
+      if (itemsPerPage) {
         query = `${query}&size=${itemsPerPage}`;
       }
       if (filters && filters.deptIds) {

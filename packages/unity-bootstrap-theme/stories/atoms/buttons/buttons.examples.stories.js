@@ -47,6 +47,11 @@ export const ButtonColorsComponent = () => (
     <button type="button" className="btn btn-dark">
       Dark
     </button>
+    <hr />
+    <form className="uds-form">
+      <input className="btn-maroon btn btn-primary" type="submit" value="Send message"></input>
+    </form>
+    <hr />
   </div>
 );
 

@@ -1,3 +1,24 @@
+# [@asu/component-news-v3.1.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-news-v3.0.0...@asu/component-news-v3.1.0) (2025-01-07)
+
+
+### Features
+
+* **component-news:** removed link from heading and image ([40e0dba](https://github.com/asu/asu-unity-stack/commit/40e0dba1051ada4322031a15bd146e69b0ac2b5a))
+
+# [@asu/component-news-v3.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-news-v2.1.1...@asu/component-news-v3.0.0) (2024-11-08)
+
+
+### Bug Fixes
+
+* **component-news:** fix image alt text on Cards ([5009ffb](https://github.com/asu/asu-unity-stack/commit/5009ffbac640514ca142aac71320fb52865cae13))
+
+
+### BREAKING CHANGES
+
+* **component-news:** Corrected the value of feed.imageAltText, which previously had an incorrect value.
+
+UDS-1890
+
 # [@asu/component-news-v2.1.1](https://github.com/asu/asu-unity-stack/compare/@asu/component-news-v2.1.0...@asu/component-news-v2.1.1) (2024-09-13)
 
 

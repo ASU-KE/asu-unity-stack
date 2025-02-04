@@ -9,6 +9,7 @@
   - [How to use the private package registry:](#how-to-use-the-private-package-registry)
     - [TROUBLESHOOTING ERRORS](#troubleshooting-errors)
   - [Packages in this repository](#packages-in-this-repository)
+  - [Cookie Consent](#cookie-consent)
   - [Deprecated packages](#deprecated-packages)
   - [Package Multi Output Targets](#package-multi-output-targets)
   - [Advanced Details for Unity Developers and Contributors](#advanced-details-for-unity-developers-and-contributors)
@@ -113,6 +114,10 @@ This repository contains multiple packages which are managed and published using
 10. [component-news](./packages/component-news/README.md)
 11. [components-core](./packages/components-core/README.md)
 12. [unity-react-core](./packages/unity-react-core/README.md) *Now includes the component carousel package*
+
+## Cookie Consent
+
+The CSS for the cookie consent banner can be found in [unity-bootstrap-theme](./packages/unity-bootstrap-theme/src/css/cookie-consent.css). The JavaScript for the cookie consent banner can be found in [unity-bootstrap-theme as well in the JS location](./packages/unity-bootstrap-theme/src/js/cookie-consent.js). The Javascript can be placed in a script tag or included in a bundle. The CSS can be included in a bundle or included in a style tag.
 
 ## Deprecated packages
 
