@@ -1,27 +1,27 @@
 import React from "react";
 
-import { CardsListEvents } from ".";
+import { CardsGridEvents } from ".";
 
 import { createMockParam } from "../../core/utils";
 
-/** @typedef {import("@asu/components-core/src/core/types/feed-types").FeedType } FeedType */
+/** @typedef {import("@asu/unity-react-core").FeedType } FeedType */
 
 export default {
-  title: "Events component/Cards List",
-  component: CardsListEvents,
+  title: "Events component/Cards Grid",
+  component: CardsGridEvents,
   parameters: {
     mockData: createMockParam(),
   },
 };
 
-const Template = args => <CardsListEvents {...args} />;
+const Template = args => <CardsGridEvents {...args} />;
 
 /**
  * @type {{ args: FeedType, parameters: object}}
  */
 export const Default = Template.bind({});
 Default.args = {
-  header: { color: "dark", text: "Events List" },
+  header: { color: "dark", text: "Events Cards" },
   ctaButton: {
     color: "gold",
     url: "https://asuevents.asu.edu/",
@@ -37,7 +37,7 @@ Default.args = {
  */
 export const WithFilters = Template.bind({});
 WithFilters.args = {
-  header: { color: "dark", text: "Events List Filtered" },
+  header: { color: "dark", text: "Events Cards Filtered" },
   ctaButton: {
     color: "gold",
     url: "https://asuevents.asu.edu/",
@@ -45,11 +45,8 @@ WithFilters.args = {
   },
   dataSource: {
     url: "/api/mocks/feeds-json",
-    filters: "easy_on_the_wallet,alumni_association,staff,sports",
+    filters: "easy_on_the_wallet,alumni_association",
   },
-};
-WithFilters.parameters = {
-  mockData: createMockParam(),
 };
 
 /**
@@ -57,7 +54,7 @@ WithFilters.parameters = {
  */
 export const WithMaxItems = Template.bind({});
 WithMaxItems.args = {
-  header: { color: "dark", text: "Events List" },
+  header: { color: "dark", text: "Events Cards" },
   ctaButton: {
     color: "gold",
     url: "https://asuevents.asu.edu/",
@@ -66,7 +63,7 @@ WithMaxItems.args = {
   dataSource: {
     url: "/api/mocks/feeds-json",
   },
-  maxItems: 4,
+  maxItems: 3,
 };
 
 /**

@@ -1,27 +1,27 @@
 import React from "react";
 
-import { CardsGridEvents } from ".";
+import { CardsListEvents } from ".";
 
 import { createMockParam } from "../../core/utils";
 
-/** @typedef {import("@asu/components-core/src/core/types/feed-types").FeedType } FeedType */
+/** @typedef {import("@asu/unity-react-core/src/core/types/feed-types").FeedType } FeedType */
 
 export default {
-  title: "Events component/Cards Grid",
-  component: CardsGridEvents,
+  title: "Events component/Cards List",
+  component: CardsListEvents,
   parameters: {
     mockData: createMockParam(),
   },
 };
 
-const Template = args => <CardsGridEvents {...args} />;
+const Template = args => <CardsListEvents {...args} />;
 
 /**
  * @type {{ args: FeedType, parameters: object}}
  */
 export const Default = Template.bind({});
 Default.args = {
-  header: { color: "dark", text: "Events Cards" },
+  header: { color: "dark", text: "Events List" },
   ctaButton: {
     color: "gold",
     url: "https://asuevents.asu.edu/",
@@ -37,7 +37,7 @@ Default.args = {
  */
 export const WithFilters = Template.bind({});
 WithFilters.args = {
-  header: { color: "dark", text: "Events Cards Filtered" },
+  header: { color: "dark", text: "Events List Filtered" },
   ctaButton: {
     color: "gold",
     url: "https://asuevents.asu.edu/",
@@ -45,8 +45,11 @@ WithFilters.args = {
   },
   dataSource: {
     url: "/api/mocks/feeds-json",
-    filters: "easy_on_the_wallet,alumni_association",
+    filters: "easy_on_the_wallet,alumni_association,staff,sports",
   },
+};
+WithFilters.parameters = {
+  mockData: createMockParam(),
 };
 
 /**
@@ -54,7 +57,7 @@ WithFilters.args = {
  */
 export const WithMaxItems = Template.bind({});
 WithMaxItems.args = {
-  header: { color: "dark", text: "Events Cards" },
+  header: { color: "dark", text: "Events List" },
   ctaButton: {
     color: "gold",
     url: "https://asuevents.asu.edu/",
@@ -63,7 +66,7 @@ WithMaxItems.args = {
   dataSource: {
     url: "/api/mocks/feeds-json",
   },
-  maxItems: 3,
+  maxItems: 4,
 };
 
 /**
