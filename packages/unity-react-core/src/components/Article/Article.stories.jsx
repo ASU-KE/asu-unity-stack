@@ -1,6 +1,7 @@
 /* eslint react/jsx-props-no-spreading: "off" */
 import React from "react";
 
+// @ts-ignore
 import img from "../../../../../shared/assets/img/named/hero01.jpg";
 import { Article } from "./Article";
 

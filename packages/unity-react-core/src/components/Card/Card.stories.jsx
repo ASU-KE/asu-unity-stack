@@ -2,6 +2,7 @@
 import classNames from "classnames";
 import React from "react";
 
+// @ts-ignore
 import img1 from "../../../../../shared/assets/img/named/hero01.jpg";
 import { Card } from "./Card";
 

@@ -9,6 +9,11 @@ module.exports = {
       // Automatically detect the react version
       version: "detect",
     },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   },
   env: {
     browser: true,
@@ -22,6 +27,7 @@ module.exports = {
     // Make this the last element so prettier config overrides other formatting rules
     "plugin:prettier/recommended",
     "plugin:jest/recommended",
+    // "plugin:import/typescript",
   ],
   parserOptions: {
     ecmaFeatures: {

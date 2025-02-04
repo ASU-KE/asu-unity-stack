@@ -4,6 +4,7 @@ import { render, cleanup } from "@testing-library/react";
 import React from "react";
 import { expect, describe, it, afterEach, beforeEach } from "vitest";
 
+// @ts-ignore
 import img from "../../../../../shared/assets/img/named/hero01.jpg";
 import { Article } from "./Article";
 

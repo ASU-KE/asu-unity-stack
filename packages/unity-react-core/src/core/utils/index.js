@@ -16,17 +16,17 @@ import {
   initImageCarousel,
   initImageGalleryCarousel,
 } from "../../components/ComponentCarousel/ComponentCarousel";
-import { Divider } from "../../components/Divider/Divider.tsx";
-import { GridLinks } from "../../components/GridLinks/GridLinks.tsx";
+import { Divider } from "../../components/Divider/Divider";
+import { GridLinks } from "../../components/GridLinks/GridLinks";
 import { Hero } from "../../components/Hero/Hero";
 import { Image } from "../../components/Image/Image";
-import { List } from "../../components/List/List.tsx";
+import { List } from "../../components/List/List";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { RankingCard } from "../../components/RankingCard/RankingCard";
-import { SystemAlert } from "../../components/SystemAlert/SystemAlert.tsx";
+import { SystemAlert } from "../../components/SystemAlert/SystemAlert";
 import { TabbedPanels } from "../../components/TabbedPanels/TabbedPanels";
 import { Testimonial } from "../../components/Testimonial/Testimonial";
-import { Tooltip } from "../../components/Tooltip/Tooltip.tsx";
+import { Tooltip } from "../../components/Tooltip/Tooltip";
 import { Video } from "../../components/Video/Video";
 
 /**

@@ -4,14 +4,16 @@
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM"],
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "./dist/types",
     "jsx": "react",
-    "moduleResolution": "bundler",
-    "module": "ES2020",
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node16",
+    "rootDir": "src",
+    "rootDirs": ["src", "../../shared"],
+    "module": "node16",
     "declaration": true,
-    "declarationDir": "dist/types",
     "sourceMap": true,
     "allowJs": true,
     "checkJs": true,
@@ -19,18 +21,28 @@
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "types": ["@vitest/browser/providers/playwright"],
     "paths": {
-      "@shared": [ "./../../shared" ],
-      "@shared/*": [ "./../../shared/*" ],
       "@asu/unity-bootstrap-theme": [ "./../unity-bootstrap-theme" ],
-      "@asu/unity-bootstrap-theme/*": [ "./../unity-bootstrap-theme/*" ],
+      "@asu/unity-bootstrap-theme/*": [ "./../unity-bootstrap-theme/*" ]
     }
   },
   "include": [
-    "src/**/*",
-    "types/**/*"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "types/**/*",
+    "src/vite-env.d.ts",
+    "shared/**/*"
   ],
   "exclude": [
     "dist",
-    "node_modules"
+    "node_modules",
+    "src/**/*.test.*",
+    "__mocks__",
+    "src/**/*.stories.*",
+    "shared",
+    "../../shared/**/*",
+    "shared/**/*",
+    "@shared/**/*"
   ]
 }

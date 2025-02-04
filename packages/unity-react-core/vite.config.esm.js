@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 import pkg from "./package.json";
 
 const COMPONENT = parseInt(process.env.NUMBER);
-const componentsToIgnore = ["FeedAnatomy", "Loader"];
+const componentsToIgnore = ["Loader"];
 
 if (isNaN(COMPONENT)) {
   throw new Error("Error parsing number", COMPONENT);
