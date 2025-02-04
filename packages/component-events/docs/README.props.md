@@ -28,12 +28,6 @@
 <dd></dd>
 <dt><a href="#ImageComponentProps">ImageComponentProps</a> : <code>Object</code></dt>
 <dd></dd>
-<dt><a href="#ButtonProps">ButtonProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#ButtonIconOnlyProps">ButtonIconOnlyProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#TagsProps">TagsProps</a> : <code>Object</code></dt>
-<dd></dd>
 <dt><a href="#BreadcrumbProps">BreadcrumbProps</a> : <code>Object</code></dt>
 <dd></dd>
 <dt><a href="#ImageProps">ImageProps</a> : <code>Object</code></dt>
@@ -45,8 +39,6 @@
 <dt><a href="#AccordionProps">AccordionProps</a> : <code>Object</code></dt>
 <dd></dd>
 <dt><a href="#ReactMouseEvent">ReactMouseEvent</a> ⇒ <code>void</code></dt>
-<dd></dd>
-<dt><a href="#AccordionCardItemProps">AccordionCardItemProps</a> : <code>Object</code></dt>
 <dd></dd>
 <dt><a href="#AnchorMenuItem">AnchorMenuItem</a> : <code>Object</code></dt>
 <dd></dd>
@@ -130,10 +122,10 @@
 | [eventTime] | <code>string</code> | 
 | [linkLabel] | <code>string</code> | 
 | [linkUrl] | <code>string</code> | 
-| [buttons] | [<code>Array.&lt;ButtonProps&gt;</code>](#ButtonProps) | 
+| [buttons] | <code>Array.&lt;ButtonProps&gt;</code> | 
 | [eventFormat] | <code>&quot;stack&quot;</code> \| <code>&quot;inline&quot;</code> | 
 | [width] | <code>&quot;25%&quot;</code> \| <code>&quot;50%&quot;</code> \| <code>&quot;75%&quot;</code> \| <code>&quot;100%&quot;</code> | 
-| [tags] | [<code>Array.&lt;TagsProps&gt;</code>](#TagsProps) | 
+| [tags] | <code>Array.&lt;TagsProps&gt;</code> | 
 | [showBorders] | <code>boolean</code> | 
 | [cardLink] | <code>string</code> | 
 
@@ -232,13 +224,29 @@
 | [dataTestId] | <code>string</code> | 
 | [cardLink] | <code>string</code> | 
 | [title] | <code>string</code> | 
+| [caption] | <code>string</code> | 
+| [captionTitle] | <code>string</code> | 
+| [border] | <code>boolean</code> | 
+| [dropShadow] | <code>boolean</code> | 
 
-<a name="ButtonProps"></a>
+<a name="BreadcrumbProps"></a>
 
-## ButtonProps : <code>Object</code>
+## BreadcrumbProps : <code>Object</code>
 **Kind**: global typedef  
 **Properties**
 
 | Name | Type |
 | --- | --- |
-| [label] | <code>string</cod
+| title | <code>string</code> | 
+| url | <code>string</code> | 
+| active | <code>boolean</code> | 
+
+<a name="ImageProps"></a>
+
+## ImageProps : <code>Object</code>
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| url | <cod

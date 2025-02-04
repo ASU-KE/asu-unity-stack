@@ -1,9 +1,13 @@
 // @ts-check
 import React from "react";
 
+// @ts-ignore
 import img1 from "../../../../../shared/assets/img/named/img001.jpg";
+// @ts-ignore
 import img2 from "../../../../../shared/assets/img/named/img002.jpg";
+// @ts-ignore
 import img3 from "../../../../../shared/assets/img/named/img003.jpg";
+// @ts-ignore
 import img4 from "../../../../../shared/assets/img/named/img004.jpg";
 import { Image } from "./Image";
 

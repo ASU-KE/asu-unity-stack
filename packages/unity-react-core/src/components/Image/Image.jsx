@@ -3,12 +3,17 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import { spreadClasses } from "../../../../../shared";
+// @ts-ignore
 import { sanitizeDangerousMarkup } from "../../../../../shared/utils";
 
 // eslint-disable-next-line import/no-cycle
 
 /**
  * @typedef {import('../../core/types/image-types').ImageComponentProps} ImageComponentProps
+ */
+
+/**
+ * @typedef {import('../../core/types/shared-types').ImageProps} ImageProps
  */
 
 /**

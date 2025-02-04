@@ -1,5 +1,6 @@
 // @ts-check
 
+// @ts-ignore
 import { imageName } from "../../../../../../../shared/assets";
 
 /**

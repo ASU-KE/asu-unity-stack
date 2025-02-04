@@ -14,62 +14,6 @@
 ## Typedefs
 
 <dl>
-<dt><a href="#ArticleProps">ArticleProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#CardProps">CardProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#FeedHeader">FeedHeader</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#FeedCtaButton">FeedCtaButton</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#FeedCardButton">FeedCardButton</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#DataSource">DataSource</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#FeedType">FeedType</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#HeroProps">HeroProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#ImageComponentProps">ImageComponentProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#ButtonProps">ButtonProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#ButtonIconOnlyProps">ButtonIconOnlyProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#TagsProps">TagsProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#BreadcrumbProps">BreadcrumbProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#ImageProps">ImageProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#ContentProps">ContentProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#AccordionCard">AccordionCard</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#AccordionProps">AccordionProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#ReactMouseEvent">ReactMouseEvent</a> ⇒ <code>void</code></dt>
-<dd></dd>
-<dt><a href="#AccordionCardItemProps">AccordionCardItemProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#AnchorMenuItem">AnchorMenuItem</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#AnchorMenuProps">AnchorMenuProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#PageChangeEvent">PageChangeEvent</a> ⇒ <code>void</code></dt>
-<dd></dd>
-<dt><a href="#PaginationProps">PaginationProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#PageItemProps">PageItemProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#TestimonialStyle">TestimonialStyle</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#TestimonialQuote">TestimonialQuote</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#TestimonialProps">TestimonialProps</a> : <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#VideoProps">VideoProps</a> : <code>Object</code></dt>
-<dd></dd>
 <dt><a href="#AnchorMenuProps">AnchorMenuProps</a> : <code>Object</code></dt>
 <dd><p>This type set the <code>url</code> and <code>isActive</code> optional</p>
 </dd>
@@ -181,37 +125,120 @@
 | --- | --- |
 | props | [<code>DetailPageProps</code>](#DetailPageProps) | 
 
-<a name="ArticleProps"></a>
+<a name="AnchorMenuProps"></a>
 
-## ArticleProps : <code>Object</code>
+## AnchorMenuProps : <code>Object</code>
+This type set the `url` and `isActive` optional
+
 **Kind**: global typedef  
 **Properties**
 
 | Name | Type |
 | --- | --- |
-| type | <code>&quot;event&quot;</code> \| <code>&quot;news&quot;</code> | 
-| [articleUrl] | <code>string</code> | 
-| [publicationDate] | <code>string</code> | 
-| [title] | <code>string</code> | 
-| [body] | <code>string</code> | 
-| [authorEmail] | <code>string</code> | 
-| [authorName] | <code>string</code> | 
-| [authorPhone] | <code>string</code> | 
-| [authorTitle] | <code>string</code> | 
-| [breadcrumbs] | [<code>Array.&lt;BreadcrumbProps&gt;</code>](#BreadcrumbProps) | 
-| [calendarUrl] | <code>string</code> | 
-| [eventLocation] | <code>string</code> | 
-| [eventTime] | <code>string</code> | 
-| [headerImageUrl] | <code>string</code> | 
-| [registrationUrl] | <code>string</code> | 
-| [zoomUrl] | <code>string</code> | 
+| [atAGlance] | <code>boolean</code> | 
+| [applicationRequirements] | <code>boolean</code> | 
+| [changeMajorRequirements] | <code>boolean</code> | 
+| [nextSteps] | <code>boolean</code> | 
+| [affordingCollege] | <code>boolean</code> | 
+| [flexibleDegreeOptions] | <code>boolean</code> | 
+| [careerOutlook] | <code>boolean</code> | 
+| [exampleCareers] | <code>boolean</code> | 
+| [customizeYourCollegeExperience] | <code>boolean</code> | 
+| [globalOpportunity] | <code>boolean</code> | 
+| [attendOnline] | <code>boolean</code> | 
+| [whyChooseAsu] | <code>boolean</code> | 
+| [programContactInfo] | <code>boolean</code> | 
+| [externalAnchors] | <code>Array.&lt;AnchorMenuItem&gt;</code> | 
 
-<a name="CardProps"></a>
+<a name="BreadcrumbItem"></a>
 
-## CardProps : <code>Object</code>
+## BreadcrumbItem : <code>Object</code>
 **Kind**: global typedef  
 **Properties**
 
 | Name | Type |
 | --- | --- |
-| [type] | <code>string</
+| [url] | <code>string</code> | 
+| text | <code>string</code> | 
+| [isActive] | <code>boolean</code> | 
+
+<a name="IntroContentProps"></a>
+
+## IntroContentProps : <code>Object</code>
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [hideMarketText] | <code>boolean</code> | 
+| [hideProgramDesc] | <code>boolean</code> | 
+| [hideRequiredCourses] | <code>boolean</code> | 
+| [contents] | [<code>Array.&lt;ContentItem&gt;</code>](#ContentItem) | 
+| [video] | <code>VideoItem</code> | 
+| [image] | <code>ImageItem</code> | 
+| [breadcrumbs] | [<code>Array.&lt;BreadcrumbItem&gt;</code>](#BreadcrumbItem) | 
+
+<a name="ProgramDescriptionProps"></a>
+
+## ProgramDescriptionProps : <code>Object</code>
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| content | [<code>ContentItem</code>](#ContentItem) \| <code>string</code> | 
+| [stemOptText] | <code>string</code> | 
+
+<a name="RequiredCoursesProps"></a>
+
+## RequiredCoursesProps : <code>Object</code>
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| onlineMajorMapURL | <code>string</code> | 
+| majorMapOnCampusURL | <code>string</code> | 
+| subPlnMajorMaps | <code>Array.&lt;Object&gt;</code> | 
+| subPlns | <code>Array.&lt;Object&gt;</code> | 
+
+<a name="AtAGlanceProps"></a>
+
+## AtAGlanceProps : <code>Object</code>
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [hide] | <code>boolean</code> | 
+| [offeredBy] | [<code>LinkItem</code>](#LinkItem) | 
+| [locations] | [<code>Array.&lt;LinkItem&gt;</code>](#LinkItem) | 
+| [firstRequirementMathCourse] | <code>string</code> | 
+| [mathIntensity] | <code>string</code> | 
+| [timeCommitment] | <code>string</code> | 
+
+<a name="ApplicationRequirementsProps"></a>
+
+## ApplicationRequirementsProps : <code>Object</code>
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| graduateRequirements | <code>string</code> | 
+| isMinorOrCertificate | <code>boolean</code> | 
+| additionalRequirements | <code>string</code> | 
+| transferRequirements | <code>string</code> | 
+| minorRequirements | <code>string</code> | 
+
+<a name="ChangeMajorRequirementsProps"></a>
+
+## ChangeMajorRequirementsProps : <code>Object</code>
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [contents] | [<code>Array.&lt;ContentItem&gt;</code>](#ContentItem) | 
+
+<

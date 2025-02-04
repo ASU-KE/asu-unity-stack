@@ -7,5 +7,15 @@ module.exports = {
         ignore: ["^@shared.*"],
       },
     ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ]
   },
 };

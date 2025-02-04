@@ -7,7 +7,7 @@ const config = {
     "@storybook/addon-viewport",
     "@storybook/addon-a11y",
   ],
-  stories: ["../src/**/*.stories.js"],
+  stories: ["../src/**/*.stories.{js,jsx}"],
   framework: {
     name: "@storybook/react-vite",
   },

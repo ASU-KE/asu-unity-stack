@@ -15,12 +15,12 @@ const gaData = {
   region: "main content",
 };
 
-interface SocialMediaLink {
+export interface SocialMediaLink {
   platform: SocialMediaPlatform;
   url: string;
 }
 
-interface ContactInfo {
+export interface ContactInfo {
   email: string;
   phone: string;
   address: {
@@ -29,7 +29,7 @@ interface ContactInfo {
   };
 }
 
-interface Profession {
+export interface Profession {
   title: string;
   department: string;
 }

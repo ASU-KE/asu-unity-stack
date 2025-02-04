@@ -9,6 +9,9 @@ import { Loader } from "../Loader/Loader";
 
 const Container = styled.section``;
 
+/**
+ * @type {React.Context<{ feeds: object[] }>}
+ */
 const FeedContext = createContext(null);
 
 /**
@@ -32,8 +35,8 @@ const FeedContainerProvider = ({
   noFeedText,
   renderHeader,
   renderBody,
-  dataTransformer = item => item,
-  dataFilter = item => item,
+  dataTransformer,
+  dataFilter,
   maxItems,
 }) => {
   const [{ data: rawData, loading, error }, doFetching] = useFetch(); // Call the fetching hook

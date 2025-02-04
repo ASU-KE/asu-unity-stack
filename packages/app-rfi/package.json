@@ -79,7 +79,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@asu/components-core": "^3.0.0",
+    "@asu/unity-react-core": "workspace:^",
     "formik": "^2.1.4",
     "prop-types": "^15.7.2",
     "react-phone-input-2": "^2.14.0",

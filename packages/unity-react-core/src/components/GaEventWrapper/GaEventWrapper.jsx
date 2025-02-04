@@ -29,6 +29,7 @@
  */
 import React from "react";
 
+// @ts-ignore
 import { trackGAEvent } from "../../../../../shared";
 import { useBaseSpecificFramework } from "./useBaseSpecificFramework";
 

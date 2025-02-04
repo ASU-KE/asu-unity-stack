@@ -1,7 +1,7 @@
 import React from "react";
 import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 
-interface Link {
+export interface Link {
   href?: string;
   text: string;
   isActive?: boolean;

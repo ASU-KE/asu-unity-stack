@@ -227,4 +227,4 @@ TabbedPanels.propTypes = {
   onTabChange: PropTypes.func,
 };
 
-export { TabbedPanels, Tab };
+export { TabbedPanels, Tab, NavControls, TabHeader };

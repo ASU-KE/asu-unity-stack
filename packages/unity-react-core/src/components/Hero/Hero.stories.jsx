@@ -2,6 +2,7 @@
 // @ts-check
 import React from "react";
 
+// @ts-ignore
 import img1 from "../../../../../shared/assets/img/named/hero01.jpg";
 import { Hero } from "./Hero";
 
