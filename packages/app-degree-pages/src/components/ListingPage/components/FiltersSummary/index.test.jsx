@@ -1,11 +1,12 @@
 // @ts-check
 import { render, fireEvent } from "@testing-library/react";
 import React from "react";
+import { vi } from "vitest";
 
 import { FiltersSummary } from ".";
 
 const mockValue = {};
-const mockOnRemove = jest.fn();
+const mockOnRemove = vi.fn();
 
 function renderFiltersSummary(value = mockValue) {
   return render(<FiltersSummary value={value} onRemove={mockOnRemove} />);

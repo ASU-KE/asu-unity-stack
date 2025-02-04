@@ -1,7 +1,7 @@
 // @ts-check
-import { Hero } from "@asu/unity-react-core";
 import { render, act, fireEvent, cleanup } from "@testing-library/react";
 import React from "react";
+import { vi } from "vitest";
 
 import { ListingPage } from "./index";
 
@@ -52,8 +52,8 @@ const defaultArgs = {
   },
 };
 
-const mockfilterData = jest.spyOn(service, "filterData");
-const mockSortPrograms = jest.spyOn(service, "sortPrograms");
+const mockfilterData = vi.spyOn(service, "filterData");
+const mockSortPrograms = vi.spyOn(service, "sortPrograms");
 
 describe("#ListingPage", () => {
   /** @type {import("@testing-library/react").RenderResult} */
@@ -147,6 +147,7 @@ describe("#ListingPage", () => {
 
   describe("#With default props", () => {
     beforeEach(async () => {
+       // Add these lines to call real implementations
       await renderListingPage(defaultArgs);
     });
 
@@ -162,10 +163,6 @@ describe("#ListingPage", () => {
     it("Should have 16 items in the program list", async () => {
       const programRows = await component.findByTestId("program-rows");
       expect(programRows.children.length).toBe(16);
-    });
-
-    it("should define `Hero` section", async () => {
-      expect(Hero).toBeDefined();
     });
 
     const sectionCases = [

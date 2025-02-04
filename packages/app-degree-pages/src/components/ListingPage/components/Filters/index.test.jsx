@@ -1,6 +1,7 @@
 // @ts-check
 import { render, fireEvent, cleanup } from "@testing-library/react";
 import React from "react";
+import { expect, describe, it, afterEach, beforeEach, vi } from "vitest";
 
 import { Filters, INITIAL_FILTER_STATE } from ".";
 
@@ -11,9 +12,9 @@ import {
 } from "../../../../core/models";
 
 const mockValue = INITIAL_FILTER_STATE;
-const mockOnChange = jest.fn();
-const mockOnApply = jest.fn();
-const mockOnClean = jest.fn();
+const mockOnChange = vi.fn();
+const mockOnApply = vi.fn();
+const mockOnClean = vi.fn();
 
 function renderFilter(value = mockValue) {
   return render(

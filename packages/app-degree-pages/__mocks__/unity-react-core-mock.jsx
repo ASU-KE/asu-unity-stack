@@ -2,6 +2,7 @@
 // @ts-check
 import * as asuCore from "@asu/unity-react-core";
 import * as React from "react";
+import { vi } from "vitest"
 
 const {
   Accordion: _C1,
@@ -14,11 +15,11 @@ const {
   ...rest
 } = asuCore;
 
-const mockComponent = jest.fn(props => <>{props?.children}</>);
+const mockComponent = vi.fn(props => <>{props?.children}</>);
 
 const Accordion = mockComponent;
 const AnchorMenu = mockComponent;
-const Button = jest.fn(({ ariaLabel: _, ...props }) => (
+const Button = vi.fn(({ ariaLabel: _, ...props }) => (
   <button type="button" {...props}>
     {props?.label}
   </button>
@@ -28,7 +29,7 @@ const Hero = mockComponent;
 const Pagination = mockComponent;
 const Video = mockComponent;
 
-jest.doMock("@asu/unity-react-core", () => ({
+vi.doMock("@asu/unity-react-core", () => ({
   Accordion,
   AnchorMenu,
   Button,

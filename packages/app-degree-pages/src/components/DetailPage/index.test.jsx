@@ -2,6 +2,7 @@
 import { Hero } from "@asu/unity-react-core";
 import { render, act, cleanup } from "@testing-library/react";
 import React from "react";
+import { vi } from "vitest";
 
 import { DetailPage } from "./index";
 
@@ -32,11 +33,10 @@ const defaultArgs = {
   programContactInfo: null,
 };
 
-const mockDegreeDataPropResolverService = jest.spyOn(
+const mockDegreeDataPropResolverService = vi.spyOn(
   service,
   "degreeDataPropResolverService"
 );
-// const mockUseFetch = jest.spyOn(componentsCore, "useFetch");
 
 const sectionCases = [
   ["Market Text", "market-text"],
