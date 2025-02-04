@@ -134,7 +134,7 @@ const DetailPage = ({
   const filteredAnchorMenu = filterAnchorMenu(anchorMenu, resolver);
   return (
     <>
-      // @ts-ignore
+      {/* @ts-ignore */}
       <ThemeStyle />
 
       {error && <ErrorAlert message={ERROR_MESSAGE} />}
