@@ -1,26 +1,22 @@
 // @ts-check
-import { Card, FeedContext } from "@asu/components-core";
+import { Card, feedCardButtonShape, FeedContext } from "@asu/unity-react-core";
 import React, { useContext, useEffect } from "react";
 
 import trackReactComponent from "../../../../../shared/services/componentDatalayer";
-import { feedCardButtonShape } from "../../../../components-core/src/components/FeedAnatomy/feed-prop-types";
 import { BaseFeed } from "../../core/components/BaseFeed";
 import { defaultProps } from "../../core/constants/default-props";
 import { parseInterests } from "../../core/utils";
 import { NewsWrapper } from "./index.styles";
 
 /**
- *
- * @param {Object} feed
+ * @param {object} feed
  * @param {import("../../core/types/news-types").CardButton} cardButton
  */
-const gridRow = (feed, cardButton) => (
-  <div
-    className="col col-12 col-md-6 col-lg-4 cards-items-container"
-    key={feed.id}
-  >
+const listRow = (feed, cardButton) => (
+  <div className="card card-hover cards-items-container" key={feed.id}>
     <Card
-      type="default"
+      type="story"
+      horizontal
       eventFormat="inline"
       eventLocation={feed.location}
       clickable={!!feed.buttonLink}
@@ -31,7 +27,7 @@ const gridRow = (feed, cardButton) => (
       image={feed.imageUrl}
       imageAltText={feed.title}
       linkLabel={feed.eventButtonText}
-      linkUrl={feed.eventButtonUrl || feed.buttonLink}
+      linkUrl={feed.eventButtonUrl || feed?.buttonLink}
       buttons={[
         {
           ariaLabel: cardButton.text,
@@ -50,14 +46,14 @@ const gridRow = (feed, cardButton) => (
  * @param {import("../../core/types/news-types").TemplateProps} props
  */
 // eslint-disable-next-line react/prop-types
-const GridTemplate = ({ cardButton }) => {
+const ListTemplate = ({ cardButton }) => {
   const { feeds } = useContext(FeedContext); // Reading the "feeds" object from the context
 
   return (
-    <NewsWrapper className="row row-spaced" data-testid="grid-view-container">
+    <NewsWrapper className="row-spaced" data-testid="list-view-container">
       {feeds?.map((feed, index) => (
         // eslint-disable-next-line react/no-array-index-key
-        <React.Fragment key={index}>{gridRow(feed, cardButton)}</React.Fragment>
+        <React.Fragment key={index}>{listRow(feed, cardButton)}</React.Fragment>
       ))}
     </NewsWrapper>
   );
@@ -71,12 +67,12 @@ const GridTemplate = ({ cardButton }) => {
 /**
  * @param {FeedType} props
  */
-const CardGridNews = ({ cardButton, ...props }) => {
+const CardListlNews = ({ cardButton, ...props }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       trackReactComponent({
         packageName: "component-news",
-        component: "CardGridNews",
+        component: "CardListlNews",
         type: "NA",
         configuration: {
           cardButton,
@@ -89,16 +85,13 @@ const CardGridNews = ({ cardButton, ...props }) => {
   return (
     // Calling the high order component that fetch the data
     <BaseFeed {...props}>
-      <GridTemplate
+      <ListTemplate
         cardButton={{ ...defaultProps.cardButton, ...cardButton }}
       />
     </BaseFeed>
   );
 };
 
-CardGridNews.propTypes = {
-  ...BaseFeed.propTypes,
-  cardButton: feedCardButtonShape,
-};
+CardListlNews.propTypes = { ...BaseFeed.propTypes, feedCardButtonShape };
 
-export { CardGridNews };
+export { CardListlNews };

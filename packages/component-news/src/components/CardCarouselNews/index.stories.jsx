@@ -1,26 +1,26 @@
 // @ts-check
 import React from "react";
 
-import { CardGridNews } from "./index";
+import { CardCarouselNews } from "./index";
 
 import { createMockParam } from "../../core/utils";
 
-/** @typedef {import("@asu/components-core/src/core/types/feed-types").FeedType } FeedType */
-
+/** @typedef {import("@asu/unity-react-core/src/core/types/feed-types").FeedType } FeedType */
 export default {
-  title: "News component/Card Grid News",
-  component: CardGridNews,
+  title: "News component/Carousel Card News",
+  component: CardCarouselNews,
   parameters: {
     docs: {
       description: {
-        component: " ",
+        component: "",
       },
     },
     mockData: createMockParam(),
   },
 };
 
-const Template = args => <CardGridNews {...args} />;
+const Template = args => <CardCarouselNews {...args} />;
+
 /**
  * @type {{ args: FeedType, parameters: object}}
  */
@@ -28,7 +28,7 @@ export const Default = Template.bind({});
 Default.args = {
   header: {
     color: "dark",
-    text: "News Cards",
+    text: "News Carousel",
   },
   ctaButton: {
     url: "https://news.asu.edu",
@@ -40,7 +40,7 @@ Default.args = {
 Default.parameters = {
   docs: {
     description: {
-      story: " ",
+      story: "",
     },
   },
 };
@@ -52,7 +52,7 @@ export const WithCardButtonProps = Template.bind({});
 WithCardButtonProps.args = {
   header: {
     color: "dark",
-    text: "News Cards",
+    text: "News Carousel",
   },
   ctaButton: {
     color: "maroon",
@@ -71,7 +71,7 @@ WithCardButtonProps.args = {
 WithCardButtonProps.parameters = {
   docs: {
     description: {
-      story: " ",
+      story: "",
     },
   },
 };
@@ -83,7 +83,7 @@ export const WithFilters = Template.bind({});
 WithFilters.args = {
   header: {
     color: "dark",
-    text: "News Cards Filtered",
+    text: "News Carousel Filtered",
   },
   ctaButton: {
     color: "maroon",
@@ -101,7 +101,7 @@ WithFilters.args = {
 WithFilters.parameters = {
   docs: {
     description: {
-      story: " ",
+      story: "",
     },
   },
 };
@@ -113,7 +113,7 @@ export const WithMaxItems = Template.bind({});
 WithMaxItems.args = {
   header: {
     color: "dark",
-    text: "News Cards",
+    text: "News Carousel",
   },
   ctaButton: {
     color: "maroon",
@@ -123,12 +123,12 @@ WithMaxItems.args = {
   dataSource: {
     url: "/api/mocks/feeds-json",
   },
-  maxItems: 3,
+  maxItems: 10,
 };
 WithMaxItems.parameters = {
   docs: {
     description: {
-      story: " ",
+      story: "",
     },
   },
 };
