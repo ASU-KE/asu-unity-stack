@@ -65,7 +65,6 @@ export default defineConfig({
                 document.head.appendChild(style);
               })();`;
             }
-            delete bundle[file.fileName];
           }
         }
       }
