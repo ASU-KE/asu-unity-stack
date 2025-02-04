@@ -147,7 +147,7 @@ describe("#ListingPage", () => {
 
   describe("#With default props", () => {
     beforeEach(async () => {
-       // Add these lines to call real implementations
+      // Add these lines to call real implementations
       await renderListingPage(defaultArgs);
     });
 
