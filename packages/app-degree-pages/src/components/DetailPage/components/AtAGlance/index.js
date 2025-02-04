@@ -60,4 +60,5 @@ AtAGlance.propTypes = {
   firstRequirementMathCourse: PropTypes.string.isRequired,
   mathIntensity: PropTypes.string,
   timeCommitment: PropTypes.string,
+  stemOptText: PropTypes.string,
 };
