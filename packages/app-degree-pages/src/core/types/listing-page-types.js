@@ -5,7 +5,7 @@
  */
 
 /**
- * @typedef {import("@asu/unity-react-core").ImageComponentProps} ImageItem
+ * @typedef {import("@asu/unity-react-core").ImageProps} ImageItem
  */
 
 /**
