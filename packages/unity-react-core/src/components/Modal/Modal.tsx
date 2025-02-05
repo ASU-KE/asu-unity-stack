@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import { ButtonIconOnly } from "../ButtonIconOnly/ButtonIconOnly";
 import { GaEventWrapper } from "../GaEventWrapper/GaEventWrapper";
 /**
@@ -25,12 +26,10 @@ export interface ModalProps {
     region: string;
     section: string;
     ga: string;
-  }
+  };
 }
 
-
-export const Modal: React.FC<ModalProps> = ({gaData}) => {
-
+export const Modal: React.FC<ModalProps> = ({ gaData }) => {
   useEffect(() => {
     document
       ?.getElementById("openModalButton")
@@ -47,23 +46,25 @@ export const Modal: React.FC<ModalProps> = ({gaData}) => {
 
   return (
     <div className="container-fluid">
-      <button onClick={() => {
-        document.getElementById("uds-modal").classList.add("open");
-      }} id="openModalButton" className="btn btn-dark">
+      <button
+        onClick={() => {
+          document.getElementById("uds-modal").classList.add("open");
+        }}
+        id="openModalButton"
+        className="btn btn-dark"
+      >
         Show modal
       </button>
 
       <div id="uds-modal" className="uds-modal">
         <div className="uds-modal-container">
-          <GaEventWrapper
-            gaData={{...defaultGaData, ...gaData}}
-            >
-          <ButtonIconOnly
-          // @ts-ignore
-            id="closeModalButton"
-            className="uds-modal-close-btn"
-            icon={['fas', 'times']}
-          />
+          <GaEventWrapper gaData={{ ...defaultGaData, ...gaData }}>
+            <ButtonIconOnly
+              // @ts-ignore
+              id="closeModalButton"
+              className="uds-modal-close-btn"
+              icon={["fas", "times"]}
+            />
           </GaEventWrapper>
           <h1>Content</h1>
           <p>

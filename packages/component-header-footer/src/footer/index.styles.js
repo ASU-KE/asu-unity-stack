@@ -361,7 +361,7 @@ const StyledFooter = styled.footer`
       }
       @media (min-width: 991.98px) {
         .img-link {
-        padding-right: 16px;
+          padding-right: 16px;
         }
       }
     }

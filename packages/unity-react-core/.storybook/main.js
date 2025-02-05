@@ -1,22 +1,34 @@
+import { dirname, join } from "path";
 export default {
-  staticDirs: ['../dist'],
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  // staticDirs: ['../dist'],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+
   addons: [
-    "../../../.storybook-config",
-    "../../../.storybook-config/dataLayerListener",
-    "@whitespace/storybook-addon-html",
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    '@storybook/addon-a11y',
-    "storybook-css-modules-preset",
+    "../.storybook-configv8",
+    "../.storybook-configv8/dataLayerListener",
+    getAbsolutePath("@storybook/addon-links"),
+    getAbsolutePath("@storybook/addon-actions"),
+    getAbsolutePath("@storybook/addon-essentials"),
+    getAbsolutePath("@storybook/addon-interactions"),
+    getAbsolutePath("@storybook/addon-a11y"),
+    getAbsolutePath("storybook-css-modules-preset"),
   ],
   core: {
     builder: '@storybook/builder-vite'
   },
   framework: {
-    name: "@storybook/react-vite",
+    name: getAbsolutePath("@storybook/react-vite"),
+    options: {}
   },
   docs: {
-    autodocs: true
+    autodocs: "tag",
+  },
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
   }
 };
+
+function getAbsolutePath(value) {
+  return dirname(require.resolve(join(value, "package.json")));
+}

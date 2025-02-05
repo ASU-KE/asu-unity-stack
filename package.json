@@ -11,7 +11,7 @@
     "packages/*"
   ],
   "scripts": {
-    "lerna-clean": "lerna clean --stream --parallel && rm -rf ./node_modules",
+    "lerna-clean": "lerna clean -y && rm -rf ./node_modules",
     "lint": "lerna run lint --stream --parallel",
     "build-static-site": "lerna run --scope @asu/static-site build",
     "build-storybook": "lerna run build-storybook --stream --parallel && yarn build-static-site",

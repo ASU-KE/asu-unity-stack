@@ -14,6 +14,10 @@ import { TestimonialCarousel } from "./TestimonialCarousel";
 export default {
   title: "Components/Testimonial Carousel",
   component: TestimonialCarousel,
+  globals: {
+    framework: "react",
+  },
+  tags: ["!bootstrap"],
   args: {
     itemColor: "None",
     itemTitleColor: "None",

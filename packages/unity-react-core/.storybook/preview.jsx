@@ -13,7 +13,6 @@ const parameters = {
       control: false,
     },
   },
-  actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
     values: [
       {
@@ -70,8 +69,12 @@ const preview = {
         ],
         dynamicTitle: true,
       },
+      initialGlobals: {
+        framework: 'bootstrap',
+      },
     },
   },
+  tags: ['autodocs', 'react' , 'bootstrap'],
 };
 
 export default preview;

@@ -30,6 +30,10 @@ const mockItemWithMoreContent = () =>
 export default {
   title: "Components/Image Carousel",
   component: ImageCarousel,
+  globals: {
+    framework: "react",
+  },
+  tags: ["!bootstrap"],
   args: {
     imageItems: [],
     perView: 1,

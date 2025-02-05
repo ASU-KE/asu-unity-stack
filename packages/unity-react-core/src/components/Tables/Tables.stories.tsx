@@ -12,6 +12,10 @@ const meta: Meta<typeof Table> = {
       </div>
     ),
   ],
+  globals: {
+    framework: "react",
+  },
+  tags: ["!bootstrap"],
 };
 
 export const BasicTable: StoryObj<typeof Table> = {

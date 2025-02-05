@@ -10,6 +10,10 @@ export default {
   title: "Components/Card Carousel",
   component: CardCarousel,
   parameters: { controls: { disable: true } },
+  globals: {
+    framework: "react",
+  },
+  tags: ["!bootstrap"],
 };
 
 /**
