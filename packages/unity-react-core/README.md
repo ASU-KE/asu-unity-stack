@@ -8,7 +8,7 @@ All of these components are listed [below](#examples---quick-links).
 ## Importing Components
 
 ### Using ES Modules (ESM)
-If you are importing components using ES modules, you can import only the components you need, this will reduce the size of the bundle drastically:
+If you are importing components using ES modules, you can import only the components you need, this will reduce the size of the bundle drastically if you only plan on using a few components.:
 
 ```js
 import { <COMPONENT_NAME> } from 'dist/esm/components/<COMPONENT_NAME>';

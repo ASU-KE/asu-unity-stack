@@ -140,6 +140,9 @@
       "import": "./dist/unityReactCore.es.js",
       "require": "./dist/unityReactCore.cjs.js",
       "default": "./dist/unityReactCore.umd.js"
+    },
+    "./dst/esm/components/*": {
+      "import": "./dist/esm/components/*.js"
     }
   },
   "volta": {
