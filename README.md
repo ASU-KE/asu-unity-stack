@@ -6,7 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Pre-requisites:](#pre-requisites)
   - [Consuming Unity packages in your separate project:](#consuming-unity-packages-in-your-separate-project)
-  - [How to use the private package registry:](#how-to-use-the-private-package-registry)
+  - [If you want to clone the entire repository and work on the packages:](#if-you-want-to-clone-the-entire-repository-and-work-on-the-packages)
     - [TROUBLESHOOTING ERRORS](#troubleshooting-errors)
   - [Packages in this repository](#packages-in-this-repository)
   - [Cookie Consent](#cookie-consent)
@@ -68,10 +68,23 @@ Follow the steps below if you want to consume the Unity packages in your own pro
 2. Install the package using npm:
 ```npm install @asu/<package-name>```
 
-If using yarn2+, follow the steps below.
+If using yarn2+:
+
+1. Add the following to your .yarnrc.yml file:
+```Yaml
+npmScopes:
+  asu:
+    npmAuthToken: "${GITHUB_AUTH_TOKEN-fallback}"
+    npmPublishRegistry: "https://npm.pkg.github.com"
+    npmRegistryServer: "https://npm.pkg.github.com"
+```
+2. Add the following to your .env.yarn file:
+```env
+GITHUB_AUTH_TOKEN=YOUR_AUTH_TOKEN_HERE
+```
 
 
-## How to use the private package registry:
+## If you want to clone the entire repository and work on the packages:
 
 The ASU Unity Design System packages are published to GitHub's package registry. This is not the same as the NPM registry. To use the packages, you need to belong to ASU's GitHub organization and to configure your local NPM to use this registry.
 
@@ -79,8 +92,6 @@ The ASU Unity Design System packages are published to GitHub's package registry.
 2. If you don't already have it [request access to the Unity Design System GitHub Repo](https://asu.edu/webservices).
 3. Once you have access, there is a ```.env.yarn.example``` file in the root of this project with the correct environment variable name used in the ```.yarnrc.yml``` file. Make a copy and name it ```.env.yarn``` and replace the ```YOUR_AUTH_TOKEN_HERE``` with a [GitHub Personal Access Token](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages) to have a project-based configuration for adding Unity package dependencies to your project.
 4. The environment variable in the ```.env.yarn``` file is used in the ```.yarnrc.yml``` file to authenticate with the GitHub package registry. The ```.yarnrc.yml``` file is used by Yarn to configure the package registry.
-5. Test installing packages using yarn or npm inside of another NPM project:
-```yarn add @asu/unity-bootstrap-theme```
 
 ### TROUBLESHOOTING ERRORS
 
@@ -131,7 +142,7 @@ Previously deprecated packages were located inside the `packages-disabled` folde
 6.  [app-new-template](https://github.com/ASU/asu-unity-stack/tree/86368e5c656108169fe27cbc405e43c2cebae968/packages-disabled/app-new-template)
 7.  [component-forms](https://github.com/ASU/asu-unity-stack/tree/86368e5c656108169fe27cbc405e43c2cebae968/packages-disabled/component-forms)
 8.  [maps](https://github.com/ASU/asu-unity-stack/tree/86368e5c656108169fe27cbc405e43c2cebae968/packages-disabled/maps)
-9.  component-carousel
+9.  [component-carousel](https://github.com/ASU/asu-unity-stack/blob/b5cc906aa26148208a0458355b9bf6d2f6bec149/packages/component-carousel/package.json)
 
 
 ## Package Multi Output Targets
