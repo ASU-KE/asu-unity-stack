@@ -7864,7 +7864,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addons@npm:^7.4.2":
+"@storybook/addons@npm:^7.4.2, @storybook/addons@npm:^7.6.14":
   version: 7.6.20
   resolution: "@storybook/addons@npm:7.6.20"
   dependencies:
@@ -7875,7 +7875,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/blocks@npm:7.6.20, @storybook/blocks@npm:^7.4.2":
+"@storybook/api@npm:^7.6.14":
+  version: 7.6.20
+  resolution: "@storybook/api@npm:7.6.20"
+  dependencies:
+    "@storybook/client-logger": "npm:7.6.20"
+    "@storybook/manager-api": "npm:7.6.20"
+  checksum: 10c0/af0602d0202784cd0fa50d6f22e910f090c4fe0cdd17e3d4a54530f9c4a9217fb17cfadb4054f68fd1b9705c81a100bf7a546b4d07abfbb2ddf55f3efad0c1a6
+  languageName: node
+  linkType: hard
+
+"@storybook/blocks@npm:7.6.20, @storybook/blocks@npm:^7.4.2, @storybook/blocks@npm:^7.6.14":
   version: 7.6.20
   resolution: "@storybook/blocks@npm:7.6.20"
   dependencies:
@@ -8168,7 +8178,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/components@npm:7.6.20, @storybook/components@npm:^7.4.2":
+"@storybook/components@npm:7.6.20, @storybook/components@npm:^7.4.2, @storybook/components@npm:^7.6.14":
   version: 7.6.20
   resolution: "@storybook/components@npm:7.6.20"
   dependencies:
@@ -8239,7 +8249,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/core-events@npm:7.6.20, @storybook/core-events@npm:^7.4.2":
+"@storybook/core-events@npm:7.6.20, @storybook/core-events@npm:^7.4.2, @storybook/core-events@npm:^7.6.14":
   version: 7.6.20
   resolution: "@storybook/core-events@npm:7.6.20"
   dependencies:
@@ -8886,7 +8896,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/theming@npm:7.6.20, @storybook/theming@npm:^7.4.2":
+"@storybook/theming@npm:7.6.20, @storybook/theming@npm:^7.4.2, @storybook/theming@npm:^7.6.14":
   version: 7.6.20
   resolution: "@storybook/theming@npm:7.6.20"
   dependencies:
@@ -11965,6 +11975,13 @@ __metadata:
     "@commitlint/config-lerna-scopes": "npm:^12.0.1"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/git": "npm:10.0.1"
+    "@storybook/addons": "npm:^7.6.14"
+    "@storybook/api": "npm:^7.6.14"
+    "@storybook/blocks": "npm:^7.6.14"
+    "@storybook/components": "npm:^7.6.14"
+    "@storybook/core-events": "npm:^7.6.14"
+    "@storybook/react": "npm:^7.6.14"
+    "@storybook/theming": "npm:^7.6.14"
     "@types/node": "npm:^20.0.0"
     "@types/react-dom": "npm:^18.3.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.13.0"
