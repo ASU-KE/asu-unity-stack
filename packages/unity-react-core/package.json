@@ -141,7 +141,7 @@
       "require": "./dist/unityReactCore.cjs.js",
       "default": "./dist/unityReactCore.umd.js"
     },
-    "./dst/esm/components/*": {
+    "./dist/esm/components/*": {
       "import": "./dist/esm/components/*.js"
     }
   },
