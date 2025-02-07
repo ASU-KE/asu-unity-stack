@@ -146,7 +146,6 @@ spec:
                 branch 'dev'
             }
             steps {
-              container('aws-cli') {
                 script {
                     // Get recently merged PR numbers from merge commits
                     def mergedPRs = sh(
@@ -168,34 +167,35 @@ spec:
                     def prList = mergedPRs.split('\n').collect { it.trim() }
                     echo "Recently merged PRs: ${prList}"
 
-                    withEnv(["AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}", "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"]) {
-                      // For each PR, check if files exist and clean up
-                      prList.each { prNumber ->
-                          def prefix = "pr-${prNumber}"
+                    container('aws-cli') {
+                      withEnv(["AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}", "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"]) {
+                        // For each PR, check if files exist and clean up
+                        prList.each { prNumber ->
+                            def prefix = "pr-${prNumber}"
 
-                          // Check if directory exists
-                          def hasFiles = sh(
-                              script: "aws s3 ls s3://${S3_BUCKET}/${prefix}/",
-                              returnStatus: true
-                          ) == 0
+                            // Check if directory exists
+                            def hasFiles = sh(
+                                script: "aws s3 ls s3://${S3_BUCKET}/${prefix}/",
+                                returnStatus: true
+                            ) == 0
 
-                          if (!hasFiles) {
-                              echo "No files found for PR ${prNumber}, skipping..."
-                              return
-                          }
+                            if (!hasFiles) {
+                                echo "No files found for PR ${prNumber}, skipping..."
+                                return
+                            }
 
-                          // List files that would be deleted
-                          def filesToDelete = sh(
-                              script: "aws s3 ls s3://${S3_BUCKET}/${prefix}/ --recursive",
-                              returnStdout: true
-                          ).trim()
+                            // List files that would be deleted
+                            def filesToDelete = sh(
+                                script: "aws s3 ls s3://${S3_BUCKET}/${prefix}/ --recursive",
+                                returnStdout: true
+                            ).trim()
 
-                          echo "Cleaning up S3 files for merged PR: ${prNumber}"
-                          sh "aws s3 rm s3://${S3_BUCKET}/${prefix}/ --recursive"
+                            echo "Cleaning up S3 files for merged PR: ${prNumber}"
+                            sh "aws s3 rm s3://${S3_BUCKET}/${prefix}/ --recursive"
+                        }
                       }
                     }
                 }
-            }
             }
         }
         stage('Test') {
