@@ -82,6 +82,8 @@ spec:
                   script {
                     echo '## Running semantic-release...'
                     withEnv(["GH_TOKEN=${RAW_GH_TOKEN_PSW}"]) {
+                      sh 'yarn install --immutable'
+                      sh 'yarn build'
                       sh 'yarn test-publish-packages'
                     }
                   }
