@@ -22,6 +22,7 @@
     "test:e2e": "jest",
     "prepublish-packages": "node scripts/copy-license.js",
     "publish-packages": "yarn prepublish-packages && lerna exec --concurrency 1 -- npx --no-install semantic-release --debug -e semantic-release-monorepo",
+    "test-publish-packages": "lerna exec --concurrency 1 -- npx --no-install semantic-release --debug --dry-run -e semantic-release-monorepo",
     "start": "node server/server.js",
     "stop": "node server/server.stop.js",
     "prepare": "husky install",
@@ -100,6 +101,9 @@
     "webpack-dashboard": "^3.3.1",
     "webpack-merge": "^5.7.3",
     "webpack-node-externals": "^2.5.0"
+  },
+  "resolutions": {
+    "cosmiconfig": "<9"
   },
   "config": {
     "commitizen": {

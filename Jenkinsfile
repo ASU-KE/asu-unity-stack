@@ -73,6 +73,21 @@ spec:
                 }
             }
         }
+        stage('Test semantic-release') {
+            when {
+                branch 'test-semantic-monorepo-config'
+            }
+            steps {
+                container('node20') {
+                  script {
+                    echo '## Running semantic-release...'
+                    withEnv(["GH_TOKEN=${RAW_GH_TOKEN_PSW}"]) {
+                      sh 'yarn test-publish-packages'
+                    }
+                  }
+                }
+            }
+        }
         stage('Build') {
             steps {
                 container('node20') {
