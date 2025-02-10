@@ -107,6 +107,8 @@
     "react-share": "^4.4.0",
     "react-syntax-highlighter": "^15.0.0",
     "reactstrap": "^9",
+    "semantic-release": "^22",
+    "semantic-release-monorepo": "^8.0.2",
     "storybook": "^8.5.1",
     "storybook-css-modules-preset": "^1.1.1",
     "style-loader": "^3.3.1",
