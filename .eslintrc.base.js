@@ -38,10 +38,19 @@ module.exports = {
   },
   plugins: ["react", "jest"],
   rules: {
+    "react/function-component-definition": "off",
+    "import/no-relative-packages": "off",
     "jsx-a11y/control-has-associated-label": "off",
     "react/jsx-filename-extension": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "no-restricted-exports": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "no-unsafe-optional-chaining": "off",
+    "no-promise-executor-return": "off",
+    "default-param-last": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": [1, { custom: "ignore" }],
+    "react/jsx-props-no-spreading": "off",
     // Use our .prettierrc file as source
     "prettier/prettier": ["error", {}, { usePrettierrc: true }],
     "dot-notation": "off",
@@ -54,6 +63,11 @@ module.exports = {
         argsIgnorePattern: "^_",
       },
     ],
+    "import/no-relative-path-imports": "off",
+    "import/order": ["error", {
+      "newlines-between": "always",
+      "pathGroupsExcludedImportTypes": ["builtin"]
+    }],
     "jsx-a11y/label-has-associated-control": [
       "error",
       {
@@ -62,6 +76,8 @@ module.exports = {
         },
       },
     ],
+    "import/no-absolute-path": "off",
+    "import/order": "off",
   },
   overrides: [
     {
