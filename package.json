@@ -22,7 +22,7 @@
     "test:e2e": "jest",
     "prepublish-packages": "node scripts/copy-license.js",
     "publish-packages": "yarn prepublish-packages && lerna exec --concurrency 1 -- npx --no-install semantic-release --debug -e semantic-release-monorepo",
-    "test-publish-packages": "lerna exec --concurrency 1 -- npx --no-install semantic-release --debug --dry-run -e semantic-release-monorepo",
+    "test-publish-packages": "node scripts/copy-release-rc.js lerna exec --concurrency 1 -- npx --no-install semantic-release --debug --dry-run -e semantic-release-monorepo",
     "start": "node server/server.js",
     "stop": "node server/server.stop.js",
     "prepare": "husky install",
