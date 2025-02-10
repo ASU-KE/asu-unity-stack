@@ -85,6 +85,8 @@
     "raw-loader": "^4.0.2",
     "sass": "^1.39.2",
     "sass-loader": "^10",
+    "semantic-release": "^22",
+    "semantic-release-monorepo": "^8.0.2",
     "storybook": "^7.6.14",
     "storybook-addon-mock": "^4.3.0",
     "style-loader": "^2.0.0",
