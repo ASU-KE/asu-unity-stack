@@ -10,7 +10,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: $uds-size-spacing-3 $uds-size-spacing-3 0;
+    padding: $uds-size-spacing-1 $uds-size-spacing-3 0;
     border-top: $uds-size-spacing-1 solid #ffc627;
     transition: all 0.3s ease-in-out;
     z-index: 10;
@@ -73,6 +73,7 @@
       }
     }
 
+    &.show,
     &.active {
       height: 100%;
 
@@ -116,6 +117,7 @@
       }
     }
 
+    &:has(.info-layer.show),
     &:has(.info-layer.active) {
       img {
         visibility: hidden;
@@ -124,10 +126,13 @@
     }
 
     .info-layer {
+      padding: 1.5rem .5rem 0 1.5rem;
+      cursor: unset;
       a.read-more {
         display: none;
       }
 
+      &.show,
       &.active {
         .content {
           a.read-more {
@@ -140,6 +145,10 @@
         .header {
           >p {
             width: 90%;
+          }
+          .btn-expand {
+            padding: .6rem;
+            border-radius: 0;
           }
         }
       }
@@ -163,6 +172,7 @@
       object-fit: cover;
     }
 
+    &:has(.info-layer.show),
     &:has(.info-layer.active) {
       img {
         visibility: hidden;
@@ -176,6 +186,7 @@
           .btn-expand {
             display: flex;
             justify-content: space-between;
+            align-items: baseline;
 
             h4 {
               min-height: 52px; // To avoid having only one line
@@ -186,7 +197,8 @@
           }
         }
 
-        >p {
+        > p {
+          line-clamp: 10;
           -webkit-line-clamp: 10;
           visibility: hidden;
           transition: visibility .3s ease-in;
@@ -198,6 +210,7 @@
         }
       }
 
+      &.show,
       &.active {
         .content {
           .header {

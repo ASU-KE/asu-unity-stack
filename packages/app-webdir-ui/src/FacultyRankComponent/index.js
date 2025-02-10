@@ -1,4 +1,4 @@
-import { TabbedPanels, Tab } from "@asu/components-core";
+import { TabbedPanels, Tab } from "@asu/unity-react-core";
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 
@@ -10,13 +10,13 @@ import { ASUSearchResultsList } from "../SearchResultsList";
  * @typedef {Object} FiltersData
  * @property {string} 1 - Filter for Faculty.
  * @property {string} 2 - Filter for Academic Professionals.
- * @property {string} 3 - Filter for Fixed-Term Faculty and Academic Professionals.
+ * @property {string} 3 - Filter for Other Faculty and Academic Professionals.
  */
 
 const filtersData = {
   1: "Faculty",
   2: "Academic Professionals",
-  3: "Fixed-Term Faculty and Academic Professionals",
+  3: "Other Faculty and Academic Professionals",
 };
 
 /**
@@ -48,6 +48,7 @@ const FacultyRankTabPanels = ({
   display,
   profileURLBase,
   searchType,
+  grid,
 }) => {
   const [requestFilters, setRequestFilters] = useState({});
   const [tabChange, setTabChange] = useState(null);
@@ -137,6 +138,7 @@ const FacultyRankTabPanels = ({
             display={display}
             rankGroup={rankGroup.toString()}
             restClientTag="asuis"
+            grid={grid}
           />
         </Tab>
       ))}
@@ -163,6 +165,7 @@ FacultyRankTabPanels.propTypes = {
     title: PropTypes.string,
     campuses: PropTypes.string,
   }),
+  grid: PropTypes.bool,
 };
 
 export default FacultyRankTabPanels;

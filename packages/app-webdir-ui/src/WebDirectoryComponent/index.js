@@ -5,17 +5,19 @@ import React, { useState, useEffect } from "react";
 
 import trackReactComponent from "../../../../shared/services/componentDatalayer";
 import FacultyRankTabPanels from "../FacultyRankComponent";
+import { FILTER_CHOICES } from "../helpers/constants";
 import { FilterComponent } from "../helpers/Filter";
 import { engineNames, engines } from "../helpers/search";
 import { SortPicker } from "../SearchPage/components/sort";
 import { ASUSearchResultsList } from "../SearchResultsList";
+import { ViewSelector } from "./GridViewSelector/GridView";
 import { WebDirLayout, FacultyRankLayout } from "./index.styles";
 
 /**
  * React component for displaying web directory search results.
  *
  * @param {Object} props - The props for configuring the WebDirectory component.
- * @param {string} props.searchType - The type of web directory search (e.g., 'departments', 'people').
+ * @param {"departments" | "faculty_rank" | "people" | "people_departments"} props.searchType - The type of web directory search (e.g., 'departments', 'people').
  * @param {string} props.ids - The IDs used for searching (e.g., department IDs, ASURITE IDs).
  * @param {string} props.deptIds - The department IDs for searching.
  * @param {string} props.API_URL - The API URL for performing the search.
@@ -42,6 +44,9 @@ function WebDirectory({
 }) {
   const [sort, setSort] = useState(defaultSortSetter);
   const [requestFilters, setRequestFilters] = useState(doSearch);
+  const [gridView, setGridView] = useState(
+    display.grid === "true" || display.grid === true
+  );
   const RES_PER_PAGE = 6;
 
   useEffect(() => {
@@ -78,7 +83,6 @@ function WebDirectory({
   function defaultSortSetter() {
     const defaultCMSOptions = {
       last_name: "last_name_asc",
-      webdir_customized: "employee_weight",
       people_order: "people_order",
     };
     if (
@@ -102,7 +106,6 @@ function WebDirectory({
         { value: "default", label: "Choose Sort", disabled: true },
         { value: "last_name_asc", label: "Last Name (ascending)" },
         { value: "last_name_desc", label: "Last Name (descending)" },
-        { value: "employee_weight", label: "Department Defined" },
       ];
     }
     return [
@@ -158,38 +161,11 @@ function WebDirectory({
   if (searchType !== "faculty_rank") {
     return (
       <>
-        <WebDirLayout>
+        <WebDirLayout className={gridView ? "grid-view" : ""}>
           {alphaFilter === "true" && (
             <FilterComponent
               filterLabel="Filter By Last Initial"
-              choices={[
-                "A",
-                "B",
-                "C",
-                "D",
-                "E",
-                "F",
-                "G",
-                "H",
-                "I",
-                "J",
-                "K",
-                "L",
-                "M",
-                "N",
-                "O",
-                "P",
-                "Q",
-                "R",
-                "S",
-                "T",
-                "U",
-                "V",
-                "W",
-                "X",
-                "Y",
-                "Z",
-              ]}
+              choices={FILTER_CHOICES}
               onChoose={filterLetter =>
                 setRequestFilters({ ...requestFilters, lastInit: filterLetter })
               }
@@ -198,6 +174,7 @@ function WebDirectory({
               }
             />
           )}
+          <ViewSelector view={gridView} setView={setGridView} label="View" />
           <div className="sort">
             <SortPicker
               customSortOptions={customSortOptions}
@@ -218,6 +195,7 @@ function WebDirectory({
               display={display}
               appPathFolder={appPathFolder}
               restClientTag="webdir"
+              grid={gridView}
             />
           </div>
         </WebDirLayout>
@@ -225,10 +203,15 @@ function WebDirectory({
     );
   }
   return (
-    <FacultyRankLayout>
+    <FacultyRankLayout className={gridView ? "grid-view" : ""}>
+      <ViewSelector view={gridView} setView={setGridView} label="View" />
       <FacultyRankTabPanels
         {...enginesWithParams[searchTypeEngineMap[searchType]]}
         alphaFilter={alphaFilter}
+        filters={requestFilters}
+        grid={gridView}
+        setGridView={setGridView}
+        className="tabbed-panels"
       />
     </FacultyRankLayout>
   );
@@ -247,6 +230,7 @@ WebDirectory.propTypes = {
     doNotDisplayProfiles: PropTypes.string,
     profilesPerPage: PropTypes.string,
     usePager: PropTypes.string,
+    grid: PropTypes.string || PropTypes.bool,
   }),
   filters: PropTypes.shape({
     employee: PropTypes.string,

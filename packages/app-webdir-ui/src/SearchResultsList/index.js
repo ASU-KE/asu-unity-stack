@@ -1,10 +1,12 @@
-import { Button, Pagination } from "@asu/components-core";
+import { Button, Pagination } from "@asu/unity-react-core";
 import PropTypes from "prop-types";
 import React, { useState, useEffect, useRef } from "react";
 
 import { trackGAEvent } from "../../../../shared";
+import Grid from "../grid/grid";
 import { performSearch } from "../helpers/search";
 import { SearchMessage } from "../SearchPage/components/SearchMessage";
+import { ProfileService } from "./dataFormatter";
 import { SearchResultsList } from "./index.styles";
 
 /*
@@ -35,6 +37,8 @@ import { SearchResultsList } from "./index.styles";
  * @param {boolean} localSection - Indicates whether the results belong to a local section.
  * @param {string} rankGroup - The rank group for the results.
  * @param {Array} icon - Icon information for the results.
+ * @param {string} restClientTag - The REST client tag for the results.
+ * @param {boolean} grid - Indicates whether to display the results in a grid.
  * @returns {JSX.Element} The ASUSearchResultsList component.
  */
 
@@ -61,111 +65,125 @@ const ASUSearchResultsList = ({
   rankGroup,
   icon,
   restClientTag,
+  grid,
 }) => {
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [subtitle, setSubtitle] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalResults, setTotalResults] = useState(null);
+  const [rawResults, setRawResults] = useState(null);
   const cardSize = type === "micro" ? "micro" : "large";
   const searchList = useRef(null);
   const controller = new AbortController();
 
-  const doSearch = (page = currentPage) => {
+  const reformatResults = (rawData, newGrid) => {
+    if (!rawData) return {};
+    const reformattedResults = engine.formatter({
+      results: rawData,
+      page: currentPage,
+      itemsPerPage,
+      cardSize,
+      grid: newGrid,
+      filters,
+      appPathFolder: appPathFolder || engine.appPathFolder,
+      localSection,
+      props: {
+        API_URL: engine.API_URL,
+        searchApiVersion: engine.searchApiVersion,
+        loggedIn,
+      },
+    });
+
+    const resultsWithProps = reformattedResults.results.map((profile, idx) => {
+      const newProps = {
+        ...profile.props,
+        ...{ key: idx, GASource },
+      };
+      return {
+        ...profile,
+        ...{ props: newProps },
+        key: profile.props?.children?.key ?? idx,
+      };
+    });
+
+    setResults(resultsWithProps);
+    return reformattedResults;
+  };
+
+  const doSearch = async (page = currentPage) => {
     if ((term && term.length > 0) || !engine.needsTerm) {
       setIsLoading(true);
-      performSearch({
-        engine,
-        term,
-        page,
-        itemsPerPage,
-        sort,
-        filters,
-        display,
-        rankGroup,
-        controller,
-        size: display?.profilesPerPage,
-        restClientTag,
-      })
-        .then(res => {
-          const filteredResults = res;
-          if (sort === "employee_weight" && engine?.name === "people_in_dept") {
-            filteredResults.results = filteredResults.results.filter(result => {
-              return Object.keys(result).length > 1;
-            });
-          }
-          const formattedResults = engine.formatter({
-            results: filteredResults,
-            page,
-            itemsPerPage,
-            cardSize,
-            filters,
-            appPathFolder: appPathFolder || engine.appPathFolder,
-            localSection,
-            props: {
-              API_URL: engine.API_URL,
-              searchApiVersion: engine.searchApiVersion,
-              loggedIn,
-            },
-          });
-          if (registerResults) {
-            registerResults(formattedResults.page.total_results);
-          }
-          if (engine.method === "GET") {
-            if (sort === "employee_weight") {
-              setCurrentPage(formattedResults.page.current + 1);
-            } else {
-              setCurrentPage(formattedResults.page.current);
-            }
-          }
-          if (engine.method === "POST") {
-            setTotalResults(filteredResults[0]?.total_results); // Each result has the total_results property
-          } else {
-            setTotalResults(formattedResults.page.total_results);
-          }
-          const resultsWithProps = formattedResults.results.map(
-            (profile, idx) => {
-              const newProps = {
-                ...profile.props,
-                ...{ key: idx, GASource },
-              };
-              return {
-                ...profile,
-                ...{ props: newProps },
-                key: profile.props?.children?.key ?? idx,
-              };
-            }
-          );
-          if (setPromotedResult) {
-            setPromotedResult(formattedResults.topResult);
-          }
-          setResults(resultsWithProps);
-          if (showSearchMessage) {
-            setSubtitle(
-              <SearchMessage
-                term={term}
-                number={formattedResults.page.total_results}
-                loggedIn={loggedIn}
-                engine={engine.name}
-                GASource={GASource}
-              />
-            );
-          }
-
-          setIsLoading(false);
-          trackGAEvent({
-            event: "search",
-            action: "type",
-            name: "onenter",
-            type: "search asu.edu",
-            section: "search",
-            text: term,
-          });
-        })
-        .catch(err => {
-          console.error(err);
-          setIsLoading(false);
+      try {
+        const res = await performSearch({
+          engine,
+          term,
+          page,
+          itemsPerPage,
+          sort,
+          filters,
+          display,
+          rankGroup,
+          controller,
+          size: display?.profilesPerPage,
+          restClientTag,
         });
+
+        let filteredResults = res;
+
+        const profileService = new ProfileService(engine, filters);
+        filteredResults = await profileService.processProfiles(
+          term,
+          filteredResults
+        );
+
+        setRawResults(filteredResults);
+        const reformattedResults = reformatResults(filteredResults, grid);
+
+        if (registerResults) {
+          registerResults(reformattedResults.page.total_results);
+        }
+
+        if (engine.method === "GET") {
+          setCurrentPage(reformattedResults.page.current);
+        }
+
+        if (engine.method === "POST") {
+          setTotalResults(filteredResults[0]?.total_results);
+        } else {
+          setTotalResults(reformattedResults.page.total_results);
+        }
+
+        if (setPromotedResult) {
+          setPromotedResult(reformattedResults.topResult);
+        }
+
+        if (showSearchMessage) {
+          setSubtitle(
+            <SearchMessage
+              term={term}
+              number={reformattedResults.page.total_results}
+              loggedIn={loggedIn}
+              engine={engine.name}
+              GASource={GASource}
+            />
+          );
+        }
+
+        setIsLoading(false);
+        trackGAEvent({
+          event: "search",
+          action: "type",
+          name: "onenter",
+          type: "search asu.edu",
+          section: "search",
+          text: term,
+        });
+      } catch (err) {
+        console.error(err);
+        setIsLoading(false);
+        setResults([]);
+      }
     }
   };
 
@@ -178,6 +196,12 @@ const ASUSearchResultsList = ({
       searchList.current.firstElementChild.focus();
     }
   };
+
+  useEffect(() => {
+    if (rawResults) {
+      reformatResults(rawResults, grid);
+    }
+  }, [grid]);
 
   useEffect(() => {
     doSearch(1);
@@ -222,7 +246,13 @@ const ASUSearchResultsList = ({
           )}
           {results.length > 0 && !isLoading ? (
             <div ref={searchList} className="results-found">
-              {results}
+              {grid ? (
+                <Grid columns={{ sm: 1, lg: 2, xl: 3 }} gap={4}>
+                  {results}
+                </Grid>
+              ) : (
+                results
+              )}
             </div>
           ) : (
             <div className="results-found">No results found</div>
@@ -286,6 +316,7 @@ ASUSearchResultsList.propTypes = {
   rankGroup: PropTypes.string,
   icon: PropTypes.arrayOf(PropTypes.string),
   restClientTag: PropTypes.string,
+  grid: PropTypes.bool,
 };
 
 export { ASUSearchResultsList };

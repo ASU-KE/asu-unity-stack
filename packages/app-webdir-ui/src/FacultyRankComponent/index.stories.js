@@ -34,7 +34,7 @@ export const FacultyRankWebDirectory = args => {
     <div className="uds-content-align">
       <WebDirectory
         searchType="faculty_rank"
-        deptIds="1535"
+        deptIds="249891,1709,N1712169848,1706,1705"
         API_URL="https://live-asu-isearch.ws.asu.edu/"
         searchApiVersion="api/v1/"
         filters={filters}

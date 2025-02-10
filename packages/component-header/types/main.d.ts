@@ -4,7 +4,7 @@ export interface Logo {
   alt: string;
   src: string;
   mobileSrc: string;
-  brandLink: string;
+  brandLink?: string;
 }
 
 
@@ -14,7 +14,6 @@ export interface Button {
   text: string;
   classes?: string;
   onClick?: () => void;
-  onFocus?: () => void;
 }
 
 export interface NavTreeProps {

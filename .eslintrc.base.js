@@ -9,6 +9,11 @@ module.exports = {
       // Automatically detect the react version
       version: "detect",
     },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   },
   env: {
     browser: true,
@@ -22,12 +27,13 @@ module.exports = {
     // Make this the last element so prettier config overrides other formatting rules
     "plugin:prettier/recommended",
     "plugin:jest/recommended",
+    // "plugin:import/typescript",
   ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
+    ecmaVersion: 13,
     sourceType: "module",
   },
   plugins: ["react", "jest"],
@@ -57,4 +63,45 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      settings: {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+      files: ["*.ts", "*.tsx"],
+      parser: "@typescript-eslint/parser",
+      extends: [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      plugins: ["eslint-plugin-import-helpers", "@typescript-eslint"],
+      rules: {
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+        ],
+        "import/prefer-default-export": "off",
+        "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx", ".ts", ".tsx"] }],
+        "@typescript-eslint/ban-ts-comment": ["warn"],
+        "no-unused-vars": "off",
+        "react/require-default-props": "off",
+        "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
+        "@typescript-eslint/no-empty-function": "off"
+      }
+    },
+  ],
 };

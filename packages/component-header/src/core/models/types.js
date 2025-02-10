@@ -8,7 +8,7 @@
  * @property {string} title
  * @property {string} src
  * @property {string} mobileSrc
- * @property {string} brandLink
+ * @property {string} [brandLink]
  */
 
 /**
@@ -18,7 +18,7 @@
  * @property {string} text
  * @property {string} [classes]
  * @property {function} [onClick]
- * @property {function} [onFocus]
+ * @property {function} [onClick]
  */
 
 /**

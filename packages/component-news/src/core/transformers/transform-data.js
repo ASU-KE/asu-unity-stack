@@ -6,7 +6,7 @@ const transformData = ({ node }, index) => ({
   index,
   id: node.nid,
   imageUrl: node.image_url,
-  imageAltText: node.image_url,
+  imageAltText: node.image_alt,
   title: shortenText(node.title, 80),
   content: shortenText(node?.clas_teaser, 140),
   buttonLink: node.path,

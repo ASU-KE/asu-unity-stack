@@ -279,15 +279,25 @@ footer {
     .img-link {
       order: 2;
       margin-right: 0;
+      padding-bottom: 24px;
+      padding-top: 24px;
       transform: translate(1.5rem, 0);
+      @include media-breakpoint-up(lg) {
+        padding-right: 16px;
+      }
       img {
-        height: 100px;
+        height: auto;
+        max-width: 320px;
         width: auto;
       }
     }
 
     .nav-link {
       padding: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -323,6 +333,10 @@ footer {
 
 #footer-colophon .nav-link {
   padding: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // #footer-colophon, Mobile

@@ -1,6 +1,8 @@
 /* eslint no-use-before-define: ["warn", {"variables": true}] */
 // ^^^ Set to "warn" instead of default "error" as we're not throwing any
 // ReferenceError's and attempts to resolve resulted in other problems.
+import axios from "axios";
+
 import {
   staffConverter,
   studentsConverter,
@@ -8,8 +10,6 @@ import {
   anonConverter,
 } from "./dataConverter";
 import { validateAndCleanURL } from "./validateUrl";
-
-const axios = require("axios");
 
 export const engineNames = {
   FACULTY: "web_dir_faculty_staff",
@@ -175,6 +175,7 @@ const webDirDeptsFormatter = ({
   cardSize,
   filters,
   appPathFolder,
+  grid,
 }) => {
   let localResults = null;
   let localPage = 1;
@@ -187,19 +188,13 @@ const webDirDeptsFormatter = ({
     });
   } else {
     localResults = results.results;
-    localPage = results.meta.page;
+    localPage = results?.meta?.page;
   }
   if (!!filters && filters.peopleIds) {
     localResults = localResults.filter(r => {
       return filters.peopleIds.includes(r.asurite_id.raw);
     });
   }
-  // filters.peopleInDepts indicates a WEB_DIRECTORY_PEOPLE_AND_DEPS flow.
-  // filters.deptIds indicates a WEB_DIRECTORY_DEPARTMENTS flow.
-  const titleOverwrite =
-    !!filters && filters.peopleInDepts
-      ? { peopleInDeps: filters.peopleInDepts }
-      : { depts: filters?.deptIds };
 
   return {
     tab: engines[engineName].name,
@@ -210,8 +205,8 @@ const webDirDeptsFormatter = ({
           datum: result,
           options: {
             size: "large",
-            titleMatch: titleOverwrite,
             profileURLBase: "https://search.asu.edu",
+            grid,
           },
           appPathFolder,
         });
@@ -240,6 +235,7 @@ export const engines = {
         appPathFolder,
       }),
     needsTerm: true,
+    doTitleLogic: true,
   },
   [engineNames.STUDENTS]: {
     name: engineNames.STUDENTS,
@@ -257,6 +253,7 @@ export const engines = {
         appPathFolder,
       }),
     needsTerm: true,
+    doTitleLogic: false,
   },
   [engineNames.SITES]: {
     name: engineNames.SITES,
@@ -284,6 +281,7 @@ export const engines = {
       );
     },
     needsTerm: true,
+    doTitleLogic: false,
   },
   [engineNames.SITES_LOCAL]: {
     name: engineNames.SITES_LOCAL,
@@ -311,6 +309,7 @@ export const engines = {
       });
     },
     needsTerm: true,
+    doTitleLogic: false,
   },
   [engineNames.WEB_DIRECTORY_DEPARTMENTS]: {
     name: engineNames.WEB_DIRECTORY_DEPARTMENTS,
@@ -318,22 +317,19 @@ export const engines = {
     needsAuth: false,
     converter: staffConverter,
     resultsPerSummaryPage: 6,
-    supportedSortTypes: [
-      "_score_desc",
-      "last_name_desc",
-      "last_name_asc",
-      "employee_weight",
-    ],
+    supportedSortTypes: ["_score_desc", "last_name_desc", "last_name_asc"],
     method: "GET",
-    formatter: ({ results, cardSize, filters, appPathFolder }) =>
+    formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({
         engineName: engineNames.WEB_DIRECTORY_DEPARTMENTS,
         results,
         cardSize,
         filters,
+        grid,
         appPathFolder,
       }),
     needsTerm: false,
+    doTitleLogic: true,
   },
   [engineNames.WEB_DIRECTORY_FACULTY_RANK]: {
     name: engineNames.WEB_DIRECTORY_FACULTY_RANK,
@@ -343,15 +339,17 @@ export const engines = {
     resultsPerSummaryPage: 6,
     supportedSortTypes: ["faculty_rank"],
     method: "GET",
-    formatter: ({ results, cardSize, filters, appPathFolder }) =>
+    formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({
         engineName: engineNames.WEB_DIRECTORY_DEPARTMENTS,
         results,
+        grid,
         cardSize,
         filters,
         appPathFolder,
       }),
     needsTerm: false,
+    doTitleLogic: true,
   },
   [engineNames.WEB_DIRECTORY_PEOPLE_AND_DEPS]: {
     name: engineNames.WEB_DIRECTORY_PEOPLE_AND_DEPS,
@@ -361,15 +359,17 @@ export const engines = {
     resultsPerSummaryPage: 6,
     supportedSortTypes: ["_score_desc", "last_name_desc", "last_name_asc"],
     method: "POST",
-    formatter: ({ results, cardSize, filters, appPathFolder }) =>
+    formatter: ({ results, cardSize, filters, appPathFolder, grid }) =>
       webDirDeptsFormatter({
         engineName: engineNames.WEB_DIRECTORY_PEOPLE_AND_DEPS,
         results,
         cardSize,
+        grid,
         filters,
         appPathFolder,
       }),
     needsTerm: false,
+    doTitleLogic: true,
   },
 };
 
@@ -394,30 +394,22 @@ export const performSearch = function ({
       : "https://dev-asu-isearch.ws.asu.edu/api/v1/";
 
     let query = `${searchURLOrDefault}${engine.url}`;
+    let tokenResponse = null;
 
     let APICall = null;
     if (engine.method === "GET") {
       query = `${query}?sort-by=${currentSort}`;
 
-      // reassign endpoint to new custom endpoint and sort is not
-      // important since endpoint automatically only sorts by employee weight
-      if (currentSort === "employee_weight") {
-        query = `${engine.API_URL}endpoint/v1/department/custom-sort?`;
-      }
       if (term) {
         query = `${query}&query=${term}`;
       }
-      if (page && currentSort === "employee_weight") {
-        query = `${query}&page=${page - 1}`;
-      } else if (page) {
+      if (page) {
         query = `${query}&page=${page}`;
       }
       if (engine.site) {
         query = `${query}&url_host=${engine.site}`;
       }
-      if (itemsPerPage && sort === "employee_weight") {
-        query = `${query}&items_per_page=${itemsPerPage}`;
-      } else if (itemsPerPage) {
+      if (itemsPerPage) {
         query = `${query}&size=${itemsPerPage}`;
       }
       if (filters && filters.deptIds) {
@@ -468,7 +460,7 @@ export const performSearch = function ({
       const validatedTokenUrl = validateAndCleanURL(
         `${engine.API_URL}/session/token`
       );
-      const tokenResponse = await axios.get(validatedTokenUrl);
+      tokenResponse = await axios.get(validatedTokenUrl);
       const headers = {
         "X-CSRF-Token": tokenResponse.data,
       };
