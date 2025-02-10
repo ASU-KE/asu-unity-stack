@@ -79,6 +79,7 @@ div[class^="uds-hero"] {
     grid-row: 2;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-top: $uds-size-spacing-10;
 
     p {
       margin: 0;
@@ -244,7 +245,7 @@ div.uds-hero-sm {
     }
 
     .hero-overlay {
-      height: $uds-size-spacing-32;
+      min-height: $uds-size-spacing-32;
     }
   }
 
@@ -270,7 +271,7 @@ div.uds-hero-md {
     }
 
     .hero-overlay {
-      height: 21rem;
+      min-height: 21rem;
     }
   }
 
@@ -307,7 +308,7 @@ div.uds-hero-lg {
     }
 
     .hero-overlay {
-      height: $uds-size-spacing-64;
+      min-height: $uds-size-spacing-64;
     }
   }
 
@@ -419,7 +420,7 @@ div.uds-hero-lg {
       }
 
       .hero-overlay {
-        height: $uds-size-spacing-64;
+        min-height: $uds-size-spacing-64;
       }
     }
   }
@@ -448,7 +449,7 @@ div.uds-hero-lg {
       }
 
       .hero-overlay {
-        height: 42.75rem;
+        min-height: 42.75rem;
       }
     }
 
