@@ -1,3 +1,10 @@
+# [@asu/component-footer-v2.3.0-testing.1](https://github.com/asu/asu-unity-stack/compare/@asu/component-footer-v2.2.3...@asu/component-footer-v2.3.0-testing.1) (2025-02-11)
+
+
+### Features
+
+* **components-core:** added component-carousel to components-core ([8677db8](https://github.com/asu/asu-unity-stack/commit/8677db8f92c15f768c35951fbbd85f254f437de0))
+
 # [@asu/component-footer-v2.2.3](https://github.com/asu/asu-unity-stack/compare/@asu/component-footer-v2.2.2...@asu/component-footer-v2.2.3) (2025-01-14)
 
 
