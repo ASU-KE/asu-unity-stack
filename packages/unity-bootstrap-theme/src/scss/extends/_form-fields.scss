@@ -13,11 +13,13 @@ form.uds-form {
     font-size: $uds-size-spacing-2;
     margin-bottom: 0.5rem;
     // Labels for required fields.
-    svg.uds-field-required {
-      font-size: $uds-size-spacing-1;
-      margin-right: 0.25rem;
-      margin-bottom: 0.125rem;
-      color: $uds-color-brand-maroon;
+    svg, i, span {
+      &.uds-field-required {
+        font-size: $uds-size-spacing-1;
+        margin-right: 0.25rem;
+        margin-bottom: 0.125rem;
+        color: $uds-color-brand-maroon;
+      }
     }
 
     &.uds-form-label-disabled {
@@ -66,6 +68,11 @@ form.uds-form {
     box-shadow: 0 0 0 1px $uds-color-base-gray-7 !important;
     border: 1px solid $uds-color-base-gray-7 !important;
     border-radius: none;
+  }
+
+  input[type="submit"]:focus {
+    box-shadow: $uds-color-base-white 0 0 0 2px, $uds-color-base-gray-7 0px 0px 0px 4px !important;
+    border: 0 !important;
   }
 
   /* Radios and Checkboxes - For more flexible control, this is a departure
@@ -232,15 +239,6 @@ form.uds-form {
       color: $uds-color-base-gray-7;
     }
   }
-  &.needs-validation {
-    .invalid-feedback {
-      display: none;
-    }
-
-    .valid-feedback {
-      display: none;
-    }
-  }
 
   /* ERROR/SUCCESS VALIDATION - SERVER-SIDE
     using Bootstrap 4 .is-valid and .is-invalid classes. */
@@ -277,7 +275,7 @@ form.uds-form {
     display: inline-block;
     font-weight: bold;
     //color: $uds-color-base-gray-7;
-    svg {
+    svg, i, span {
       // We don't implement svg icons as bkg images due to need for color
       // manipulation.
       color: var(--invalid-feedback-light-background);
@@ -317,7 +315,7 @@ form.uds-form {
     display: inline-block;
     font-weight: bold;
     //color: $uds-color-base-gray-7;
-    svg {
+    svg, i, span {
       // We don't implement svg icons as bkg images due to need for color
       // manipulation.
       color: $uds-color-font-dark-success;
@@ -327,7 +325,7 @@ form.uds-form {
 
   /* TRAILING ICON INPUT */
   .input-group-trailing-icon {
-    svg {
+    svg, i, span {
       position: absolute;
       right: 0.75rem;
       top: 0.75rem;
@@ -365,10 +363,13 @@ form.uds-form {
   }
   &.uds-form-gray7 {
     background-color: $uds-color-base-gray-7;
+    color: $uds-color-base-gray-1;
 
     label, legend {
-      svg.uds-field-required {
-        color: $uds-color-base-gold;
+      svg, i, span {
+        &.uds-field-required {
+          color: $uds-color-base-gold;
+        }
       }
     }
 
@@ -516,7 +517,7 @@ form.uds-form {
     .invalid-feedback {
       font-weight: bold;
       color: $uds-color-font-dark-error;
-      svg {
+      svg, i, span {
         // We don't implement svg icons as bkg images due to need for color
         // manipulation.
         color: $uds-color-font-dark-error;
@@ -540,7 +541,7 @@ form.uds-form {
     .valid-feedback {
       font-weight: bold;
       color: $uds-color-base-green;
-      svg {
+      svg, i, span {
         // We don't implement svg icons as bkg images due to need for color
         // manipulation.
         color: $uds-color-base-green;
@@ -549,7 +550,7 @@ form.uds-form {
     }
 
     .input-group-trailing-icon {
-      svg {
+      svg, i, span {
         color: $uds-color-base-gray-1;
       }
     }

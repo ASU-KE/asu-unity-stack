@@ -1,3 +1,54 @@
+# [@asu/unity-bootstrap-theme-v1.20.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.1...@asu/unity-bootstrap-theme-v1.20.2) (2025-01-17)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** fix profile squishing grid view ([a53688f](https://github.com/ASU/asu-unity-stack/commit/a53688f022c35b7e33fe706360da150fe115b597))
+
+# [@asu/unity-bootstrap-theme-v1.20.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.0...@asu/unity-bootstrap-theme-v1.20.1) (2025-01-14)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** breadcrumbs final active link changed to black ([debc183](https://github.com/ASU/asu-unity-stack/commit/debc1839b3d0d71da8101290ea492ba1d27ff336))
+* **unity-bootstrap-theme:** requested to remove !important ([9f7e7fa](https://github.com/ASU/asu-unity-stack/commit/9f7e7faf5d96e558805789decfb53a698e341b26))
+
+# [@asu/unity-bootstrap-theme-v1.20.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.19.1...@asu/unity-bootstrap-theme-v1.20.0) (2025-01-06)
+
+
+### Features
+
+* **unity-bootstrap-theme:** removed unnecessary display none for input validation on webform ([1133684](https://github.com/ASU/asu-unity-stack/commit/1133684b2a97e2aea935518d46eaf8f75a9f9e49))
+
+# [@asu/unity-bootstrap-theme-v1.19.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.19.0...@asu/unity-bootstrap-theme-v1.19.1) (2025-01-06)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** pagination hover color fix ([952e974](https://github.com/ASU/asu-unity-stack/commit/952e9741be1453a925272dcee7ce0403974ea2a1))
+
+# [@asu/unity-bootstrap-theme-v1.19.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.3...@asu/unity-bootstrap-theme-v1.19.0) (2025-01-06)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added custom selector for input type submit ([467009e](https://github.com/ASU/asu-unity-stack/commit/467009e43ee4efb040560c91cee6ec83a41a404c))
+* **unity-bootstrap-theme:** added style and example for input type submit ([2feb907](https://github.com/ASU/asu-unity-stack/commit/2feb907ac4c1367dbda107ad6bbe680c65472058))
+
+# [@asu/unity-bootstrap-theme-v1.18.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.2...@asu/unity-bootstrap-theme-v1.18.3) (2025-01-02)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** left aligned the heading ([c2d1cc5](https://github.com/ASU/asu-unity-stack/commit/c2d1cc589f051fccc8130a1953acf5302b99c7d7))
+
+# [@asu/unity-bootstrap-theme-v1.18.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.1...@asu/unity-bootstrap-theme-v1.18.2) (2024-12-19)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** apply a11y breadcrumbs min size ([df962e1](https://github.com/ASU/asu-unity-stack/commit/df962e15f13f872a850cc2545e2af03ed24f896c))
+
 # [@asu/unity-bootstrap-theme-v1.18.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.18.0...@asu/unity-bootstrap-theme-v1.18.1) (2024-12-17)
 
 

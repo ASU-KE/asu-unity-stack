@@ -3,7 +3,6 @@
 import { toMatchImageSnapshot } from "jest-image-snapshot";
 
 import "@testing-library/jest-dom";
-import "@testing-library/jest-dom/extend-expect";
 
 import "./__mocks__/window-mock";
 

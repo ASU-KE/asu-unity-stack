@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 import { allCookieConsentJS } from "../../../src/js/cookie-consent";
+import { forceReloadOfStory } from "../../../.storybook/decorators";
 import "../../../src/css/cookie-consent.css";
-
-import { fullLayoutDecorator } from "../../../../../shared/components/Layout";
 
 export default {
   title: "Molecules/Cookie Consent",
-  decorators: [ fullLayoutDecorator ],
+  decorators: [forceReloadOfStory],
   parameters: { controls: { disable: true } },
 };
-export const CookieConsent = () => {
+export const MaxWidthCookieConsent = () => {
   useEffect(() => {
     allCookieConsentJS();
   }, []);

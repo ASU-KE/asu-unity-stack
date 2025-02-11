@@ -7,11 +7,11 @@ const ProfileCardLayout = styled.div`
     display: block;
     font-weight: bold;
   }
-  [class*="fa-"] {
+  ul.person-contact-info [class*="fa-"] {
     display: none;
   }
   &.uds-grid-profile {
-    [class*="fa-"] {
+    ul.person-contact-info [class*="fa-"] {
       display: inline;
       color: #8c1d40;
       padding-right: 8px;

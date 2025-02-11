@@ -1,10 +1,8 @@
 import React from "react";
 
-import { defaultDecorator } from "../../../../../shared/components/Layout";
 
 export default {
   title: "Atoms/Buttons/Examples",
-  decorators: [ defaultDecorator ],
   parameters: { controls: { disable: true } },
 };
 import { googleAnalytics as initFunc } from "@asu/unity-bootstrap-theme/js/data-layer.js";
@@ -49,6 +47,11 @@ export const ButtonColorsComponent = () => (
     <button type="button" className="btn btn-dark">
       Dark
     </button>
+    <hr />
+    <form className="uds-form">
+      <input className="btn-maroon btn btn-primary" type="submit" value="Send message"></input>
+    </form>
+    <hr />
   </div>
 );
 

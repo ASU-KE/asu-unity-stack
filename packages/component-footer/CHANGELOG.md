@@ -1,3 +1,10 @@
+# [@asu/component-footer-v2.2.3](https://github.com/asu/asu-unity-stack/compare/@asu/component-footer-v2.2.2...@asu/component-footer-v2.2.3) (2025-01-14)
+
+
+### Bug Fixes
+
+* **component-footer:** updated the ranked footer graphic ([f398095](https://github.com/asu/asu-unity-stack/commit/f39809513b98537386f591cbf4ee09288c823907))
+
 # [@asu/component-footer-v2.2.2](https://github.com/asu/asu-unity-stack/compare/@asu/component-footer-v2.2.1...@asu/component-footer-v2.2.2) (2024-11-13)
 
 

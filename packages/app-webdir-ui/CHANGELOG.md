@@ -1,3 +1,36 @@
+# [@asu/app-webdir-ui-v4.1.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.1...@asu/app-webdir-ui-v4.1.2) (2025-01-17)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** fix profile squishing ([d8a39aa](https://github.com/asu/asu-unity-stack/commit/d8a39aaa6f0b4d64b0bc742e766d415d943b72fa))
+
+# [@asu/app-webdir-ui-v4.1.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.0...@asu/app-webdir-ui-v4.1.1) (2025-01-10)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** fix grid profile squishing on 50% layout ([ee345ae](https://github.com/asu/asu-unity-stack/commit/ee345ae6ffc1097fab858adacbf7c5908235261a))
+
+# [@asu/app-webdir-ui-v4.1.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.2...@asu/app-webdir-ui-v4.1.0) (2025-01-06)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** changed mailto and phone number aria-label ([962ab0b](https://github.com/asu/asu-unity-stack/commit/962ab0bb47eb7846e3dca968e728370cb77bee97))
+
+
+### Features
+
+* **app-webdir-ui:** removed toLowerCase() on email ([6c53e4e](https://github.com/asu/asu-unity-stack/commit/6c53e4ec4a517d84647e7394797c019797d6e102))
+
+# [@asu/app-webdir-ui-v4.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.1...@asu/app-webdir-ui-v4.0.2) (2025-01-02)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** fixed social media links not showing ([c1a3bfd](https://github.com/asu/asu-unity-stack/commit/c1a3bfd25d88768721c7a43890c3f5540aaeb7d6))
+
 # [@asu/app-webdir-ui-v4.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.0.0...@asu/app-webdir-ui-v4.0.1) (2024-12-16)
 
 
