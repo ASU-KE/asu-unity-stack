@@ -362,7 +362,7 @@ __metadata:
 
 "@asu/component-header-footer@file:../component-header-footer::locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site":
   version: 0.0.1
-  resolution: "@asu/component-header-footer@file:../component-header-footer#../component-header-footer::hash=fce6cf&locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site"
+  resolution: "@asu/component-header-footer@file:../component-header-footer#../component-header-footer::hash=9a28a2&locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site"
   dependencies:
     "@fortawesome/fontawesome-svg-core": "npm:^6.4.2"
     "@fortawesome/free-brands-svg-icons": "npm:^6.4.2"
@@ -371,7 +371,7 @@ __metadata:
   peerDependencies:
     react: ^18.3.1
     react-dom: ^18.3.1
-  checksum: 10c0/b7d14dd1d65bd39057163ec0c8c42b7402916ee4f130bc5f1f24c1b424f2cff786e837183d079b66b82c6955c50cd9e7dfb056b8e09786738ba2e6815f143a01
+  checksum: 10c0/46cffcd3981c7c2168beb2f3043b68d0ca770a6e67f4e47af20c0802973cb6f7d1cdeb22205ff377836ad4bff3289656d897f479efe7d9dddb7762fb548d2b2c
   languageName: node
   linkType: hard
 
@@ -688,7 +688,7 @@ __metadata:
 
 "@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fapp-degree-pages%40workspace%3Apackages%2Fapp-degree-pages":
   version: 1.0.0
-  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fapp-degree-pages%40workspace%3Apackages%2Fapp-degree-pages"
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=27791b&locator=%40asu%2Fapp-degree-pages%40workspace%3Apackages%2Fapp-degree-pages"
   dependencies:
     "@glidejs/glide": "npm:~3.6.2"
     classnames: "npm:^2.2.6"
@@ -701,13 +701,13 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-router-dom: ">= 5.2.0 < 7"
-  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  checksum: 10c0/917b588a018a417c07f983cef2e6169b3ec2d6cefc6d2b6cf1760051b22e2a4dd32665aa1cd73bf21a2b5638dfca697231f98fcb70eff23f4df57e1631eedb05
   languageName: node
   linkType: hard
 
 "@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fapp-rfi%40workspace%3Apackages%2Fapp-rfi":
   version: 1.0.0
-  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fapp-rfi%40workspace%3Apackages%2Fapp-rfi"
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=27791b&locator=%40asu%2Fapp-rfi%40workspace%3Apackages%2Fapp-rfi"
   dependencies:
     "@glidejs/glide": "npm:~3.6.2"
     classnames: "npm:^2.2.6"
@@ -720,13 +720,13 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-router-dom: ">= 5.2.0 < 7"
-  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  checksum: 10c0/917b588a018a417c07f983cef2e6169b3ec2d6cefc6d2b6cf1760051b22e2a4dd32665aa1cd73bf21a2b5638dfca697231f98fcb70eff23f4df57e1631eedb05
   languageName: node
   linkType: hard
 
 "@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fapp-webdir-ui%40workspace%3Apackages%2Fapp-webdir-ui":
   version: 1.0.0
-  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fapp-webdir-ui%40workspace%3Apackages%2Fapp-webdir-ui"
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=27791b&locator=%40asu%2Fapp-webdir-ui%40workspace%3Apackages%2Fapp-webdir-ui"
   dependencies:
     "@glidejs/glide": "npm:~3.6.2"
     classnames: "npm:^2.2.6"
@@ -739,13 +739,13 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-router-dom: ">= 5.2.0 < 7"
-  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  checksum: 10c0/917b588a018a417c07f983cef2e6169b3ec2d6cefc6d2b6cf1760051b22e2a4dd32665aa1cd73bf21a2b5638dfca697231f98fcb70eff23f4df57e1631eedb05
   languageName: node
   linkType: hard
 
 "@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fcomponent-events%40workspace%3Apackages%2Fcomponent-events":
   version: 1.0.0
-  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fcomponent-events%40workspace%3Apackages%2Fcomponent-events"
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=27791b&locator=%40asu%2Fcomponent-events%40workspace%3Apackages%2Fcomponent-events"
   dependencies:
     "@glidejs/glide": "npm:~3.6.2"
     classnames: "npm:^2.2.6"
@@ -758,13 +758,13 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-router-dom: ">= 5.2.0 < 7"
-  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  checksum: 10c0/917b588a018a417c07f983cef2e6169b3ec2d6cefc6d2b6cf1760051b22e2a4dd32665aa1cd73bf21a2b5638dfca697231f98fcb70eff23f4df57e1631eedb05
   languageName: node
   linkType: hard
 
 "@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fcomponent-news%40workspace%3Apackages%2Fcomponent-news":
   version: 1.0.0
-  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fcomponent-news%40workspace%3Apackages%2Fcomponent-news"
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=27791b&locator=%40asu%2Fcomponent-news%40workspace%3Apackages%2Fcomponent-news"
   dependencies:
     "@glidejs/glide": "npm:~3.6.2"
     classnames: "npm:^2.2.6"
@@ -777,13 +777,13 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-router-dom: ">= 5.2.0 < 7"
-  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  checksum: 10c0/917b588a018a417c07f983cef2e6169b3ec2d6cefc6d2b6cf1760051b22e2a4dd32665aa1cd73bf21a2b5638dfca697231f98fcb70eff23f4df57e1631eedb05
   languageName: node
   linkType: hard
 
 "@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site":
   version: 1.0.0
-  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site"
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=27791b&locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site"
   dependencies:
     "@glidejs/glide": "npm:~3.6.2"
     classnames: "npm:^2.2.6"
@@ -796,7 +796,7 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-router-dom: ">= 5.2.0 < 7"
-  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  checksum: 10c0/917b588a018a417c07f983cef2e6169b3ec2d6cefc6d2b6cf1760051b22e2a4dd32665aa1cd73bf21a2b5638dfca697231f98fcb70eff23f4df57e1631eedb05
   languageName: node
   linkType: hard
 
