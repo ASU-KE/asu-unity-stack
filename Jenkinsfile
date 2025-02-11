@@ -67,6 +67,8 @@ spec:
                     sh 'yarn build'
 
                     withEnv(["GH_TOKEN=${RAW_GH_TOKEN_PSW}"]) {
+                      echo '## publishing unity react core and component header footer'
+                      sh 'yarn onetime-release-urc-chf'
                       echo '## Publishing packages...'
                       sh 'yarn publish-packages'
                     }
