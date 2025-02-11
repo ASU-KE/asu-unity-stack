@@ -39,7 +39,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/app-degree-pages@workspace:packages/app-degree-pages"
   dependencies:
-    "@asu/unity-react-core": "npm:^1.0.0"
+    "@asu/unity-react-core": ../unity-react-core
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-react-jsx": "npm:^7.13.12"
@@ -94,7 +94,7 @@ __metadata:
   resolution: "@asu/app-rfi@workspace:packages/app-rfi"
   dependencies:
     "@asu/unity-bootstrap-theme": "npm:^1.0.0"
-    "@asu/unity-react-core": "npm:^1.0.0"
+    "@asu/unity-react-core": ../unity-react-core
     "@babel/core": "npm:^7.13.14"
     "@babel/eslint-parser": "npm:^7.13.14"
     "@babel/plugin-proposal-class-properties": "npm:^7.13.0"
@@ -147,7 +147,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/app-webdir-ui@workspace:packages/app-webdir-ui"
   dependencies:
-    "@asu/unity-react-core": "npm:^1.0.0"
+    "@asu/unity-react-core": ../unity-react-core
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-react-jsx": "npm:^7.13.12"
@@ -263,7 +263,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/component-events@workspace:packages/component-events"
   dependencies:
-    "@asu/unity-react-core": "npm:^1.0.0"
+    "@asu/unity-react-core": ../unity-react-core
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-runtime": "npm:^7.14.5"
@@ -360,7 +360,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@asu/component-header-footer@npm:^0.0.1, @asu/component-header-footer@workspace:packages/component-header-footer":
+"@asu/component-header-footer@file:../component-header-footer::locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site":
+  version: 0.0.1
+  resolution: "@asu/component-header-footer@file:../component-header-footer#../component-header-footer::hash=fce6cf&locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site"
+  dependencies:
+    "@fortawesome/fontawesome-svg-core": "npm:^6.4.2"
+    "@fortawesome/free-brands-svg-icons": "npm:^6.4.2"
+    "@fortawesome/free-solid-svg-icons": "npm:^6.4.2"
+    "@fortawesome/react-fontawesome": "npm:^0.2.0"
+  peerDependencies:
+    react: ^18.3.1
+    react-dom: ^18.3.1
+  checksum: 10c0/b7d14dd1d65bd39057163ec0c8c42b7402916ee4f130bc5f1f24c1b424f2cff786e837183d079b66b82c6955c50cd9e7dfb056b8e09786738ba2e6815f143a01
+  languageName: node
+  linkType: hard
+
+"@asu/component-header-footer@workspace:packages/component-header-footer":
   version: 0.0.0-use.local
   resolution: "@asu/component-header-footer@workspace:packages/component-header-footer"
   dependencies:
@@ -470,7 +485,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/component-news@workspace:packages/component-news"
   dependencies:
-    "@asu/unity-react-core": "npm:^1.0.0"
+    "@asu/unity-react-core": ../unity-react-core
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-react-jsx": "npm:^7.13.12"
@@ -587,9 +602,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/static-site@workspace:packages/static-site"
   dependencies:
-    "@asu/component-header-footer": "npm:^0.0.1"
+    "@asu/component-header-footer": ../component-header-footer
     "@asu/unity-bootstrap-theme": "npm:^1.20"
-    "@asu/unity-react-core": "npm:^1.0.0"
+    "@asu/unity-react-core": ../unity-react-core
     "@fortawesome/fontawesome-svg-core": "npm:^6.4.2"
     "@fortawesome/free-brands-svg-icons": "npm:^6.4.2"
     "@fortawesome/free-solid-svg-icons": "npm:^6.4.2"
@@ -671,7 +686,121 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@asu/unity-react-core@npm:^1.0.0, @asu/unity-react-core@workspace:packages/unity-react-core":
+"@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fapp-degree-pages%40workspace%3Apackages%2Fapp-degree-pages":
+  version: 1.0.0
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fapp-degree-pages%40workspace%3Apackages%2Fapp-degree-pages"
+  dependencies:
+    "@glidejs/glide": "npm:~3.6.2"
+    classnames: "npm:^2.2.6"
+    date-fns: "npm:^2.19.0"
+    phone-fns: "npm:^3.2.3"
+    prop-types: "npm:^15.7.2"
+    styled-components: "npm:^5.3.0"
+  peerDependencies:
+    "@fortawesome/fontawesome-free": ^5.15.3
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    react-router-dom: ">= 5.2.0 < 7"
+  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  languageName: node
+  linkType: hard
+
+"@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fapp-rfi%40workspace%3Apackages%2Fapp-rfi":
+  version: 1.0.0
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fapp-rfi%40workspace%3Apackages%2Fapp-rfi"
+  dependencies:
+    "@glidejs/glide": "npm:~3.6.2"
+    classnames: "npm:^2.2.6"
+    date-fns: "npm:^2.19.0"
+    phone-fns: "npm:^3.2.3"
+    prop-types: "npm:^15.7.2"
+    styled-components: "npm:^5.3.0"
+  peerDependencies:
+    "@fortawesome/fontawesome-free": ^5.15.3
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    react-router-dom: ">= 5.2.0 < 7"
+  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  languageName: node
+  linkType: hard
+
+"@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fapp-webdir-ui%40workspace%3Apackages%2Fapp-webdir-ui":
+  version: 1.0.0
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fapp-webdir-ui%40workspace%3Apackages%2Fapp-webdir-ui"
+  dependencies:
+    "@glidejs/glide": "npm:~3.6.2"
+    classnames: "npm:^2.2.6"
+    date-fns: "npm:^2.19.0"
+    phone-fns: "npm:^3.2.3"
+    prop-types: "npm:^15.7.2"
+    styled-components: "npm:^5.3.0"
+  peerDependencies:
+    "@fortawesome/fontawesome-free": ^5.15.3
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    react-router-dom: ">= 5.2.0 < 7"
+  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  languageName: node
+  linkType: hard
+
+"@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fcomponent-events%40workspace%3Apackages%2Fcomponent-events":
+  version: 1.0.0
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fcomponent-events%40workspace%3Apackages%2Fcomponent-events"
+  dependencies:
+    "@glidejs/glide": "npm:~3.6.2"
+    classnames: "npm:^2.2.6"
+    date-fns: "npm:^2.19.0"
+    phone-fns: "npm:^3.2.3"
+    prop-types: "npm:^15.7.2"
+    styled-components: "npm:^5.3.0"
+  peerDependencies:
+    "@fortawesome/fontawesome-free": ^5.15.3
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    react-router-dom: ">= 5.2.0 < 7"
+  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  languageName: node
+  linkType: hard
+
+"@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fcomponent-news%40workspace%3Apackages%2Fcomponent-news":
+  version: 1.0.0
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fcomponent-news%40workspace%3Apackages%2Fcomponent-news"
+  dependencies:
+    "@glidejs/glide": "npm:~3.6.2"
+    classnames: "npm:^2.2.6"
+    date-fns: "npm:^2.19.0"
+    phone-fns: "npm:^3.2.3"
+    prop-types: "npm:^15.7.2"
+    styled-components: "npm:^5.3.0"
+  peerDependencies:
+    "@fortawesome/fontawesome-free": ^5.15.3
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    react-router-dom: ">= 5.2.0 < 7"
+  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  languageName: node
+  linkType: hard
+
+"@asu/unity-react-core@file:../unity-react-core::locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site":
+  version: 1.0.0
+  resolution: "@asu/unity-react-core@file:../unity-react-core#../unity-react-core::hash=b96011&locator=%40asu%2Fstatic-site%40workspace%3Apackages%2Fstatic-site"
+  dependencies:
+    "@glidejs/glide": "npm:~3.6.2"
+    classnames: "npm:^2.2.6"
+    date-fns: "npm:^2.19.0"
+    phone-fns: "npm:^3.2.3"
+    prop-types: "npm:^15.7.2"
+    styled-components: "npm:^5.3.0"
+  peerDependencies:
+    "@fortawesome/fontawesome-free": ^5.15.3
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    react-router-dom: ">= 5.2.0 < 7"
+  checksum: 10c0/24c010eefe9651a9ed09994f1e93705d80f33895165fa4df650ba9a98133d65303ef2d659022fe19148fb84ed9566eb106961072ef56d10a1968943802ab95e8
+  languageName: node
+  linkType: hard
+
+"@asu/unity-react-core@workspace:packages/unity-react-core":
   version: 0.0.0-use.local
   resolution: "@asu/unity-react-core@workspace:packages/unity-react-core"
   dependencies:
