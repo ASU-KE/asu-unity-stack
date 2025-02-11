@@ -1,3 +1,10 @@
+# [@asu/component-header-footer-v1.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.1...@asu/component-header-footer-v1.0.2) (2025-02-11)
+
+
+### Bug Fixes
+
+* **component-header-footer:** update package with proper files ([b7c4606](https://github.com/asu/asu-unity-stack/commit/b7c4606b42d4c6eb3299f5e7fefe5ac08b21c177))
+
 # [@asu/component-header-footer-v1.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.0...@asu/component-header-footer-v1.0.1) (2025-02-11)
 
 
