@@ -67,8 +67,8 @@ spec:
                     sh 'yarn build'
 
                     withEnv(["GH_TOKEN=${RAW_GH_TOKEN_PSW}"]) {
-                      echo '## publishing unity react core and component header footer'
-                      sh 'yarn onetime-release-urc-chf'
+                      echo '## Publishing packages...'
+                      sh 'yarn publish-packages'
                     }
                   }
                 }
@@ -108,7 +108,7 @@ spec:
                     httpMode: 'GET',
                     contentType: 'APPLICATION_JSON',
                     customHeaders: [
-                        [name: 'Authorization', value: "Bearer ${RAW_GH_TOKEN_PSW}"],
+                        [name: 'Authorization', value: "Bearer " + env.RAW_GH_TOKEN_PSW],
                         [name: 'Accept', value: 'application/vnd.github.v3+json']
                     ]
                 ).content
@@ -127,7 +127,7 @@ spec:
                         httpMode: 'POST',
                         contentType: 'APPLICATION_JSON',
                         customHeaders: [
-                            [name: 'Authorization', value: "Bearer ${RAW_GH_TOKEN_PSW}"],
+                            [name: 'Authorization', value: "Bearer " + env.RAW_GH_TOKEN_PSW],
                             [name: 'Accept', value: 'application/vnd.github.v3+json']
                         ],
                         requestBody: """
@@ -241,6 +241,8 @@ spec:
             steps {
                 container('node20') {
                     script {
+                      writeFile file: '.npmrc', text: '@asu:registry=https://npm.pkg.github.com/ \n' +
+                      '//npm.pkg.github.com/:_authToken=' + env.RAW_GH_TOKEN_PSW
                       withEnv(["GH_TOKEN=${RAW_GH_TOKEN_PSW}"]) {
                       echo '## Publishing packages...'
                       sh 'yarn publish-packages'
