@@ -681,7 +681,7 @@ __metadata:
     "@babel/plugin-transform-runtime": "npm:^7.19.6"
     "@babel/preset-env": "npm:^7.20.2"
     "@fortawesome/fontawesome-free": "npm:^5.15.3"
-    "@glidejs/glide": "npm:^3.4.1"
+    "@glidejs/glide": "npm:~3.6.2"
     "@storybook/addon-a11y": "npm:^8.5.1"
     "@storybook/addon-essentials": "npm:^8.5.1"
     "@storybook/addon-interactions": "npm:^8.5.1"
@@ -3585,10 +3585,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glidejs/glide@npm:^3.4.1":
-  version: 3.7.1
-  resolution: "@glidejs/glide@npm:3.7.1"
-  checksum: 10c0/fd627fc80170abcb932bac7b72fe892330c0f2f6898acb4ee190ce3412ee1637083a4618b035a8e954935fb837c5588f8d2c22aa5392c1bf759bfff43ec27cda
+"@glidejs/glide@npm:~3.6.2":
+  version: 3.6.2
+  resolution: "@glidejs/glide@npm:3.6.2"
+  checksum: 10c0/50d708f578c5c4ef833ae0f4213173cdb4152cc179696cba23c3b047410b6dc339c84349e653d16fdd2b6c1c5eea2accd8738e9c65c7e61ecd84e1ce44a34107
   languageName: node
   linkType: hard
 

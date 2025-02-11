@@ -121,7 +121,7 @@
     "vitest-browser-react": "^0.0.1"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
+    "@glidejs/glide": "~3.6.2",
     "classnames": "^2.2.6",
     "date-fns": "^2.19.0",
     "phone-fns": "^3.2.3",
