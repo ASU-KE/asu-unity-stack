@@ -43,7 +43,7 @@
     "postdocs": "node ../../scripts/process-readme-props.js"
   },
   "devDependencies": {
-    "@asu/unity-bootstrap-theme": "workspace:^",
+    "@asu/unity-bootstrap-theme": "^1.20.2",
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.21.3",
     "@babel/plugin-transform-runtime": "^7.19.6",

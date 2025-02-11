@@ -38,7 +38,7 @@
     "postdocs": "node ../../scripts/process-readme-props.js"
   },
   "dependencies": {
-    "@asu/unity-react-core": "workspace:^",
+    "@asu/unity-react-core": "^1.0.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "axios": "^1.6.0",
