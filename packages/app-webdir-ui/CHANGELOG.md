@@ -1,3 +1,21 @@
+# [@asu/app-webdir-ui-v5.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.2...@asu/app-webdir-ui-v5.0.0) (2025-02-11)
+
+
+### Bug Fixes
+
+* **unity-react-core:** update package json ([414cd0f](https://github.com/asu/asu-unity-stack/commit/414cd0f6bf60a07275b80088e3475c96fb1bcc7c))
+
+
+### Features
+
+* **app-webdir-ui:** updated to new unity-react-core ([b192bcb](https://github.com/asu/asu-unity-stack/commit/b192bcb07a01fc5c648c320265bced760f5ab4fb))
+* **components-core:** added component-carousel to components-core ([8677db8](https://github.com/asu/asu-unity-stack/commit/8677db8f92c15f768c35951fbbd85f254f437de0))
+
+
+### BREAKING CHANGES
+
+* **app-webdir-ui:** Replaced components-core with unity-react-core in dependencies
+
 # [@asu/app-webdir-ui-v4.1.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.1...@asu/app-webdir-ui-v4.1.2) (2025-01-17)
 
 
