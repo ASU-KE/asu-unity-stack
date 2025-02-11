@@ -682,22 +682,22 @@ __metadata:
     "@babel/preset-env": "npm:^7.20.2"
     "@fortawesome/fontawesome-free": "npm:^5.15.3"
     "@glidejs/glide": "npm:~3.6.2"
-    "@storybook/addon-a11y": "npm:^8.5.1"
-    "@storybook/addon-essentials": "npm:^8.5.1"
-    "@storybook/addon-interactions": "npm:^8.5.1"
-    "@storybook/addon-links": "npm:^8.5.1"
-    "@storybook/blocks": "npm:^8.5.1"
-    "@storybook/builder-vite": "npm:^8.5.1"
-    "@storybook/components": "npm:^8.5.1"
-    "@storybook/core": "npm:^8.5.1"
+    "@storybook/addon-a11y": "npm:^8.5.4"
+    "@storybook/addon-essentials": "npm:^8.5.4"
+    "@storybook/addon-interactions": "npm:^8.5.4"
+    "@storybook/addon-links": "npm:^8.5.4"
+    "@storybook/blocks": "npm:^8.5.4"
+    "@storybook/builder-vite": "npm:^8.5.4"
+    "@storybook/components": "npm:^8.5.4"
+    "@storybook/core": "npm:^8.5.4"
     "@storybook/jest": "npm:^0.2.3"
-    "@storybook/manager-api": "npm:^8.5.1"
-    "@storybook/preview-api": "npm:^8.5.1"
-    "@storybook/react": "npm:^8.5.1"
-    "@storybook/react-vite": "npm:^8.5.1"
-    "@storybook/test": "npm:^8.5.1"
+    "@storybook/manager-api": "npm:^8.5.4"
+    "@storybook/preview-api": "npm:^8.5.4"
+    "@storybook/react": "npm:^8.5.4"
+    "@storybook/react-vite": "npm:^8.5.4"
+    "@storybook/test": "npm:^8.5.4"
     "@storybook/test-runner": "npm:^0.21.0"
-    "@storybook/theming": "npm:^8.5.1"
+    "@storybook/theming": "npm:^8.5.4"
     "@testing-library/dom": "npm:^10.4.0"
     "@testing-library/jest-dom": "npm:^6.5.0"
     "@testing-library/react": "npm:^16.0.0"
@@ -741,7 +741,7 @@ __metadata:
     reactstrap: "npm:^9"
     semantic-release: "npm:^22"
     semantic-release-monorepo: "npm:^8.0.2"
-    storybook: "npm:^8.5.1"
+    storybook: "npm:^8.5.4"
     storybook-css-modules-preset: "npm:^1.1.1"
     style-loader: "npm:^3.3.1"
     styled-components: "npm:^5.3.0"
@@ -6956,7 +6956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-a11y@npm:^8.5.1":
+"@storybook/addon-a11y@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/addon-a11y@npm:8.5.4"
   dependencies:
@@ -7118,7 +7118,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-essentials@npm:^8.5.1":
+"@storybook/addon-essentials@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/addon-essentials@npm:8.5.4"
   dependencies:
@@ -7171,7 +7171,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-interactions@npm:^8.5.1":
+"@storybook/addon-interactions@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/addon-interactions@npm:8.5.4"
   dependencies:
@@ -7202,7 +7202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:^8.5.1":
+"@storybook/addon-links@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/addon-links@npm:8.5.4"
   dependencies:
@@ -7354,7 +7354,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/blocks@npm:8.5.4, @storybook/blocks@npm:^8.5.1":
+"@storybook/blocks@npm:8.5.4, @storybook/blocks@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/blocks@npm:8.5.4"
   dependencies:
@@ -7434,7 +7434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/builder-vite@npm:8.5.4, @storybook/builder-vite@npm:^8.5.1":
+"@storybook/builder-vite@npm:8.5.4, @storybook/builder-vite@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/builder-vite@npm:8.5.4"
   dependencies:
@@ -7614,7 +7614,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/components@npm:8.5.4, @storybook/components@npm:^8.5.1":
+"@storybook/components@npm:8.5.4, @storybook/components@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/components@npm:8.5.4"
   peerDependencies:
@@ -7734,7 +7734,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/core@npm:8.5.4, @storybook/core@npm:^8.5.1":
+"@storybook/core@npm:8.5.4, @storybook/core@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/core@npm:8.5.4"
   dependencies:
@@ -7917,7 +7917,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/manager-api@npm:8.5.4, @storybook/manager-api@npm:^8.5.1":
+"@storybook/manager-api@npm:8.5.4, @storybook/manager-api@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/manager-api@npm:8.5.4"
   peerDependencies:
@@ -8010,7 +8010,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/preview-api@npm:8.5.4, @storybook/preview-api@npm:^8.5.1":
+"@storybook/preview-api@npm:8.5.4, @storybook/preview-api@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/preview-api@npm:8.5.4"
   peerDependencies:
@@ -8084,7 +8084,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-vite@npm:^8.5.1":
+"@storybook/react-vite@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/react-vite@npm:8.5.4"
   dependencies:
@@ -8168,7 +8168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:8.5.4, @storybook/react@npm:^8.5.1":
+"@storybook/react@npm:8.5.4, @storybook/react@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/react@npm:8.5.4"
   dependencies:
@@ -8251,7 +8251,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/test@npm:8.5.4, @storybook/test@npm:^8.5.1":
+"@storybook/test@npm:8.5.4, @storybook/test@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/test@npm:8.5.4"
   dependencies:
@@ -8284,7 +8284,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/theming@npm:8.5.4, @storybook/theming@npm:^8.5.1":
+"@storybook/theming@npm:8.5.4, @storybook/theming@npm:^8.5.4":
   version: 8.5.4
   resolution: "@storybook/theming@npm:8.5.4"
   peerDependencies:
@@ -29773,7 +29773,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:^8.5.1":
+"storybook@npm:^8.5.4":
   version: 8.5.4
   resolution: "storybook@npm:8.5.4"
   dependencies:
