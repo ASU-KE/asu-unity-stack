@@ -1,3 +1,10 @@
+# [@asu/component-header-v2.4.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-v2.3.3...@asu/component-header-v2.4.0) (2025-02-11)
+
+
+### Features
+
+* **components-core:** added component-carousel to components-core ([8677db8](https://github.com/asu/asu-unity-stack/commit/8677db8f92c15f768c35951fbbd85f254f437de0))
+
 # [@asu/component-header-v2.3.3](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-v2.3.2...@asu/component-header-v2.3.3) (2024-10-03)
 
 
