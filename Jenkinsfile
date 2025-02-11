@@ -16,13 +16,7 @@ spec:
     - cat
     tty: true
   - name: playwright
-    image: 'mcr.microsoft.com/playwright:v1.48.0-noble'
-    imagePullPolicy: Always
-    command:
-    - cat
-    tty: true
-  - name: puppeteer
-    image: 'ghcr.io/puppeteer/puppeteer:22'
+    image: 'mcr.microsoft.com/playwright:v1.50.1-jammy'
     imagePullPolicy: Always
     command:
     - cat
