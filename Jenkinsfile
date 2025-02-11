@@ -60,7 +60,8 @@ spec:
             steps {
                 container('node20') {
                   script {
-                    echo '## Configure env file for @asu registry...'
+                    writeFile file: '.npmrc', text: '@asu:registry=https://npm.pkg.github.com/ \n' +
+                      '//npm.pkg.github.com/:_authToken=' + env.RAW_GH_TOKEN_PSW
                     echo '## Install and build Unity monorepo...'
                     sh 'yarn install --immutable'
                     sh 'yarn build'
