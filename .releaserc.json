@@ -1,11 +1,7 @@
 {
   "branches": [
     "dev",
-    {
-      "name": "testing",
-      "channel": "testing",
-      "prerelease": true
-    }
+    "testing"
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
