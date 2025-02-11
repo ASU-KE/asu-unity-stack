@@ -39,7 +39,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/app-degree-pages@workspace:packages/app-degree-pages"
   dependencies:
-    "@asu/unity-react-core": "npm:^0.0.1"
+    "@asu/unity-react-core": "npm:^1.0.0"
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-react-jsx": "npm:^7.13.12"
@@ -94,7 +94,7 @@ __metadata:
   resolution: "@asu/app-rfi@workspace:packages/app-rfi"
   dependencies:
     "@asu/unity-bootstrap-theme": "npm:^1.0.0"
-    "@asu/unity-react-core": "npm:^0.0.1"
+    "@asu/unity-react-core": "npm:^1.0.0"
     "@babel/core": "npm:^7.13.14"
     "@babel/eslint-parser": "npm:^7.13.14"
     "@babel/plugin-proposal-class-properties": "npm:^7.13.0"
@@ -147,7 +147,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/app-webdir-ui@workspace:packages/app-webdir-ui"
   dependencies:
-    "@asu/unity-react-core": "npm:^0.0.1"
+    "@asu/unity-react-core": "npm:^1.0.0"
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-react-jsx": "npm:^7.13.12"
@@ -263,7 +263,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/component-events@workspace:packages/component-events"
   dependencies:
-    "@asu/unity-react-core": "npm:^0.0.1"
+    "@asu/unity-react-core": "npm:^1.0.0"
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-runtime": "npm:^7.14.5"
@@ -470,7 +470,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/component-news@workspace:packages/component-news"
   dependencies:
-    "@asu/unity-react-core": "npm:^0.0.1"
+    "@asu/unity-react-core": "npm:^1.0.0"
     "@babel/core": "npm:^7.13.14"
     "@babel/plugin-syntax-jsx": "npm:^7.14.5"
     "@babel/plugin-transform-react-jsx": "npm:^7.13.12"
@@ -589,7 +589,7 @@ __metadata:
   dependencies:
     "@asu/component-header-footer": "npm:^0.0.1"
     "@asu/unity-bootstrap-theme": "npm:^1.20"
-    "@asu/unity-react-core": "npm:^0.0.1"
+    "@asu/unity-react-core": "npm:^1.0.0"
     "@fortawesome/fontawesome-svg-core": "npm:^6.4.2"
     "@fortawesome/free-brands-svg-icons": "npm:^6.4.2"
     "@fortawesome/free-solid-svg-icons": "npm:^6.4.2"
@@ -671,7 +671,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@asu/unity-react-core@npm:^0.0.1, @asu/unity-react-core@workspace:packages/unity-react-core":
+"@asu/unity-react-core@npm:^1.0.0, @asu/unity-react-core@workspace:packages/unity-react-core":
   version: 0.0.0-use.local
   resolution: "@asu/unity-react-core@workspace:packages/unity-react-core"
   dependencies:
