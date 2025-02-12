@@ -6,7 +6,7 @@ export default create({
   fontCode: 'monospace',
 
   brandTitle: 'Unity Design System Storybook',
-  brandUrl: './',
+  brandUrl: './../../index.html',
   brandImage: 'https://asu.github.io/asu-unity-stack/@asu/unity-bootstrap-theme/static/media/arizona-state-university-logo.a161f814.png',
   brandTarget: '_self',
 
