@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.21.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.0...@asu/unity-bootstrap-theme-v1.21.1) (2025-02-12)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** pagination active state page changed to a perfect circle ([4eb253f](https://github.com/ASU/asu-unity-stack/commit/4eb253f9b6d3b48a38ac869ea14230628a30e092))
+
 # [@asu/unity-bootstrap-theme-v1.21.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.2...@asu/unity-bootstrap-theme-v1.21.0) (2025-02-11)
 
 
