@@ -1,17 +1,18 @@
+import { Card, ButtonProps } from "@asu/unity-react-core";
 import { FC } from "react";
 import { getRelativePath } from "~/utils/baseUrl";
 
-export interface CardProps {
+export interface CardWrapperProps {
   title: string;
   description: string | JSX.Element;
   href: string;
   linkLabel: string
   isRoute?: boolean;
 }
-const Card:FC<CardProps> = ({title, description, href,linkLabel, isRoute}) => {
+const CardWrapper:FC<CardWrapperProps> = ({title, description, href,linkLabel, isRoute}) => {
   return (
     <div className="col-md-6 pb-8">
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <p>
         {description}
       </p>
@@ -37,4 +38,4 @@ const Card:FC<CardProps> = ({title, description, href,linkLabel, isRoute}) => {
   );
 };
 
-export default Card;
+export default CardWrapper;

@@ -1,7 +1,8 @@
 
 import { PagePaths } from "~/routes/config";
 import Card from "../components/Card";
-import PackageCards from "../components/PackageCards";
+import PackageCards, { DeprecatedPackageCards } from "../components/PackageCards";
+import { AnchorMenu, Divider } from "@asu/unity-react-core";
 
 const Home = () => {
   return (
@@ -25,6 +26,8 @@ const Home = () => {
         </div>
       </div>
       <div className="container">
+        <h2>Resources</h2>
+        <Divider />
         <div className="row my-6">
             <Card
               title="Unity Design System UI Kit"
@@ -72,7 +75,21 @@ const Home = () => {
               href="https://github.com/orgs/ASU/packages?repo_name=asu-unity-stack"
               linkLabel="Visit package registry"
               />
+
+        </div>
+      </div>
+      <div className="container">
+        <h2>Npm Packages</h2>
+        <Divider />
+        <div className="row my-6">
               <PackageCards/>
+        </div>
+      </div>
+      <div className="container">
+      <h2>Deprecated Packages</h2>
+      <Divider />
+        <div className="row my-6">
+              <DeprecatedPackageCards/>
         </div>
       </div>
     </>
