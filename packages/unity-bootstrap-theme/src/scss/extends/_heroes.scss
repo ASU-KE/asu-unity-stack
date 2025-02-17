@@ -282,7 +282,7 @@ div.uds-hero-md {
 }
 
 div.uds-hero-lg {
-  height: $uds-size-spacing-64;
+  min-height: $uds-size-spacing-64;
 
   .content {
     display: none;
@@ -426,7 +426,7 @@ div.uds-hero-lg {
   }
 
   div.uds-hero-lg {
-    height: 42.75rem;
+    min-height: 42.75rem;
     // TODO; remove this, it's a fallback for buttons without has-btn-row
     grid-template-rows: 1fr repeat(4, auto) $uds-size-spacing-6;
 
@@ -498,7 +498,7 @@ div.uds-hero-lg {
   }
 
   div.uds-hero-lg {
-    height: 42.75rem;
+    min-height: 42.75rem;
 
     &.uds-video-hero {
       position: relative;
