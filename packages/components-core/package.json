@@ -9,7 +9,7 @@
   "author": "Nathan Rollins <nathan.rollins@asu.edu>",
   "homepage": "https://github.com/ASU/asu-unity-stack#readme",
   "license": "MIT",
-  "deprecated": "This package has been moved. Please use that @asu/unity-react-core to receive continued support.",
+  "deprecated": "This package has been moved. Please use @asu/unity-react-core to receive continued support.",
   "files": [
     "examples/*",
     "dist/*",

@@ -8,7 +8,7 @@
   "types": "./dist/main.d.ts",
   "author": "Nicolas Baudon",
   "license": "MIT",
-  "deprecated": "This package has been moved. Please use that @asu/component-header-footer to receive continued support.",
+  "deprecated": "This package has been moved. Please use @asu/component-header-footer to receive continued support.",
   "files": [
     "examples/*",
     "dist/*",
