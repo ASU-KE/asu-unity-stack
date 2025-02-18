@@ -1,3 +1,10 @@
+# [@asu/component-header-v2.5.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-v2.4.0...@asu/component-header-v2.5.0) (2025-02-18)
+
+
+### Features
+
+* **component-header:** add Deprecation ([f404aa1](https://github.com/asu/asu-unity-stack/commit/f404aa1e24911395430dfbe91ffaa28bdc6790af))
+
 # [@asu/component-header-v2.4.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-v2.3.3...@asu/component-header-v2.4.0) (2025-02-11)
 
 
