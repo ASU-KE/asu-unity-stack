@@ -1,3 +1,10 @@
+# [@asu/component-footer-v2.4.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-footer-v2.3.0...@asu/component-footer-v2.4.0) (2025-02-18)
+
+
+### Features
+
+* **component-footer:** add Deprecation ([6b57e1d](https://github.com/asu/asu-unity-stack/commit/6b57e1d510031e93fd6d40259dc647d248e616e1))
+
 # [@asu/component-footer-v2.3.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-footer-v2.2.3...@asu/component-footer-v2.3.0) (2025-02-11)
 
 
