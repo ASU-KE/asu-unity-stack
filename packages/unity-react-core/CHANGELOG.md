@@ -1,3 +1,10 @@
+# [@asu/unity-react-core-v1.0.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.0.1...@asu/unity-react-core-v1.0.2) (2025-02-18)
+
+
+### Bug Fixes
+
+* **unity-react-core:** update AnchorMenu Ex/Doc ([430dea6](https://github.com/ASU/asu-unity-stack/commit/430dea6d5929d0651b55d8cfbdec8beb33bb8b9a))
+
 # [@asu/unity-react-core-v1.0.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.0.0...@asu/unity-react-core-v1.0.1) (2025-02-11)
 
 
