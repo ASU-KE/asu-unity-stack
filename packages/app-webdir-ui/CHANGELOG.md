@@ -1,3 +1,10 @@
+# [@asu/app-webdir-ui-v5.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v5.0.0...@asu/app-webdir-ui-v5.0.1) (2025-02-18)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** duplicate Aria labels in "Sort by" dropdown menu ([a159396](https://github.com/asu/asu-unity-stack/commit/a1593966a38affefb8e2d9dfb5baea21043d25bc))
+
 # [@asu/app-webdir-ui-v5.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.2...@asu/app-webdir-ui-v5.0.0) (2025-02-11)
 
 
