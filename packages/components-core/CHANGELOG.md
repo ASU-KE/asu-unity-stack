@@ -1,3 +1,10 @@
+# [@asu/components-core-v4.3.0](https://github.com/ASU/asu-unity-stack/compare/@asu/components-core-v4.2.0...@asu/components-core-v4.3.0) (2025-02-18)
+
+
+### Features
+
+* **components-core:** add Deprecation ([9a35364](https://github.com/ASU/asu-unity-stack/commit/9a3536442d44efb313df66c0c2bbefd5162c0dbb))
+
 # [@asu/components-core-v4.2.0](https://github.com/ASU/asu-unity-stack/compare/@asu/components-core-v4.1.1...@asu/components-core-v4.2.0) (2025-02-11)
 
 
