@@ -1,7 +1,9 @@
-
 import { PagePaths } from "~/routes/config";
 import Card from "../components/Card";
-import PackageCards from "../components/PackageCards";
+import PackageCards, {
+  DeprecatedPackageCards,
+} from "../components/PackageCards";
+import { Divider } from "@asu/unity-react-core";
 
 const Home = () => {
   return (
@@ -25,54 +27,79 @@ const Home = () => {
         </div>
       </div>
       <div className="container">
+        <h2>Resources</h2>
+        <Divider />
         <div className="row my-6">
-            <Card
-              title="Unity Design System UI Kit"
-              description="Guidelines, standards, and best-practices for Unity Design System
+          <Card
+            title="Unity Design System UI Kit"
+            description="Guidelines, standards, and best-practices for Unity Design System
               across all ASU web projects."
-              href="https://zeroheight.com/9f0b32a56"
-              linkLabel="Explore the UDS UI Kit"
-              />
+            href="https://zeroheight.com/9f0b32a56"
+            linkLabel="Explore the UDS UI Kit"
+          />
 
-              <Card
-              title="Unity Design System Styles Library"
-              description="A community-built design system built with Adobe XD."
-              href="https://shared-assets.adobe.com/link/fb14b288-bf63-47e0-5d30-384de5560455"
-              linkLabel="View the document"
-              />
-              <Card
-                title="ASU Header"
-                description="Guidelines, requirements and best practices for using the ASU
+          <Card
+            title="Unity Design System Styles Library"
+            description="A community-built design system built with Adobe XD."
+            href="https://shared-assets.adobe.com/link/fb14b288-bf63-47e0-5d30-384de5560455"
+            linkLabel="View the document"
+          />
+          <Card
+            title="ASU Header"
+            description="Guidelines, requirements and best practices for using the ASU
               Branded Header in your site."
-                href={PagePaths.HEADERGUIDE + "index.html"}
-                isRoute={true}
-                linkLabel="View the guide"
-                />
-            <Card
-              title="Google Tag Manager and data layer"
-              description="Ensure your site or application has the necessary analytics integrations."
-              href={PagePaths.DATALAYERGUIDE + "index.html"}
-              isRoute={true}
-              linkLabel="GTM and data layer guide"
-              />
-            <Card
-              title="Unity Design System Package Registry"
-              description={<>
-                <a target="_blank" rel="noreferrer" href="https://github.com/ASU/asu-unity-stack#-how-to-use-the-private-package-registry">
+            href={PagePaths.HEADERGUIDE + "index.html"}
+            isRoute={true}
+            linkLabel="View the guide"
+          />
+          <Card
+            title="Google Tag Manager and data layer"
+            description="Ensure your site or application has the necessary analytics integrations."
+            href={PagePaths.DATALAYERGUIDE + "index.html"}
+            isRoute={true}
+            linkLabel="GTM and data layer guide"
+          />
+          <Card
+            title="Unity Design System Package Registry"
+            description={
+              <>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/ASU/asu-unity-stack#-how-to-use-the-private-package-registry"
+                >
                   Learn how to use the private package registry
                 </a>{" "}
                 to incorporate Unity packages in your site or application. Note:
                 You must belong to the ASU GitHub organization to access these
                 packages.{" "}
-                <a target="_blank" rel="noreferrer" href="https://asu.edu/webservices">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://asu.edu/webservices"
+                >
                   Request access to the Unity Design System GitHub Repo
                 </a>{" "}
                 if you need that.
-              </>}
-              href="https://github.com/orgs/ASU/packages?repo_name=asu-unity-stack"
-              linkLabel="Visit package registry"
-              />
-              <PackageCards/>
+              </>
+            }
+            href="https://github.com/orgs/ASU/packages?repo_name=asu-unity-stack"
+            linkLabel="Visit package registry"
+          />
+        </div>
+      </div>
+      <div className="container">
+        <h2>Npm Packages</h2>
+        <Divider />
+        <div className="row my-6">
+          <PackageCards />
+        </div>
+      </div>
+      <div className="container">
+        <h2>Deprecated Packages</h2>
+        <Divider />
+        <div className="row my-6">
+          <DeprecatedPackageCards />
         </div>
       </div>
     </>
