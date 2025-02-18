@@ -1,3 +1,14 @@
+# [@asu/app-degree-pages-v3.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v3.0.0...@asu/app-degree-pages-v3.0.1) (2025-02-18)
+
+
+### Bug Fixes
+
+* **app-degree-pages:** at A Glance-STEM-OPT Update ([15c920a](https://github.com/asu/asu-unity-stack/commit/15c920ae8102cb8988d160a7848c4fd1936d7023))
+* **app-degree-pages:** degreeRequirements failing to display ([b91aabf](https://github.com/asu/asu-unity-stack/commit/b91aabfec984954971eb5716c33ce42f812812e1))
+* **app-degree-pages:** logic error in getGraduateRequirements ([a17daf4](https://github.com/asu/asu-unity-stack/commit/a17daf4a8fa646c1e169110a0c0ea710542473af))
+* **app-degree-pages:** sTEM-OPT Update+ ([fab8906](https://github.com/asu/asu-unity-stack/commit/fab8906d3445efb4662acdee3831e1cc723d031d))
+* **app-degree-pages:** sTEMP-OPT update ([ab0d13e](https://github.com/asu/asu-unity-stack/commit/ab0d13e687bc4318a32ab1d70fa5923f0e4b5f16))
+
 # [@asu/app-degree-pages-v3.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v2.6.2...@asu/app-degree-pages-v3.0.0) (2025-02-11)
 
 
