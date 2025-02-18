@@ -31,7 +31,10 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
             className={cx("breadcrumb-item", { active: item.active })}
             key={item.href}
           >
+            { item.active ?
+            <span>{item.label}</span> :
             <a href={item.href}>{item.label}</a>
+            }
           </li>
         ))}
       </ol>
