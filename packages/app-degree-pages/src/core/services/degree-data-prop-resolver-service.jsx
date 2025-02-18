@@ -218,6 +218,14 @@ function degreeDataPropResolverService(row = {}) {
       return "Major";
     },
     getStemOptText: () => row["stemOptText"],
+    hasStemOptText: () => {
+      const text = row["stemOptText"];
+      if (text && text !== "") {
+        return "Yes";
+      } else {
+        return "No";
+      }
+    },
     getSubPlnMajorMaps: () => {
       if (!row["subplans"] || !row["majorMapSubplans"]) return [];
       let subplans = [...row["subplans"]]?.filter(

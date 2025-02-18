@@ -102,6 +102,13 @@ const renderExtraInfo = ({ resolver }) => (
         {resolver.getMathIntensity()}
       </div>
     )}
+
+    {resolver.hasStemOptText() && (
+      <div>
+        <strong>STEM OPT:</strong>
+        {resolver.hasStemOptText()}
+      </div>
+    )}
   </div>
 );
 
