@@ -50,12 +50,24 @@ describe("NotificationBanner tests", () => {
     expect(container.firstChild).toHaveClass("banner-orange");
   });
 
+  it("should render with gold buttons on black background", async() => {
+    const props: NotificationBannerProps = {
+      ...defaultProps,
+      buttons: [{ href: "#", label: "Click me" }],
+      color: "black",
+    };
+    const {findByTestId, container} = renderComponent(props);
+    const buttonWrapper = await findByTestId("banner-buttons");
+    expect(container.firstChild).toHaveClass("banner-black");
+    expect(buttonWrapper.querySelector('a')).toHaveClass('btn-gold');
+  });
+
   it("should render buttons if provided", () => {
     const props: NotificationBannerProps = {
       ...defaultProps,
       buttons: [{ href: "#", label: "Click me" }],
     };
-    const { getByText } = renderComponent(props);
+    const { getByText} = renderComponent(props);
     expect(getByText("Click me")).toBeInTheDocument();
   });
 
