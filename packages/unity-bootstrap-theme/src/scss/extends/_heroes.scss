@@ -212,7 +212,7 @@ div[class^="uds-hero"] {
 }
 
 div.uds-hero-sm {
-  height: $uds-size-spacing-32;
+  min-height: $uds-size-spacing-32;
   grid-template-rows: 1fr auto auto 3rem;
 
   h1,
@@ -255,7 +255,7 @@ div.uds-hero-sm {
 }
 
 div.uds-hero-md {
-  height: 21rem;
+  min-height: 21rem;
   // by design, the hero-md has no content on mobile, change grid template rows and hide .content
   grid-template-rows: 1fr auto auto 3rem;
 
@@ -379,7 +379,7 @@ div.uds-hero-lg {
     grid-template-rows: 1fr auto auto $uds-size-spacing-7;
     &.has-btn-row {
       .btn-row {
-        top: 14.5rem;
+        top: 92%;
       }
     }
 
@@ -391,7 +391,7 @@ div.uds-hero-lg {
   }
 
   div.uds-hero-md {
-    height: $uds-size-spacing-64;
+    min-height: $uds-size-spacing-64;
     // TODO; remove this, it's a fallback for buttons without has-btn-row
     grid-template-rows: 1fr repeat(4, auto) $uds-size-spacing-6;
     h1 {
