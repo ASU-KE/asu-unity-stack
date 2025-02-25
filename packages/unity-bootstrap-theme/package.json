@@ -86,7 +86,7 @@
       "default": "./src/js/data-layer.js"
     },
     "./*": "./*",
-    ".": "./dist/unity-bootstrap-theme.css"
+    ".": "./dist/css/unity-bootstrap-theme.css"
   },
   "peerDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3"

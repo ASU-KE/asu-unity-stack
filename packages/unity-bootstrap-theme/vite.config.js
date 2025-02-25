@@ -61,9 +61,9 @@ const c = {
         chunkFileNames: "js/[name].[format]",
         assetFileNames: (assetInfo) => {
           if (assetInfo.originalFileNames && assetInfo.originalFileNames[0].includes("bundle")) {
-            return "unity-bootstrap-theme.bundle.[ext]";
+            return "css/unity-bootstrap-theme.bundle.[ext]";
           }
-          return "[name].[ext]";
+          return "css/[name].[ext]";
         },
         format: "es",
       },
