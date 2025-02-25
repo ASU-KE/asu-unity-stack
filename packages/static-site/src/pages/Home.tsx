@@ -8,10 +8,9 @@ import { Divider } from "@asu/unity-react-core";
 const Home = () => {
   return (
     <>
-      <div className="uds-hero-sm">
-        <img className="hero" src="./assets/img/grey-bg.jpg" />
+      <div className="uds-hero-sm bg morse-code-black">
         <h1>
-          <span className="highlight-black">Unity Component Explorer</span>
+          <span className="highlight-gold">Unity Component Explorer</span>
         </h1>
       </div>
       <div className="container">
