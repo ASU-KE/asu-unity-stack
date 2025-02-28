@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.21.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.1...@asu/unity-bootstrap-theme-v1.21.2) (2025-02-28)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** accessibility: Dark Background Hyperlink Color Not Accessible ([87aa9fd](https://github.com/ASU/asu-unity-stack/commit/87aa9fd674141c9163909273e4b9bf8e33427643))
+
 # [@asu/unity-bootstrap-theme-v1.21.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.0...@asu/unity-bootstrap-theme-v1.21.1) (2025-02-12)
 
 
