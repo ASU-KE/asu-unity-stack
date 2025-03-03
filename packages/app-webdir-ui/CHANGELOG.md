@@ -1,3 +1,10 @@
+# [@asu/app-webdir-ui-v5.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v5.0.1...@asu/app-webdir-ui-v5.0.2) (2025-03-03)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** changed aria-label for All option on alphaFilter ([f26a7fb](https://github.com/asu/asu-unity-stack/commit/f26a7fb47312c5082a94b364b0279317c40467e2))
+
 # [@asu/app-webdir-ui-v5.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v5.0.0...@asu/app-webdir-ui-v5.0.1) (2025-02-18)
 
 
