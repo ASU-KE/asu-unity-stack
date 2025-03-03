@@ -1,3 +1,11 @@
+# [@asu/unity-react-core-v1.0.4](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.0.3...@asu/unity-react-core-v1.0.4) (2025-03-03)
+
+
+### Bug Fixes
+
+* **unity-react-core:** "Current Page" Text State Change to Plain Text ([38b2d02](https://github.com/ASU/asu-unity-stack/commit/38b2d0226b50c74cffcffb33d0c43be1c9690632))
+* **unity-react-core:** "Current Page" Text State Change to Plain Text ([b413f95](https://github.com/ASU/asu-unity-stack/commit/b413f9517f1b062b10ab3122c0ab69bc9828a992))
+
 # [@asu/unity-react-core-v1.0.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.0.2...@asu/unity-react-core-v1.0.3) (2025-03-03)
 
 
