@@ -128,7 +128,7 @@ const FilterComponent = ({
                 resetFilters();
               }}
               tabIndex={-1}
-              aria-label={`Reset ${filterLabel}`}
+              aria-label="All"
               aria-checked={selected === null}
               className="choice"
             >
