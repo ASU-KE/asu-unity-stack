@@ -1,3 +1,10 @@
+# [@asu/app-degree-pages-v3.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v3.0.1...@asu/app-degree-pages-v3.0.2) (2025-03-03)
+
+
+### Bug Fixes
+
+* **app-degree-pages:** added new description in campus-definitions.js ([6337dc5](https://github.com/asu/asu-unity-stack/commit/6337dc5ed2bf9a8705102ef189bf4bceafdd7aed))
+
 # [@asu/app-degree-pages-v3.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v3.0.0...@asu/app-degree-pages-v3.0.1) (2025-02-18)
 
 
