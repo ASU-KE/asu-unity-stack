@@ -1,3 +1,10 @@
+# [@asu/app-rfi-v3.1.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v3.0.0...@asu/app-rfi-v3.1.0) (2025-03-03)
+
+
+### Features
+
+* **app-rfi:** added autoFocus prop for EmailAddress input ([dd729b3](https://github.com/asu/asu-unity-stack/commit/dd729b36567ffa2ebb196eeef56e1e8edc6d2543))
+
 # [@asu/app-rfi-v3.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v2.4.2...@asu/app-rfi-v3.0.0) (2025-02-11)
 
 
