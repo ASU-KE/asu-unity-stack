@@ -105,7 +105,7 @@ const variants = {
     >
       <h4>Step 2 of 2</h4>
       <h2>About me</h2>
-      <EmailAddress gaData={gaData2Of2} />
+      <EmailAddress autoFocus gaData={gaData2Of2} />
       <FirstName gaData={gaData2Of2} />
       <LastName gaData={gaData2Of2} />
       <Phone gaData={gaData2Of2} />
