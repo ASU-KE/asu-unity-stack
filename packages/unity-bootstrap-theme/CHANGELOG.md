@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.21.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.2...@asu/unity-bootstrap-theme-v1.21.3) (2025-03-07)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** bring back css dir ([949367c](https://github.com/ASU/asu-unity-stack/commit/949367c279b72e678a8bfc6000a1d334dd267aa7))
+* **unity-bootstrap-theme:** relative css assets ([27db1a7](https://github.com/ASU/asu-unity-stack/commit/27db1a723e051761593da7530b890d305a9cfb1a))
+
 # [@asu/unity-bootstrap-theme-v1.21.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.1...@asu/unity-bootstrap-theme-v1.21.2) (2025-02-28)
 
 
