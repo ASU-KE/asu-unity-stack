@@ -1,3 +1,10 @@
+# [@asu/app-webdir-ui-v5.0.3](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v5.0.2...@asu/app-webdir-ui-v5.0.3) (2025-03-12)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** moved react router dom to dependencies ([c89d5c4](https://github.com/asu/asu-unity-stack/commit/c89d5c4f4fe21f4334d66ce46945b0246205626a))
+
 # [@asu/app-webdir-ui-v5.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v5.0.1...@asu/app-webdir-ui-v5.0.2) (2025-03-03)
 
 
