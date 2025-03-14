@@ -1,3 +1,10 @@
+# [@asu/component-header-footer-v1.0.3](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.2...@asu/component-header-footer-v1.0.3) (2025-03-14)
+
+
+### Bug Fixes
+
+* **component-header-footer:** pass onClick handler to header buttons ([064292f](https://github.com/asu/asu-unity-stack/commit/064292f0d9efa3f6b362e9fc430bcfb052ac588b))
+
 # [@asu/component-header-footer-v1.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.1...@asu/component-header-footer-v1.0.2) (2025-02-11)
 
 
