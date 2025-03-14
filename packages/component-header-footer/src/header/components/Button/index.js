@@ -20,6 +20,7 @@ const Button = ({ href, color, text, classes, onClick, onFocus }) => {
       className={`button-${color} ${classes ?? ""}`}
       onClick={onClick}
       onFocus={onFocus}
+      {...(onClick && { role: "button" })}
     >
       {text}
     </ButtonWrapper>
