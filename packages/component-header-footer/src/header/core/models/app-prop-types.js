@@ -26,7 +26,7 @@ const LoginPropTypes = {
 const ButtonPropTypes = {
   text: PropTypes.string.isRequired,
   color: PropTypes.oneOf(["gold", "maroon", "light", "dark"]),
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
   classes: PropTypes.string,
   onClick: PropTypes.func,
   onFocus: PropTypes.func,

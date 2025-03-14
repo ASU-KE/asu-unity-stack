@@ -10,6 +10,9 @@ import { UniversalNavbar } from "../../UniversalNavbar";
 import { Wrapper } from "./index.styles";
 import { NavItem } from "./NavItem";
 
+export const BUTTON_ERROR_MESSAGE =
+  "Header buttons cannot have both an onClick and an href property as this breaks accessibility. Please remove one";
+
 const NavbarContainer = () => {
   const { navTree, mobileNavTree, buttons, breakpoint } = useAppContext();
   const isMobile = useIsMobile(breakpoint);
@@ -17,6 +20,26 @@ const NavbarContainer = () => {
 
   const handleSetItemOpened = itemId => {
     setItemOpened(prev => (itemOpened === itemId ? undefined : itemId));
+  };
+
+  const validateButton = button => {
+    if (button.onClick && button.href) {
+      console.error(BUTTON_ERROR_MESSAGE);
+    }
+  };
+
+  const handleButtonClick = button => () => {
+    trackGAEvent({
+      event: "link",
+      action: "click",
+      name: "onclick",
+      region: "navbar",
+      type: "internal link",
+      section: "main navbar",
+      text: button.text,
+    });
+
+    if (button.onClick) button.onClick();
   };
 
   const renderItem = (link, index) => {
@@ -47,23 +70,17 @@ const NavbarContainer = () => {
           )}
           {!!buttons?.length && (
             <form className="buttons-container" data-testid="buttons-container">
-              {buttons?.map(button => (
-                <Button
-                  {...button}
-                  key={button.text}
-                  onClick={() =>
-                    trackGAEvent({
-                      event: "link",
-                      action: "click",
-                      name: "onclick",
-                      region: "navbar",
-                      type: "internal link",
-                      section: "main navbar",
-                      text: button.text,
-                    })
-                  }
-                />
-              ))}
+              {buttons.map(button => {
+                validateButton(button);
+                console.log(button);
+                return (
+                  <Button
+                    {...button}
+                    key={button.text}
+                    onClick={handleButtonClick(button)}
+                  />
+                );
+              })}
             </form>
           )}
         </div>
