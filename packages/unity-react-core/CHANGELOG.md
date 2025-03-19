@@ -1,3 +1,10 @@
+# [@asu/unity-react-core-v1.0.5](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.0.4...@asu/unity-react-core-v1.0.5) (2025-03-19)
+
+
+### Bug Fixes
+
+* **unity-react-core:** updating the page numbers and ellipses used in pagination ([073c6ea](https://github.com/ASU/asu-unity-stack/commit/073c6ea2d5fbeb65730d8384e73440b2eb7432dd))
+
 # [@asu/unity-react-core-v1.0.4](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.0.3...@asu/unity-react-core-v1.0.4) (2025-03-03)
 
 
