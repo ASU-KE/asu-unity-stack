@@ -183,7 +183,7 @@ Pagination.propTypes = {
    */
   totalPages: PropTypes.number,
   /**
-   * Callback fired when the page is changed.
+   * Callback fired when the page is changed
    */
   onChange: PropTypes.func.isRequired,
 };
