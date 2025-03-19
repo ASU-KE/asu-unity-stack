@@ -62,16 +62,15 @@ export const Pagination = ({
 
   const renderPages = () => {
     // Set the ranges to be shown in the pagination
-    const displayMinimumPages = 2;
     const lowerRangeLimit = iff(
       selectedPage === totalPages - 1,
-      1,
-      selectedPage === totalPages ? 2 : 1
+      2,
+      selectedPage === totalPages ? 3 : 1
     );
     const upperRangeLimit = iff(
       selectedPage === 1,
-      2,
-      selectedPage === 2 ? 1 : 1
+      3,
+      selectedPage === 2 ? 2 : 1
     );
     const lowerRange = createRange(
       selectedPage - lowerRangeLimit,
@@ -97,16 +96,6 @@ export const Pagination = ({
             1
           </PageItem>
         )}
-        {selectedPage > (totalPages - displayMinimumPages ) && (
-          <PageItem
-            isClickeable
-            ariaLabel={`Page 2 of ${totalPages}`}
-            selectedPage={selectedPage === 2}
-            onClick={e => handleChangePage(e, 2)}
-          >
-            2
-          </PageItem>
-        )}
         {renderedPages[0] > 2 && <PageItem ellipses>...</PageItem>}
         {renderedPages.map(page => (
           <PageItem
@@ -121,16 +110,6 @@ export const Pagination = ({
         ))}
         {renderedPages[renderedPages.length - 1] < totalPages - 1 && (
           <PageItem ellipses>...</PageItem>
-        )}
-        {selectedPage < displayMinimumPages + 1  && (
-          <PageItem
-            isClickeable
-            ariaLabel={`Page ${totalPages-1} of ${totalPages}`}
-            selectedPage={selectedPage === totalPages - 1}
-            onClick={e => handleChangePage(e, totalPages - 1)}
-          >
-            {totalPages - 1}
-          </PageItem>
         )}
         {renderedPages[renderedPages.length - 1] !== totalPages && (
           <PageItem
