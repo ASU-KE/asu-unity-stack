@@ -1,3 +1,10 @@
+# [@asu/unity-react-core-v1.0.6](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.0.5...@asu/unity-react-core-v1.0.6) (2025-03-19)
+
+
+### Bug Fixes
+
+* **unity-react-core:** revert uds-1856 ([7b9e465](https://github.com/ASU/asu-unity-stack/commit/7b9e465cd36c124cfdd7b6a7b6c7489bce5c0af2))
+
 # [@asu/unity-react-core-v1.0.5](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.0.4...@asu/unity-react-core-v1.0.5) (2025-03-19)
 
 
