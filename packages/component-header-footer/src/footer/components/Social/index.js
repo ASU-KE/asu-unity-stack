@@ -11,12 +11,8 @@ import PropTypes, { shape } from "prop-types";
 import React from "react";
 
 import { trackGAEvent } from "../../../../../../shared";
-import { getCurrentScriptPath } from "../../../../../../shared/utils";
-
-// @ts-ignore
-
-const currentScriptPath = getCurrentScriptPath();
-const endorsedLogo = `${currentScriptPath}assets/images/endorsedLogo.png`;
+// @ts-expect-error
+import endorsedLogo from "../../../../public/assets/images/endorsedLogo.png";
 
 const DEFAULT_GA_EVENT = {
   type: "external link",

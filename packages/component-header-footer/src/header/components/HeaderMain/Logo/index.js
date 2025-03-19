@@ -2,8 +2,8 @@
 import React from "react";
 
 import { trackGAEvent } from "../../../../../../../shared";
-import vertLogo from "../../../assets/img/arizona-state-university-logo-vertical.png";
-import horizLogo from "../../../assets/img/arizona-state-university-logo.png";
+import vertLogo from "../../../../../public/assets/img/arizona-state-university-logo-vertical.png";
+import horizLogo from "../../../../../public/assets/img/arizona-state-university-logo.png";
 import { useAppContext } from "../../../core/context/app-context";
 import { LogoWrapper } from "./index.styles";
 
