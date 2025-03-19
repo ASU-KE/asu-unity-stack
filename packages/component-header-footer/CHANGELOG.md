@@ -1,3 +1,10 @@
+# [@asu/component-header-footer-v1.0.4](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.3...@asu/component-header-footer-v1.0.4) (2025-03-19)
+
+
+### Bug Fixes
+
+* **component-header-footer:** point all images to public folder ([bdbac3b](https://github.com/asu/asu-unity-stack/commit/bdbac3b0fe1e1a6d5b94087f54202c5e4c57838b))
+
 # [@asu/component-header-footer-v1.0.3](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.2...@asu/component-header-footer-v1.0.3) (2025-03-14)
 
 
