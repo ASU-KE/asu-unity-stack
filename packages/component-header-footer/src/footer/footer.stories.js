@@ -1,7 +1,6 @@
 import React from "react";
 
-// eslint-disable-next-line import/no-unresolved
-import endorsedLogo from "./assets/images/endorsedLogo.png";
+import endorsedLogo from "../../public/assets/images/endorsedLogo.png";
 import { ASUFooter } from "./footer";
 
 export default {

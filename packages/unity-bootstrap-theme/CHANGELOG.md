@@ -1,3 +1,44 @@
+# [@asu/unity-bootstrap-theme-v1.21.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.2...@asu/unity-bootstrap-theme-v1.21.3) (2025-03-07)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** bring back css dir ([949367c](https://github.com/ASU/asu-unity-stack/commit/949367c279b72e678a8bfc6000a1d334dd267aa7))
+* **unity-bootstrap-theme:** relative css assets ([27db1a7](https://github.com/ASU/asu-unity-stack/commit/27db1a723e051761593da7530b890d305a9cfb1a))
+
+# [@asu/unity-bootstrap-theme-v1.21.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.1...@asu/unity-bootstrap-theme-v1.21.2) (2025-02-28)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** accessibility: Dark Background Hyperlink Color Not Accessible ([87aa9fd](https://github.com/ASU/asu-unity-stack/commit/87aa9fd674141c9163909273e4b9bf8e33427643))
+
+# [@asu/unity-bootstrap-theme-v1.21.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.0...@asu/unity-bootstrap-theme-v1.21.1) (2025-02-12)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** pagination active state page changed to a perfect circle ([4eb253f](https://github.com/ASU/asu-unity-stack/commit/4eb253f9b6d3b48a38ac869ea14230628a30e092))
+
+# [@asu/unity-bootstrap-theme-v1.21.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.2...@asu/unity-bootstrap-theme-v1.21.0) (2025-02-11)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** allow span,i alert-icon tags ([3a7b4ad](https://github.com/ASU/asu-unity-stack/commit/3a7b4ad8ecc676ec4526d36a7f0e31ccb39e178c))
+* **unity-bootstrap-theme:** apply a11y breadcrumbs min size ([fbd32cc](https://github.com/ASU/asu-unity-stack/commit/fbd32cc8f419bc97ea794553e7158a92af3ca215))
+* **unity-bootstrap-theme:** breadcrumbs ([73180a5](https://github.com/ASU/asu-unity-stack/commit/73180a52d8a193d409c368d4109e2072819c8f11))
+* **unity-bootstrap-theme:** style tweak to support rendering non-svg icons ([6010c42](https://github.com/ASU/asu-unity-stack/commit/6010c4233d9cf01fd6260fc9ae2cb2a14dffb0e0))
+* **unity-react-core:** update package.json ([7eabcca](https://github.com/ASU/asu-unity-stack/commit/7eabcca01058eb26a1954fd26831b7ebbf1ea161))
+
+
+### Features
+
+* **components-core:** added component-carousel to components-core ([8677db8](https://github.com/ASU/asu-unity-stack/commit/8677db8f92c15f768c35951fbbd85f254f437de0))
+* **unity-bootstrap-theme:** banner icon styles ([3304cf4](https://github.com/ASU/asu-unity-stack/commit/3304cf4d818a6f6ab85652afcde346d5e5fa6ccf))
+* **unity-bootstrap-theme:** rank cards native BS ([f799b7c](https://github.com/ASU/asu-unity-stack/commit/f799b7cbb693005ce4783b878c498bfe1d10535f))
+* **unity-react-core:** form elements ([bf2d04b](https://github.com/ASU/asu-unity-stack/commit/bf2d04b64439e2bbe433d9a8c68271a09dafe29c))
+
 # [@asu/unity-bootstrap-theme-v1.20.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.20.1...@asu/unity-bootstrap-theme-v1.20.2) (2025-01-17)
 
 

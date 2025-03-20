@@ -16,13 +16,7 @@ spec:
     - cat
     tty: true
   - name: playwright
-    image: 'mcr.microsoft.com/playwright:v1.48.0-noble'
-    imagePullPolicy: Always
-    command:
-    - cat
-    tty: true
-  - name: puppeteer
-    image: 'ghcr.io/puppeteer/puppeteer:22'
+    image: 'mcr.microsoft.com/playwright:v1.50.1-jammy'
     imagePullPolicy: Always
     command:
     - cat
@@ -60,7 +54,8 @@ spec:
             steps {
                 container('node20') {
                   script {
-                    echo '## Configure env file for @asu registry...'
+                    writeFile file: '.npmrc', text: '@asu:registry=https://npm.pkg.github.com/ \n' +
+                      '//npm.pkg.github.com/:_authToken=' + env.RAW_GH_TOKEN_PSW
                     echo '## Install and build Unity monorepo...'
                     sh 'yarn install --immutable'
                     sh 'yarn build'
@@ -107,7 +102,7 @@ spec:
                     httpMode: 'GET',
                     contentType: 'APPLICATION_JSON',
                     customHeaders: [
-                        [name: 'Authorization', value: "Bearer ${RAW_GH_TOKEN_PSW}"],
+                        [name: 'Authorization', value: "Bearer " + env.RAW_GH_TOKEN_PSW],
                         [name: 'Accept', value: 'application/vnd.github.v3+json']
                     ]
                 ).content
@@ -126,7 +121,7 @@ spec:
                         httpMode: 'POST',
                         contentType: 'APPLICATION_JSON',
                         customHeaders: [
-                            [name: 'Authorization', value: "Bearer ${RAW_GH_TOKEN_PSW}"],
+                            [name: 'Authorization', value: "Bearer " + env.RAW_GH_TOKEN_PSW],
                             [name: 'Accept', value: 'application/vnd.github.v3+json']
                         ],
                         requestBody: """
@@ -240,6 +235,8 @@ spec:
             steps {
                 container('node20') {
                     script {
+                      writeFile file: '.npmrc', text: '@asu:registry=https://npm.pkg.github.com/ \n' +
+                      '//npm.pkg.github.com/:_authToken=' + env.RAW_GH_TOKEN_PSW
                       withEnv(["GH_TOKEN=${RAW_GH_TOKEN_PSW}"]) {
                       echo '## Publishing packages...'
                       sh 'yarn publish-packages'

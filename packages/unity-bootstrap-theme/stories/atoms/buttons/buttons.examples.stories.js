@@ -5,7 +5,6 @@ export default {
   title: "Atoms/Buttons/Examples",
   parameters: { controls: { disable: true } },
 };
-import { googleAnalytics as initFunc } from "@asu/unity-bootstrap-theme/js/data-layer.js";
 
 export const ButtonColorsComponent = () => (
   <div>

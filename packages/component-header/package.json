@@ -1,6 +1,6 @@
 {
   "name": "@asu/component-header",
-  "version": "2.3.3",
+  "version": "2.5.0",
   "description": "ASU Global Header",
   "main": "./dist/asuHeader.cjs.js",
   "browser": "./dist/asuHeader.umd.js",
@@ -8,6 +8,7 @@
   "types": "./dist/main.d.ts",
   "author": "Nicolas Baudon",
   "license": "MIT",
+  "deprecated": "This package has been moved. Please use @asu/component-header-footer to receive continued support.",
   "files": [
     "examples/*",
     "dist/*",

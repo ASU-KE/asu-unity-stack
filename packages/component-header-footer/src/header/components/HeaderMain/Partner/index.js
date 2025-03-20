@@ -3,9 +3,9 @@ import React from "react";
 
 import { trackGAEvent } from "../../../../../../../shared";
 // @ts-check
-import asuVertLogo from "../../../assets/img/arizona-state-university-logo-vertical.png";
-import asuHorizLogo from "../../../assets/img/arizona-state-university-logo.png";
-import starbucksLogo from "../../../assets/img/asu-starbucks.png";
+import asuVertLogo from "../../../../../public/assets/img/arizona-state-university-logo-vertical.png";
+import asuHorizLogo from "../../../../../public/assets/img/arizona-state-university-logo.png";
+import starbucksLogo from "../../../../../public/assets/img/asu-starbucks.png";
 import { useAppContext } from "../../../core/context/app-context";
 import { PartnerLogosWrapper } from "./index.styles";
 

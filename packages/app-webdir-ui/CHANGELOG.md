@@ -1,3 +1,42 @@
+# [@asu/app-webdir-ui-v5.0.3](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v5.0.2...@asu/app-webdir-ui-v5.0.3) (2025-03-12)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** moved react router dom to dependencies ([c89d5c4](https://github.com/asu/asu-unity-stack/commit/c89d5c4f4fe21f4334d66ce46945b0246205626a))
+
+# [@asu/app-webdir-ui-v5.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v5.0.1...@asu/app-webdir-ui-v5.0.2) (2025-03-03)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** changed aria-label for All option on alphaFilter ([f26a7fb](https://github.com/asu/asu-unity-stack/commit/f26a7fb47312c5082a94b364b0279317c40467e2))
+
+# [@asu/app-webdir-ui-v5.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v5.0.0...@asu/app-webdir-ui-v5.0.1) (2025-02-18)
+
+
+### Bug Fixes
+
+* **app-webdir-ui:** duplicate Aria labels in "Sort by" dropdown menu ([a159396](https://github.com/asu/asu-unity-stack/commit/a1593966a38affefb8e2d9dfb5baea21043d25bc))
+
+# [@asu/app-webdir-ui-v5.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.2...@asu/app-webdir-ui-v5.0.0) (2025-02-11)
+
+
+### Bug Fixes
+
+* **unity-react-core:** update package json ([414cd0f](https://github.com/asu/asu-unity-stack/commit/414cd0f6bf60a07275b80088e3475c96fb1bcc7c))
+
+
+### Features
+
+* **app-webdir-ui:** updated to new unity-react-core ([b192bcb](https://github.com/asu/asu-unity-stack/commit/b192bcb07a01fc5c648c320265bced760f5ab4fb))
+* **components-core:** added component-carousel to components-core ([8677db8](https://github.com/asu/asu-unity-stack/commit/8677db8f92c15f768c35951fbbd85f254f437de0))
+
+
+### BREAKING CHANGES
+
+* **app-webdir-ui:** Replaced components-core with unity-react-core in dependencies
+
 # [@asu/app-webdir-ui-v4.1.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-webdir-ui-v4.1.1...@asu/app-webdir-ui-v4.1.2) (2025-01-17)
 
 

@@ -1,3 +1,39 @@
+# [@asu/app-degree-pages-v3.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v3.0.1...@asu/app-degree-pages-v3.0.2) (2025-03-03)
+
+
+### Bug Fixes
+
+* **app-degree-pages:** added new description in campus-definitions.js ([6337dc5](https://github.com/asu/asu-unity-stack/commit/6337dc5ed2bf9a8705102ef189bf4bceafdd7aed))
+
+# [@asu/app-degree-pages-v3.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v3.0.0...@asu/app-degree-pages-v3.0.1) (2025-02-18)
+
+
+### Bug Fixes
+
+* **app-degree-pages:** at A Glance-STEM-OPT Update ([15c920a](https://github.com/asu/asu-unity-stack/commit/15c920ae8102cb8988d160a7848c4fd1936d7023))
+* **app-degree-pages:** degreeRequirements failing to display ([b91aabf](https://github.com/asu/asu-unity-stack/commit/b91aabfec984954971eb5716c33ce42f812812e1))
+* **app-degree-pages:** logic error in getGraduateRequirements ([a17daf4](https://github.com/asu/asu-unity-stack/commit/a17daf4a8fa646c1e169110a0c0ea710542473af))
+* **app-degree-pages:** sTEM-OPT Update+ ([fab8906](https://github.com/asu/asu-unity-stack/commit/fab8906d3445efb4662acdee3831e1cc723d031d))
+* **app-degree-pages:** sTEMP-OPT update ([ab0d13e](https://github.com/asu/asu-unity-stack/commit/ab0d13e687bc4318a32ab1d70fa5923f0e4b5f16))
+
+# [@asu/app-degree-pages-v3.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v2.6.2...@asu/app-degree-pages-v3.0.0) (2025-02-11)
+
+
+### Bug Fixes
+
+* **unity-react-core:** update package json ([414cd0f](https://github.com/asu/asu-unity-stack/commit/414cd0f6bf60a07275b80088e3475c96fb1bcc7c))
+
+
+### Features
+
+* **app-degree-pages:** updated dependecies to new unity-react-core package ([20d6e6a](https://github.com/asu/asu-unity-stack/commit/20d6e6a48d1c8c28d6ca2afefd2eef81a37ffe6e))
+* **components-core:** added component-carousel to components-core ([8677db8](https://github.com/asu/asu-unity-stack/commit/8677db8f92c15f768c35951fbbd85f254f437de0))
+
+
+### BREAKING CHANGES
+
+* **app-degree-pages:** Replaced dependency
+
 # [@asu/app-degree-pages-v2.6.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-degree-pages-v2.6.1...@asu/app-degree-pages-v2.6.2) (2024-08-14)
 
 

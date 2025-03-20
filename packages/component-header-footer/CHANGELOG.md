@@ -1,3 +1,31 @@
+# [@asu/component-header-footer-v1.0.4](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.3...@asu/component-header-footer-v1.0.4) (2025-03-19)
+
+
+### Bug Fixes
+
+* **component-header-footer:** point all images to public folder ([bdbac3b](https://github.com/asu/asu-unity-stack/commit/bdbac3b0fe1e1a6d5b94087f54202c5e4c57838b))
+
+# [@asu/component-header-footer-v1.0.3](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.2...@asu/component-header-footer-v1.0.3) (2025-03-14)
+
+
+### Bug Fixes
+
+* **component-header-footer:** pass onClick handler to header buttons ([064292f](https://github.com/asu/asu-unity-stack/commit/064292f0d9efa3f6b362e9fc430bcfb052ac588b))
+
+# [@asu/component-header-footer-v1.0.2](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.1...@asu/component-header-footer-v1.0.2) (2025-02-11)
+
+
+### Bug Fixes
+
+* **component-header-footer:** update package with proper files ([b7c4606](https://github.com/asu/asu-unity-stack/commit/b7c4606b42d4c6eb3299f5e7fefe5ac08b21c177))
+
+# [@asu/component-header-footer-v1.0.1](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.0...@asu/component-header-footer-v1.0.1) (2025-02-11)
+
+
+### Bug Fixes
+
+* **unity-react-core:** update package json ([414cd0f](https://github.com/asu/asu-unity-stack/commit/414cd0f6bf60a07275b80088e3475c96fb1bcc7c))
+
 # [@asu/component-header-v2.3.0](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-v2.2.8...@asu/component-header-v2.3.0) (2024-08-05)
 
 

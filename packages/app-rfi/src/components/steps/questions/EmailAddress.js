@@ -7,7 +7,8 @@ import { PII_VALUE } from "../../../core/utils/constants";
 /**
  * @param {{ gaData: import("../../../../../../shared/services/googleAnalytics").GAEventObject}} props
  */
-export const EmailAddress = ({ gaData }) => {
+// eslint-disable-next-line react/prop-types
+export const EmailAddress = ({ gaData, autoFocus }) => {
   const label = "Email Address";
   const name = "EmailAddress";
 
@@ -18,6 +19,7 @@ export const EmailAddress = ({ gaData }) => {
       name={name}
       requiredIcon
       required
+      autoFocus={autoFocus}
       onBlur={e =>
         trackGAEvent({
           ...gaData,

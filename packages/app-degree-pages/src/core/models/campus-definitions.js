@@ -18,11 +18,11 @@ const campusDefinitions = {
     url: "https://campus.asu.edu/downtown-phoenix",
   },
   "EAC": {
-    text: "",
+    text: "ASU at The Gila Valley",
     url: "https://admission.asu.edu/transfer/thegilavalley",
   },
   "CAC": {
-    text: "",
+    text: "ASU at Pinal",
     url: "https://admission.asu.edu/transfer/pinal",
   },
   "ONLNE": {
@@ -30,51 +30,51 @@ const campusDefinitions = {
     url: "https://asuonline.asu.edu",
   },
   "CALHC": {
-    text: "Lake Havasu",
+    text: "ASU at Lake Havasu",
     url: "https://havasu.asu.edu",
   },
   "COCHS": {
-    text: "",
+    text: "ASU at Cochise",
     url: "https://admission.asu.edu/transfer/asu-cochise",
   },
   "WASHD": {
-    text: "",
+    text: "ASU at Washington D.C.>",
     url: "https://washingtondc.asu.edu",
   },
   "YAVAP": {
-    text: "",
+    text: "ASU at Yavapai",
     url: "https://admission.asu.edu/transfer/asuyavapai",
   },
   "PIMA": {
-    text: "",
+    text: "ASU at Pima",
     url: "https://admission.asu.edu/transfer/pima",
   },
   "NEAZ": {
-    text: "",
+    text: "ASU at Northeastern Arizona",
     url: "https://admission.asu.edu/transfer/asu-northeastern-arizona",
   },
   "LOSAN": {
-    text: "ASU@Los Angeles",
+    text: "ASU at Los Angeles",
     url: "https://california.asu.edu",
   },
   "TUCSN-undergrad": {
-    text: "",
+    text: "ASU at Tucson",
     url: "https://transfer.asu.edu/tucson",
   },
   "TUCSN-graduate": {
-    text: "",
+    text: "ASU at Tucson",
     url: "https://admission.asu.edu/contact/graduate",
   },
   "MXCTY": {
-    text: "",
+    text: "ASU at Mexico City",
     url: "https://admission.asu.edu/contact/graduate",
   },
   "AWC-undergrad": {
-    text: "",
+    text: "ASU at Yuma",
     url: "https://admission.asu.edu/transfer/asu-yuma",
   },
   "AWC-graduate": {
-    text: "",
+    text: "ASU at Yuma",
     url: "https://admission.asu.edu/contact/graduate",
   },
 };

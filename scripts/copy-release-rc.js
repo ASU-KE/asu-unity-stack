@@ -3,6 +3,7 @@ const path = require('path');
 
 const sourcePath = path.join(__dirname, '..', '.releaserc.json');
 const packagesDir = path.join(__dirname, '..', 'packages');
+const EXCLUDED_DIRS = ['static-site'];
 
 function copyReleaseRC() {
   fs.readdir(packagesDir, (err, files) => {
@@ -12,6 +13,10 @@ function copyReleaseRC() {
     }
 
     files.forEach(file => {
+      if (EXCLUDED_DIRS.includes(file)) {
+        console.log(`Skipping excluded directory: ${file}`);
+        return;
+      }
       const packagePath = path.join(packagesDir, file);
       const destPath = path.join(packagePath, '.releaserc');
 

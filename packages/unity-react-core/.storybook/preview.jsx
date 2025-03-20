@@ -33,16 +33,20 @@ const parameters = {
     root: sourceCodeRootSelector,
   },
   docs: {
-    toc: {
-      contentsSelector: '.sbdocs-content',
-      headingSelector: 'h1, h2, h3',
-      title: 'Table of Contents',
-      disable: false,
-      // ignoreSelector: '#primary',
-      // unsafeTocbotOptions: {
-        // orderedList: false,
-      // },
-    },
+    // Table of contents stopped working, so I disabled it.
+    // If we can figure out how to get it working again, we can re-enable it.
+    // If we decide we don't want it, we can remove it.
+    //
+    // toc: {
+    //   contentsSelector: '.sbdocs-content',
+    //   headingSelector: 'h1, h2, h3',
+    //   title: 'Table of Contents',
+    //   disable: false,
+    //   ignoreSelector: '#primary',
+    //   unsafeTocbotOptions: {
+    //     orderedList: false,
+    //   },
+    // },
     controls: {
       sort: "requiredFirst",
     },

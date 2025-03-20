@@ -1,6 +1,6 @@
 {
   "name": "@asu/component-footer",
-  "version": "2.2.3",
+  "version": "2.4.0",
   "description": "ASU implementation of global footer",
   "main": "./dist/asuFooter.cjs.js",
   "browser": "./dist/asuFooter.umd.js",
@@ -8,6 +8,7 @@
   "types": "./dist/main.d.ts",
   "author": "Conner Shannon",
   "license": "MIT",
+  "deprecated": "This package has been moved. Please use @asu/component-header-footer to receive continued support.",
   "files": [
     "examples/*",
     "dist/*",

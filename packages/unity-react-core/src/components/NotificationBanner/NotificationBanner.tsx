@@ -17,7 +17,7 @@ export interface NotificationBannerProps {
   /**
    * Background color of the banner.
    */
-  color?: "orange" | "blue" | "gray" | "black";
+  color?: "orange" | "blue" | "gray" | "black" | "green";
   /**
    * Main content in the banner.
    */
@@ -47,13 +47,13 @@ export const NotificationBanner: React.FC<NotificationBannerProps> = ({
             {children}
           </div>
           {buttons.length && (
-            <div className="banner-buttons">
+            <div className="banner-buttons" data-testid="banner-buttons">
               {buttons.map(item => (
                 <Button
                   key={`${item.label}${item.href}`}
                   classes={cx("btn btn-sm", {
                     "btn-dark": color !== "black",
-                    "btn-light": color === "black",
+                    "btn-gold": color === "black",
                   })}
                   href={item.href}
                   label={item.label}

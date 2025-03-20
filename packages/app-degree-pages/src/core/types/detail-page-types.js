@@ -107,6 +107,7 @@
  * @property {string} [firstRequirementMathCourse]
  * @property {string} [mathIntensity]
  * @property {string} [timeCommitment]
+ * @property {string} [stemOptText]
  */
 
 /**

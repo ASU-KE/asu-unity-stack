@@ -1,6 +1,6 @@
 {
   "name": "@asu/unity-react-core",
-  "version": "0.0.1",
+  "version": "1.0.6",
   "main": "./dist/unityReactCore.umd.js",
   "module": "./dist/unityReactCore.es.js",
   "browser": "./dist/unityReactCore.umd.js",
@@ -48,7 +48,7 @@
     "test:browser": "vitest --workspace=vitest.workspace.ts"
   },
   "devDependencies": {
-    "@asu/unity-bootstrap-theme": "workspace:^",
+    "@asu/unity-bootstrap-theme": "^1.20.2",
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.21.3",
     "@babel/plugin-transform-runtime": "^7.19.6",
@@ -121,7 +121,7 @@
     "vitest-browser-react": "^0.0.1"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
+    "@glidejs/glide": "~3.6.2",
     "classnames": "^2.2.6",
     "date-fns": "^2.19.0",
     "phone-fns": "^3.2.3",

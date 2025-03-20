@@ -2,225 +2,82 @@
 import classNames from "classnames";
 import React from "react";
 
+import { Divider } from "../Divider/Divider";
 import { AnchorMenu } from "./AnchorMenu";
+import { getLoremSentences, titleCaseDefinition } from "../../../../../shared/constants/strings";
 
+const titleCaseTitle = "Anchor Menus Should Always be Formatted with Title Case";
 export default {
   title: "Components/AnchorMenu",
   component: AnchorMenu,
   excludeStories: ["Containers"],
+  globals: {
+    framework: "react",
+  },
+  tags: ["!bootstrap"],
   parameters: {
     docs: {
       description: {
-        component: `The Anchor Menu component can be used to generate a responsive anchor menu.
+        component: `The Anchor Menu component can be used to generate a
+responsive anchor menu.
 ## Usage
 
-Anchor menu users are responsible to meet all UDS design guidelines with their menu,
-including rules on the use of Call-to-Action buttons and tags.
+Anchor menu users are responsible to meet all UDS design guidelines with their
+menu, including rules on the use of Call-to-Action buttons and tags.
 
 View component examples and source code below.
 
 This story includes another components for demostration purposes.
+
+## ${titleCaseTitle}
+**Definition:** ${titleCaseDefinition}
         `,
       },
     },
   },
 };
+const items = [
+  {
+    text: "Title Case is Required",
+    targetIdName: "first-container",
+    icon: ["fas", "link"],
+  },
+  { text: "Second Container", targetIdName: "second-container" },
+  { text: "Third Container", targetIdName: "third-container" },
+  {
+    text: "This is the Last",
+    targetIdName: "fourth-container",
+    icon: ["fas", "link"],
+  },
+];
 
 export const Containers = () => {
   return (
     <>
-      <div id="first-container">
-        <h2>First container</h2>
+      {items && items.map((item, index) => {
+        const lastStyle = (index === items.length - 1) ? {marginBottom: "100vh"} : undefined;
+        return (
+          <div
+          id={item.targetIdName}
+          key={item.targetIdName}
+          style={lastStyle}>
+        <h2>{item.text}</h2>
+          {/* use titleCaseDefinition for the first item */}
+          { (index === 0) &&
+            <>
+            <h3>{titleCaseTitle}</h3>
+              <p>
+                <strong>Definition: </strong>{ titleCaseDefinition }
+              </p>
+              <Divider type="copy"/>
+            </>
+          }
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          consectetur lectus nec laoreet elementum. Mauris ut sapien nibh.
-          Aenean consequat pellentesque rutrum. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Aliquam sollicitudin neque vel risus volutpat, nec hendrerit nisl
-          tempus. Etiam suscipit purus imperdiet, ultrices enim et, maximus
-          lectus. Aenean hendrerit, nibh eget vehicula sollicitudin, nulla
-          tellus accumsan justo, quis gravida sapien quam ultricies magna. Nulla
-          ullamcorper odio id risus pretium, sed ornare turpis luctus. Integer
-          ac semper ex, ac convallis lorem. Orci varius natoque penatibus et
-          magnis dis parturient montes, nascetur ridiculus mus. In eleifend
-          lobortis lacus sed efficitur. Ut rhoncus consectetur accumsan. Nulla
-          massa lorem, maximus eu venenatis in, ultrices sit amet purus. Duis et
-          rutrum mi, id dictum risus. Fusce suscipit metus congue, fermentum sem
-          non, molestie sem. Donec tortor quam, imperdiet vel dui at, finibus
-          vestibulum neque. Nulla facilisi. Sed fermentum vulputate enim, at
-          aliquam diam tincidunt vitae. Nunc eleifend volutpat pellentesque.
-          Aliquam consectetur enim ac lectus dapibus bibendum. Cras eget erat
-          magna. Donec turpis quam, efficitur in leo in, elementum interdum
-          lorem. Duis tempor tempor nulla, at faucibus leo commodo vel. Nunc in
-          tincidunt diam, ac ultrices mauris. Nunc quis vehicula tellus. Mauris
-          vehicula gravida eros, eget facilisis elit viverra faucibus. Sed
-          viverra rhoncus erat, eget dignissim orci tincidunt et. Nullam sodales
-          elit eu metus lobortis, ut posuere lectus convallis. Maecenas id
-          lectus id ligula bibendum congue ac ut risus. Integer eget neque
-          volutpat, mollis nisi sed, lobortis mauris. In est metus, rhoncus in
-          tristique nec, blandit sed mauris. Maecenas non risus mauris. Nunc
-          pretium urna sit amet sapien venenatis mollis. Sed facilisis libero
-          nisi, fermentum malesuada magna commodo at. Phasellus sed hendrerit
-          ipsum. Donec ultrices sodales posuere. Proin a finibus mauris, non
-          ornare arcu. Donec eget cursus augue. Nulla vel porta massa. Ut
-          hendrerit mauris a suscipit ullamcorper. Donec sagittis tellus non
-          ultrices feugiat. Mauris sodales, eros id vulputate porttitor, nunc
-          augue aliquet tortor, eget mattis turpis mauris nec enim. Proin ac
-          rhoncus lacus. Aliquam venenatis lorem ac arcu commodo tristique id
-          eget dolor. Nam gravida nisi vel purus interdum, faucibus suscipit
-          arcu placerat. Phasellus congue velit et quam elementum, a fermentum
-          velit efficitur. Nunc lobortis, lacus at faucibus vestibulum, mauris
-          nisl facilisis odio, at elementum nisi mauris nec tortor. Nullam
-          commodo pellentesque ante ac porttitor. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Sed feugiat neque magna. Suspendisse
-          potenti. Duis dictum ac elit at elementum. In sit amet hendrerit
-          lacus.
+          {getLoremSentences(40, index * 3)  /* 40 sentences, index * 3 offset just creates some variety */}
         </p>
       </div>
-      <div id="second-container">
-        <h2>Second container</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          consectetur lectus nec laoreet elementum. Mauris ut sapien nibh.
-          Aenean consequat pellentesque rutrum. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Aliquam sollicitudin neque vel risus volutpat, nec hendrerit nisl
-          tempus. Etiam suscipit purus imperdiet, ultrices enim et, maximus
-          lectus. Aenean hendrerit, nibh eget vehicula sollicitudin, nulla
-          tellus accumsan justo, quis gravida sapien quam ultricies magna. Nulla
-          ullamcorper odio id risus pretium, sed ornare turpis luctus. Integer
-          ac semper ex, ac convallis lorem. Orci varius natoque penatibus et
-          magnis dis parturient montes, nascetur ridiculus mus. In eleifend
-          lobortis lacus sed efficitur. Ut rhoncus consectetur accumsan. Nulla
-          massa lorem, maximus eu venenatis in, ultrices sit amet purus. Duis et
-          rutrum mi, id dictum risus. Fusce suscipit metus congue, fermentum sem
-          non, molestie sem. Donec tortor quam, imperdiet vel dui at, finibus
-          vestibulum neque. Nulla facilisi. Sed fermentum vulputate enim, at
-          aliquam diam tincidunt vitae. Nunc eleifend volutpat pellentesque.
-          Aliquam consectetur enim ac lectus dapibus bibendum. Cras eget erat
-          magna. Donec turpis quam, efficitur in leo in, elementum interdum
-          lorem. Duis tempor tempor nulla, at faucibus leo commodo vel. Nunc in
-          tincidunt diam, ac ultrices mauris. Nunc quis vehicula tellus. Mauris
-          vehicula gravida eros, eget facilisis elit viverra faucibus. Sed
-          viverra rhoncus erat, eget dignissim orci tincidunt et. Nullam sodales
-          elit eu metus lobortis, ut posuere lectus convallis. Maecenas id
-          lectus id ligula bibendum congue ac ut risus. Integer eget neque
-          volutpat, mollis nisi sed, lobortis mauris. In est metus, rhoncus in
-          tristique nec, blandit sed mauris. Maecenas non risus mauris. Nunc
-          pretium urna sit amet sapien venenatis mollis. Sed facilisis libero
-          nisi, fermentum malesuada magna commodo at. Phasellus sed hendrerit
-          ipsum. Donec ultrices sodales posuere. Proin a finibus mauris, non
-          ornare arcu. Donec eget cursus augue. Nulla vel porta massa. Ut
-          hendrerit mauris a suscipit ullamcorper. Donec sagittis tellus non
-          ultrices feugiat. Mauris sodales, eros id vulputate porttitor, nunc
-          augue aliquet tortor, eget mattis turpis mauris nec enim. Proin ac
-          rhoncus lacus. Aliquam venenatis lorem ac arcu commodo tristique id
-          eget dolor. Nam gravida nisi vel purus interdum, faucibus suscipit
-          arcu placerat. Phasellus congue velit et quam elementum, a fermentum
-          velit efficitur. Nunc lobortis, lacus at faucibus vestibulum, mauris
-          nisl facilisis odio, at elementum nisi mauris nec tortor. Nullam
-          commodo pellentesque ante ac porttitor. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Sed feugiat neque magna. Suspendisse
-          potenti. Duis dictum ac elit at elementum. In sit amet hendrerit
-          lacus.
-        </p>
-      </div>
-      <div id="third-container">
-        <h2>Third container</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          consectetur lectus nec laoreet elementum. Mauris ut sapien nibh.
-          Aenean consequat pellentesque rutrum. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Aliquam sollicitudin neque vel risus volutpat, nec hendrerit nisl
-          tempus. Etiam suscipit purus imperdiet, ultrices enim et, maximus
-          lectus. Aenean hendrerit, nibh eget vehicula sollicitudin, nulla
-          tellus accumsan justo, quis gravida sapien quam ultricies magna. Nulla
-          ullamcorper odio id risus pretium, sed ornare turpis luctus. Integer
-          ac semper ex, ac convallis lorem. Orci varius natoque penatibus et
-          magnis dis parturient montes, nascetur ridiculus mus. In eleifend
-          lobortis lacus sed efficitur. Ut rhoncus consectetur accumsan. Nulla
-          massa lorem, maximus eu venenatis in, ultrices sit amet purus. Duis et
-          rutrum mi, id dictum risus. Fusce suscipit metus congue, fermentum sem
-          non, molestie sem. Donec tortor quam, imperdiet vel dui at, finibus
-          vestibulum neque. Nulla facilisi. Sed fermentum vulputate enim, at
-          aliquam diam tincidunt vitae. Nunc eleifend volutpat pellentesque.
-          Aliquam consectetur enim ac lectus dapibus bibendum. Cras eget erat
-          magna. Donec turpis quam, efficitur in leo in, elementum interdum
-          lorem. Duis tempor tempor nulla, at faucibus leo commodo vel. Nunc in
-          tincidunt diam, ac ultrices mauris. Nunc quis vehicula tellus. Mauris
-          vehicula gravida eros, eget facilisis elit viverra faucibus. Sed
-          viverra rhoncus erat, eget dignissim orci tincidunt et. Nullam sodales
-          elit eu metus lobortis, ut posuere lectus convallis. Maecenas id
-          lectus id ligula bibendum congue ac ut risus. Integer eget neque
-          volutpat, mollis nisi sed, lobortis mauris. In est metus, rhoncus in
-          tristique nec, blandit sed mauris. Maecenas non risus mauris. Nunc
-          pretium urna sit amet sapien venenatis mollis. Sed facilisis libero
-          nisi, fermentum malesuada magna commodo at. Phasellus sed hendrerit
-          ipsum. Donec ultrices sodales posuere. Proin a finibus mauris, non
-          ornare arcu. Donec eget cursus augue. Nulla vel porta massa. Ut
-          hendrerit mauris a suscipit ullamcorper. Donec sagittis tellus non
-          ultrices feugiat. Mauris sodales, eros id vulputate porttitor, nunc
-          augue aliquet tortor, eget mattis turpis mauris nec enim. Proin ac
-          rhoncus lacus. Aliquam venenatis lorem ac arcu commodo tristique id
-          eget dolor. Nam gravida nisi vel purus interdum, faucibus suscipit
-          arcu placerat. Phasellus congue velit et quam elementum, a fermentum
-          velit efficitur. Nunc lobortis, lacus at faucibus vestibulum, mauris
-          nisl facilisis odio, at elementum nisi mauris nec tortor. Nullam
-          commodo pellentesque ante ac porttitor. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Sed feugiat neque magna. Suspendisse
-          potenti. Duis dictum ac elit at elementum. In sit amet hendrerit
-          lacus.
-        </p>
-      </div>
-      <div id="fourth-container" style={{ marginBottom: 400 }}>
-        <h2>Fourth container</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          consectetur lectus nec laoreet elementum. Mauris ut sapien nibh.
-          Aenean consequat pellentesque rutrum. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Aliquam sollicitudin neque vel risus volutpat, nec hendrerit nisl
-          tempus. Etiam suscipit purus imperdiet, ultrices enim et, maximus
-          lectus. Aenean hendrerit, nibh eget vehicula sollicitudin, nulla
-          tellus accumsan justo, quis gravida sapien quam ultricies magna. Nulla
-          ullamcorper odio id risus pretium, sed ornare turpis luctus. Integer
-          ac semper ex, ac convallis lorem. Orci varius natoque penatibus et
-          magnis dis parturient montes, nascetur ridiculus mus. In eleifend
-          lobortis lacus sed efficitur. Ut rhoncus consectetur accumsan. Nulla
-          massa lorem, maximus eu venenatis in, ultrices sit amet purus. Duis et
-          rutrum mi, id dictum risus. Fusce suscipit metus congue, fermentum sem
-          non, molestie sem. Donec tortor quam, imperdiet vel dui at, finibus
-          vestibulum neque. Nulla facilisi. Sed fermentum vulputate enim, at
-          aliquam diam tincidunt vitae. Nunc eleifend volutpat pellentesque.
-          Aliquam consectetur enim ac lectus dapibus bibendum. Cras eget erat
-          magna. Donec turpis quam, efficitur in leo in, elementum interdum
-          lorem. Duis tempor tempor nulla, at faucibus leo commodo vel. Nunc in
-          tincidunt diam, ac ultrices mauris. Nunc quis vehicula tellus. Mauris
-          vehicula gravida eros, eget facilisis elit viverra faucibus. Sed
-          viverra rhoncus erat, eget dignissim orci tincidunt et. Nullam sodales
-          elit eu metus lobortis, ut posuere lectus convallis. Maecenas id
-          lectus id ligula bibendum congue ac ut risus. Integer eget neque
-          volutpat, mollis nisi sed, lobortis mauris. In est metus, rhoncus in
-          tristique nec, blandit sed mauris. Maecenas non risus mauris. Nunc
-          pretium urna sit amet sapien venenatis mollis. Sed facilisis libero
-          nisi, fermentum malesuada magna commodo at. Phasellus sed hendrerit
-          ipsum. Donec ultrices sodales posuere. Proin a finibus mauris, non
-          ornare arcu. Donec eget cursus augue. Nulla vel porta massa. Ut
-          hendrerit mauris a suscipit ullamcorper. Donec sagittis tellus non
-          ultrices feugiat. Mauris sodales, eros id vulputate porttitor, nunc
-          augue aliquet tortor, eget mattis turpis mauris nec enim. Proin ac
-          rhoncus lacus. Aliquam venenatis lorem ac arcu commodo tristique id
-          eget dolor. Nam gravida nisi vel purus interdum, faucibus suscipit
-          arcu placerat. Phasellus congue velit et quam elementum, a fermentum
-          velit efficitur. Nunc lobortis, lacus at faucibus vestibulum, mauris
-          nisl facilisis odio, at elementum nisi mauris nec tortor. Nullam
-          commodo pellentesque ante ac porttitor. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Sed feugiat neque magna. Suspendisse
-          potenti. Duis dictum ac elit at elementum. In sit amet hendrerit
-          lacus.
-        </p>
-      </div>
+        );
+      })}
     </>
   );
 };
@@ -240,19 +97,6 @@ const Template = args => (
 
 export const Default = Template.bind({});
 Default.args = {
-  items: [
-    {
-      text: "First container",
-      targetIdName: "first-container",
-      icon: ["fas", "link"],
-    },
-    { text: "Second container", targetIdName: "second-container" },
-    { text: "Third container", targetIdName: "third-container" },
-    {
-      text: "Fourth container",
-      targetIdName: "fourth-container",
-      icon: ["fas", "link"],
-    },
-  ],
+  items,
   firstElementId: "first-container",
 };

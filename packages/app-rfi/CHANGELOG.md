@@ -1,3 +1,36 @@
+# [@asu/app-rfi-v3.2.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v3.1.0...@asu/app-rfi-v3.2.0) (2025-03-05)
+
+
+### Features
+
+* **app-rfi:** added a patch for react-phone-input-2 ([ec7cbb2](https://github.com/asu/asu-unity-stack/commit/ec7cbb222190cb7a37a75e8fce5068d736920bf6))
+* **app-rfi:** added react-phone-input-2 patch to resolutions in package.json ([21e9a36](https://github.com/asu/asu-unity-stack/commit/21e9a367e6ef073a213bb4591795948d9b18ea13))
+
+# [@asu/app-rfi-v3.1.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v3.0.0...@asu/app-rfi-v3.1.0) (2025-03-03)
+
+
+### Features
+
+* **app-rfi:** added autoFocus prop for EmailAddress input ([dd729b3](https://github.com/asu/asu-unity-stack/commit/dd729b36567ffa2ebb196eeef56e1e8edc6d2543))
+
+# [@asu/app-rfi-v3.0.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v2.4.2...@asu/app-rfi-v3.0.0) (2025-02-11)
+
+
+### Bug Fixes
+
+* **unity-react-core:** update package json ([414cd0f](https://github.com/asu/asu-unity-stack/commit/414cd0f6bf60a07275b80088e3475c96fb1bcc7c))
+
+
+### Features
+
+* **app-rfi:** updated to new unity-react-core package ([3647744](https://github.com/asu/asu-unity-stack/commit/36477446a78e1308a98a88c78f2f6fb07683bb19))
+* **components-core:** added component-carousel to components-core ([8677db8](https://github.com/asu/asu-unity-stack/commit/8677db8f92c15f768c35951fbbd85f254f437de0))
+
+
+### BREAKING CHANGES
+
+* **app-rfi:** Replaced components-core with unity-react-core
+
 # [@asu/app-rfi-v2.4.2](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v2.4.1...@asu/app-rfi-v2.4.2) (2025-01-30)
 
 
