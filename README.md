@@ -8,6 +8,12 @@ git fetch upstream
 git merge upstream/dev
 ```
 
+### Common errors
+#### `git merge error Usage Error: Couldn't find the node_modules state file`
+- delete `node_modules` folder, `yarn install` Do not `npm install`, no longer works
+
+
+
 ## Changelog
 
 ### app-rfi
