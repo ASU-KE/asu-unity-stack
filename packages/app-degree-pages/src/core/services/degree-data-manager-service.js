@@ -46,10 +46,28 @@ function filterData({
     !isAccelConcValid(acceleratedConcurrent) ||
     row[acceleratedConcurrent.value]?.length > 0;
 
-  const filterByKeyword = (resolver, searchTerm) => {
+  const filterByKeywordTitle = (resolver, searchTerm) => {
     if (!searchTerm) return true;
     const regex = new RegExp(searchTerm, "i");
-    return regex.test(resolver.getFullDescription());
+    const title = regex.test(resolver.getMajorDesc());
+    if (title){
+      return true;
+    }
+    else{
+      return false;
+    }
+  };
+
+  const filterByKeywordDescription = (resolver, searchTerm) => {
+    if (!searchTerm) return true;
+    const regex = new RegExp(searchTerm, "i");
+    const description = regex.test(resolver.getFullDescription());
+    if (description){
+      return true;
+    }
+    else{
+      return false;
+    }
   };
 
   const filterByBlacklist = resolver =>
@@ -81,13 +99,33 @@ function filterData({
       filterByDepartmentCode(resolver) &&
       filterByCampus(resolver) &&
       filterByAcceleratedConcurrent(row) &&
-      filterByKeyword(resolver, keyword) &&
       filterByBlacklist(resolver) &&
       filterGraduateCerts(resolver)
     );
   };
 
-  return programs.filter(applyFilters);
+  let filteredByTitle = [];
+  let filteredByDescription = [];
+
+  let newPrograms = programs.filter(degree => {
+    const resolver = degreeDataPropResolverService(degree);
+
+    if(filterByKeywordTitle(resolver, keyword)) {
+      if (applyFilters(degree)) {
+        filteredByTitle.push(degree);
+      }
+      return false;
+    }
+
+    if(filterByKeywordDescription(resolver, keyword)) {
+      if (applyFilters(degree)) {
+        filteredByDescription.push(degree);
+      }
+      return false;
+    }
+  });
+
+  return filteredByTitle.concat(filteredByDescription);
 }
 
 /**
