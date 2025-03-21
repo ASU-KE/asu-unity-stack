@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.21.4](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.3...@asu/unity-bootstrap-theme-v1.21.4) (2025-03-21)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** add bundled UMD bootstrap file to package dist ([75be0fc](https://github.com/ASU/asu-unity-stack/commit/75be0fc08fc418401a8acb52ae76783811b2f446))
+
 # [@asu/unity-bootstrap-theme-v1.21.3](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.2...@asu/unity-bootstrap-theme-v1.21.3) (2025-03-07)
 
 
