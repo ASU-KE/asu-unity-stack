@@ -611,7 +611,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@asu/unity-bootstrap-theme@npm:^1.0.0, @asu/unity-bootstrap-theme@npm:^1.20, @asu/unity-bootstrap-theme@npm:^1.20.2, @asu/unity-bootstrap-theme@workspace:packages/unity-bootstrap-theme":
+"@asu/unity-bootstrap-theme@npm:^1.0.0, @asu/unity-bootstrap-theme@npm:^1.20, @asu/unity-bootstrap-theme@npm:^1.20.2, @asu/unity-bootstrap-theme@npm:^1.21.3, @asu/unity-bootstrap-theme@workspace:packages/unity-bootstrap-theme":
   version: 0.0.0-use.local
   resolution: "@asu/unity-bootstrap-theme@workspace:packages/unity-bootstrap-theme"
   dependencies:
@@ -674,7 +674,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asu/unity-react-core@workspace:packages/unity-react-core"
   dependencies:
-    "@asu/unity-bootstrap-theme": "npm:^1.20.2"
+    "@asu/unity-bootstrap-theme": "npm:^1.21.3"
     "@babel/cli": "npm:^7.19.3"
     "@babel/core": "npm:^7.21.3"
     "@babel/plugin-transform-runtime": "npm:^7.19.6"
@@ -752,6 +752,7 @@ __metadata:
     vitest: "npm:^2.1.1"
     vitest-browser-react: "npm:^0.0.1"
   peerDependencies:
+    "@asu/unity-bootstrap-theme": ^1.21.3
     "@fortawesome/fontawesome-free": ^5.15.3
     react: ^18.3.1
     react-dom: ^18.3.1
