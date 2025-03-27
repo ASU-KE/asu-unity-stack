@@ -106,8 +106,9 @@ function filterData({
 
   let filteredByTitle = [];
   let filteredByDescription = [];
+  let newPrograms;
 
-  let newPrograms = programs.filter(degree => {
+  newPrograms = programs.filter(degree => {
     const resolver = degreeDataPropResolverService(degree);
 
     if(filterByKeywordTitle(resolver, keyword)) {
