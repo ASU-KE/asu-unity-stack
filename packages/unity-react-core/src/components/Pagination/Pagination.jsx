@@ -61,6 +61,28 @@ export const Pagination = ({
   };
 
   const renderPages = () => {
+
+    if (totalPages < 5) {
+      return (
+        <>
+          {Array.from({ length: totalPages }, (_, index) => {
+            const page = index + 1;
+            return (
+              <PageItem
+                ariaLabel={`Page ${page} of ${totalPages}`}
+                isClickeable
+                key={page}
+                selectedPage={selectedPage === page}
+                onClick={e => handleChangePage(e, page)}
+              >
+                {page}
+              </PageItem>
+            );
+          })}
+        </>
+      );
+    }
+
     // Set the ranges to be shown in the pagination
     const displayMinimumPages = 2;
     const lowerRangeLimit = iff(
