@@ -1,6 +1,6 @@
 {
   "name": "@asu/unity-react-core",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "./dist/unityReactCore.umd.js",
   "module": "./dist/unityReactCore.es.js",
   "browser": "./dist/unityReactCore.umd.js",
