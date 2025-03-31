@@ -1,3 +1,11 @@
+# [@asu/component-header-footer-v1.0.5](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.4...@asu/component-header-footer-v1.0.5) (2025-03-31)
+
+
+### Bug Fixes
+
+* **component-header-footer:** fixing variable name ([499e391](https://github.com/asu/asu-unity-stack/commit/499e39106e5584522c5feab466ab33a31c20c5a4))
+* **component-header-footer:** updated logo alt and title from brand header ([f952066](https://github.com/asu/asu-unity-stack/commit/f95206680c29589a536a8c8739fa3bde8f4d95d1))
+
 # [@asu/component-header-footer-v1.0.4](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.3...@asu/component-header-footer-v1.0.4) (2025-03-19)
 
 
