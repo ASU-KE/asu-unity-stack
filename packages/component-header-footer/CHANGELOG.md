@@ -1,3 +1,10 @@
+# [@asu/component-header-footer-v1.0.6](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.5...@asu/component-header-footer-v1.0.6) (2025-04-01)
+
+
+### Bug Fixes
+
+* **component-header-footer:** add correct outline for footer links and buttons onfocus ([201a77a](https://github.com/asu/asu-unity-stack/commit/201a77aec078cb98f84dd5c3e2e322872f9769dd))
+
 # [@asu/component-header-footer-v1.0.5](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.4...@asu/component-header-footer-v1.0.5) (2025-03-31)
 
 
