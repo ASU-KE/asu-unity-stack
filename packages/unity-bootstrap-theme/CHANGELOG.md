@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.21.5](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.4...@asu/unity-bootstrap-theme-v1.21.5) (2025-04-01)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** added hover white to footer's social icon ([d855ea1](https://github.com/ASU/asu-unity-stack/commit/d855ea156ccf0be0dbe1f9fac437ca9902f117e4))
+
 # [@asu/unity-bootstrap-theme-v1.21.4](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.3...@asu/unity-bootstrap-theme-v1.21.4) (2025-03-21)
 
 
