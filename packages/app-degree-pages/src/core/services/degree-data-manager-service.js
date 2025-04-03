@@ -50,24 +50,22 @@ function filterData({
     if (!searchTerm) return true;
     const regex = new RegExp(searchTerm, "i");
     const title = regex.test(resolver.getMajorDesc());
-    if (title){
+    if (title) {
       return true;
     }
-    else{
-      return false;
-    }
+
+    return false;
   };
 
   const filterByKeywordDescription = (resolver, searchTerm) => {
     if (!searchTerm) return true;
     const regex = new RegExp(searchTerm, "i");
     const description = regex.test(resolver.getFullDescription());
-    if (description){
+    if (description) {
       return true;
     }
-    else{
-      return false;
-    }
+
+    return false;
   };
 
   const filterByBlacklist = resolver =>
@@ -104,26 +102,31 @@ function filterData({
     );
   };
 
-  let filteredByTitle = [];
-  let filteredByDescription = [];
-  let newPrograms;
+  const filteredByTitle = [];
+  const filteredByDescription = [];
 
-  newPrograms = programs.filter(degree => {
+  const newPrograms = programs.filter(degree => {
     const resolver = degreeDataPropResolverService(degree);
 
-    if(filterByKeywordTitle(resolver, keyword)) {
-      if (applyFilters(degree)) {
-        filteredByTitle.push(degree);
-      }
-      return false;
-    }
+    const isFilteredByTitle = filterByKeywordTitle(resolver, keyword);
+    const isFilteredByDescription = filterByKeywordDescription(
+      resolver,
+      keyword
+    );
 
-    if(filterByKeywordDescription(resolver, keyword)) {
-      if (applyFilters(degree)) {
+    if (
+      (isFilteredByTitle || isFilteredByDescription) &&
+      applyFilters(degree)
+    ) {
+      if (isFilteredByTitle) {
+        filteredByTitle.push(degree);
+      } else {
         filteredByDescription.push(degree);
       }
-      return false;
+      return true;
     }
+
+    return false;
   });
 
   return filteredByTitle.concat(filteredByDescription);
