@@ -1,11 +1,22 @@
 import { Chart, registerables } from 'chart.js';
+import { EventHandler } from './bootstrap-helper';
+
+// Chart.js library should be peer dependency
+
 Chart.register(...registerables);
 
 function initChart() {
   const GRAPH_PERCENTAGE_COMPLETE = 50;
+
+  var ctx = document.getElementById('uds-donut');
+
+  if (!ctx) {
+      // id="uds-donut" not found in the DOM.
+    return;
+  }
+
   document.getElementById('percentage-display').innerHTML =
     GRAPH_PERCENTAGE_COMPLETE + '%';
-  var ctx = document.getElementById('uds-donut');
 
   const config = {
     type: 'doughnut',
@@ -28,5 +39,7 @@ function initChart() {
 
   var myChart = new Chart(ctx, config);
 };
+
+EventHandler.on(window, 'load.uds.chart', initChart);
 
 export { initChart };

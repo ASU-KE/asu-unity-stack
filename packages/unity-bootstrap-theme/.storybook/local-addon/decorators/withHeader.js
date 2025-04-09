@@ -1,7 +1,7 @@
 import React, { useEffect, useRef} from 'react';
 import { makeDecorator } from '@storybook/addons';
 
-import { Basic as Header } from "../../../stories/organisms/global-header/global-header.templates";
+import { Basic as Header } from "../../../stories/organisms/global-header/global-header.templates.jsx";
 
 import { initGlobalHeader } from "../../../src/js/storybook-global-header";
 
