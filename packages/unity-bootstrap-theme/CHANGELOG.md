@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.22.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.6...@asu/unity-bootstrap-theme-v1.22.0) (2025-04-09)
+
+
+### Features
+
+* **unity-bootstrap-theme:** added visually-hidden text for Tags ([a5f4d37](https://github.com/ASU/asu-unity-stack/commit/a5f4d379e269a04fa17c8cc79c748d065e321876))
+
 # [@asu/unity-bootstrap-theme-v1.21.6](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.5...@asu/unity-bootstrap-theme-v1.21.6) (2025-04-03)
 
 
