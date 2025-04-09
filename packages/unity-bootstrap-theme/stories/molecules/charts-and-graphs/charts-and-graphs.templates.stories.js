@@ -1,16 +1,11 @@
 import React from "react";
 
 import { defaultDecorator } from "../../../../../shared/components/Layout";
-import { initChart } from "./charts-and-graphs";
 
 export default {
   title: "Molecules/Charts And Graphs/Templates",
   decorators: [ defaultDecorator ],
   parameters: {
-    initFunc: {
-      code: initChart,
-      disable: false,
-    },
     controls: { disable: true }
   },
 };

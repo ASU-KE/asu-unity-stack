@@ -5,10 +5,6 @@ import {
 
 import { withFooter } from './decorators/withFooter';
 import { withHeader } from './decorators/withHeader';
-import { withInitFunc } from './decorators/withInitFunc';
-import { withLoadEvent } from './decorators/withLoadEvent';
-
-import "../../src/js/data-layer.js";
 
 export const parameters = {
   header: {
@@ -19,10 +15,6 @@ export const parameters = {
   },
   loadEvent: {
     disable: false
-  },
-  initFunc: {
-    disable: true,
-    code: null
   },
   docs:{
     source: {
@@ -40,8 +32,6 @@ export const globals = {
   footer: false
 }
 export const decorators = [
-  withLoadEvent,
-  withInitFunc,
   withHeader,
   withFooter,
 ]
