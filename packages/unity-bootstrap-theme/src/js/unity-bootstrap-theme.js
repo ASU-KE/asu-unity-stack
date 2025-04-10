@@ -14,7 +14,6 @@ import { initializeFixedTable } from "./tables.js";
 import { initVideo } from "./video.js";
 
 const unityBootstrap = {
-  // EventHandler,
   initAnchorMenu,
   // Banner,
   initBlockquoteAnimation,

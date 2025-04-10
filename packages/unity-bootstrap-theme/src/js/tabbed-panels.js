@@ -1,5 +1,8 @@
+import { EventHandler } from "./bootstrap-helper";
+
 function initTabs() {
-  "use strict";
+  ("use strict");
+
   const DOM_ELEMENT_A = "a";
   const DOM_ELEMENT_BUTTON = "button";
   const DOM_ELEMENT_NAV_TABS = ".nav-tabs";
@@ -7,12 +10,12 @@ function initTabs() {
   const DOM_ELEMENT_UDS_TABBED_PANELS = ".uds-tabbed-panels";
   const DOM_ELEMENT_SCROLL_CONTROL_PREV = ".scroll-control-prev";
   const DOM_ELEMENT_SCROLL_CONTROL_NEXT = ".scroll-control-next";
-  const EVENT_LOAD = "load";
   const EVENT_CLICK = "click";
   const EVENT_SCROLL = "scroll";
+  const EVENT_FOCUS = "focus";
   const CSS_DISPLAY_NONE = "none";
   const CSS_DISPLAY_BLOCK = "block";
-  const magicalNumberThree = 3;
+  const scrollTollerance = 10;
   const LG_BREAKPOINT = 992;
 
   // helpers functions
@@ -23,146 +26,120 @@ function initTabs() {
     }
   };
 
-  const slideNav = (clicked, e, direction) => {
-    e.preventDefault();
-    const parentNav = Array.from(clicked.parentElement.children).filter(child =>
-      child.classList.contains("nav-tabs")
-    );
-
-    let scrollPosition = parseInt(parentNav[0].dataset.scrollPosition, 10);
-
-    const navItems = Array.from(
-      parentNav[0].querySelectorAll(DOM_ELEMENT_NAV_ITEM)
-    );
-
-    // get left value to interact with scroll
-    const rawLeftValue = getComputedStyle(parentNav[0]).left;
-    const sanitizedLeftValue = rawLeftValue.replace("px", "");
-    let scrollOffset = parseInt(sanitizedLeftValue, 10);
-
-    if (direction === 1 && scrollPosition > 0) {
-      scrollPosition -= 1;
-    }
-    if (scrollPosition < navItems.length - 1 && direction == -1) {
-      scrollPosition += 1;
-    }
-    parentNav[0].dataset.scrollPosition = scrollPosition;
-
-    scrollOffset = 0;
-    for (var i = 0; i < scrollPosition; i++) {
-      scrollOffset +=
-        navItems[i].offsetWidth +
-        parseInt(getComputedStyle(navItems[i]).marginLeft, 10) +
-        parseInt(getComputedStyle(navItems[i]).marginRight, 10);
-    }
-
-    // set the position of the scroll of the .nav-tabs element
-    parentNav[0].scrollLeft = scrollOffset;
-    setControlVisibility(clicked, scrollOffset);
-  };
-
-  const setControlVisibility = (clicked, scrollOffset) => {
-    // select the nearest ancestor with the class ".uds-tabbed-panels".
-    const parentContainer = clicked.closest(DOM_ELEMENT_UDS_TABBED_PANELS);
-    // select the sibling parent elements of the clicked element.
-    const parentNav = parentContainer.querySelector(DOM_ELEMENT_NAV_TABS);
-
-    // get the value of the data-scroll-position attribute and make sure it is an integer
-    const scrollPosition = parseInt(parentNav.dataset.scrollPosition, 10);
-    const tabPosition = parentNav.scrollWidth - scrollOffset;
-
-    // hide or show the scroll buttons based on the scroll position
-    if (scrollPosition == 0) {
-      parentContainer.querySelector(
+  document
+    .querySelectorAll(DOM_ELEMENT_UDS_TABBED_PANELS)
+    .forEach(parentContainer => {
+      const parentNav = parentContainer.querySelector(DOM_ELEMENT_NAV_TABS);
+      const navItems = parentContainer.querySelectorAll(DOM_ELEMENT_NAV_ITEM);
+      const prevButton = parentContainer.querySelector(
         DOM_ELEMENT_SCROLL_CONTROL_PREV
-      ).style.display = CSS_DISPLAY_NONE;
-    } else {
-      parentContainer.querySelector(
-        DOM_ELEMENT_SCROLL_CONTROL_PREV
-      ).style.display = CSS_DISPLAY_BLOCK;
-    }
-    if (tabPosition <= parentContainer.offsetWidth) {
-      parentContainer.querySelector(
+      );
+      const nextButton = parentContainer.querySelector(
         DOM_ELEMENT_SCROLL_CONTROL_NEXT
-      ).style.display = CSS_DISPLAY_NONE;
-    } else {
-      parentContainer.querySelector(
-        DOM_ELEMENT_SCROLL_CONTROL_NEXT
-      ).style.display = CSS_DISPLAY_BLOCK;
-    }
-  };
+      );
+      let scrollPosition = 0;
 
-  // wait to load the page and all resources before initializing
-  window.addEventListener(EVENT_LOAD, function windowLoad() {
-    window.removeEventListener(EVENT_LOAD, windowLoad)
-    // wait to DOM content is loaded before run these scripts
-    document.addEventListener(EVENT_CLICK, function (e) {
-      setButtonsCompatibility(e);
-    });
+      parentContainer.addEventListener(EVENT_CLICK, function (e) {
+        setButtonsCompatibility(e);
+      });
 
-    // handle focus event for tabs titles
-    const navItems = document.querySelectorAll(DOM_ELEMENT_NAV_ITEM);
-    navItems.forEach(tabTitle => {
-      tabTitle.addEventListener("focus", function (e) {
-        tabTitle.scrollIntoView();
-      })
-    })
+      const slideNav = (clicked, e, direction) => {
+        e.preventDefault();
 
-    // handle scroll for tabs titles
-    document.querySelectorAll(DOM_ELEMENT_UDS_TABBED_PANELS).forEach(item => {
-      const nav = item.querySelector(DOM_ELEMENT_NAV_TABS);
-      nav.addEventListener(EVENT_SCROLL, event => {
+        // get left value to interact with scroll
+        const rawLeftValue = getComputedStyle(parentNav).left;
+        const sanitizedLeftValue = rawLeftValue.replace("px", "");
+        let scrollOffset = parseInt(sanitizedLeftValue, 10);
+
+        if (direction === 1 && scrollPosition > 0) {
+          scrollPosition -= 1;
+        }
+        if (scrollPosition < navItems.length - 1 && direction == -1) {
+          scrollPosition += 1;
+        }
+        parentNav.dataset.scrollPosition = scrollPosition;
+
+        scrollOffset = 0;
+        for (var i = 0; i < scrollPosition; i++) {
+          scrollOffset +=
+            navItems[i].offsetWidth +
+            parseInt(getComputedStyle(navItems[i]).marginLeft, 10) +
+            parseInt(getComputedStyle(navItems[i]).marginRight, 10);
+        }
+
+        // set the position of the scroll of the .nav-tabs element
+        parentNav.scrollLeft = scrollOffset;
+        setControlVisibility(clicked, scrollOffset);
+      };
+
+      const setControlVisibility = (clicked, scrollOffset) => {
+        const tabPosition = parentNav.scrollWidth - scrollOffset;
+
+        // hide or show the scroll buttons based on the scroll position
+        if (scrollPosition == 0) {
+          prevButton.style.display = CSS_DISPLAY_NONE;
+        } else {
+          prevButton.style.display = CSS_DISPLAY_BLOCK;
+        }
+        if (tabPosition <= parentContainer.offsetWidth) {
+          nextButton.style.display = CSS_DISPLAY_NONE;
+        } else {
+          nextButton.style.display = CSS_DISPLAY_BLOCK;
+        }
+      };
+
+      parentNav.addEventListener(EVENT_SCROLL, event => {
         const scrollPos = event.target.scrollLeft;
-        const prevButton = item.querySelector(DOM_ELEMENT_SCROLL_CONTROL_PREV);
-        const nextButton = item.querySelector(DOM_ELEMENT_SCROLL_CONTROL_NEXT);
         const atFarRight =
-          nav.offsetWidth + scrollPos + magicalNumberThree >= nav.scrollWidth;
+          parentNav.offsetWidth + scrollPos + scrollTollerance >=
+          parentNav.scrollWidth;
         prevButton.style.display =
-          scrollPos === 0 ? CSS_DISPLAY_NONE : CSS_DISPLAY_BLOCK;
+          scrollPos < scrollTollerance ? CSS_DISPLAY_NONE : CSS_DISPLAY_BLOCK;
         nextButton.style.display = atFarRight
           ? CSS_DISPLAY_NONE
           : CSS_DISPLAY_BLOCK;
       });
-    });
+      // });
 
-    // click of the next button
-    document
-      .querySelector(DOM_ELEMENT_SCROLL_CONTROL_NEXT)
-      .addEventListener(EVENT_CLICK, function (e) {
+      // handle focus event for tabs titles
+      navItems.forEach(tabTitle => {
+        tabTitle.addEventListener(EVENT_FOCUS, function (e) {
+          tabTitle.scrollIntoView();
+        });
+      });
+
+      // click of the next button
+      nextButton.addEventListener(EVENT_CLICK, function (e) {
         if (window.innerWidth > LG_BREAKPOINT) {
           slideNav(this, e, -1);
         }
       });
 
-    // click of the prev button
-    document
-      .querySelector(DOM_ELEMENT_SCROLL_CONTROL_PREV)
-      .addEventListener(EVENT_CLICK, function (e) {
+      // click of the prev button
+      prevButton.addEventListener(EVENT_CLICK, function (e) {
         if (window.innerWidth > LG_BREAKPOINT) {
           slideNav(this, e, 1);
         }
       });
 
-    // hide prev button on load
-    document.querySelector(
-      `${DOM_ELEMENT_UDS_TABBED_PANELS} ${DOM_ELEMENT_SCROLL_CONTROL_PREV}`
-    ).style.display = CSS_DISPLAY_NONE;
+      // hide prev button on load
 
-    // width of all tabs
-    const navTabWidth =
-      document.querySelector(DOM_ELEMENT_NAV_TABS).scrollWidth;
+      prevButton.style.display = CSS_DISPLAY_NONE;
 
-    // width of the parent element
-    const udsTabbedPanelsWidth = document.querySelector(
-      DOM_ELEMENT_UDS_TABBED_PANELS
-    ).offsetWidth;
+      // width of all tabs
+      const navTabWidth = parentNav.scrollWidth;
 
-    if (navTabWidth <= udsTabbedPanelsWidth) {
-      document.querySelector(
-        `${DOM_ELEMENT_UDS_TABBED_PANELS} ${DOM_ELEMENT_SCROLL_CONTROL_NEXT}`
-      ).style.display = CSS_DISPLAY_NONE;
-    }
-  });
-};
+      // width of the parent element
+      const udsTabbedPanelsWidth = parentContainer.offsetWidth;
 
-export {initTabs}
+      if (navTabWidth <= udsTabbedPanelsWidth) {
+        nextButton.style.display = CSS_DISPLAY_NONE;
+      }
+    });
+}
+
+EventHandler.on(window, 'load.uds.tabs', initTabs);
+
+// window.addEventListener("load.uds.tabs", initTabs, true);
+
+export { initTabs };

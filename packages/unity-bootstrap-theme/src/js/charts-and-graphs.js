@@ -1,11 +1,10 @@
-import { Chart, registerables } from 'chart.js';
+import * as Chart from 'chart.js';
+
 import { EventHandler } from './bootstrap-helper';
 
-// Chart.js library should be peer dependency
-
-Chart.register(...registerables);
-
 function initChart() {
+  Chart.Chart.register(...Chart.registerables);
+
   const GRAPH_PERCENTAGE_COMPLETE = 50;
 
   var ctx = document.getElementById('uds-donut');
@@ -37,7 +36,7 @@ function initChart() {
     },
   };
 
-  var myChart = new Chart(ctx, config);
+  var myChart = new Chart.Chart(ctx, config);
 };
 
 EventHandler.on(window, 'load.uds.chart', initChart);

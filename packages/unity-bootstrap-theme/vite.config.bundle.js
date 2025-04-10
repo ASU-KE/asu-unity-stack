@@ -22,16 +22,6 @@ const c = {
         });
       },
     },
-    {
-      name: 'copy-bootstrap-umd-to-dist',
-      // See https://vite.dev/guide/api-plugin#universal-hooks for closeBundle info
-      closeBundle() {
-        const srcPath = path.resolve(__dirname, "../../node_modules", 'bootstrap/dist/js/bootstrap.bundle.min.js');
-        const destDir = path.resolve(__dirname, 'dist/js/bootstrap.bundle.min.js');
-
-        fs.copyFileSync(srcPath, destDir);
-      }
-    }
   ],
   optimizeDeps: {
     esbuildOptions: {
@@ -42,22 +32,15 @@ const c = {
     },
   },
   build: {
-    emptyOutDir: true,
+    emptyOutDir: false,
     sourcemap: true,
     cssMinify: true,
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     lib: {
-      entry: [
-        resolve(__dirname, "src/scss/unity-bootstrap-theme.bundle.scss"),
-        resolve(__dirname, "src/scss/unity-bootstrap-theme.scss"),
-        resolve(__dirname, "src/scss/unity-bootstrap-header-footer.scss"),
-        resolve(__dirname, "src/scss/unity-bootstrap-header.scss"),
-        resolve(__dirname, "src/scss/unity-bootstrap-footer.scss"),
-        resolve(__dirname, "src/js/global-header.js"),
-        resolve(__dirname, "src/js/data-layer.js"),
-        // resolve(__dirname, "../../node_modules/bootstrap/js/index.esm.js"),
-      ],
-
+      entry: resolve(__dirname, "src/js/unity-bootstrap-theme.js"),
+      formats: ["es", "cjs", "umd"],
+      name: 'unityBootstrap',
+      fileName: (format) => `js/${format}/unity-bootstrap-theme.js`,
     },
     outDir: "dist",
     rollupOptions: {
@@ -67,20 +50,13 @@ const c = {
         globals: {
           "chart.js": "Chart",
         },
-        entryFileNames: chunkInfo => {
-          if (chunkInfo.name.includes("index.esm")) {
-            return "js/[format]/bootstrap.bundle.min.js";
-          }
-          return "js/[format]/[name].js";
-        },
-        chunkFileNames: "js/[format]/[name].js",
         assetFileNames: (assetInfo) => {
-          if (assetInfo.originalFileNames && assetInfo.originalFileNames[0].includes("bundle")) {
+          console.log(assetInfo)
+          if (assetInfo.originalFileNames && assetInfo.originalFileNames[0]?.includes("bundle")) {
             return "css/unity-bootstrap-theme.bundle.[ext]";
           }
           return "css/[name].[ext]";
         },
-        format: "es",
       },
     },
   },
@@ -98,6 +74,11 @@ const c = {
   },
   server: {
     port: 9000,
+  },
+  resolve: {
+    alias: [
+      { find: '@shared', replacement: path.resolve(__dirname, '../../shared') },
+    ],
   },
 };
 
