@@ -29,9 +29,12 @@
     }
 
     a:has(img) {
-      display: flex;
-      z-index: 1;
-      position: relative;
+
+      &:focus {
+        display: flex;
+        position: relative;
+      }
+
     }
 
     .uds-figure-caption {
