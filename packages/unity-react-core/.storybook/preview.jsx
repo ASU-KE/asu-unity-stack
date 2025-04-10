@@ -7,9 +7,6 @@ import "@asu/unity-bootstrap-theme/src/js/unity-bootstrap-theme.js";
 import { globalDecorators } from "./decorators.tsx";
 import { Container } from "./docPage.tsx";
 
-
-const sourceCodeRootSelector = "#html-root";
-
 const parameters = {
   controls: { expanded: true },
   argTypes: {
@@ -28,13 +25,6 @@ const parameters = {
         value: "#d0d0d0",
       },
     ],
-  },
-  html: {
-    prettier: {
-      tabWidth: 4,
-      htmlWhitespaceSensitivity: "ignore",
-    },
-    root: sourceCodeRootSelector,
   },
   docs: {
     // Table of contents stopped working, so I disabled it.

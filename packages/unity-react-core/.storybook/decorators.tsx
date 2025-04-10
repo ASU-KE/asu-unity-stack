@@ -18,14 +18,14 @@ declare interface ContainerProps {
 
 const Full:ContainerComponent<ContainerProps, any> = forwardRef((props, ref) => {
   return (
-  <div ref={ref} id="html-root" className="col uds-full-width" {...props}/>
+  <div ref={ref} className="col uds-full-width" {...props}/>
 )});
 
 const UdsContainer:ContainerComponent<ContainerProps, any> = forwardRef((props, ref) => {
   return (
   <div className="container">
     <div className="row">
-      <div ref={ref} id="html-root" className="uds-container" {...props}/>
+      <div ref={ref} className="uds-container" {...props}/>
     </div>
   </div>
 )});
@@ -34,21 +34,22 @@ export const withContainer: Decorator = (
   StoryFn,
   {
     args,
-    globals: { framework = "react" },
+    globals,
     parameters: { layout = "fullscreen" },
+    viewMode,
   }
 ) => {
+  let { framework = "react" } = globals;
+  // Doc page will only render react framework
+  if(viewMode === "docs") {
+    framework = "react";
+  }
   const isBootstrap = framework === "bootstrap";
-  const isReact = !isBootstrap;
   const root = React.useRef(null as any);
 
   const emit = useChannel({ "HTML/CodeUpdated": () => {} });
 
-
-
   const mount = () => {
-    // console.log("sb mounting");
-
     if (root.current) {
       if (isBootstrap) {
         // custom events created by eventSpy.js to allow storybook to dispatch load events after the page is loaded
@@ -58,7 +59,6 @@ export const withContainer: Decorator = (
 
       emit("HTML/CodeUpdated", { code: root.current.innerHTML });
     }
-
   }
 
   const unmount = () => {
@@ -77,19 +77,10 @@ export const withContainer: Decorator = (
     }
   }
 
-
-
-
-
-
-
-
   useEffect(() => {
     // @ts-ignore
     if (!window.unloading) {
       mount()
-    } else {
-
     }
     return unmount
   }, [StoryFn, args, framework]);
@@ -116,5 +107,3 @@ export const withContainer: Decorator = (
 export const globalDecorators = [
   withContainer
 ];
-
-
