@@ -6,10 +6,10 @@ import {
   getLoremSentences,
   titleCaseDefinition,
 } from "../../../../../shared/constants/strings";
+import { Basic as Header } from "../../../../unity-bootstrap-theme/stories/organisms/global-header/global-header.templates";
 import { Divider } from "../Divider/Divider";
+import { useBaseSpecificFramework } from "../GaEventWrapper/useBaseSpecificFramework";
 import { AnchorMenu } from "./AnchorMenu";
-import { Basic as Header } from "../../../../unity-bootstrap-theme/stories/organisms/global-header/global-header.templates.jsx";
-import { useBaseSpecificFramework } from "../GaEventWrapper/useBaseSpecificFramework.js";
 
 const titleCaseTitle =
   "Anchor Menus Should Always be Formatted with Title Case";
