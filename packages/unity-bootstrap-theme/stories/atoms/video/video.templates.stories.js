@@ -2,7 +2,6 @@ import React from "react";
 
 // @ts-ignore
 import stockVideo from "./stock-video-person-drawing.mp4";
-import { initVideo as initFunc } from "./video";
 
 
 export default {
@@ -12,12 +11,6 @@ export default {
     content: {
       name: "Content",
       control: { type: "boolean" },
-    },
-  },
-  parameters: {
-    initFunc: {
-      disable: false,
-      code: initFunc
     },
   },
 };

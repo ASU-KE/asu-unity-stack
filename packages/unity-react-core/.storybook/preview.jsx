@@ -1,8 +1,12 @@
+import "./eventSpy.js";
 import "@asu/unity-bootstrap-theme/src/scss/unity-bootstrap-theme.bundle.scss";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import * as bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js";
+globalThis.bootstrap = bootstrap;
+
+import "@asu/unity-bootstrap-theme/src/js/unity-bootstrap-theme.js";
 import { globalDecorators } from "./decorators.tsx";
 import { Container } from "./docPage.tsx";
-import "@asu/unity-bootstrap-theme/src/js/data-layer.js";
+
 
 const sourceCodeRootSelector = "#html-root";
 

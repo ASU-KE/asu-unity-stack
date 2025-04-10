@@ -15,8 +15,6 @@ const extraOptions = {
   },
 };
 
-import { initTabs as initFunc } from "./tabbed-panels.js";
-
 export const TabbedPanels = (args) => {
   return (
     <div className={args.bgColor}>
@@ -251,12 +249,6 @@ export const TabbedPanels = (args) => {
   );
 }
 
-TabbedPanels.parameters = {
-  initFunc: {
-    disable: false,
-    code: initFunc
-  }
-}
 export default {
   title: "Molecules/Tabbed Panels",
   component: TabbedPanels,

@@ -3,7 +3,6 @@ import React from "react";
 import { defaultDecorator, htmlRootDecorator } from "../../../../../shared/components/Layout";
 import cardsImage from "./cards-image.jpg";
 import { horizontalCardsMap as horizontalCard } from "./cardVariations.js";
-import { rankingFunc as initRankFunc } from "./ranking-cards.js";
 
 export default {
   title: "Molecules/Cards/Examples",
@@ -1531,12 +1530,6 @@ export const RankingCardLarge = () => (
     </div>
   </div>
 );
-RankingCardLarge.parameters = {
-  initFunc: {
-    code: initRankFunc,
-    disable: false,
-  },
-}
 RankingCardLarge.decorators = [ defaultDecorator ];
 
 export const RankingCardSmall = () => (
@@ -1605,10 +1598,4 @@ export const RankingCardSmall = () => (
     </div>
   </div>
 );
-RankingCardSmall.parameters = {
-  initFunc: {
-    code: initRankFunc,
-    disable: false,
-  },
-}
 RankingCardSmall.decorators = [ defaultDecorator ];

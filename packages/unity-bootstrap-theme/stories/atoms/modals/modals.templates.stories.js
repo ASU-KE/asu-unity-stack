@@ -1,16 +1,11 @@
 import React from "react";
 
 import { defaultDecorator } from "../../../../../shared/components/Layout";
-import { initModals as initFunc } from "./modals.js";
 
 export default {
   title: "Atoms/Modals/Templates",
   decorators: [ defaultDecorator ],
   parameters: {
-    initFunc: {
-      disable: false,
-      code: initFunc
-    },
     header: {
       forced: true,
     },

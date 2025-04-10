@@ -1,5 +1,4 @@
 import { htmlRootDecorator } from "../../../../../shared/components/Layout.js";
-import { initFooterGA as initFunc } from "./global-footer";
 import {
   GlobalElementsOnly,
   ZeroColumns,
@@ -18,10 +17,6 @@ export default {
   parameters: {
     footer: {
       disable: true
-    },
-    initFunc: {
-      disable: false,
-      code: initFunc
     },
     controls: { disable: true }
   },
