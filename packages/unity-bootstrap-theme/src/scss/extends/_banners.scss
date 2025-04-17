@@ -29,8 +29,8 @@
     flex: 3;
     a,
     button {
-      margin-top: 0.25rem;
-      margin-bottom: 0.25rem;
+      margin-top: calc($uds-size-spacing-1 / 2);
+      margin-bottom: calc($uds-size-spacing-1 / 2);
       margin-left: 0;
     }
     // Do buttons in their own flexbox, column-style, no stretching.
