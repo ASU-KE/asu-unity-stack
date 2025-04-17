@@ -112,55 +112,78 @@ function ApplicationRequirements({
   isMinorOrCertificate,
   additionalRequirements,
   minorRequirements,
+  majorMapURL,
 }) {
-  let reqsLabel;
-  if (graduateRequirements || isMinorOrCertificate) {
-    reqsLabel = !isMinorOrCertificate
-      ? "Degree requirements"
-      : "Program requirements";
-  } else {
-    reqsLabel = !isMinorOrCertificate
-      ? "Admission requirements"
-      : "Program requirements";
+  if (!graduateRequirements && !isMinorOrCertificate) {
+    // if the program is not a graduate program AND not a minor/certificate
+    // we only show the undergraduate template
+    return (
+      <section
+        id={progDetailSectionIds.applicationRequirements.targetIdName}
+        data-testid="application-requirements"
+      >
+        <h2>
+          <span className="highlight-gold">Admission requirements</span>
+        </h2>
+        {undergraduateTemplate({
+          transferRequirements,
+          additionalRequirements,
+        })}
+      </section>
+    );
   }
+
+  const reqsLabel = !isMinorOrCertificate
+    ? "Degree requirements"
+    : "Program requirements";
+
+  const requirements = graduateRequirements || minorRequirements;
+
   return (
     <>
       <section
         id={progDetailSectionIds.applicationRequirements.targetIdName}
         data-testid="application-requirements"
       >
-        <h2>
-          <span className="highlight-gold">{reqsLabel}</span>
-        </h2>
-        {graduateRequirements || isMinorOrCertificate ? (
-          <div
-            dangerouslySetInnerHTML={sanitizeDangerousMarkup(
-              graduateRequirements || minorRequirements
-            )}
-          />
-        ) : (
-          undergraduateTemplate({
-            transferRequirements,
-            additionalRequirements,
-          })
+        {requirements && (
+          // Has requirements From API
+          <>
+            <h2>
+              <span className="highlight-gold">{reqsLabel}</span>
+            </h2>
+            <div
+              dangerouslySetInnerHTML={sanitizeDangerousMarkup(requirements)}
+            />
+          </>
+        )}
+        {!requirements && (
+          // No Requirements From API, show link to major map
+          <>
+            <h3>{reqsLabel}</h3>
+            <ul>
+              <li>
+                <a href={majorMapURL} rel="noreferrer" target="_blank">
+                  View Curriculum
+                </a>
+              </li>
+            </ul>
+          </>
         )}
       </section>
 
-      {graduateRequirements || isMinorOrCertificate ? (
-        <section
-          id={progDetailSectionIds.degreeRequirements.targetIdName}
-          data-testid="degree-requirements"
-        >
-          <h2>
-            <span className="highlight-gold">Admission requirements</span>
-          </h2>
-          <div
-            dangerouslySetInnerHTML={sanitizeDangerousMarkup(
-              additionalRequirements
-            )}
-          />
-        </section>
-      ) : null}
+      <section
+        id={progDetailSectionIds.degreeRequirements.targetIdName}
+        data-testid="degree-requirements"
+      >
+        <h2>
+          <span className="highlight-gold">Admission requirements</span>
+        </h2>
+        <div
+          dangerouslySetInnerHTML={sanitizeDangerousMarkup(
+            additionalRequirements
+          )}
+        />
+      </section>
     </>
   );
 }
@@ -171,6 +194,7 @@ ApplicationRequirements.propTypes = {
   isMinorOrCertificate: PropTypes.bool,
   additionalRequirements: PropTypes.string,
   minorRequirements: PropTypes.string,
+  majorMapURL: PropTypes.string,
 };
 
 export { ApplicationRequirements };
