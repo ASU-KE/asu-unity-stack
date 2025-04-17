@@ -1,3 +1,16 @@
+# [@asu/unity-bootstrap-theme-v1.23.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.22.0...@asu/unity-bootstrap-theme-v1.23.0) (2025-04-16)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** added style for small and medium hero ([64002b9](https://github.com/ASU/asu-unity-stack/commit/64002b904d50c4ae9aee7377327fc9b58425b0cd))
+* **unity-bootstrap-theme:** changed height to min-height on hero-overlay classes ([f1b2991](https://github.com/ASU/asu-unity-stack/commit/f1b299190c384c97793d1aecbf690b7737dcaf15))
+
+
+### Features
+
+* **unity-bootstrap-theme:** changed heigth to min-heigth on div.uds-hero-lg ([0e0c04b](https://github.com/ASU/asu-unity-stack/commit/0e0c04b558758836963fdffc526dbdbe7e793445))
+
 # [@asu/unity-bootstrap-theme-v1.22.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.21.6...@asu/unity-bootstrap-theme-v1.22.0) (2025-04-09)
 
 
