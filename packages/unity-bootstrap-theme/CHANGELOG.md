@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.23.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.23.0...@asu/unity-bootstrap-theme-v1.23.1) (2025-04-18)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** notification Banner button enlarged and gap between buttons reduced ([439ad1d](https://github.com/ASU/asu-unity-stack/commit/439ad1d09de5cb64e6d02d472e47b0268244fd4c))
+* **unity-bootstrap-theme:** notification Banner size enlarged and gap reduced ([30c71f1](https://github.com/ASU/asu-unity-stack/commit/30c71f181a699f1105747cbda7e1d3a0f0791ac2))
+
 # [@asu/unity-bootstrap-theme-v1.23.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.22.0...@asu/unity-bootstrap-theme-v1.23.0) (2025-04-16)
 
 
