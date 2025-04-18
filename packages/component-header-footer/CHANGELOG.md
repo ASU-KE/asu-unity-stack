@@ -1,3 +1,10 @@
+# [@asu/component-header-footer-v1.0.7](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.6...@asu/component-header-footer-v1.0.7) (2025-04-18)
+
+
+### Bug Fixes
+
+* **component-header-footer:** removed aria-labelledby and added span for desktop ([a67d7df](https://github.com/asu/asu-unity-stack/commit/a67d7df86122ab283910d7a01e6006c33c6f88e3))
+
 # [@asu/component-header-footer-v1.0.6](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.5...@asu/component-header-footer-v1.0.6) (2025-04-01)
 
 
