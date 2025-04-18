@@ -83,7 +83,7 @@ const variants = {
         To learn more about ASU or a specific program, fill out the form below
         then check your email.
       </p>
-      <Campus autoFocus gaData={gaData1Of2} />
+      <Campus gaData={gaData1Of2} />
       <CareerAndStudentType gaData={gaData1Of2} />
       <Interest1 gaData={gaData1Of2} />
       <Interest2 gaData={gaData1Of2} />
