@@ -1,3 +1,12 @@
+# [@asu/unity-bootstrap-theme-v1.23.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.23.1...@asu/unity-bootstrap-theme-v1.23.2) (2025-04-21)
+
+
+### Bug Fixes
+
+* **component-events:** added style to fix a:focus ([de0e708](https://github.com/ASU/asu-unity-stack/commit/de0e70889ffae0770538d993c8a13d1cc346ba89))
+* **component-news:** removed margin from focus and added to a tag into card-title ([9629f6f](https://github.com/ASU/asu-unity-stack/commit/9629f6fb7203a2fcf2d28e7d2e453efe1ddb15d0))
+* **unity-bootstrap-theme:** fix focus styles for card titles ([ffa430d](https://github.com/ASU/asu-unity-stack/commit/ffa430de81b8cd345b431a48c693308ff9b1b43b))
+
 # [@asu/unity-bootstrap-theme-v1.23.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.23.0...@asu/unity-bootstrap-theme-v1.23.1) (2025-04-18)
 
 
