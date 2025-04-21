@@ -102,6 +102,29 @@ const undergraduateTemplate = ({
   );
 };
 
+const viewCurriculum = majorMapURL => {
+  const label = "View Curriculum";
+  return (
+    <>
+      <p>
+        View curriculum below for a detailed list of courses and other
+        requirements.
+      </p>
+      <ButtonList>
+        <li>
+          <Button
+            ariaLabel={label}
+            color="maroon"
+            href={majorMapURL}
+            label={label}
+            size="small"
+          />
+        </li>
+      </ButtonList>
+    </>
+  );
+};
+
 /**
  * @param {ApplicationRequirementsProps} props
  * @returns {JSX.Element}
@@ -145,29 +168,15 @@ function ApplicationRequirements({
         id={progDetailSectionIds.applicationRequirements.targetIdName}
         data-testid="application-requirements"
       >
-        {requirements && (
-          // Has requirements From API
-          <>
-            <h2>
-              <span className="highlight-gold">{reqsLabel}</span>
-            </h2>
-            <div
-              dangerouslySetInnerHTML={sanitizeDangerousMarkup(requirements)}
-            />
-          </>
-        )}
-        {!requirements && (
-          // No Requirements From API, show link to major map
-          <>
-            <h3>{reqsLabel}</h3>
-            <ul>
-              <li>
-                <a href={majorMapURL} rel="noreferrer" target="_blank">
-                  View Curriculum
-                </a>
-              </li>
-            </ul>
-          </>
+        <h2>
+          <span className="highlight-gold">{reqsLabel}</span>
+        </h2>
+        {requirements ? (
+          <div
+            dangerouslySetInnerHTML={sanitizeDangerousMarkup(requirements)}
+          />
+        ) : (
+          viewCurriculum(majorMapURL)
         )}
       </section>
 
