@@ -10,15 +10,11 @@ addons.register('local-addon', (api) => {
     type: types.PANEL,
     paramKey: 'initFunc',
     render: ({active, key}) => {
-
       return(
         <AddonPanel key={key} active={!!active}>
           <div style={{ padding: '20px', fontSize: '1rem'}}>
-
-          This component requires Javascript. <br/><br/>
-
-          <a href="./index.html?path=/docs/get-started-get-started--docs#-including-unity-in-your-project">View the documentation</a>{" "}on how to use the component in your project.
-
+            This component requires Javascript. <br/><br/>
+            View the documentation on <a href="./index.html?path=/docs/get-started-get-started--docs#-including-unity-in-your-project">including unity in your project</a>
           </div>
         </AddonPanel>
     )},

@@ -12,7 +12,7 @@ export default defineConfig(
       plugins: [
         {
           name: "copy",
-          writeBundle() {
+          closeBundle() {
             fs.mkdirSync(resolve(__dirname, "dist/js"), {
               recursive: true,
             });
