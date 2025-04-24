@@ -17,7 +17,7 @@ addons.register('local-addon', (api) => {
 
           This component requires Javascript. <br/><br/>
 
-          <a href="./?path=/docs/get-started-get-started--docs#-including-unity-in-your-project">View the documentation</a>{" "}on how to use the component in your project.
+          <a href="./index.html?path=/docs/get-started-get-started--docs#-including-unity-in-your-project">View the documentation</a>{" "}on how to use the component in your project.
 
           </div>
         </AddonPanel>
