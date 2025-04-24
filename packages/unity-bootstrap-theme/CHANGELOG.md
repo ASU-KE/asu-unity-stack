@@ -1,3 +1,15 @@
+# [@asu/unity-bootstrap-theme-v1.24.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.23.2...@asu/unity-bootstrap-theme-v1.24.0) (2025-04-24)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** update build to include js ([804ce9a](https://github.com/ASU/asu-unity-stack/commit/804ce9acc756acb6031012b9cf9b6fb2aeb5a2ff))
+
+
+### Features
+
+* **unity-bootstrap-theme:** update dist files and README docs for usage ([0900210](https://github.com/ASU/asu-unity-stack/commit/090021037959d12925a9551ef3235b483a774b68))
+
 # [@asu/unity-bootstrap-theme-v1.23.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.23.1...@asu/unity-bootstrap-theme-v1.23.2) (2025-04-21)
 
 
