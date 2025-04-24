@@ -13,7 +13,9 @@
     "url": "git+https://github.com/ASU/asu-unity-stack.git"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "yarn build:css && yarn build:js",
+    "build:css": "vite build",
+    "build:js": "vite build --config vite.config.bundle.js",
     "watch": "rimraf ./dist && webpack --watch && rimraf ./.tmp",
     "storybook": "storybook dev -p 9000",
     "build-storybook": "storybook build -o ../../build/$npm_package_name",
@@ -77,14 +79,6 @@
     "webpack-node-externals": "^3.0.0"
   },
   "exports": {
-    "./js/global-header.js": {
-      "module": "./src/js/storybook-global-header.js",
-      "default": "./src/js/global-header.js"
-    },
-    "./js/data-layer.js": {
-      "module": "./src/js/storybook-data-layer.js",
-      "default": "./src/js/data-layer.js"
-    },
     "./*": "./*",
     ".": "./dist/css/unity-bootstrap-theme.css"
   },
