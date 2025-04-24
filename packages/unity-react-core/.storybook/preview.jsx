@@ -3,7 +3,7 @@ import "@asu/unity-bootstrap-theme/src/scss/unity-bootstrap-theme.bundle.scss";
 import * as bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js";
 globalThis.bootstrap = bootstrap;
 
-import "@asu/unity-bootstrap-theme/src/js/unity-bootstrap-theme.js";
+import "@asu/unity-bootstrap-theme/src/js/unity-bootstrap.js";
 import { globalDecorators } from "./decorators.tsx";
 import { Container } from "./docPage.tsx";
 
