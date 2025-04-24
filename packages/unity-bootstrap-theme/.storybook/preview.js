@@ -2,7 +2,7 @@ import "./eventSpy.js";
 import "../src/scss/unity-bootstrap-theme.bundle.scss";
 import { default as bootstrap } from "bootstrap/js/index.umd.js";
 globalThis.bootstrap = bootstrap;
-import { default as udsBootstrap } from "@asu/unity-bootstrap-theme/src/js/unity-bootstrap-theme.js";
+import { default as udsBootstrap } from "../src/js/unity-bootstrap.js";
 globalThis.udsBootstrap = udsBootstrap;
 
 import { removeFontAwesomeChanges } from "./local-addon/helpers";

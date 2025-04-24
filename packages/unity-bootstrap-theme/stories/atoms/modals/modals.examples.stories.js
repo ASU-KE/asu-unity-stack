@@ -3,6 +3,9 @@ import React from "react";
 export default {
   title: "Atoms/Modals/Examples",
   parameters: {
+    initFunc: {
+      disable: false,
+    },
     header: {
       forced: true,
     },

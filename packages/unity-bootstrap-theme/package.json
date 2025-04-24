@@ -13,9 +13,9 @@
     "url": "git+https://github.com/ASU/asu-unity-stack.git"
   },
   "scripts": {
-    "build": "yarn build:1 && yarn build:2",
-    "build:1": "vite build",
-    "build:2": "vite build --config vite.config.bundle.js",
+    "build": "yarn build:css && yarn build:js",
+    "build:css": "vite build",
+    "build:js": "vite build --config vite.config.bundle.js",
     "watch": "rimraf ./dist && webpack --watch && rimraf ./.tmp",
     "storybook": "storybook dev -p 9000",
     "build-storybook": "storybook build -o ../../build/$npm_package_name",

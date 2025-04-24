@@ -16,6 +16,9 @@ export const parameters = {
   loadEvent: {
     disable: false
   },
+  initFunc: {
+    disable: true
+  },
   docs:{
     source: {
       transform: (src,storyContext)=>{

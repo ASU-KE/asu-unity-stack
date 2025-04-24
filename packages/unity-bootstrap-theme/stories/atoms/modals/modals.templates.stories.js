@@ -6,12 +6,15 @@ export default {
   title: "Atoms/Modals/Templates",
   decorators: [ defaultDecorator ],
   parameters: {
+    initFunc: {
+      disable: false,
+    },
     header: {
       forced: true,
     },
     footer: {
       forced: true,
-    }
+    },
   },
   args: {open: true},
   argTypes: {

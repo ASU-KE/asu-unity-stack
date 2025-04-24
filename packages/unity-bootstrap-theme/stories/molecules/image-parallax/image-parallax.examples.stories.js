@@ -7,6 +7,9 @@ export default {
   title: "Molecules/Image Parallax/Examples",
   decorators: [ defaultDecorator ],
   parameters: {
+    initFunc: {
+      disable: false,
+    },
     controls: { disable: true }
   }
 };

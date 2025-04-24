@@ -125,3 +125,9 @@ FixedComponent.args = {
   fixed: true,
   columns: 7,
 }
+FixedComponent.parameters = {
+  initFunc: {
+    disable: false,
+  },
+};
+

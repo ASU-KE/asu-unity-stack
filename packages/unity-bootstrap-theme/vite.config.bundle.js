@@ -1,85 +1,53 @@
-import react from "@vitejs/plugin-react";
-import path, { resolve } from "path";
 import fs from "fs";
-import { defineConfig, transformWithEsbuild } from "vite";
+import { resolve } from "path";
+import { defineConfig } from "vite";
 
-import pkg from "./package.json";
-/** @typedef {import('vite').UserConfig} UserConfig */
+import baseConfig from "./vite.config.js";
 
-/** @type {UserConfig} */
-const c = {
-  root: resolve(__dirname),
-  plugins: [
-    react(),
-    {
-      name: "treat-js-files-as-jsx",
-      async transform(code, id) {
-        if (!id.match(/stories\/.*\.js$/)) return null;
+export default defineConfig(
+  (/** @type {import('vite').ConfigEnv} */ _) => {
 
-        return transformWithEsbuild(code, id, {
-          loader: "jsx",
-          jsx: "automatic",
-        });
-      },
-    },
-  ],
-  optimizeDeps: {
-    esbuildOptions: {
-      target: "es2021",
-      loader: {
-        ".js": "jsx",
-      },
-    },
-  },
-  build: {
-    emptyOutDir: false,
-    sourcemap: true,
-    cssMinify: true,
-    cssCodeSplit: false,
-    lib: {
-      entry: resolve(__dirname, "src/js/unity-bootstrap-theme.js"),
-      formats: ["es", "cjs", "umd"],
-      name: 'unityBootstrap',
-      fileName: (format) => `js/${format}/unity-bootstrap-theme.js`,
-    },
-    outDir: "dist",
-    rollupOptions: {
-      external: [...Object.keys(pkg.peerDependencies), "chart.js"],
-      treeshake: true,
-      output: {
-        globals: {
-          "chart.js": "Chart",
+    return {
+      ...baseConfig,
+      plugins: [
+        {
+          name: "copy",
+          writeBundle() {
+            fs.mkdirSync(resolve(__dirname, "dist/js"), {
+              recursive: true,
+            });
+            fs.copyFileSync(
+              resolve(
+                __dirname,
+                "../../node_modules",
+                "bootstrap/dist/js/bootstrap.bundle.min.js"
+              ),
+              resolve(__dirname, "dist/js/bootstrap.bundle.min.js")
+            );
+            fs.copyFileSync(
+              resolve(
+                __dirname,
+                "../../node_modules",
+                "chart.js/dist/chart.min.js"
+              ),
+              resolve(__dirname, "dist/js/chart.min.js")
+            );
+          },
         },
-        assetFileNames: (assetInfo) => {
-          console.log(assetInfo)
-          if (assetInfo.originalFileNames && assetInfo.originalFileNames[0]?.includes("bundle")) {
-            return "css/unity-bootstrap-theme.bundle.[ext]";
-          }
-          return "css/[name].[ext]";
+      ],
+      build: {
+        ...baseConfig.build,
+        emptyOutDir: false,
+        lib: {
+          entry: resolve(__dirname, "src/js/unity-bootstrap.js"),
+          formats: ["umd", "cjs", "es"],
+          name: "unityBootstrap",
+        },
+        rollupOptions: {
+          ...baseConfig.build.rollupOptions,
+          input: undefined,
         },
       },
-    },
-  },
-  esbuild: {
-    loader: "jsx",
-    include: /.*\.jsx?$/,
-    exclude: [],
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: "modern-compiler",
-      },
-    },
-  },
-  server: {
-    port: 9000,
-  },
-  resolve: {
-    alias: [
-      { find: '@shared', replacement: path.resolve(__dirname, '../../shared') },
-    ],
-  },
-};
-
-export default defineConfig(c);
+    };
+  }
+);

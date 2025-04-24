@@ -1,7 +1,7 @@
 import { EventHandler } from "./bootstrap-helper";
 
 // method ot handle the custom behavior of the ranking card
-function rankingFunc() {
+function initRankingCard() {
   const $infoLayer = document.querySelector(".info-layer");
   const $toggleIcon = document.getElementById("dispatch");
 
@@ -11,6 +11,6 @@ function rankingFunc() {
 
 };
 
-EventHandler.on(window, 'load.uds.ranking-card', rankingFunc);
+EventHandler.on(window, 'load.uds.ranking-card', initRankingCard);
 
-export { rankingFunc };
+export { initRankingCard };

@@ -3,9 +3,13 @@ import React from "react";
 import { imageName } from "../../../../../shared/assets";
 import { htmlRootDecorator } from "../../../../../shared/components/Layout";
 import {getLoremSentences} from "../../../../../shared/constants/strings";
+
 export default {
   title: "Atoms/Anchor Menu",
   parameters: {
+    initFunc: {
+      disable: false,
+    },
     header: {
       forced: true,
     },

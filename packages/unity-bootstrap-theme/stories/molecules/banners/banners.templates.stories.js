@@ -25,6 +25,11 @@ export default {
   args: {
     color: "Orange",
   },
+  parameters: {
+    initFunc: {
+      disable: false,
+    },
+  },
 };
 
 export const Banner = ({color}) => {

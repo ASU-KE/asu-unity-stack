@@ -1,6 +1,6 @@
 import { EventHandler } from "./bootstrap-helper";
 
-function initTabs() {
+function initTabbedPanels() {
   ("use strict");
 
   const DOM_ELEMENT_A = "a";
@@ -138,8 +138,8 @@ function initTabs() {
     });
 }
 
-EventHandler.on(window, 'load.uds.tabs', initTabs);
+EventHandler.on(window, 'load.uds.tabs', initTabbedPanels);
 
 // window.addEventListener("load.uds.tabs", initTabs, true);
 
-export { initTabs };
+export { initTabbedPanels };

@@ -252,5 +252,10 @@ export const TabbedPanels = (args) => {
 export default {
   title: "Molecules/Tabbed Panels",
   component: TabbedPanels,
-  argTypes: {...extraOptions}
+  argTypes: {...extraOptions},
+  parameters: {
+    initFunc: {
+      disable: false,
+    },
+  },
 };

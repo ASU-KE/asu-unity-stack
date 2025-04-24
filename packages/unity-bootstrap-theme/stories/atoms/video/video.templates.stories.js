@@ -13,6 +13,11 @@ export default {
       control: { type: "boolean" },
     },
   },
+  parameters: {
+    initFunc: {
+      disable: false,
+    },
+  },
 };
 
 export const Default = ({content}) =>

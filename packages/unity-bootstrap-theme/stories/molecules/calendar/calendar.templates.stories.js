@@ -6,6 +6,9 @@ export default {
   title: "Molecules/Calendar/Templates",
   decorators: [ defaultDecorator ],
   parameters: {
+    initFunc: {
+      disable: false,
+    },
     controls: { disable: true }
   },
 };

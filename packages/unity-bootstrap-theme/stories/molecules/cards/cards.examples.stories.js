@@ -1530,6 +1530,11 @@ export const RankingCardLarge = () => (
     </div>
   </div>
 );
+RankingCardLarge.parameters = {
+  initFunc: {
+    disable: false,
+  },
+};
 RankingCardLarge.decorators = [ defaultDecorator ];
 
 export const RankingCardSmall = () => (
@@ -1598,4 +1603,9 @@ export const RankingCardSmall = () => (
     </div>
   </div>
 );
+RankingCardSmall.parameters = {
+  initFunc: {
+    disable: false,
+  },
+};
 RankingCardSmall.decorators = [ defaultDecorator ];

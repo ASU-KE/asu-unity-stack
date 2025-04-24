@@ -15,6 +15,9 @@ export default {
   title: "Organisms/Global Footer/Examples",
   argTypes: {},
   parameters: {
+    initFunc: {
+      disable: false,
+    },
     footer: {
       disable: true
     },

@@ -14,6 +14,9 @@ export default {
   title: "Organisms/Global Header/Examples",
   decorators: [ htmlRootDecorator ],
   parameters: {
+    initFunc: {
+      disable: false,
+    },
     header: {
       disable: true
     },

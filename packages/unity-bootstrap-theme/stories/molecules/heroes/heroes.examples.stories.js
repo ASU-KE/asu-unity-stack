@@ -241,3 +241,9 @@ export const HeroVideo = () => (
     </div>
   </div>
 );
+
+HeroVideo.parameters = {
+  initFunc: {
+    disable: false,
+  },
+};

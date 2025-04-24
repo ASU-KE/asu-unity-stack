@@ -14,7 +14,7 @@
 import { EventHandler } from "./bootstrap-helper";
 
 
-function initializeFixedTable() {
+function initFixedTable() {
   function setPreButtonPosition() {
     const wrapperSelector = '.uds-table-fixed-wrapper';
     const tableSelector = '.uds-table.uds-table-fixed table';
@@ -74,6 +74,6 @@ function initializeFixedTable() {
   });
 }
 
-EventHandler.on(window, 'load.uds.fixed-table', initializeFixedTable);
+EventHandler.on(window, 'load.uds.fixed-table', initFixedTable);
 
-export { initializeFixedTable };
+export { initFixedTable };
