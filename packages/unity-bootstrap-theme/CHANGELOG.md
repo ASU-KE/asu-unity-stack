@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.24.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.24.0...@asu/unity-bootstrap-theme-v1.24.1) (2025-04-29)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** added style only for a tags into Images ([61c9ad7](https://github.com/ASU/asu-unity-stack/commit/61c9ad7e8aa9d530959e8ff79a8d81d35d0d5bfc))
+* **unity-bootstrap-theme:** removed unnecesary z-index ([a130196](https://github.com/ASU/asu-unity-stack/commit/a1301963fff6fd208250eff2284741d4e025ae64))
+
 # [@asu/unity-bootstrap-theme-v1.24.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.23.2...@asu/unity-bootstrap-theme-v1.24.0) (2025-04-24)
 
 
