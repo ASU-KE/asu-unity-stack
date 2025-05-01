@@ -2,19 +2,20 @@ import { PagePaths } from '../routes/config';
 
 export const getBaseUrl = () => {
 
-  const pages = Object.values(PagePaths).filter((page) => page !== '/').map((page) => page.replace(/\//g, ''));
+  const pages = Object.values(PagePaths)
+    .filter((page) => page !== '/')
+    .map((page) => page.replace(/\//g, ''));
 
   if (typeof window === 'undefined') return '/';
 
   const pathname = window.location.pathname;
 
-  const segments = pathname.split('/').filter(str=> str !== 'index.html');
+  const segments = pathname.split('/')
+    .filter(Boolean)
+    .filter((segment) => !pages.includes(segment))
+    .filter((segment) => segment.indexOf(".") === -1);
 
-  if (pages.includes(segments[0])) {
-    segments.shift();
-  }
-
-  return segments.length > 0 ? `/${segments[0]}` : '/';
+  return `/${segments.join('/')}`;
 
 };
 
