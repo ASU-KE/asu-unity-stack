@@ -1,3 +1,15 @@
+# [@asu/unity-bootstrap-theme-v1.25.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.24.1...@asu/unity-bootstrap-theme-v1.25.0) (2025-05-01)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** changed margin-top to padding-top on uds-anchor-menu-wrapper ([f14c513](https://github.com/ASU/asu-unity-stack/commit/f14c513c09b50a2d8bda5fbfe0221a1b096cfb34))
+
+
+### Features
+
+* **unity-bootstrap-theme:** added margin-top on uds-anchor-menu-wrapper ([08ac674](https://github.com/ASU/asu-unity-stack/commit/08ac674b9516a8b0ac221606a0af7f3d82ca9d3a))
+
 # [@asu/unity-bootstrap-theme-v1.24.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.24.0...@asu/unity-bootstrap-theme-v1.24.1) (2025-04-29)
 
 
