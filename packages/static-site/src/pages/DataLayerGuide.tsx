@@ -218,7 +218,11 @@ const DataLayerGuide = () => {
             Add event listeners to your code to capture click and change events
             related to your `data-ga` attributes and to push that event to the
             data layer. As a help to get you started, the
-            `unity-bootstrap-theme` package&apos;s `src/js/data-layer.js` file can
+            `unity-bootstrap-theme` package&apos;s{" "}
+            <a href="https://github.com/ASU/asu-unity-stack/blob/dev/packages/unity-bootstrap-theme/src/js/data-layer.js" target="_blank">
+              src/js/data-layer.js
+            </a>{" "}
+            file can
             serve as a starting point or as a reference for implementing your
             own data layer push code.
           </p>
