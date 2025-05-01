@@ -1,3 +1,10 @@
+# [@asu/component-header-footer-v1.0.8](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.7...@asu/component-header-footer-v1.0.8) (2025-05-01)
+
+
+### Bug Fixes
+
+* **component-header-footer:** added focusout event to NavItem ([b7eea2e](https://github.com/asu/asu-unity-stack/commit/b7eea2eae897fab10761806932dcc0e172936d54))
+
 # [@asu/component-header-footer-v1.0.7](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.6...@asu/component-header-footer-v1.0.7) (2025-04-18)
 
 
