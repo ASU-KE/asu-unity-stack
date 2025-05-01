@@ -219,7 +219,7 @@ const DataLayerGuide = () => {
             related to your `data-ga` attributes and to push that event to the
             data layer. As a help to get you started, the
             `unity-bootstrap-theme` package&apos;s{" "}
-            <a href="https://github.com/ASU/asu-unity-stack/blob/dev/packages/unity-bootstrap-theme/src/js/data-layer.js" target="_blank">
+            <a href="https://github.com/ASU/asu-unity-stack/blob/dev/packages/unity-bootstrap-theme/src/js/data-layer.js" target="_blank" rel="noreferrer">
               src/js/data-layer.js
             </a>{" "}
             file can
