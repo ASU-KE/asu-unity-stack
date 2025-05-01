@@ -1,4 +1,4 @@
-export const watchDataLayer = () => {
+() => {
   const w = window
     , dl = w.dataLayer || []
     /* used to provide styling in the console */

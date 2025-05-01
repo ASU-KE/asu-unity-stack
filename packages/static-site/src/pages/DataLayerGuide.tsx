@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { PagePaths } from "~/routes/config";
-import { watchDataLayer } from "~/utils/watchDataLayerBookmarklet";
+import { default as watchDataLayer } from "~/utils/watchDataLayerBookmarklet?raw";
 
 export const bookmarklet = `javascript:(${watchDataLayer.toString()
   // remove line breaks
