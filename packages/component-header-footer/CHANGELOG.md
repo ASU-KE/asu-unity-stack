@@ -1,3 +1,10 @@
+# [@asu/component-header-footer-v1.0.9](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.8...@asu/component-header-footer-v1.0.9) (2025-05-06)
+
+
+### Bug Fixes
+
+* **component-header-footer:** update alt for innovation logo ([d32a7b9](https://github.com/asu/asu-unity-stack/commit/d32a7b9571811a9909708475a9ed3f6218bcc437))
+
 # [@asu/component-header-footer-v1.0.8](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.7...@asu/component-header-footer-v1.0.8) (2025-05-01)
 
 
