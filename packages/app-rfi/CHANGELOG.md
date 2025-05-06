@@ -1,3 +1,22 @@
+# [@asu/app-rfi-v3.4.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v3.3.0...@asu/app-rfi-v3.4.0) (2025-04-29)
+
+
+### Bug Fixes
+
+* **app-rfi:** added autofocus property for Campus select ([d0bb98d](https://github.com/asu/asu-unity-stack/commit/d0bb98dac9df47fbf86c56742e985f62c3f0245c))
+
+
+### Features
+
+* **app-rfi:** removed autofocus and added focus function for handleback ([f807b3f](https://github.com/asu/asu-unity-stack/commit/f807b3fa27f15410f9fe3aa8f6f426aa3ad6aa28))
+
+# [@asu/app-rfi-v3.3.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v3.2.0...@asu/app-rfi-v3.3.0) (2025-04-01)
+
+
+### Features
+
+* **app-rfi:** simple change to rebuild release ([13f8a3b](https://github.com/asu/asu-unity-stack/commit/13f8a3b546f4f29d47e3c895e9f48b6058415744))
+
 # [@asu/app-rfi-v3.2.0](https://github.com/asu/asu-unity-stack/compare/@asu/app-rfi-v3.1.0...@asu/app-rfi-v3.2.0) (2025-03-05)
 
 
