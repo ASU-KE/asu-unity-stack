@@ -8,4 +8,16 @@ if [ -n "$2" ]; then
   exit 0
 fi
 
+echo "Running linter..."
+yarn lint
+
+# Check linter exit status
+if [ $? -ne 0 ]; then
+  echo "Linting failed. Please fix lint errors before committing."
+  exit 1
+else
+  echo "Adding linted files to staging..."
+  git add .
+fi
+
 exec < /dev/tty && git cz --hook || true
