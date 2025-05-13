@@ -1,3 +1,10 @@
+# [@asu/component-header-footer-v1.0.10](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.9...@asu/component-header-footer-v1.0.10) (2025-05-13)
+
+
+### Bug Fixes
+
+* **component-header-footer:** fix footer mobile column styles ([4654ef9](https://github.com/asu/asu-unity-stack/commit/4654ef95a727261b6f73aaeeea9b5ce88f6ed813))
+
 # [@asu/component-header-footer-v1.0.9](https://github.com/asu/asu-unity-stack/compare/@asu/component-header-footer-v1.0.8...@asu/component-header-footer-v1.0.9) (2025-05-06)
 
 
