@@ -1,11 +1,21 @@
+import { PagePaths } from '../routes/config';
+
 export const getBaseUrl = () => {
+
+  const pages = Object.values(PagePaths)
+    .filter((page) => page !== '/')
+    .map((page) => page.replace(/\//g, ''));
 
   if (typeof window === 'undefined') return '/';
 
   const pathname = window.location.pathname;
 
-  const segments = pathname.split('/').filter(Boolean);
-  return segments.length > 0 ? `/${segments[0]}` : '/';
+  const segments = pathname.split('/')
+    .filter(Boolean)
+    .filter((segment) => !pages.includes(segment))
+    .filter((segment) => segment.indexOf(".") === -1);
+
+  return `/${segments.join('/')}`;
 
 };
 
