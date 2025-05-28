@@ -1,3 +1,10 @@
+# [@asu/unity-bootstrap-theme-v1.25.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.25.0...@asu/unity-bootstrap-theme-v1.25.1) (2025-05-28)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** removed display none style on mobile for the Breadcrumb ([1223d32](https://github.com/ASU/asu-unity-stack/commit/1223d32afa2f913a63057f97c3fefbcf38069dca))
+
 # [@asu/unity-bootstrap-theme-v1.25.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.24.1...@asu/unity-bootstrap-theme-v1.25.0) (2025-05-01)
 
 
