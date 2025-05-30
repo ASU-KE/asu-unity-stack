@@ -1,3 +1,11 @@
+# [@asu/unity-bootstrap-theme-v1.25.2](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.25.1...@asu/unity-bootstrap-theme-v1.25.2) (2025-05-30)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** standardize all list types  margins ([345dc84](https://github.com/ASU/asu-unity-stack/commit/345dc8465b93b21838778269c7020577afafa8de))
+* **unity-bootstrap-theme:** steplist adjust circle to be more rounded ([9cccf5e](https://github.com/ASU/asu-unity-stack/commit/9cccf5eb25a481156bf2c74912ee049ac5110992))
+
 # [@asu/unity-bootstrap-theme-v1.25.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-bootstrap-theme-v1.25.0...@asu/unity-bootstrap-theme-v1.25.1) (2025-05-28)
 
 
