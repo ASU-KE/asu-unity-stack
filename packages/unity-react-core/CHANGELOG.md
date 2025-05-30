@@ -1,3 +1,10 @@
+# [@asu/unity-react-core-v1.1.1](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.1.0...@asu/unity-react-core-v1.1.1) (2025-05-30)
+
+
+### Bug Fixes
+
+* **unity-bootstrap-theme:** standardize all list types  margins ([345dc84](https://github.com/ASU/asu-unity-stack/commit/345dc8465b93b21838778269c7020577afafa8de))
+
 # [@asu/unity-react-core-v1.1.0](https://github.com/ASU/asu-unity-stack/compare/@asu/unity-react-core-v1.0.7...@asu/unity-react-core-v1.1.0) (2025-04-24)
 
 
