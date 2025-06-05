@@ -6,11 +6,14 @@ KE Fork of ASU UDS. Changelog tracks customizations made. View the [git commit g
 ```
 git fetch upstream
 git merge upstream/dev
+git push --no-verify
 ```
 
 ### Common errors
 #### `git merge error Usage Error: Couldn't find the node_modules state file`
 - delete `node_modules` folder, `yarn install` Do not `npm install`, no longer works
+#### `error: failed to push some refs to 'github.com:ASU-KE/asu-unity-stack.git'`
+- use the `--no-verify` flag to skip the failing Learna build
 
 
 
